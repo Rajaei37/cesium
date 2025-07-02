@@ -17,5 +17,6 @@
     </head>
     <body class="font-sans antialiased">
         @inertia
+        <script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     </body>
 </html>

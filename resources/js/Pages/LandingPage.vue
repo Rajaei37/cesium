@@ -1,152 +1,140 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-blue-50 to-white flex flex-col items-center px-4">
+  <div class="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 flex flex-col">
     <!-- Header -->
-    <header class="w-full max-w-6xl mx-auto py-8 flex justify-between items-center" data-aos="fade-down">
+    <header class="w-full max-w-6xl mx-auto py-8 flex justify-between items-center">
       <div class="flex items-center space-x-3">
-        <img src="/images/cesium-logo.svg" alt="Cesium Logo" class="h-10 w-10" />
-        <span class="text-3xl font-extrabold text-blue-700">Cesium</span>
+        <!-- Example casino logo from online source -->
+        <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" alt="Cesium Casino Logo" class="h-12 w-12" />
+        <span class="text-3xl font-extrabold text-yellow-400 tracking-tight font-serif">Cesium</span>
       </div>
-      <nav class="space-x-6">
-        <a href="#" class="text-blue-700 hover:underline">Home</a>
-        <a href="#features" class="text-blue-700 hover:underline">Features</a>
-        <a href="#testimonials" class="text-blue-700 hover:underline">Testimonials</a>
-        <a href="#team" class="text-blue-700 hover:underline">Team</a>
-        <a href="#contact" class="text-blue-700 hover:underline">Contact</a>
+      <nav class="space-x-8 text-lg font-medium">
+        <a href="#features" class="text-yellow-300 hover:underline">Features</a>
+        <a href="#about" class="text-yellow-300 hover:underline">About</a>
+        <a href="#contact" class="text-yellow-300 hover:underline">Contact</a>
       </nav>
     </header>
 
-    <!-- Hero Section with Lottie Animation -->
-    <main class="flex flex-col md:flex-row items-center justify-center text-center md:text-left w-full max-w-6xl py-12 gap-8">
+    <!-- Hero Section -->
+    <section class="flex-1 flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto px-4 py-12 gap-12">
       <div class="flex-1" data-aos="fade-right">
-        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-          Elevate Your Brand with <span class="text-blue-600">Stunning Marketing</span>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-yellow-300 mb-6 leading-tight font-serif drop-shadow-lg">
+          Launch & Grow Your <span class="text-white">Casino Business</span> with Cesium
         </h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
-          We help brands stand out with beautiful, high-converting websites and creative marketing strategies.
+        <p class="text-xl text-gray-200 mb-8 max-w-xl">
+          The all-in-one marketing and launchpad solution for online casinos, betting, and gambling platforms. From branding to player acquisition, we help you win big!
         </p>
-        <a href="#contact" class="px-8 py-4 bg-blue-600 text-white rounded-full shadow-lg text-lg font-semibold hover:bg-blue-700 transition">Get Started</a>
+        <a href="#contact" class="inline-block px-10 py-4 bg-yellow-400 text-purple-900 rounded-full shadow-lg text-lg font-bold hover:bg-yellow-300 transition">
+          Get Started
+        </a>
       </div>
       <div class="flex-1 flex justify-center" data-aos="fade-left">
-        <div ref="lottieContainer" class="w-72 h-72 mx-auto"></div>
+        <!-- Casino illustration from undraw.co -->
+        <img src="https://undraw.co/api/illustrations/1b1e1e1e-1b1e-1b1e-1b1e-1b1e1b1e1b1e" alt="Casino Illustration" class="w-80 h-80 object-contain rounded-xl shadow-2xl bg-white/10" />
       </div>
-    </main>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="w-full max-w-6xl mx-auto py-16 grid md:grid-cols-3 gap-8" data-aos="fade-up">
-      <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="zoom-in" data-aos-delay="100">
-        <svg class="mx-auto mb-4 w-14 h-14 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
-        <h3 class="text-2xl font-bold mb-2">Creative Design</h3>
-        <p class="text-gray-600">Eye-catching, modern designs that capture your brand's essence and engage your audience.</p>
+    <section id="features" class="w-full max-w-6xl mx-auto py-20 grid md:grid-cols-3 gap-10">
+      <div class="bg-white/90 rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition" data-aos="zoom-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" class="mx-auto mb-4 w-14 h-14" alt="Branding" />
+        <h3 class="text-2xl font-bold mb-2 text-purple-900">Casino Branding</h3>
+        <p class="text-gray-700">Custom logos, themes, and brand kits tailored for the gambling industry.</p>
       </div>
-      <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="zoom-in" data-aos-delay="200">
-        <svg class="mx-auto mb-4 w-14 h-14 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3"></path></svg>
-        <h3 class="text-2xl font-bold mb-2">Web Development</h3>
-        <p class="text-gray-600">Fast, responsive, and SEO-friendly websites built for results and scalability.</p>
+      <div class="bg-white/90 rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://cdn-icons-png.flaticon.com/512/1047/1047735.png" class="mx-auto mb-4 w-14 h-14" alt="Player Acquisition" />
+        <h3 class="text-2xl font-bold mb-2 text-purple-900">Player Acquisition</h3>
+        <p class="text-gray-700">SEO, influencer marketing, and affiliate programs to attract high-value players.</p>
       </div>
-      <div class="bg-white rounded-lg shadow-lg p-8 text-center" data-aos="zoom-in" data-aos-delay="300">
-        <svg class="mx-auto mb-4 w-14 h-14 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M17 8V6a4 4 0 00-8 0v2m8 0a4 4 0 01-8 0"></path></svg>
-        <h3 class="text-2xl font-bold mb-2">Marketing Strategy</h3>
-        <p class="text-gray-600">Data-driven strategies to grow your audience and boost your sales.</p>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="w-full max-w-6xl mx-auto py-16" data-aos="fade-up">
-      <h2 class="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-lg shadow-lg p-6" data-aos="fade-up" data-aos-delay="100">
-          <p class="text-gray-700 italic mb-4">"Absolutely transformed our online presence. The team is creative, responsive, and results-driven!"</p>
-          <div class="flex items-center gap-3">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full" alt="Client 1">
-            <div>
-              <div class="font-bold">John Doe</div>
-              <div class="text-gray-400 text-sm">CEO, Acme Corp</div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-lg p-6" data-aos="fade-up" data-aos-delay="200">
-          <p class="text-gray-700 italic mb-4">"Our sales increased by 40% after launching the new site. Highly recommended!"</p>
-          <div class="flex items-center gap-3">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full" alt="Client 2">
-            <div>
-              <div class="font-bold">Jane Smith</div>
-              <div class="text-gray-400 text-sm">Marketing Lead, Beta Inc</div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-lg p-6" data-aos="fade-up" data-aos-delay="300">
-          <p class="text-gray-700 italic mb-4">"Professional, innovative, and always on time. Our go-to marketing partner."</p>
-          <div class="flex items-center gap-3">
-            <img src="https://randomuser.me/api/portraits/men/54.jpg" class="w-12 h-12 rounded-full" alt="Client 3">
-            <div>
-              <div class="font-bold">Mike Lee</div>
-              <div class="text-gray-400 text-sm">Founder, Gamma LLC</div>
-            </div>
-          </div>
-        </div>
+      <div class="bg-white/90 rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://cdn-icons-png.flaticon.com/512/1047/1047736.png" class="mx-auto mb-4 w-14 h-14" alt="Launchpad" />
+        <h3 class="text-2xl font-bold mb-2 text-purple-900">Casino Launchpad</h3>
+        <p class="text-gray-700">End-to-end support for launching your online casino, from licensing to go-live.</p>
       </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="w-full max-w-6xl mx-auto py-16" data-aos="fade-up">
-      <h2 class="text-4xl font-bold text-center mb-12">Meet the Team</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center" data-aos="flip-left" data-aos-delay="100">
-          <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Team 1">
-          <div class="font-bold text-lg">Alex Johnson</div>
-          <div class="text-gray-400 mb-2">Lead Designer</div>
-          <p class="text-gray-600">Passionate about creating beautiful, user-friendly interfaces.</p>
-        </div>
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center" data-aos="flip-left" data-aos-delay="200">
-          <img src="https://randomuser.me/api/portraits/women/47.jpg" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Team 2">
-          <div class="font-bold text-lg">Sara Kim</div>
-          <div class="text-gray-400 mb-2">Marketing Strategist</div>
-          <p class="text-gray-600">Expert in digital marketing and brand growth strategies.</p>
-        </div>
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center" data-aos="flip-left" data-aos-delay="300">
-          <img src="https://randomuser.me/api/portraits/men/48.jpg" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Team 3">
-          <div class="font-bold text-lg">Chris Evans</div>
-          <div class="text-gray-400 mb-2">Full Stack Developer</div>
-          <p class="text-gray-600">Loves building fast, scalable, and robust web applications.</p>
-        </div>
+    <!-- About Section -->
+    <section id="about" class="w-full max-w-6xl mx-auto py-16 flex flex-col md:flex-row items-center gap-12">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Team" class="rounded-lg shadow-lg w-full md:w-1/2" />
+      <div>
+        <h2 class="text-3xl font-bold mb-4 text-yellow-300 font-serif">About Cesium</h2>
+        <p class="text-gray-200 mb-4">
+          Cesium is a team of casino marketing experts, designers, and strategists. We've helped launch and grow dozens of successful online gambling brands worldwide. Our mission: make your casino the next big winner!
+        </p>
+        <a href="#contact" class="text-yellow-300 font-semibold hover:underline">Learn more about our story &rarr;</a>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="w-full max-w-4xl mx-auto py-16" data-aos="fade-up">
-      <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-      <div class="space-y-6">
-        <div class="bg-white rounded-lg shadow p-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="font-bold mb-2">How long does a typical project take?</div>
-          <div class="text-gray-600">Most projects are completed within 4-8 weeks, depending on complexity and requirements.</div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="font-bold mb-2">Do you offer ongoing support?</div>
-          <div class="text-gray-600">Yes! We offer maintenance and support packages to keep your site running smoothly.</div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="font-bold mb-2">Can you help with branding and content?</div>
-          <div class="text-gray-600">Absolutely. Our team includes branding experts and copywriters to help you shine.</div>
-        </div>
+    <!-- Stats Section -->
+    <section class="w-full max-w-6xl mx-auto py-12 flex flex-wrap justify-center gap-12" data-aos="fade-up">
+      <div class="text-center">
+        <div class="text-4xl font-bold text-yellow-300">50+</div>
+        <div class="text-gray-200">Casinos Launched</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold text-yellow-300">100K+</div>
+        <div class="text-gray-200">Players Acquired</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold text-yellow-300">24/7</div>
+        <div class="text-gray-200">Support</div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="w-full max-w-4xl mx-auto py-16 text-center" data-aos="zoom-in">
-      <h2 class="text-4xl font-bold mb-4">Ready to elevate your brand?</h2>
-      <p class="text-gray-600 mb-8">Contact us today for a free consultation and let's build something amazing together.</p>
+      <h2 class="text-4xl font-bold mb-4 text-yellow-300 font-serif">Ready to launch your casino?</h2>
+      <p class="text-gray-200 mb-8">Contact us for a free consultation and let's build your winning brand together.</p>
       <form class="max-w-xl mx-auto grid gap-4">
-        <input type="text" placeholder="Your Name" class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-200" />
-        <input type="email" placeholder="Your Email" class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-200" />
-        <textarea placeholder="Your Message" class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-200"></textarea>
-        <button type="submit" class="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition">Send Message</button>
+        <input type="text" placeholder="Your Name" class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200" />
+        <input type="email" placeholder="Your Email" class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200" />
+        <textarea placeholder="Your Message" class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"></textarea>
+        <button type="submit" class="px-8 py-3 bg-yellow-400 text-purple-900 rounded-full font-semibold hover:bg-yellow-300 transition">Send Message</button>
       </form>
     </section>
 
     <!-- Footer -->
-    <footer class="w-full max-w-6xl mx-auto py-6 text-center text-gray-400">
-      &copy; 2024 Cesium. All rights reserved.
+    <footer class="w-full max-w-6xl mx-auto py-8 text-center text-gray-400 flex flex-col items-center border-t mt-12">
+      <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" alt="Cesium Logo" class="h-8 w-8 mb-2" />
+      <div class="mb-2">&copy; 2024 Cesium. All rights reserved.</div>
+      <div class="space-x-4">
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Terms of Use</a>
+      </div>
     </footer>
+
+    <!-- 3D Lottie Animation -->
+    <div ref="slotContainer" class="w-64 h-64 mx-auto my-8"></div>
+    <!-- Mini Slot Machine Game -->
+    <MiniSlotMachine />
+
+    <model-viewer
+      src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+      alt="A 3D model of a casino chip"
+      auto-rotate
+      camera-controls
+      style="width: 300px; height: 300px; background: transparent;">
+    </model-viewer>
+
+    <div class="flex flex-col items-center my-12">
+      <h2 class="text-3xl font-bold text-yellow-300 mb-4 font-serif">Try Your Luck!</h2>
+      <div class="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col items-center">
+        <div class="flex space-x-4 text-5xl font-mono mb-4">
+          <span :class="getColor(slots[0])">{{ slots[0] }}</span>
+          <span :class="getColor(slots[1])">{{ slots[1] }}</span>
+          <span :class="getColor(slots[2])">{{ slots[2] }}</span>
+        </div>
+        <button
+          @click="spin"
+          class="px-8 py-3 bg-yellow-400 text-purple-900 rounded-full font-semibold hover:bg-yellow-300 transition mb-2"
+          :disabled="spinning"
+        >
+          {{ spinning ? 'Spinning...' : 'Spin' }}
+        </button>
+        <div v-if="result" class="mt-2 text-lg font-bold" :class="result === '🎉 Jackpot! 🎉' ? 'text-green-600' : 'text-purple-900'">
+          {{ result }}
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -156,19 +144,52 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import lottie from 'lottie-web'
 
-const lottieContainer = ref(null)
+const slotContainer = ref(null)
 
 onMounted(() => {
   AOS.init()
-  // Lottie animation (replace with your own animation JSON if desired)
   lottie.loadAnimation({
-    container: lottieContainer.value,
+    container: slotContainer.value,
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'https://assets2.lottiefiles.com/packages/lf20_kyu7xb1v.json' // Example marketing animation
+    path: 'https://lottie.host/1b1e1e1e-1b1e-1b1e-1b1e-1b1e1b1e1b1e/slot-machine.json' // Replace with actual Lottie URL
   })
 })
+
+const symbols = ['🍒', '🍋', '🔔', '7️⃣', '🍀', '💎']
+const slots = ref(['🍒', '🍋', '🔔'])
+const spinning = ref(false)
+const result = ref('')
+
+function getColor(symbol) {
+  if (symbol === '7️⃣') return 'text-red-600'
+  if (symbol === '💎') return 'text-blue-600'
+  return 'text-purple-900'
+}
+
+function spin() {
+  spinning.value = true
+  result.value = ''
+  let spins = 0
+  const interval = setInterval(() => {
+    slots.value = [
+      symbols[Math.floor(Math.random() * symbols.length)],
+      symbols[Math.floor(Math.random() * symbols.length)],
+      symbols[Math.floor(Math.random() * symbols.length)],
+    ]
+    spins++
+    if (spins > 15) {
+      clearInterval(interval)
+      spinning.value = false
+      if (slots.value[0] === slots.value[1] && slots.value[1] === slots.value[2]) {
+        result.value = '🎉 Jackpot! 🎉'
+      } else {
+        result.value = 'Try again!'
+      }
+    }
+  }, 100)
+}
 </script>
 
 <style scoped>
