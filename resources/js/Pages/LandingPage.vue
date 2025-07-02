@@ -2,7 +2,10 @@
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-white flex flex-col items-center px-4">
     <!-- Header -->
     <header class="w-full max-w-6xl mx-auto py-8 flex justify-between items-center" data-aos="fade-down">
-      <div class="text-3xl font-extrabold text-blue-700">YourBrand</div>
+      <div class="flex items-center space-x-3">
+        <img src="/images/cesium-logo.svg" alt="Cesium Logo" class="h-10 w-10" />
+        <span class="text-3xl font-extrabold text-blue-700">Cesium</span>
+      </div>
       <nav class="space-x-6">
         <a href="#" class="text-blue-700 hover:underline">Home</a>
         <a href="#features" class="text-blue-700 hover:underline">Features</a>
@@ -142,7 +145,7 @@
 
     <!-- Footer -->
     <footer class="w-full max-w-6xl mx-auto py-6 text-center text-gray-400">
-      &copy; 2024 YourBrand. All rights reserved.
+      &copy; 2024 Cesium. All rights reserved.
     </footer>
   </div>
 </template>
