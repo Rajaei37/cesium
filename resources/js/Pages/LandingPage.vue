@@ -15,21 +15,22 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="flex-1 flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto px-4 py-12 gap-12">
-      <div class="flex-1" data-aos="fade-right">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-yellow-300 mb-6 leading-tight font-serif drop-shadow-lg">
+    <section class="flex-1 flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto px-4 py-12 gap-12 relative">
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-indigo-900/60 to-blue-900/80 pointer-events-none z-0"></div>
+      <div class="flex-1 z-10" data-aos="fade-right">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-yellow-300 mb-6 leading-tight font-serif drop-shadow-lg animate-pulse">
           Launch & Grow Your <span class="text-white">Casino Business</span> with Cesium
         </h1>
         <p class="text-xl text-gray-200 mb-8 max-w-xl">
           The all-in-one marketing and launchpad solution for online casinos, betting, and gambling platforms. From branding to player acquisition, we help you win big!
         </p>
-        <a href="#contact" class="inline-block px-10 py-4 bg-yellow-400 text-purple-900 rounded-full shadow-lg text-lg font-bold hover:bg-yellow-300 transition">
+        <a href="#contact" class="inline-block px-10 py-4 bg-yellow-400 text-purple-900 rounded-full shadow-lg text-lg font-bold hover:bg-yellow-300 transition animate-bounce">
           Get Started
         </a>
       </div>
-      <div class="flex-1 flex justify-center" data-aos="fade-left">
-        <!-- Casino illustration from undraw.co -->
-        <img src="https://undraw.co/api/illustrations/1b1e1e1e-1b1e-1b1e-1b1e-1b1e1b1e1b1e" alt="Casino Illustration" class="w-80 h-80 object-contain rounded-xl shadow-2xl bg-white/10" />
+      <div class="flex-1 flex justify-center z-10" data-aos="fade-left">
+        <!-- Lottie Casino Animation -->
+        <div ref="lottieCasino" class="w-80 h-80 mx-auto"></div>
       </div>
     </section>
 
@@ -115,26 +116,64 @@
       style="width: 300px; height: 300px; background: transparent;">
     </model-viewer>
 
-    <div class="flex flex-col items-center my-12">
-      <h2 class="text-3xl font-bold text-yellow-300 mb-4 font-serif">Try Your Luck!</h2>
-      <div class="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col items-center">
-        <div class="flex space-x-4 text-5xl font-mono mb-4">
-          <span :class="getColor(slots[0])">{{ slots[0] }}</span>
-          <span :class="getColor(slots[1])">{{ slots[1] }}</span>
-          <span :class="getColor(slots[2])">{{ slots[2] }}</span>
-        </div>
-        <button
-          @click="spin"
-          class="px-8 py-3 bg-yellow-400 text-purple-900 rounded-full font-semibold hover:bg-yellow-300 transition mb-2"
-          :disabled="spinning"
-        >
-          {{ spinning ? 'Spinning...' : 'Spin' }}
-        </button>
-        <div v-if="result" class="mt-2 text-lg font-bold" :class="result === '🎉 Jackpot! 🎉' ? 'text-green-600' : 'text-purple-900'">
-          {{ result }}
+    <!-- Enhanced Slot Machine Section -->
+    <section class="w-full flex flex-col items-center justify-center py-16" style="background: radial-gradient(circle at 50% 30%, #fff3 0%, #0000 70%);">
+      <h2 class="text-4xl font-extrabold text-yellow-300 mb-6 font-serif animate-pulse">Try Your Luck!</h2>
+      <div class="relative flex flex-col items-center">
+        <!-- Confetti animation (Lottie) -->
+        <div v-if="showConfetti" ref="confettiContainer" class="absolute inset-0 pointer-events-none z-10"></div>
+        <div :class="['bg-white/90 rounded-2xl shadow-2xl p-8 flex flex-col items-center border-4',
+          spinning ? 'border-yellow-400 animate-shake' : 'border-yellow-300',
+          jackpot ? 'ring-4 ring-green-400 ring-offset-2' : '']"
+          style="width: 340px; min-height: 220px; transition: box-shadow 0.3s;">
+          <div class="flex space-x-4 text-6xl font-mono mb-4 select-none">
+            <span v-for="(symbol, i) in slots" :key="i" :class="['transition-transform duration-300', getColor(symbol)]">
+              {{ symbol }}
+            </span>
+          </div>
+          <button
+            @click="spin"
+            class="px-10 py-4 bg-yellow-400 text-purple-900 rounded-full font-bold text-xl shadow-lg hover:bg-yellow-300 transition animate-bounce"
+            :disabled="spinning"
+          >
+            {{ spinning ? 'Spinning...' : 'Spin' }}
+          </button>
+          <div v-if="result" class="mt-4 text-lg font-bold text-center" :class="jackpot ? 'text-green-600 animate-pulse' : 'text-purple-900'">
+            {{ result }}
+          </div>
+          <div v-if="funMessage" class="mt-2 text-sm text-gray-500 italic">{{ funMessage }}</div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <div ref="lottieCasino" class="w-80 h-80 mx-auto"></div>
+
+    <!-- How It Works Section -->
+    <section class="w-full max-w-6xl mx-auto py-16">
+      <h2 class="text-3xl font-bold text-yellow-300 text-center mb-10">How It Works</h2>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-white/90 rounded-xl shadow-lg p-6 flex flex-col items-center" data-aos="fade-up">
+          <span class="text-4xl mb-2">🎨</span>
+          <div class="font-bold mb-1">Branding</div>
+          <div class="text-gray-600 text-center">Custom casino branding and design.</div>
+        </div>
+        <div class="bg-white/90 rounded-xl shadow-lg p-6 flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+          <span class="text-4xl mb-2">🚀</span>
+          <div class="font-bold mb-1">Launch</div>
+          <div class="text-gray-600 text-center">Fast, compliant casino launchpad.</div>
+        </div>
+        <div class="bg-white/90 rounded-xl shadow-lg p-6 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+          <span class="text-4xl mb-2">🎯</span>
+          <div class="font-bold mb-1">Player Acquisition</div>
+          <div class="text-gray-600 text-center">SEO, affiliates, and influencer marketing.</div>
+        </div>
+        <div class="bg-white/90 rounded-xl shadow-lg p-6 flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+          <span class="text-4xl mb-2">📈</span>
+          <div class="font-bold mb-1">Growth</div>
+          <div class="text-gray-600 text-center">Analytics and ongoing support.</div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -145,6 +184,7 @@ import 'aos/dist/aos.css'
 import lottie from 'lottie-web'
 
 const slotContainer = ref(null)
+const lottieCasino = ref(null)
 
 onMounted(() => {
   AOS.init()
@@ -155,22 +195,49 @@ onMounted(() => {
     autoplay: true,
     path: 'https://lottie.host/1b1e1e1e-1b1e-1b1e-1b1e-1b1e1b1e1b1e/slot-machine.json' // Replace with actual Lottie URL
   })
+  lottie.loadAnimation({
+    container: lottieCasino.value,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets2.lottiefiles.com/packages/lf20_kyu7xb1v.json'
+  })
 })
 
 const symbols = ['🍒', '🍋', '🔔', '7️⃣', '🍀', '💎']
+const funMessages = [
+  'Luck is just a spin away!',
+  'Feeling lucky today?',
+  'Big wins start with bold moves!',
+  'The reels are hot!',
+  'Try again, fortune favors the brave!',
+  'Jackpot dreams!',
+  'Spin to win!',
+  'May the odds be ever in your favor!',
+  'Every spin is a new chance!',
+  'Go for gold!'
+]
 const slots = ref(['🍒', '🍋', '🔔'])
 const spinning = ref(false)
 const result = ref('')
+const showConfetti = ref(false)
+const confettiContainer = ref(null)
+const jackpot = ref(false)
+const funMessage = ref('')
 
 function getColor(symbol) {
-  if (symbol === '7️⃣') return 'text-red-600'
-  if (symbol === '💎') return 'text-blue-600'
+  if (symbol === '7️⃣') return 'text-red-600 drop-shadow-lg'
+  if (symbol === '💎') return 'text-blue-600 drop-shadow-lg'
+  if (symbol === '🍀') return 'text-green-600 drop-shadow-lg'
   return 'text-purple-900'
 }
 
 function spin() {
   spinning.value = true
   result.value = ''
+  showConfetti.value = false
+  jackpot.value = false
+  funMessage.value = funMessages[Math.floor(Math.random() * funMessages.length)]
   let spins = 0
   const interval = setInterval(() => {
     slots.value = [
@@ -179,19 +246,43 @@ function spin() {
       symbols[Math.floor(Math.random() * symbols.length)],
     ]
     spins++
-    if (spins > 15) {
+    if (spins > 18) {
       clearInterval(interval)
       spinning.value = false
       if (slots.value[0] === slots.value[1] && slots.value[1] === slots.value[2]) {
         result.value = '🎉 Jackpot! 🎉'
+        jackpot.value = true
+        showConfetti.value = true
+        setTimeout(() => {
+          if (confettiContainer.value) {
+            lottie.loadAnimation({
+              container: confettiContainer.value,
+              renderer: 'svg',
+              loop: false,
+              autoplay: true,
+              path: 'https://assets2.lottiefiles.com/packages/lf20_jzj8g3js.json' // Confetti Lottie
+            })
+          }
+        }, 100)
+        setTimeout(() => showConfetti.value = false, 3000)
       } else {
         result.value = 'Try again!'
       }
     }
-  }, 100)
+  }, 90)
 }
 </script>
 
-<style scoped>
-/* Add custom styles or use Tailwind classes */
+<style>
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-8px); }
+  80% { transform: translateX(8px); }
+  100% { transform: translateX(0); }
+}
+.animate-shake {
+  animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
 </style>
