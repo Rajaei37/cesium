@@ -182,6 +182,7 @@ import { onMounted, ref } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import lottie from 'lottie-web'
+import MiniSlotMachine from '@/Components/MiniSlotMachine.vue'
 
 const slotContainer = ref(null)
 const lottieCasino = ref(null)
@@ -193,14 +194,14 @@ onMounted(() => {
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'https://lottie.host/1b1e1e1e-1b1e-1b1e-1b1e-1b1e1b1e1b1e/slot-machine.json' // Replace with actual Lottie URL
+    path: '/lottie/slot-machine.json' // Replace with actual Lottie URL
   })
   lottie.loadAnimation({
     container: lottieCasino.value,
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'https://assets2.lottiefiles.com/packages/lf20_kyu7xb1v.json'
+    path: '/lottie/slot-machine.json'
   })
 })
 
