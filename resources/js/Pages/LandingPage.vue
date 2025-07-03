@@ -24,13 +24,13 @@
         <p class="text-xl text-gray-200 mb-8 max-w-xl">
           The all-in-one marketing and launchpad solution for online casinos, betting, and gambling platforms. From branding to player acquisition, we help you win big!
         </p>
-        <a href="#contact" class="inline-block px-10 py-4 bg-yellow-400 text-purple-900 rounded-full shadow-lg text-lg font-bold hover:bg-yellow-300 transition animate-bounce">
+        <a href="#slot-machine" class="inline-block px-10 py-4 bg-yellow-400 text-purple-900 rounded-full shadow-lg text-lg font-bold hover:bg-yellow-300 transition animate-bounce">
           Get Started
         </a>
       </div>
       <div class="flex-1 flex justify-center z-10" data-aos="fade-left">
-        <!-- Lottie Casino Animation -->
-        <div ref="lottieCasino" class="w-80 h-80 mx-auto"></div>
+        <!-- Lottie Animation: Man working on computer -->
+        <div ref="lottieMan" class="w-80 h-80"></div>
       </div>
     </section>
 
@@ -116,9 +116,9 @@
       style="width: 300px; height: 300px; background: transparent;">
     </model-viewer>
 
-    <!-- Enhanced Slot Machine Section -->
-    <section class="w-full flex flex-col items-center justify-center py-16" style="background: radial-gradient(circle at 50% 30%, #fff3 0%, #0000 70%);">
-      <h2 class="text-4xl font-extrabold text-yellow-300 mb-6 font-serif animate-pulse">Try Your Luck!</h2>
+    <!-- Slot Machine Section -->
+    <section id="slot-machine" class="w-full flex flex-col items-center justify-center py-16" style="background: radial-gradient(circle at 50% 30%, #fff3 0%, #0000 70%);">
+      <h2 class="text-4xl font-extrabold text-yellow-300 mb-6 font-serif animate-pulse">Try Your Luck for a Discount!</h2>
       <div class="relative flex flex-col items-center">
         <!-- Confetti animation (Lottie) -->
         <div v-if="showConfetti" ref="confettiContainer" class="absolute inset-0 pointer-events-none z-10"></div>
@@ -136,10 +136,13 @@
             class="px-10 py-4 bg-yellow-400 text-purple-900 rounded-full font-bold text-xl shadow-lg hover:bg-yellow-300 transition animate-bounce"
             :disabled="spinning"
           >
-            {{ spinning ? 'Spinning...' : 'Spin' }}
+            {{ spinning ? 'Spinning...' : 'Spin for Discount' }}
           </button>
           <div v-if="result" class="mt-4 text-lg font-bold text-center" :class="jackpot ? 'text-green-600 animate-pulse' : 'text-purple-900'">
             {{ result }}
+          </div>
+          <div v-if="discount" class="mt-2 text-2xl font-bold text-green-700">
+            🎁 Your Discount Code: <span class="underline">{{ discount }}</span>
           </div>
           <div v-if="funMessage" class="mt-2 text-sm text-gray-500 italic">{{ funMessage }}</div>
         </div>
@@ -186,6 +189,8 @@ import MiniSlotMachine from '@/Components/MiniSlotMachine.vue'
 
 const slotContainer = ref(null)
 const lottieCasino = ref(null)
+const lottieMan = ref(null)
+const confettiContainer = ref(null)
 
 onMounted(() => {
   AOS.init()
@@ -202,6 +207,13 @@ onMounted(() => {
     loop: true,
     autoplay: true,
     path: '/lottie/slot-machine.json'
+  })
+  lottie.loadAnimation({
+    container: lottieMan.value,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets2.lottiefiles.com/packages/lf20_2LdLki.json' // Example: man working on computer
   })
 })
 
@@ -222,9 +234,9 @@ const slots = ref(['🍒', '🍋', '🔔'])
 const spinning = ref(false)
 const result = ref('')
 const showConfetti = ref(false)
-const confettiContainer = ref(null)
 const jackpot = ref(false)
 const funMessage = ref('')
+const discount = ref('')
 
 function getColor(symbol) {
   if (symbol === '7️⃣') return 'text-red-600 drop-shadow-lg'
@@ -238,6 +250,7 @@ function spin() {
   result.value = ''
   showConfetti.value = false
   jackpot.value = false
+  discount.value = ''
   funMessage.value = funMessages[Math.floor(Math.random() * funMessages.length)]
   let spins = 0
   const interval = setInterval(() => {
@@ -250,10 +263,13 @@ function spin() {
     if (spins > 18) {
       clearInterval(interval)
       spinning.value = false
+      // Discount logic
       if (slots.value[0] === slots.value[1] && slots.value[1] === slots.value[2]) {
         result.value = '🎉 Jackpot! 🎉'
         jackpot.value = true
         showConfetti.value = true
+        // Big win discount
+        discount.value = 'CASINO50' // 50% off
         setTimeout(() => {
           if (confettiContainer.value) {
             lottie.loadAnimation({
@@ -261,13 +277,17 @@ function spin() {
               renderer: 'svg',
               loop: false,
               autoplay: true,
-              path: 'https://assets2.lottiefiles.com/packages/lf20_jzj8g3js.json' // Confetti Lottie
+              path: '/lottie/slot-machine.json'
             })
           }
         }, 100)
         setTimeout(() => showConfetti.value = false, 3000)
+      } else if (slots.value[0] === slots.value[1] || slots.value[1] === slots.value[2] || slots.value[0] === slots.value[2]) {
+        result.value = 'Nice! You got a match!'
+        discount.value = 'CASINO20' // 20% off
       } else {
         result.value = 'Try again!'
+        discount.value = 'CASINO10' // 10% off
       }
     }
   }, 90)

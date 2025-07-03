@@ -1,23 +1,23 @@
 {
-  "_index.esm-D7sE0JfL.js": {
-    "file": "assets/index.esm-D7sE0JfL.js",
+  "_index.esm-CsEtzn-v.js": {
+    "file": "assets/index.esm-CsEtzn-v.js",
     "name": "index.esm",
     "imports": [
       "resources/js/app.js"
     ]
   },
   "resources/js/Pages/Dashboard.vue": {
-    "file": "assets/Dashboard-BQs6W2A-.js",
+    "file": "assets/Dashboard-BguIz_Hc.js",
     "name": "Dashboard",
     "src": "resources/js/Pages/Dashboard.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_index.esm-D7sE0JfL.js"
+      "_index.esm-CsEtzn-v.js"
     ]
   },
   "resources/js/Pages/LandingPage.vue": {
-    "file": "assets/LandingPage-04pH2V3O.js",
+    "file": "assets/LandingPage-BnIGfRos.js",
     "name": "LandingPage",
     "src": "resources/js/Pages/LandingPage.vue",
     "isDynamicEntry": true,
@@ -29,17 +29,17 @@
     ]
   },
   "resources/js/Pages/Welcome.vue": {
-    "file": "assets/Welcome-CL2_SFND.js",
+    "file": "assets/Welcome-Ds93VYZT.js",
     "name": "Welcome",
     "src": "resources/js/Pages/Welcome.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_index.esm-D7sE0JfL.js",
+      "_index.esm-CsEtzn-v.js",
       "resources/js/app.js"
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-DlyYTuAb.js",
+    "file": "assets/app-Ck7joQ_O.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -49,7 +49,7 @@
       "resources/js/Pages/Welcome.vue"
     ],
     "css": [
-      "assets/app-lWfbaeeK.css"
+      "assets/app-DUAJLZxr.css"
     ]
   }
 }
