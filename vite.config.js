@@ -14,9 +14,6 @@ export default defineConfig({
                     base: null,
                     includeAbsolute: false,
                 },
-                compilerOptions: {
-                    isCustomElement: tag => tag === 'model-viewer'
-                }
             },
         }),
     ],
@@ -26,3 +23,4 @@ export default defineConfig({
         },
     },
 });
+
