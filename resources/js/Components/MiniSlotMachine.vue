@@ -1,137 +1,550 @@
+<template>
+  <div 
+    class="w-full flex flex-col items-center justify-center py-16" 
+    id="slot-machine"
+    role="region"
+    aria-labelledby="slot-machine-title"
+  >
+    <h2 
+      id="slot-machine-title"
+      class="text-4xl font-extrabold text-[#facb24] mb-6 font-serif animate-pulse text-center"
+    >
+      Try Your Luck for a Discount!
+    </h2>
+    
+    <div class="relative flex flex-col items-center">
+      <!-- Confetti Container -->
+      <div 
+        v-if="showConfetti" 
+        ref="confettiContainer" 
+        class="absolute inset-0 pointer-events-none z-10"
+        aria-hidden="true"
+      ></div>
+      
+      <!-- Slot Machine Container -->
+      <div
+        :class="[
+          'bg-white/90 rounded-2xl shadow-2xl p-8 flex flex-col items-center border-4 relative',
+          spinning ? 'border-[#facb24] animate-shake' : 'border-[#362869]',
+          jackpot ? 'ring-4 ring-green-400 ring-offset-2' : ''
+        ]"
+        style="width: 340px; min-height: 220px; transition: box-shadow 0.3s;"
+        role="application"
+        aria-label="Slot machine game"
+      >
+        <!-- Loading overlay for spinning -->
+        <div 
+          v-if="spinning"
+          class="absolute inset-0 bg-white/20 rounded-2xl flex items-center justify-center z-5"
+          aria-hidden="true"
+        >
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-[#362869]"></div>
+        </div>
+
+        <!-- Slot Display -->
+        <div 
+          class="flex space-x-4 text-6xl font-mono mb-4 select-none"
+          role="img"
+          :aria-label="`Current slots: ${slots.join(', ')}`"
+        >
+          <span 
+            v-for="(symbol, i) in slots" 
+            :key="i" 
+            :class="[
+              'transition-transform duration-300 flex items-center justify-center w-16 h-16 rounded-lg',
+              getColor(symbol),
+              spinning ? 'animate-bounce' : ''
+            ]"
+            :style="{ animationDelay: `${i * 0.1}s` }"
+          >
+            {{ symbol }}
+          </span>
+        </div>
+
+        <!-- Spin Button -->
+        <button
+          @click="spin"
+          class="px-10 py-4 bg-[#facb24] text-[#362869] rounded-full font-bold text-xl shadow-lg hover:bg-yellow-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#facb24] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          :disabled="spinning || cooldown"
+          :aria-label="spinning ? 'Spinning in progress' : 'Spin the slot machine'"
+        >
+          {{ getButtonText() }}
+        </button>
+
+        <!-- Cooldown indicator -->
+        <div 
+          v-if="cooldown && !spinning"
+          class="mt-2 text-sm text-gray-500"
+          role="status"
+          aria-live="polite"
+        >
+          Wait {{ cooldownTime }}s before next spin
+        </div>
+
+        <!-- Result Display -->
+        <div 
+          v-if="result" 
+          class="mt-4 text-lg font-bold text-center transition-all duration-300" 
+          :class="jackpot ? 'text-green-600 animate-pulse' : 'text-[#362869]'"
+          role="status"
+          aria-live="assertive"
+        >
+          {{ result }}
+        </div>
+
+        <!-- Discount Code Display -->
+        <div 
+          v-if="discount" 
+          class="mt-2 text-2xl font-bold text-green-700 text-center"
+          role="status"
+          aria-live="assertive"
+        >
+          🎁 Your Discount Code: 
+          <span 
+            class="underline cursor-pointer hover:text-green-800 transition-colors"
+            @click="copyDiscountCode"
+            :title="copied ? 'Copied!' : 'Click to copy'"
+          >
+            {{ discount }}
+          </span>
+          <span v-if="copied" class="text-sm text-green-600 ml-2">✓ Copied!</span>
+        </div>
+
+        <!-- Fun Message -->
+        <div 
+          v-if="funMessage" 
+          class="mt-2 text-sm text-gray-500 italic text-center max-w-xs"
+        >
+          {{ funMessage }}
+        </div>
+
+        <!-- Game Stats (optional) -->
+        <div 
+          v-if="showStats && gameStats.totalSpins > 0"
+          class="mt-4 text-xs text-gray-400 text-center border-t pt-3 w-full"
+        >
+          <div class="flex justify-between">
+            <span>Spins: {{ gameStats.totalSpins }}</span>
+            <span>Wins: {{ gameStats.wins }}</span>
+            <span>Win Rate: {{ winRate }}%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instructions -->
+      <div class="mt-6 text-center text-sm text-gray-600 max-w-md">
+        <p>🎰 Match 3 symbols for JACKPOT (50% off)</p>
+        <p>🎯 Match 2 symbols for 20% off</p>
+        <p>🍀 Any spin gets you 10% off</p>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script setup>
-import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import lottie from 'lottie-web'
 
-const props = defineProps({
-    show: {
-        type: Boolean,
-        default: false,
-    },
-    maxWidth: {
-        type: String,
-        default: '2xl',
-    },
-    closeable: {
-        type: Boolean,
-        default: true,
-    },
-});
+// Emits
+const emit = defineEmits(['discount-won', 'spin-complete'])
 
-const emit = defineEmits(['close']);
-const dialog = ref();
-const showSlot = ref(props.show);
+// State
+const slots = ref(['🍒', '🍋', '🔔'])
+const spinning = ref(false)
+const result = ref('')
+const showConfetti = ref(false)
+const jackpot = ref(false)
+const funMessage = ref('')
+const discount = ref('')
+const confettiContainer = ref(null)
+const copied = ref(false)
+const cooldown = ref(false)
+const cooldownTime = ref(0)
+const showStats = ref(false)
 
-watch(
-    () => props.show,
-    () => {
-        if (props.show) {
-            document.body.style.overflow = 'hidden';
-            showSlot.value = true;
+// Game statistics
+const gameStats = ref({
+  totalSpins: 0,
+  wins: 0,
+  jackpots: 0,
+  lastWin: null
+})
 
-            dialog.value?.showModal();
-        } else {
-            document.body.style.overflow = '';
+// Constants
+const symbols = ['🍒', '🍋', '🔔', '7️⃣', '🍀', '💎']
+const funMessages = [
+  'Luck is just a spin away!',
+  'Feeling lucky today?',
+  'Big wins start with bold moves!',
+  'The reels are hot!',
+  'Try again, fortune favors the brave!',
+  'Jackpot dreams!',
+  'Spin to win!',
+  'May the odds be ever in your favor!',
+  'Every spin is a new chance!',
+  'Go for gold!'
+]
 
-            setTimeout(() => {
-                dialog.value?.close();
-                showSlot.value = false;
-            }, 200);
-        }
-    },
-);
+const discountCodes = {
+  jackpot: 'CASINO50',
+  match: 'CASINO20',
+  consolation: 'CASINO10'
+}
 
-const close = () => {
-    if (props.closeable) {
-        emit('close');
+// Computed
+const winRate = computed(() => {
+  if (gameStats.value.totalSpins === 0) return 0
+  return Math.round((gameStats.value.wins / gameStats.value.totalSpins) * 100)
+})
+
+// Methods
+const getColor = (symbol) => {
+  const colors = {
+    '7️⃣': 'text-red-600 drop-shadow-lg bg-red-50',
+    '💎': 'text-blue-600 drop-shadow-lg bg-blue-50',
+    '🍀': 'text-green-600 drop-shadow-lg bg-green-50',
+    '🍒': 'text-red-500 bg-red-50',
+    '🍋': 'text-yellow-500 bg-yellow-50',
+    '🔔': 'text-gray-600 bg-gray-50'
+  }
+  return colors[symbol] || 'text-[#362869] bg-gray-50'
+}
+
+const getButtonText = () => {
+  if (spinning.value) return 'Spinning...'
+  if (cooldown.value) return `Wait ${cooldownTime.value}s`
+  return 'Spin for Discount'
+}
+
+const copyDiscountCode = async () => {
+  if (!discount.value) return
+  
+  try {
+    await navigator.clipboard.writeText(discount.value)
+    copied.value = true
+    setTimeout(() => {
+      copied.value = false
+    }, 2000)
+  } catch (error) {
+    console.warn('Failed to copy discount code:', error)
+    // Fallback for older browsers
+    const textArea = document.createElement('textarea')
+    textArea.value = discount.value
+    document.body.appendChild(textArea)
+    textArea.select()
+    document.execCommand('copy')
+    document.body.removeChild(textArea)
+    copied.value = true
+    setTimeout(() => {
+      copied.value = false
+    }, 2000)
+  }
+}
+
+const startCooldown = () => {
+  cooldown.value = true
+  cooldownTime.value = 3
+  
+  const interval = setInterval(() => {
+    cooldownTime.value--
+    if (cooldownTime.value <= 0) {
+      cooldown.value = false
+      clearInterval(interval)
     }
-};
+  }, 1000)
+}
 
-const closeOnEscape = (e) => {
-    if (e.key === 'Escape') {
-        e.preventDefault();
+const updateGameStats = (isWin, isJackpot = false) => {
+  gameStats.value.totalSpins++
+  if (isWin) {
+    gameStats.value.wins++
+    gameStats.value.lastWin = new Date()
+  }
+  if (isJackpot) {
+    gameStats.value.jackpots++
+  }
+  
+  // Save to localStorage
+  try {
+    localStorage.setItem('slotMachineStats', JSON.stringify(gameStats.value))
+  } catch (error) {
+    console.warn('Failed to save game stats:', error)
+  }
+}
 
-        if (props.show) {
-            close();
-        }
+const loadGameStats = () => {
+  try {
+    const saved = localStorage.getItem('slotMachineStats')
+    if (saved) {
+      gameStats.value = { ...gameStats.value, ...JSON.parse(saved) }
     }
-};
+  } catch (error) {
+    console.warn('Failed to load game stats:', error)
+  }
+}
 
-onMounted(() => document.addEventListener('keydown', closeOnEscape));
+const spin = () => {
+  if (spinning.value || cooldown.value) return
+  
+  spinning.value = true
+  result.value = ''
+  showConfetti.value = false
+  jackpot.value = false
+  discount.value = ''
+  copied.value = false
+  funMessage.value = funMessages[Math.floor(Math.random() * funMessages.length)]
+
+  let spins = 0
+  const spinDuration = 20 + Math.floor(Math.random() * 10) // 20-30 spins
+  
+  const interval = setInterval(() => {
+    slots.value = [
+      symbols[Math.floor(Math.random() * symbols.length)],
+      symbols[Math.floor(Math.random() * symbols.length)],
+      symbols[Math.floor(Math.random() * symbols.length)],
+    ]
+    spins++
+
+    if (spins > spinDuration) {
+      clearInterval(interval)
+      spinning.value = false
+      evaluateResult()
+      startCooldown()
+    }
+  }, 90)
+}
+
+const evaluateResult = () => {
+  const [first, second, third] = slots.value
+  let isWin = false
+  let isJackpotWin = false
+  
+  if (first === second && second === third) {
+    // Jackpot - all three match
+    result.value = '🎉 JACKPOT! 🎉'
+    jackpot.value = true
+    showConfetti.value = true
+    discount.value = discountCodes.jackpot
+    isWin = true
+    isJackpotWin = true
+    
+    // Show confetti animation
+    setTimeout(() => {
+      if (confettiContainer.value) {
+        try {
+          lottie.loadAnimation({
+            container: confettiContainer.value,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: '/assets/confetti.json'
+          })
+        } catch (error) {
+          console.warn('Confetti animation failed:', error)
+        }
+      }
+    }, 100)
+
+    setTimeout(() => {
+      showConfetti.value = false
+    }, 3000)
+    
+  } else if (first === second || second === third || first === third) {
+    // Partial match - two symbols match
+    result.value = 'Nice! You got a match! 🎯'
+    discount.value = discountCodes.match
+    isWin = true
+    
+  } else {
+    // No match - consolation prize
+    result.value = 'Try again! 🍀'
+    discount.value = discountCodes.consolation
+  }
+  
+  // Update statistics
+  updateGameStats(isWin, isJackpotWin)
+  
+  // Emit events
+  emit('discount-won', {
+    code: discount.value,
+    type: isJackpotWin ? 'jackpot' : isWin ? 'match' : 'consolation',
+    slots: [...slots.value]
+  })
+  
+  emit('spin-complete', {
+    result: result.value,
+    discount: discount.value,
+    isWin,
+    isJackpot: isJackpotWin,
+    stats: { ...gameStats.value }
+  })
+}
+
+// Lifecycle
+onMounted(() => {
+  loadGameStats()
+  
+  // Show stats after first spin
+  if (gameStats.value.totalSpins > 0) {
+    showStats.value = true
+  }
+})
 
 onUnmounted(() => {
-    document.removeEventListener('keydown', closeOnEscape);
+  // Clean up any running intervals
+  if (showConfetti.value) {
+    showConfetti.value = false
+  }
+})
 
-    document.body.style.overflow = '';
-});
-
-const maxWidthClass = computed(() => {
-    return {
-        sm: 'sm:max-w-sm',
-        md: 'sm:max-w-md',
-        lg: 'sm:max-w-lg',
-        xl: 'sm:max-w-xl',
-        '2xl': 'sm:max-w-2xl',
-    }[props.maxWidth];
-});
-
-const lottieCasino = ref(null);
-
-onMounted(() => {
-    if (lottieCasino.value) {
-        lottie.loadAnimation({
-            container: lottieCasino.value,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: '/build/assets/Animation1751499581625.json'
-        });
-    }
-});
+// Expose methods for parent component
+defineExpose({
+  spin,
+  resetStats: () => {
+    gameStats.value = { totalSpins: 0, wins: 0, jackpots: 0, lastWin: null }
+    localStorage.removeItem('slotMachineStats')
+    showStats.value = false
+  }
+})
 </script>
 
-<template>
-    <dialog
-        class="z-50 m-0 min-h-full min-w-full overflow-y-auto bg-transparent backdrop:bg-transparent"
-        ref="dialog"
-    >
-        <div
-            class="fixed inset-0 z-50 overflow-y-auto px-4 py-6 sm:px-0"
-            scroll-region
-        >
-            <Transition
-                enter-active-class="ease-out duration-300"
-                enter-from-class="opacity-0"
-                enter-to-class="opacity-100"
-                leave-active-class="ease-in duration-200"
-                leave-from-class="opacity-100"
-                leave-to-class="opacity-0"
-            >
-                <div
-                    v-show="show"
-                    class="fixed inset-0 transform transition-all"
-                    @click="close"
-                >
-                    <div
-                        class="absolute inset-0 bg-gray-500 opacity-75"
-                    />
-                </div>
-            </Transition>
+<style scoped>
+/* Shake animation for spinning */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-8px); }
+  80% { transform: translateX(8px); }
+  100% { transform: translateX(0); }
+}
 
-            <Transition
-                enter-active-class="ease-out duration-300"
-                enter-from-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                enter-to-class="opacity-100 translate-y-0 sm:scale-100"
-                leave-active-class="ease-in duration-200"
-                leave-from-class="opacity-100 translate-y-0 sm:scale-100"
-                leave-to-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            >
-                <div
-                    v-show="show"
-                    class="mb-6 transform overflow-hidden rounded-lg bg-white shadow-xl transition-all sm:mx-auto sm:w-full"
-                    :class="maxWidthClass"
-                >
-                    <slot v-if="showSlot" />
-                </div>
-            </Transition>
-        </div>
-    </dialog>
-</template>
+.animate-shake {
+  animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Bounce animation for slots */
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Pulse animation for title and jackpot */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Spin animation for loading */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Enhanced button effects */
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .animate-shake,
+  .animate-bounce,
+  .animate-pulse,
+  .animate-spin {
+    animation: none;
+  }
+  
+  .transition-all,
+  .transition-colors,
+  .transition-transform {
+    transition: none;
+  }
+  
+  button:hover:not(:disabled) {
+    transform: none;
+  }
+}
+
+/* Focus styles */
+button:focus-visible {
+  outline: 2px solid #362869;
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .px-10 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .py-4 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+/* Custom scrollbar for stats */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+</style>
+

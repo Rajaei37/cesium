@@ -24,7 +24,10 @@
         "@inertiajs/inertia": "^0.11.1",
         "@inertiajs/inertia-vue3": "^0.6.0",
         "aos": "^2.3.4",
+        "gsap": "^3.13.0",
         "lottie-web": "^5.13.0",
+        "scrollreveal": "^4.0.9",
+        "typed.js": "^2.1.0",
         "vue": "^3.5.17"
     }
 }
