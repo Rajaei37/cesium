@@ -147,8 +147,7 @@ const props = defineProps({
 })
 
 // Emits
-const emit = defineEmits(['click', 'read-more'])
-
+const emit = defineEmits(["click", "read-more"])
 // State
 const imageError = ref(false)
 
@@ -290,4 +289,5 @@ article:focus-visible {
   transform: translateX(0.25rem);
 }
 </style>
+
 

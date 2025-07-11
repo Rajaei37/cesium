@@ -27,7 +27,7 @@
     <div 
       ref="counterRef" 
       class="text-3xl font-extrabold text-[#facb24] mb-1"
-      :aria-live="isAnimating ? 'polite' : 'off'"
+     :aria-live="isAnimating ? 'polite' : 'off'"
       :aria-label="`${formattedValue} ${label}`"
     >
       {{ displayValue }}
@@ -43,7 +43,7 @@
     <!-- Loading indicator during animation -->
     <div 
       v-if="isAnimating && showLoadingIndicator"
-      class="mt-2 w-8 h-1 bg-[#facb24]/30 rounded-full mx-auto overflow-hidden"
+      class="mt-2 w-8 h-2 bg-[#facb24]/30 rounded-full mx-auto overflow-hidden"
       aria-hidden="true"
     >
       <div class="h-full bg-[#facb24] rounded-full animate-pulse"></div>
@@ -88,13 +88,12 @@ const props = defineProps({
 })
 
 // Emits
-const emit = defineEmits(['animation-complete'])
-
+const emit = defineEmits(["animation-complete"])
 // State
 const counterRef = ref(null)
 const imageError = ref(false)
 const isAnimating = ref(false)
-const displayValue = ref('0')
+const displayValue = ref("0")
 const currentValue = ref(0)
 
 // Computed
@@ -246,4 +245,5 @@ div:focus-visible {
   border-radius: 0.5rem;
 }
 </style>
+
 

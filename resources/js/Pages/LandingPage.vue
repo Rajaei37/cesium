@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-100 font-sans antialiased">
     <!-- Hero Section -->
-    <section class="relative bg-primary-dark text-white py-20 overflow-hidden" :style="{ backgroundImage: `url(${heroBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
+    <section class="relative bg-primary-dark text-white py-20 overflow-hidden" :style="{ backgroundImage: `url(${heroBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }" >
       <div class="absolute inset-0 bg-gradient-to-r from-primary to-primary-light opacity-90"></div>
       <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
@@ -320,3 +320,5 @@ onMounted(() => {
   /* animation: fade-in-up 0.8s ease-out forwards; */
 }
 </style>
+
+
