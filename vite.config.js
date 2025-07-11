@@ -17,8 +17,9 @@ export default defineConfig({
             },
         }),
     ],
-    base: process.env.APP_URL ? new URL(process.env.APP_URL).pathname + 
-          (new URL(process.env.APP_URL).pathname.endsWith('/') ? '' : '/') + 'build/' : '/build/',
+    base: 
+        process.env.APP_URL ? new URL(process.env.APP_URL).pathname + 
+        (new URL(process.env.APP_URL).pathname.endsWith("/") ? "" : "/") + "build/" : "/build/",
     resolve: {
         alias: {
             '@': '/resources/js',
