@@ -1,0 +1,6 @@
+[11-Jul-2025 21:27:29 UTC] PHP Fatal error:  Uncaught BadMethodCallException: Method Illuminate\Foundation\Application::configure does not exist. in /home/odingjyi/public_html/cesium/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:86
+Stack trace:
+#0 /home/odingjyi/public_html/cesium/bootstrap/app.php(7): Illuminate\Foundation\Application::__callStatic()
+#1 /home/odingjyi/public_html/cesium/public/index.php(18): require_once('/home/odingjyi/...')
+#2 {main}
+  thrown in /home/odingjyi/public_html/cesium/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php on line 86

@@ -3,9 +3,10 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
+    base: '/cesium/build/', // ✅ This ensures all URLs are prefixed correctly
     plugins: [
         laravel({
-            input: ["resources/css/app.css", "resources/js/app.js"],
+            input: 'resources/js/app.js',
             refresh: true,
         }),
         vue({
@@ -17,13 +18,9 @@ export default defineConfig({
             },
         }),
     ],
-    base: 
-        process.env.APP_URL ? new URL(process.env.APP_URL).pathname + 
-        (new URL(process.env.APP_URL).pathname.endsWith("/") ? "" : "/") + "build/" : "/build/",
     resolve: {
         alias: {
             '@': '/resources/js',
         },
     },
 });
-
