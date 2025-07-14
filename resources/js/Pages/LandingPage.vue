@@ -258,10 +258,10 @@
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-4 animate-fade-in-up">
-            Let\"s Build Your Winning Brand
+            Let's Build Your Winning Brand
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
-            Ready to take your iGaming business to the next level? Let\"s discuss your growth strategy.
+            Ready to take your iGaming business to the next level? Let's discuss your growth strategy.
           </p>
         </div>
         <form @submit.prevent="submitContactForm" class="max-w-2xl mx-auto bg-cesium-light-gray p-10 rounded-2xl shadow-xl animate-fade-in-up">
