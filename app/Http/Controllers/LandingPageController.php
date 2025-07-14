@@ -41,10 +41,32 @@ class LandingPageController extends Controller
             ],
         ];
 
+        $testimonials = [
+            [
+                'name' => 'Alexandra', 
+                'photo' => '/assets/video-testimonials/alexandra-thumbnail.jpg',
+                'quote' => 'Cesium Marketing transformed our player acquisition strategy. Their data-driven approach is unmatched!',
+                'video_url' => 'https://www.youtube.com/watch?v=your-video-id-alexandra' // Placeholder
+            ],
+            [
+                'name' => 'James Mitchell',
+                'photo' => '/assets/testimonials/james-mitchell.jpg',
+                'quote' => 'Our LTV has significantly increased thanks to Cesium Marketing. Highly recommend their services.',
+            ],
+        ];
+
+        $trustBadges = [
+            ['src' => '/assets/clients/royal-vegas-logo.png', 'alt' => 'Royal Vegas Logo'],
+            ['src' => '/assets/clients/diamond-spins-logo.png', 'alt' => 'Diamond Spins Logo'],
+            ['src' => '/assets/clients/lucky-strike-logo.png', 'alt' => 'Lucky Strike Logo'],
+        ];
+
         return Inertia::render(
             'LandingPage',
             [
                 'features' => $features,
+                'testimonials' => $testimonials,
+                'trustBadges' => $trustBadges,
             ]
         );
     }
