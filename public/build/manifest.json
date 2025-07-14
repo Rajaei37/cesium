@@ -3,62 +3,62 @@
     "file": "assets/_plugin-vue_export-helper-DlAUqK2U.js",
     "name": "_plugin-vue_export-helper"
   },
-  "_index.esm-BPI7aVrn.js": {
-    "file": "assets/index.esm-BPI7aVrn.js",
+  "_index.esm-BgrAXz40.js": {
+    "file": "assets/index.esm-BgrAXz40.js",
     "name": "index.esm",
     "imports": [
       "resources/js/app.js"
     ]
   },
   "resources/css/app.css": {
-    "file": "assets/app-ezQZwwh3.css",
+    "file": "assets/app-C4aRgfp8.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/Pages/Dashboard.vue": {
-    "file": "assets/Dashboard-CyVc65OS.js",
+    "file": "assets/Dashboard-BGS69a-N.js",
     "name": "Dashboard",
     "src": "resources/js/Pages/Dashboard.vue",
     "isDynamicEntry": true,
     "imports": [
       "__plugin-vue_export-helper-DlAUqK2U.js",
       "resources/js/app.js",
-      "_index.esm-BPI7aVrn.js"
+      "_index.esm-BgrAXz40.js"
     ],
     "css": [
-      "assets/app-ezQZwwh3.css"
+      "assets/app-C4aRgfp8.css"
     ]
   },
   "resources/js/Pages/LandingPage.vue": {
-    "file": "assets/LandingPage-bukP1ykE.js",
+    "file": "assets/LandingPage-Dgs-6r-n.js",
     "name": "LandingPage",
     "src": "resources/js/Pages/LandingPage.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_index.esm-BPI7aVrn.js",
+      "_index.esm-BgrAXz40.js",
       "__plugin-vue_export-helper-DlAUqK2U.js"
     ],
     "css": [
-      "assets/LandingPage-CQBoYJtr.css",
-      "assets/app-ezQZwwh3.css"
+      "assets/LandingPage-Cty6Ba0n.css",
+      "assets/app-C4aRgfp8.css"
     ]
   },
   "resources/js/Pages/Welcome.vue": {
-    "file": "assets/Welcome-BaoVtO0r.js",
+    "file": "assets/Welcome-BzsD4UUC.js",
     "name": "Welcome",
     "src": "resources/js/Pages/Welcome.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_index.esm-BPI7aVrn.js",
+      "_index.esm-BgrAXz40.js",
       "resources/js/app.js"
     ],
     "css": [
-      "assets/app-ezQZwwh3.css"
+      "assets/app-C4aRgfp8.css"
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-VDo3CMNV.js",
+    "file": "assets/app-CFrhIHeQ.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -68,7 +68,7 @@
       "resources/js/Pages/Welcome.vue"
     ],
     "css": [
-      "assets/app-ezQZwwh3.css"
+      "assets/app-C4aRgfp8.css"
     ]
   }
 }

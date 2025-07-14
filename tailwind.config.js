@@ -13,10 +13,29 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+                // New Cesium brand colors
+                'cesium-purple': '#362869',
+                'cesium-yellow': '#facb24',
+                'cesium-light-gray': '#f2f2f2',
+                
+                // Semantic color mappings
+                'primary': '#362869',
+                'secondary': '#facb24',
+                'accent': '#facb24',
+                'neutral': '#f2f2f2',
+                
+                // Additional shades for consistency
+                'primary-light': '#4a3b82',
+                'primary-dark': '#2a1d4f',
+                'secondary-light': '#fdd835',
+                'secondary-dark': '#e0b41e',
             },
         },
     },
 
     plugins: [forms],
 };
+

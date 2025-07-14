@@ -1,3 +1,280 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom CSS Variables for Cesium Brand */
+:root {
+  --cesium-purple: #362869;
+  --cesium-yellow: #facb24;
+  --cesium-light-gray: #f2f2f2;
+  --cesium-purple-light: #4a3b82;
+  --cesium-purple-dark: #2a1d4f;
+  --cesium-yellow-light: #fdd835;
+  --cesium-yellow-dark: #e0b41e;
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Figtree', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Enhanced focus styles for accessibility */
+  *:focus {
+    outline: 2px solid var(--cesium-yellow);
+    outline-offset: 2px;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--cesium-light-gray);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--cesium-purple);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--cesium-purple-dark);
+  }
+}
+
+/* Component Styles */
+@layer components {
+  /* Enhanced Button Styles */
+  .btn-primary {
+    @apply bg-secondary text-primary font-bold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-secondary text-secondary font-bold py-4 px-8 rounded-full hover:bg-secondary hover:text-primary transition-all duration-300;
+  }
+  
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-8 border border-gray-100;
+  }
+  
+  .card-dark {
+    @apply bg-primary-light rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-8 border border-primary-light;
+  }
+  
+  /* Form Styles */
+  .form-input {
+    @apply w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300;
+  }
+  
+  .form-textarea {
+    @apply w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300 resize-none;
+  }
+  
+  /* Section Styles */
+  .section-padding {
+    @apply py-20;
+  }
+  
+  .section-title {
+    @apply text-4xl lg:text-5xl font-extrabold mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-xl max-w-3xl mx-auto;
+  }
+  
+  /* Animation Classes */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Gradient Backgrounds */
+  .gradient-purple {
+    background: linear-gradient(135deg, var(--cesium-purple) 0%, var(--cesium-purple-light) 100%);
+  }
+  
+  .gradient-yellow {
+    background: linear-gradient(135deg, var(--cesium-yellow) 0%, var(--cesium-yellow-light) 100%);
+  }
+  
+  /* Icon Styles */
+  .icon-wrapper {
+    @apply w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto;
+    background: linear-gradient(135deg, var(--cesium-yellow) 0%, var(--cesium-yellow-light) 100%);
+  }
+  
+  .icon-wrapper img {
+    @apply w-8 h-8;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  /* Custom spacing */
+  .space-y-24 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 6rem;
+  }
+  
+  /* Text gradients */
+  .text-gradient {
+    background: linear-gradient(135deg, var(--cesium-purple) 0%, var(--cesium-yellow) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Enhanced shadows */
+  .shadow-brand {
+    box-shadow: 0 10px 25px -5px rgba(54, 40, 105, 0.1), 0 10px 10px -5px rgba(54, 40, 105, 0.04);
+  }
+  
+  .shadow-brand-lg {
+    box-shadow: 0 25px 50px -12px rgba(54, 40, 105, 0.25);
+  }
+  
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 0.1s; }
+  .animation-delay-200 { animation-delay: 0.2s; }
+  .animation-delay-300 { animation-delay: 0.3s; }
+  .animation-delay-400 { animation-delay: 0.4s; }
+  .animation-delay-500 { animation-delay: 0.5s; }
+  .animation-delay-600 { animation-delay: 0.6s; }
+  
+  /* Responsive text sizes */
+  .text-responsive-xl {
+    @apply text-2xl;
+  }
+  
+  @screen md {
+    .text-responsive-xl {
+      @apply text-3xl;
+    }
+  }
+  
+  @screen lg {
+    .text-responsive-xl {
+      @apply text-4xl;
+    }
+  }
+  
+  .text-responsive-2xl {
+    @apply text-3xl;
+  }
+  
+  @screen md {
+    .text-responsive-2xl {
+      @apply text-4xl;
+    }
+  }
+  
+  @screen lg {
+    .text-responsive-2xl {
+      @apply text-5xl;
+    }
+  }
+  
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 transform hover:-translate-y-2 hover:shadow-brand-lg;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(250, 203, 36, 0.4);
+  }
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+  
+  .section-padding {
+    @apply py-16;
+  }
+  
+  .section-title {
+    @apply text-3xl;
+  }
+  
+  .section-subtitle {
+    @apply text-lg;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-padding {
+    @apply py-12;
+  }
+  
+  .section-title {
+    @apply text-2xl;
+  }
+  
+  .section-subtitle {
+    @apply text-base;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    color: black !important;
+    background: white !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .card {
+    @apply border-2 border-gray-800;
+  }
+  
+  .btn-primary {
+    @apply border-2 border-black;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Dark Mode Support (Future Enhancement) */
+@media (prefers-color-scheme: dark) {
+  /* Dark mode styles can be added here in the future */
+}
+
