@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-cesium-light-gray font-sans antialiased">
+  <div class="min-h-screen bg-cesium-light-gray font-poppins antialiased">
     <!-- Hero Section -->
     <section class="relative bg-primary text-white py-20 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-95"></div>
@@ -10,13 +10,13 @@
             <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-16 mx-auto lg:mx-0" />
           </div>
           
-          <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
-            Launch & Scale Your Online Casino
+          <h1 class="text-5xl lg:text-6xl font-semibold leading-tight mb-6 animate-fade-in-up">
+            Launch & Scale Your iGaming Business
           </h1>
-          <p class="text-xl lg:text-2xl mb-8 opacity-90 animate-fade-in-up animation-delay-200">
-            We help casino operators grow faster with data-driven acquisition, retention, and brand building.
+          <p class="text-xl lg:text-2xl mb-8 opacity-90 animate-fade-in-up animation-delay-200 font-light">
+            We help iGaming operators grow faster with data-driven acquisition, retention, and brand building.
           </p>
-          <a href="#contact" class="inline-block bg-secondary text-primary font-bold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
+          <a href="#contact" class="inline-block bg-secondary text-primary font-medium py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
             Request Strategy Call
           </a>
         </div>
@@ -30,11 +30,11 @@
     <section id="services" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold text-primary mb-4 animate-fade-in-up">
+          <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-4 animate-fade-in-up">
             What We Offer
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
-            Comprehensive marketing solutions designed specifically for the online casino industry
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
+            Comprehensive marketing solutions designed specifically for the iGaming industry
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -55,11 +55,11 @@
     <section class="py-20 bg-primary text-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold mb-4 animate-fade-in-up">
+          <h2 class="text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up">
             Proven Results
           </h2>
-          <p class="text-xl opacity-90 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
-            Our data-driven approach delivers measurable growth for casino operators
+          <p class="text-xl opacity-90 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
+            Our data-driven approach delivers measurable growth for iGaming operators
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -76,40 +76,15 @@
       </div>
     </section>
 
-    <!-- Trust Badges Section -->
-    <section id="trust" class="py-20 bg-cesium-light-gray">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-primary text-center mb-16 animate-fade-in-up">
-          Trusted By Industry Leaders
-        </h2>
-        <TrustBadges :badges="trustBadges" />
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold text-primary mb-4 animate-fade-in-up">
-            What Our Clients Say
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
-            Don't just take our word for it. Hear from casino operators who've transformed their business with our proven strategies.
-          </p>
-        </div>
-        <TestimonialCarousel :testimonials="testimonials" />
-      </div>
-    </section>
-
     <!-- Interactive ROI Calculator Section -->
     <section id="calculator" class="py-20 bg-secondary-light text-primary">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold mb-4 animate-fade-in-up">
+          <h2 class="text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up">
             Interactive ROI Calculator
           </h2>
-          <p class="text-xl max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
-            See how much your casino could grow with our marketing strategies
+          <p class="text-xl max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
+            See how much your iGaming business could grow with our marketing strategies
           </p>
         </div>
         <InteractiveCalculator />
@@ -120,11 +95,11 @@
     <section id="case-studies" class="py-20 bg-primary text-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold mb-4 animate-fade-in-up">
+          <h2 class="text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up">
             Our Success Stories
           </h2>
-          <p class="text-xl opacity-90 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
-            Real results from real casino operators who partnered with us
+          <p class="text-xl opacity-90 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
+            Real results from real iGaming operators who partnered with us
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -146,11 +121,11 @@
     <section id="team" class="py-20 bg-cesium-light-gray">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold text-primary mb-4 animate-fade-in-up">
+          <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-4 animate-fade-in-up">
             Meet the Pros
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
-            Our team of casino marketing experts with proven track records
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
+            Our team of iGaming marketing experts with proven track records
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -171,11 +146,11 @@
     <section id="blog" class="py-20 bg-primary-dark text-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold mb-4 animate-fade-in-up">
+          <h2 class="text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up">
             Latest Insights
           </h2>
-          <p class="text-xl opacity-90 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
-            Stay ahead with the latest trends and strategies in casino marketing
+          <p class="text-xl opacity-90 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
+            Stay ahead with the latest trends and strategies in iGaming marketing
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -195,11 +170,11 @@
     <section id="contact" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold text-primary mb-4 animate-fade-in-up">
-            Let's Build Your Winning Brand
+          <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-4 animate-fade-in-up">
+            Let\'s Build Your Winning Brand
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
-            Ready to take your casino to the next level? Let's discuss your growth strategy.
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
+            Ready to take your iGaming business to the next level? Let\'s discuss your growth strategy.
           </p>
         </div>
         <form @submit.prevent="submitContactForm" class="max-w-2xl mx-auto bg-cesium-light-gray p-10 rounded-2xl shadow-xl animate-fade-in-up">
@@ -209,7 +184,7 @@
                 type="text"
                 v-model="form.name"
                 placeholder="Your Name"
-                class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300"
+                class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300 font-light"
                 required
               />
               <p v-if="form.errors.name" class="text-red-500 text-sm mt-2">{{ form.errors.name }}</p>
@@ -219,7 +194,7 @@
                 type="email"
                 v-model="form.email"
                 placeholder="Email"
-                class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300"
+                class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300 font-light"
                 required
               />
               <p v-if="form.errors.email" class="text-red-500 text-sm mt-2">{{ form.errors.email }}</p>
@@ -228,22 +203,22 @@
           <div class="mb-8">
             <textarea
               v-model="form.message"
-              placeholder="Tell us about your casino and your goals..."
+              placeholder="Tell us about your iGaming business and your goals..."
               rows="6"
-              class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300 resize-none"
+              class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300 resize-none font-light"
               required
             ></textarea>
             <p v-if="form.errors.message" class="text-red-500 text-sm mt-2">{{ form.errors.message }}</p>
           </div>
           <button
             type="submit"
-            class="w-full bg-secondary text-primary font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 text-lg"
+            class="w-full bg-secondary text-primary font-medium py-4 px-8 rounded-xl shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 text-lg"
             :disabled="form.processing"
           >
             <span v-if="form.processing">Sending...</span>
             <span v-else>Send Message</span>
           </button>
-          <p v-if="form.successMessage" class="text-green-600 text-center mt-6 font-semibold">{{ form.successMessage }}</p>
+          <p v-if="form.successMessage" class="text-green-600 text-center mt-6 font-medium">{{ form.successMessage }}</p>
         </form>
       </div>
     </section>
@@ -253,10 +228,10 @@
       <div class="container mx-auto px-6">
         <div class="text-center">
           <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-12 mx-auto mb-6" />
-          <p class="text-lg mb-6">&copy; {{ new Date().getFullYear() }} Cesium Marketing. All rights reserved.</p>
+          <p class="text-lg mb-6 font-light">&copy; {{ new Date().getFullYear() }} Cesium Marketing. All rights reserved.</p>
           <div class="flex justify-center space-x-8 text-sm">
-            <a href="#" class="text-white hover:text-secondary transition-colors duration-300">Privacy Policy</a>
-            <a href="#" class="text-white hover:text-secondary transition-colors duration-300">Terms of Service</a>
+            <a href="#" class="text-white hover:text-secondary transition-colors duration-300 font-light">Privacy Policy</a>
+            <a href="#" class="text-white hover:text-secondary transition-colors duration-300 font-light">Terms of Service</a>
           </div>
         </div>
       </div>
@@ -272,9 +247,7 @@ import FeatureCard from '@/Components/FeatureCard.vue';
 import KpiCard from '@/Components/KpiCard.vue';
 import BlogCard from '@/Components/BlogCard.vue';
 import TeamCard from '@/Components/TeamCard.vue';
-import TestimonialCarousel from '@/Components/TestimonialCarousel.vue';
 import CaseStudyCard from '@/Components/CaseStudyCard.vue';
-import TrustBadges from '@/Components/TrustBadges.vue';
 import InteractiveCalculator from '@/Components/InteractiveCalculator.vue';
 import ScrollReveal from 'scrollreveal';
 
@@ -283,9 +256,7 @@ const props = defineProps({
   kpis: Array,
   teamMembers: Array,
   blogPosts: Array,
-  testimonials: Array,
   caseStudies: Array,
-  trustBadges: Array,
 });
 
 const form = useForm({
@@ -346,6 +317,5 @@ onMounted(() => {
   transition-duration: 300ms;
 }
 </style>
-
 
 
