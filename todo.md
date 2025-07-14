@@ -6,30 +6,30 @@
 
 ## Phase 2: Revise Home Page Sections
 ### First Section:
-- [ ] Remove 'Trusted by Industry Leader' section with client logos
-- [ ] Remove 'What Our Client Says' section
-- [ ] Add a small section about the benefits of working with us
-- [ ] Add a Call to Action (CTA) button to 'Contact Us' page
-- [ ] Add a 'See how we transform the world' content section
+- [x] Remove 'Trusted by Industry Leader' section with client logos
+- [x] Remove 'What Our Client Says' section
+- [x] Add a small section about the benefits of working with us
+- [x] Add a Call to Action (CTA) button to 'Contact Us' page
+- [x] Add a 'See how we transform the world' content section
 
 ### Services Section:
-- [ ] Add 'Affiliate Marketing' to services
-- [ ] Add 'Branding' (visual identity/brand building) to services
-- [ ] Add 'Influencer Marketing' to services
-- [ ] Ensure a total of 9 services are listed
+- [x] Add 'Affiliate Marketing' to services
+- [x] Add 'Branding' (visual identity/brand building) to services
+- [x] Add 'Influencer Marketing' to services
+- [x] Ensure a total of 9 services are listed
 
 ### Affiliate Marketing Section:
-- [ ] Discuss affiliate marketing but not as the sole focus
-- [ ] Add content like 'See how you can benefit with us' or 'Know what you can achieve if you work with us'
-- [ ] Consider adding a design for the affiliate marketing section
-- [ ] Add a CTA to a calculator that shows potential returns for clients
+- [x] Discuss affiliate marketing but not as the sole focus
+- [x] Add content like \'See how you can benefit with us\' or \'Know what you can achieve if you work with us\'
+- [x] Consider adding a design for the affiliate marketing section
+- [x] Add a CTA to a calculator that shows potential returns for clients
 
 ### Selected Work Section:
-- [ ] Remove the 'Selected Work' section
+- [x] Remove the 'Selected Work' section
 
 ### Latest News Section:
-- [ ] Add a 'Latest News' section (like a blog) displaying the last three news items
-- [ ] Ensure this section is prominent on the homepage/header
+- [x] Add a 'Latest News' section (like a blog) displaying the last three news items
+- [x] Ensure this section is prominent on the homepage/header
 
 ## Phase 3: Implement Header and Footer Changes
 ### Header:

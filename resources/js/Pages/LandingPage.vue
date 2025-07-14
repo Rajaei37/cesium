@@ -26,6 +26,60 @@
       </div>
     </section>
 
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-8 animate-fade-in-up">
+          Why Partner with Cesium Marketing?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="animate-fade-in-up bg-cesium-light-gray p-8 rounded-xl shadow-lg" style="animation-delay: 0.1s;">
+            <h3 class="text-2xl font-semibold text-primary mb-4">Data-Driven Strategies</h3>
+            <p class="text-gray-700 font-light">Our decisions are backed by extensive data analysis, ensuring optimal performance and measurable ROI for your iGaming business.</p>
+          </div>
+          <div class="animate-fade-in-up bg-cesium-light-gray p-8 rounded-xl shadow-lg" style="animation-delay: 0.2s;">
+            <h3 class="text-2xl font-semibold text-primary mb-4">Industry Expertise</h3>
+            <p class="text-gray-700 font-light">With years of experience in the iGaming sector, we understand the unique challenges and opportunities to drive your success.</p>
+          </div>
+          <div class="animate-fade-in-up bg-cesium-light-gray p-8 rounded-xl shadow-lg" style="animation-delay: 0.3s;">
+            <h3 class="text-2xl font-semibold text-primary mb-4">Tailored Solutions</h3>
+            <p class="text-gray-700 font-light">We craft customized marketing plans that align with your specific goals, ensuring a personalized approach to your growth.</p>
+          </div>
+        </div>
+        <div class="mt-12 animate-fade-in-up" style="animation-delay: 0.4s;">
+          <a href="#contact" class="inline-block bg-secondary text-primary font-medium py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
+            Contact Us Today
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Transform Section -->
+    <section class="py-20 bg-primary text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl lg:text-5xl font-semibold mb-8 animate-fade-in-up">
+          See How We Transform the iGaming World
+        </h2>
+        <p class="text-xl opacity-90 max-w-3xl mx-auto mb-12 animate-fade-in-up animation-delay-200 font-light">
+          We don't just market; we revolutionize. Our innovative strategies and deep industry insights help iGaming businesses achieve unprecedented growth and market leadership.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="animate-fade-in-up" style="animation-delay: 0.1s;">
+            <h3 class="text-2xl font-semibold mb-4">Unlocking Potential</h3>
+            <p class="opacity-90 font-light">Identifying untapped markets and player segments to expand your reach.</p>
+          </div>
+          <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
+            <h3 class="text-2xl font-semibold mb-4">Optimizing Performance</h3>
+            <p class="opacity-90 font-light">Fine-tuning every aspect of your marketing funnel for maximum conversion.</p>
+          </div>
+          <div class="animate-fade-in-up" style="animation-delay: 0.3s;">
+            <h3 class="text-2xl font-semibold mb-4">Building Legacies</h3>
+            <p class="opacity-90 font-light">Creating sustainable growth models that ensure long-term success and brand recognition.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- What We Offer Section -->
     <section id="services" class="py-20 bg-white">
       <div class="container mx-auto px-6">
@@ -72,6 +126,39 @@
             class="animate-fade-in-up bg-primary-light rounded-xl p-8 border border-primary-light hover:bg-primary-dark transition-all duration-300"
             :style="{ animationDelay: `${200 * index}ms` }"
           />
+        </div>
+      </div>
+    </section>
+
+    <!-- Affiliate Marketing Section -->
+    <section id="affiliate-marketing" class="py-20 bg-cesium-light-gray text-primary">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl lg:text-5xl font-semibold mb-8 animate-fade-in-up">
+          Unlock Your Affiliate Potential
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12 animate-fade-in-up animation-delay-200 font-light">
+          Discover how our expert affiliate marketing strategies can significantly boost your player acquisition and revenue. See what you can achieve with us.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="animate-fade-in-up text-left">
+            <h3 class="text-3xl font-semibold mb-4">See How You Can Benefit With Us</h3>
+            <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 font-light">
+              <li>Access to a vast network of high-performing affiliates.</li>
+              <li>Customized commission structures for optimal ROI.</li>
+              <li>Real-time tracking and transparent reporting.</li>
+              <li>Dedicated affiliate management support.</li>
+              <li>Proven strategies for diverse iGaming markets.</li>
+            </ul>
+            <p class="text-lg text-gray-700 mt-6 font-light">
+              Ready to see the numbers? Use our interactive calculator to estimate your potential returns.
+            </p>
+            <a href="#calculator" class="inline-block bg-secondary text-primary font-medium py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 mt-8">
+              Calculate Your ROI
+            </a>
+          </div>
+          <div class="animate-fade-in-up">
+            <img src="/assets/images/affiliate-marketing-illustration.png" alt="Affiliate Marketing Illustration" class="w-full h-auto rounded-xl shadow-lg" />
+          </div>
         </div>
       </div>
     </section>
@@ -171,10 +258,10 @@
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-4 animate-fade-in-up">
-            Let\'s Build Your Winning Brand
+            Let\"s Build Your Winning Brand
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
-            Ready to take your iGaming business to the next level? Let\'s discuss your growth strategy.
+            Ready to take your iGaming business to the next level? Let\"s discuss your growth strategy.
           </p>
         </div>
         <form @submit.prevent="submitContactForm" class="max-w-2xl mx-auto bg-cesium-light-gray p-10 rounded-2xl shadow-xl animate-fade-in-up">
