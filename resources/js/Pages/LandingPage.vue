@@ -7,7 +7,7 @@
         <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
           <!-- Logo -->
           <div class="mb-8">
-            <img src="/upload/logo-main.svg" alt="Cesium Marketing Logo" class="h-16 mx-auto lg:mx-0" />
+            <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-16 mx-auto lg:mx-0" />
           </div>
           
           <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
@@ -252,7 +252,7 @@
     <footer class="bg-primary text-white py-12">
       <div class="container mx-auto px-6">
         <div class="text-center">
-          <img src="/upload/logo-main.svg" alt="Cesium Marketing Logo" class="h-12 mx-auto mb-6" />
+          <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-12 mx-auto mb-6" />
           <p class="text-lg mb-6">&copy; {{ new Date().getFullYear() }} Cesium Marketing. All rights reserved.</p>
           <div class="flex justify-center space-x-8 text-sm">
             <a href="#" class="text-white hover:text-secondary transition-colors duration-300">Privacy Policy</a>
