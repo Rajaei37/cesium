@@ -13,47 +13,56 @@ class LandingPageController extends Controller
                 'icon' => '/assets/icons/paid-media.png',
                 'title' => 'Paid Media',
                 'desc' => 'Maximize your ROI with targeted ad campaigns across all platforms.',
+                'long_desc' => 'Our paid media strategies are designed to deliver maximum return on investment. We specialize in creating and managing highly targeted campaigns across Google Ads, social media platforms (Facebook, Instagram, X), and programmatic advertising. From keyword research and audience segmentation to ad copy optimization and A/B testing, we ensure every dollar spent drives qualified traffic and conversions. We focus on real-time bidding, performance tracking, and continuous optimization to keep your campaigns efficient and effective, driving new player acquisition and increasing player lifetime value.'
             ],
             [
                 'icon' => '/assets/icons/seo-optimization.png',
                 'title' => 'SEO Optimization',
                 'desc' => 'Boost your organic rankings and drive qualified traffic.',
+                'long_desc' => 'Achieve top search engine rankings and attract high-intent organic traffic with our comprehensive SEO services. We conduct in-depth keyword research, technical SEO audits, on-page optimization, and high-quality link building to improve your site’s visibility. Our strategies are tailored to the iGaming industry, focusing on compliance, local SEO, and content strategies that resonate with your target audience. We monitor algorithm changes and competitor strategies to ensure your site remains competitive and continues to grow its organic footprint.'
             ],
             [
                 'icon' => '/assets/icons/social-media.png',
                 'title' => 'Social Media Marketing',
                 'desc' => 'Engage your audience and build lasting brand loyalty.',
+                'long_desc' => 'Build a vibrant community and amplify your brand message across all major social media platforms. Our social media marketing services include content creation, community management, paid social campaigns, and influencer collaborations. We develop strategies that foster engagement, drive traffic to your iGaming platform, and convert followers into loyal players. From captivating visuals to interactive campaigns, we ensure your social presence is dynamic, relevant, and aligned with your brand’s voice.'
             ],
             [
                 'icon' => '/assets/icons/data-analytics.png',
                 'title' => 'Data Analytics',
                 'desc' => 'Gain actionable insights to optimize your marketing strategies.',
+                'long_desc' => 'Unlock the power of your data with our advanced analytics services. We help you collect, analyze, and interpret complex marketing data to identify trends, measure campaign performance, and uncover actionable insights. Our expertise includes setting up tracking systems, creating custom dashboards, and providing regular performance reports. By understanding player behavior, acquisition costs, and retention rates, we empower you to make informed decisions that optimize your marketing spend and drive sustainable growth.'
             ],
             [
                 'icon' => '/assets/icons/content-marketing.png',
                 'title' => 'Content Marketing',
                 'desc' => 'Create compelling content that converts visitors into customers.',
+                'long_desc' => 'Attract, engage, and convert your target audience with high-quality, relevant content. Our content marketing services include strategy development, content creation (blog posts, articles, guides, video scripts), and content distribution. We focus on producing valuable content that addresses the needs and interests of iGaming players, establishes your brand as an industry authority, and drives organic traffic. From SEO-optimized articles to engaging video content, we ensure your message resonates and converts.'
             ],
             [
                 'icon' => '/assets/icons/email-marketing.png',
                 'title' => 'Email Marketing',
                 'desc' => 'Build customer relationships and drive repeat business.',
+                'long_desc' => 'Nurture leads and retain players with highly effective email marketing campaigns. We design and implement personalized email strategies, including welcome series, promotional campaigns, re-engagement flows, and VIP programs. Our services cover list segmentation, A/B testing, automation, and performance tracking to maximize open rates, click-through rates, and conversions. We help you build strong, lasting relationships with your players, encouraging repeat play and increasing lifetime value.'
             ],
             [
                 'icon' => '/assets/icons/affiliate-marketing.png',
                 'title' => 'Affiliate Marketing',
                 'desc' => 'Expand your reach through strategic partnership networks.',
+                'long_desc' => 'Leverage the power of partnerships with our expert affiliate marketing management. We connect you with a vast network of high-performing affiliates, negotiate favorable commission structures, and provide real-time tracking and transparent reporting. Our team manages all aspects of your affiliate program, from recruitment and activation to optimization and compliance, ensuring you acquire new players efficiently and expand your market reach without upfront advertising costs.'
             ],
             [
                 'icon' => '/assets/icons/branding.png',
                 'title' => 'Branding & Visual Identity',
                 'desc' => 'Build a memorable brand that stands out in the market.',
+                'long_desc' => 'Forge a powerful and memorable brand identity that resonates with your target audience and differentiates you in the competitive iGaming landscape. Our branding services include brand strategy development, logo design, visual identity guidelines, and brand messaging. We ensure every touchpoint reflects your brand’s unique personality and values, creating a cohesive and compelling presence that attracts and retains players.'
             ],
             [
                 'icon' => '/assets/icons/influencer-marketing.png',
                 'title' => 'Influencer Marketing',
                 'desc' => 'Leverage influential voices to amplify your brand message.',
-            ],
+                'long_desc' => 'Amplify your brand’s reach and credibility by partnering with key influencers in the iGaming space. Our influencer marketing services cover identifying relevant influencers, campaign strategy and execution, content collaboration, and performance measurement. We help you tap into engaged communities, generate authentic buzz, and drive player acquisition through trusted recommendations and compelling content created by influential voices.'
+            },
         ];
 
         $kpis = [
@@ -125,7 +134,7 @@ class LandingPageController extends Controller
                 'description' => 'Integrated marketing approach that tripled conversion rates.',
                 'image' => '/assets/case-studies/multi-channel.jpg',
                 'metrics' => ['300% Conversion', '4 Months', '5 Channels']
-            ],
+            },
         ];
 
         return Inertia::render(
@@ -140,4 +149,6 @@ class LandingPageController extends Controller
         );
     }
 }
+
+
 

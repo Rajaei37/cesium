@@ -98,6 +98,7 @@
             :icon="feature.icon"
             :title="feature.title"
             :desc="feature.desc"
+            :long_desc="feature.long_desc"
             class="animate-fade-in-up bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-8 border border-gray-100"
             :style="{ animationDelay: `${200 * index}ms` }"
           />
