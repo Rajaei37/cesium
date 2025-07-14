@@ -17,6 +17,7 @@
 - [x] Add 'Branding' (visual identity/brand building) to services
 - [x] Add 'Influencer Marketing' to services
 - [x] Ensure a total of 9 services are listed
+- [x] Add details in a super creative graphical way to 'What We Offer' section
 
 ### Affiliate Marketing Section:
 - [x] Discuss affiliate marketing but not as the sole focus

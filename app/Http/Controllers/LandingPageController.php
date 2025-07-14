@@ -62,7 +62,7 @@ class LandingPageController extends Controller
                 'title' => 'Influencer Marketing',
                 'desc' => 'Leverage influential voices to amplify your brand message.',
                 'long_desc' => 'Amplify your brand’s reach and credibility by partnering with key influencers in the iGaming space. Our influencer marketing services cover identifying relevant influencers, campaign strategy and execution, content collaboration, and performance measurement. We help you tap into engaged communities, generate authentic buzz, and drive player acquisition through trusted recommendations and compelling content created by influential voices.'
-            },
+            ]
         ];
 
         $kpis = [
@@ -134,7 +134,7 @@ class LandingPageController extends Controller
                 'description' => 'Integrated marketing approach that tripled conversion rates.',
                 'image' => '/assets/case-studies/multi-channel.jpg',
                 'metrics' => ['300% Conversion', '4 Months', '5 Channels']
-            },
+            ]
         ];
 
         return Inertia::render(
@@ -149,6 +149,5 @@ class LandingPageController extends Controller
         );
     }
 }
-
 
 
