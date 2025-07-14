@@ -3,7 +3,7 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
-    base: '/cesium/build/', // ✅ This ensures all URLs are prefixed correctly
+    base: '/build/', // Updated for root domain deployment
     plugins: [
         laravel({
             input: ["resources/css/app.css", "resources/js/app.js"],
@@ -24,3 +24,5 @@ export default defineConfig({
         },
     },
 });
+
+
