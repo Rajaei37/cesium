@@ -99,7 +99,7 @@
           role="status"
           aria-live="assertive"
         >
-          🎁 Your Discount Code: 
+           Your Discount Code: 
           <span 
             class="underline cursor-pointer hover:text-green-800 transition-colors"
             @click="copyDiscountCode"
@@ -132,10 +132,10 @@
       </div>
 
       <!-- Instructions -->
-      <div class="mt-6 text-center text-sm text-gray-600 max-w-md">
-        <p>🎰 Match 3 symbols for JACKPOT (50% off)</p>
-        <p>🎯 Match 2 symbols for 20% off</p>
-        <p>🍀 Any spin gets you 10% off</p>
+      <div class="mt-6 text-center text-sm text-black-600 max-w-md">
+        <p> Match 3 symbols for JACKPOT (30% off)</p>
+        <p> Match 2 symbols for 20% off</p>
+        <p> Any spin gets you 10% off</p>
       </div>
     </div>
   </div>
@@ -186,9 +186,9 @@ const funMessages = [
 ]
 
 const discountCodes = {
-  jackpot: 'CASINO50',
-  match: 'CASINO20',
-  consolation: 'CASINO10'
+  jackpot: 'CesiumPlatinum30-884695',
+  match: 'CesiumGold20-1529',
+  consolation: 'CesiumSilver10'
 }
 
 // Computed
@@ -321,7 +321,7 @@ const evaluateResult = () => {
   
   if (first === second && second === third) {
     // Jackpot - all three match
-    result.value = '🎉 JACKPOT! 🎉'
+    result.value = ' JACKPOT! '
     jackpot.value = true
     showConfetti.value = true
     discount.value = discountCodes.jackpot
@@ -351,13 +351,13 @@ const evaluateResult = () => {
     
   } else if (first === second || second === third || first === third) {
     // Partial match - two symbols match
-    result.value = 'Nice! You got a match! 🎯'
+    result.value = 'Nice! You got a match! '
     discount.value = discountCodes.match
     isWin = true
     
   } else {
     // No match - consolation prize
-    result.value = 'Try again! 🍀'
+    result.value = 'Try again! '
     discount.value = discountCodes.consolation
   }
   
