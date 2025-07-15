@@ -22,13 +22,13 @@ class LandingPageController extends Controller
                 'icon' => '/assets/icons/seo-optimization.png',
                 'title' => 'SEO Optimization',
                 'desc' => 'Boost your organic rankings and drive qualified traffic.',
-                'long_desc' => 'Achieve top search engine rankings and attract high-intent organic traffic with our comprehensive SEO services. We conduct in-depth keyword research, technical SEO audits, on-page optimization, and high-quality link building to improve your site’s visibility. Our strategies are tailored to the iGaming industry, focusing on compliance, local SEO, and content strategies that resonate with your target audience. We monitor algorithm changes and competitor strategies to ensure your site remains competitive and continues to grow its organic footprint.'
+                'long_desc' => 'Achieve top search engine rankings and attract high-intent organic traffic with our comprehensive SEO services. We conduct in-depth keyword research, technical SEO audits, on-page optimization, and high-quality link building to improve your site's visibility. Our strategies are tailored to the iGaming industry, focusing on compliance, local SEO, and content strategies that resonate with your target audience. We monitor algorithm changes and competitor strategies to ensure your site remains competitive and continues to grow its organic footprint.'
             ],
             [
                 'icon' => '/assets/icons/social-media.png',
                 'title' => 'Social Media Marketing',
                 'desc' => 'Engage your audience and build lasting brand loyalty.',
-                'long_desc' => 'Build a vibrant community and amplify your brand message across all major social media platforms. Our social media marketing services include content creation, community management, paid social campaigns, and influencer collaborations. We develop strategies that foster engagement, drive traffic to your iGaming platform, and convert followers into loyal players. From captivating visuals to interactive campaigns, we ensure your social presence is dynamic, relevant, and aligned with your brand’s voice.'
+                'long_desc' => 'Build a vibrant community and amplify your brand message across all major social media platforms. Our social media marketing services include content creation, community management, paid social campaigns, and influencer collaborations. We develop strategies that foster engagement, drive traffic to your iGaming platform, and convert followers into loyal players. From captivating visuals to interactive campaigns, we ensure your social presence is dynamic, relevant, and aligned with your brand's voice.'
             ],
             [
                 'icon' => '/assets/icons/data-analytics.png',
@@ -49,127 +49,143 @@ class LandingPageController extends Controller
                 'long_desc' => 'Nurture leads and retain players with highly effective email marketing campaigns. We design and implement personalized email strategies, including welcome series, promotional campaigns, re-engagement flows, and VIP programs. Our services cover list segmentation, A/B testing, automation, and performance tracking to maximize open rates, click-through rates, and conversions. We help you build strong, lasting relationships with your players, encouraging repeat play and increasing lifetime value.'
             ],
             [
-                'icon' => '/assets/icons/affiliate-marketing.png',
-                'title' => 'Affiliate Marketing',
-                'desc' => 'Expand your reach through strategic partnership networks.',
-                'long_desc' => 'Leverage the power of partnerships with our expert affiliate marketing management. We connect you with a vast network of high-performing affiliates, negotiate favorable commission structures, and provide real-time tracking and transparent reporting. Our team manages all aspects of your affiliate program, from recruitment and activation to optimization and compliance, ensuring you acquire new players efficiently and expand your market reach without upfront advertising costs.'
-            ],
-            [
                 'icon' => '/assets/icons/branding.png',
                 'title' => 'Branding & Visual Identity',
-                'desc' => 'Build a memorable brand that stands out in the market.',
-                'long_desc' => 'Forge a powerful and memorable brand identity that resonates with your target audience and differentiates you in the competitive iGaming landscape. Our branding services include brand strategy development, logo design, visual identity guidelines, and brand messaging. We ensure every touchpoint reflects your brand’s unique personality and values, creating a cohesive and compelling presence that attracts and retains players.'
+                'desc' => 'Develop a distinctive brand that stands out in the market.',
+                'long_desc' => 'Create a powerful and memorable brand identity that resonates with your target audience and differentiates you from competitors. Our branding services include logo design, visual identity development, brand guidelines creation, and brand positioning strategy. We work closely with you to understand your vision and values, translating them into a cohesive visual language that speaks to iGaming players. From color palettes and typography to imagery and tone of voice, we ensure every element of your brand works together to create a compelling and trustworthy presence.'
             ],
             [
                 'icon' => '/assets/icons/influencer-marketing.png',
                 'title' => 'Influencer Marketing',
-                'desc' => 'Leverage influential voices to amplify your brand message.',
-                'long_desc' => 'Amplify your brand’s reach and credibility by partnering with key influencers in the iGaming space. Our influencer marketing services cover identifying relevant influencers, campaign strategy and execution, content collaboration, and performance measurement. We help you tap into engaged communities, generate authentic buzz, and drive player acquisition through trusted recommendations and compelling content created by influential voices.'
+                'desc' => 'Leverage trusted voices to expand your reach and credibility.',
+                'long_desc' => 'Partner with influential personalities and content creators to amplify your brand message and reach new audiences. Our influencer marketing services include influencer identification and vetting, campaign strategy development, content collaboration, and performance tracking. We focus on building authentic partnerships with influencers who align with your brand values and have genuine connections with your target demographic. From micro-influencers to industry thought leaders, we help you leverage trusted voices to build credibility and drive player acquisition.'
             ]
         ];
 
         $kpis = [
             [
-                'icon' => 'chart-line',
-                'value' => '300%',
-                'label' => 'Average ROI Increase'
+                'icon' => 'trending-up',
+                'number' => '300%',
+                'label' => 'Average ROI Increase',
+                'description' => 'Our clients see an average 300% return on their marketing investment within the first 6 months.'
             ],
             [
                 'icon' => 'target',
-                'value' => '85%',
-                'label' => 'Player Retention Rate'
+                'number' => '150+',
+                'label' => 'Successful Campaigns',
+                'description' => 'Over 150 successful marketing campaigns launched across various iGaming verticals.'
             ],
             [
                 'icon' => 'dollar-sign',
-                'value' => '$2.5M+',
-                'label' => 'Revenue Generated'
-            ],
+                'number' => '50M+',
+                'label' => 'Revenue Generated',
+                'description' => 'Our strategies have generated over $50 million in revenue for our iGaming clients.'
+            ]
         ];
 
         $teamMembers = [
             [
-                'name' => 'Sarah Johnson',
-                'role' => 'Marketing Director',
-                'photo' => '/assets/team/sarah-johnson.jpg'
+                'name' => 'Sarah Mitchell',
+                'role' => 'CEO & Marketing Strategist',
+                'photo' => '/assets/team/sarah-mitchell.jpg'
             ],
             [
-                'name' => 'Michael Chen',
-                'role' => 'Data Analyst',
-                'photo' => '/assets/team/michael-chen.jpg'
+                'name' => 'Marcus Chen',
+                'role' => 'Head of Data Analytics',
+                'photo' => '/assets/team/marcus-chen.jpg'
             ],
             [
-                'name' => 'Emma Rodriguez',
+                'name' => 'Elena Rodriguez',
                 'role' => 'Creative Director',
-                'photo' => '/assets/team/emma-rodriguez.jpg'
+                'photo' => '/assets/team/elena-rodriguez.jpg'
             ],
         ];
 
+        // Synchronized blog posts with BlogController
         $blogPosts = [
             [
                 'id' => 1,
-                'title' => 'The Future of iGaming Marketing: AI and Personalization',
-                'desc' => 'Explore how artificial intelligence and machine learning are revolutionizing player acquisition and retention strategies in the iGaming industry.',
-                'date' => 'July 10, 2025',
-                'author' => 'Sarah Johnson',
-                'readTime' => 5,
+                'title' => 'AI-Powered Marketing Strategies for iGaming Success',
+                'desc' => 'Discover how artificial intelligence is revolutionizing iGaming marketing with personalized campaigns, predictive analytics, and automated optimization strategies.',
+                'excerpt' => 'Discover how artificial intelligence is revolutionizing iGaming marketing with personalized campaigns, predictive analytics, and automated optimization strategies.',
+                'slug' => 'ai-powered-marketing-strategies-igaming',
+                'date' => '2024-01-15',
+                'author' => 'Dr. Sarah Mitchell',
+                'readTime' => '8 min',
                 'image' => '/assets/blog/ai-igaming-marketing.jpg',
-                'tags' => ['AI', 'Personalization', 'Marketing Trends', 'iGaming'],
-                'url' => '#'
+                'category' => 'AI & Technology',
+                'tags' => ['AI', 'Marketing', 'iGaming', 'Automation', 'Analytics'],
+                'url' => '/blog/ai-powered-marketing-strategies-igaming'
             ],
             [
                 'id' => 2,
-                'title' => 'Data-Driven Player Acquisition: Maximizing ROI',
-                'desc' => 'Learn how to leverage analytics and data insights to optimize your acquisition funnel and reduce customer acquisition costs.',
-                'date' => 'July 8, 2025',
-                'author' => 'Michael Chen',
-                'readTime' => 7,
+                'title' => 'Data-Driven Player Acquisition: Converting Insights into Revenue',
+                'desc' => 'Learn how to leverage advanced analytics and data science to optimize your player acquisition funnel and maximize lifetime value in the competitive iGaming market.',
+                'excerpt' => 'Learn how to leverage advanced analytics and data science to optimize your player acquisition funnel and maximize lifetime value in the competitive iGaming market.',
+                'slug' => 'data-driven-player-acquisition-revenue',
+                'date' => '2024-01-12',
+                'author' => 'Marcus Chen',
+                'readTime' => '6 min',
                 'image' => '/assets/blog/data-driven-acquisition.jpg',
-                'tags' => ['Data Analytics', 'ROI', 'Player Acquisition', 'Optimization'],
-                'url' => '#'
+                'category' => 'Data Analytics',
+                'tags' => ['Data Analytics', 'Player Acquisition', 'LTV', 'Conversion', 'ROI'],
+                'url' => '/blog/data-driven-player-acquisition-revenue'
             ],
             [
                 'id' => 3,
-                'title' => 'Building Brand Loyalty in the Competitive iGaming Space',
-                'desc' => 'Discover proven strategies for creating lasting relationships with players and increasing lifetime value through effective brand building.',
-                'date' => 'July 5, 2025',
-                'author' => 'Emma Rodriguez',
-                'readTime' => 6,
+                'title' => 'Building Brand Loyalty in the iGaming Industry',
+                'desc' => 'Explore proven strategies for creating lasting relationships with players through personalized experiences, loyalty programs, and community building initiatives.',
+                'excerpt' => 'Explore proven strategies for creating lasting relationships with players through personalized experiences, loyalty programs, and community building initiatives.',
+                'slug' => 'building-brand-loyalty-igaming-industry',
+                'date' => '2024-01-10',
+                'author' => 'Elena Rodriguez',
+                'readTime' => '7 min',
                 'image' => '/assets/blog/brand-loyalty-igaming.jpg',
-                'tags' => ['Brand Building', 'Player Retention', 'Loyalty Programs', 'LTV'],
-                'url' => '#'
+                'category' => 'Brand Strategy',
+                'tags' => ['Brand Loyalty', 'Customer Retention', 'Community', 'Personalization'],
+                'url' => '/blog/building-brand-loyalty-igaming-industry'
             ],
             [
                 'id' => 4,
-                'title' => 'Regulatory Compliance in iGaming Marketing',
-                'desc' => 'Navigate the complex landscape of iGaming regulations while maintaining effective marketing campaigns across different jurisdictions.',
-                'date' => 'July 3, 2025',
-                'author' => 'David Wilson',
-                'readTime' => 8,
+                'title' => 'Navigating Regulatory Compliance in iGaming Marketing',
+                'desc' => 'Stay compliant while maximizing marketing effectiveness. A comprehensive guide to navigating the complex regulatory landscape of iGaming marketing.',
+                'excerpt' => 'Stay compliant while maximizing marketing effectiveness. A comprehensive guide to navigating the complex regulatory landscape of iGaming marketing.',
+                'slug' => 'regulatory-compliance-igaming-marketing',
+                'date' => '2024-01-08',
+                'author' => 'James Thompson',
+                'readTime' => '9 min',
                 'image' => '/assets/blog/regulatory-compliance.jpg',
-                'tags' => ['Compliance', 'Regulations', 'Legal', 'Marketing'],
-                'url' => '#'
+                'category' => 'Compliance',
+                'tags' => ['Compliance', 'Regulation', 'Legal', 'Marketing', 'Risk Management'],
+                'url' => '/blog/regulatory-compliance-igaming-marketing'
             ],
             [
                 'id' => 5,
-                'title' => 'Social Media Strategies for iGaming Brands',
-                'desc' => 'Master the art of social media marketing in the iGaming industry with platform-specific strategies and content approaches.',
-                'date' => 'June 30, 2025',
-                'author' => 'Lisa Thompson',
-                'readTime' => 4,
+                'title' => 'Social Media Strategies That Drive iGaming Engagement',
+                'desc' => 'Master the art of social media marketing in the iGaming space with platform-specific strategies, content creation tips, and engagement tactics.',
+                'excerpt' => 'Master the art of social media marketing in the iGaming space with platform-specific strategies, content creation tips, and engagement tactics.',
+                'slug' => 'social-media-strategies-igaming-engagement',
+                'date' => '2024-01-05',
+                'author' => 'Alex Kim',
+                'readTime' => '5 min',
                 'image' => '/assets/blog/social-media-strategies.jpg',
-                'tags' => ['Social Media', 'Content Marketing', 'Engagement', 'Branding'],
-                'url' => '#'
+                'category' => 'Social Media',
+                'tags' => ['Social Media', 'Engagement', 'Content Marketing', 'Community Building'],
+                'url' => '/blog/social-media-strategies-igaming-engagement'
             ],
             [
                 'id' => 6,
-                'title' => 'The Rise of Mobile Gaming: Marketing Implications',
-                'desc' => 'Understand how the mobile gaming revolution is reshaping marketing strategies and player behavior in the iGaming sector.',
-                'date' => 'June 28, 2025',
-                'author' => 'Alex Martinez',
-                'readTime' => 6,
+                'title' => 'Mobile-First Marketing: Capturing the iGaming Audience',
+                'desc' => 'With mobile gaming dominating the market, learn how to create mobile-first marketing campaigns that resonate with modern iGaming audiences.',
+                'excerpt' => 'With mobile gaming dominating the market, learn how to create mobile-first marketing campaigns that resonate with modern iGaming audiences.',
+                'slug' => 'mobile-first-marketing-igaming-audience',
+                'date' => '2024-01-03',
+                'author' => 'Lisa Wang',
+                'readTime' => '6 min',
                 'image' => '/assets/blog/mobile-gaming-marketing.jpg',
-                'tags' => ['Mobile Gaming', 'User Experience', 'Mobile Marketing', 'Trends'],
-                'url' => '#'
+                'category' => 'Mobile Marketing',
+                'tags' => ['Mobile Marketing', 'User Experience', 'App Marketing', 'Mobile Gaming'],
+                'url' => '/blog/mobile-first-marketing-igaming-audience'
             ]
         ];
 

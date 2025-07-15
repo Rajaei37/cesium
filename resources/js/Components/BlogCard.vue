@@ -172,7 +172,14 @@ const handleCardClick = () => {
   
   // If URL is provided, navigate to it
   if (props.url) {
-    window.open(props.url, '_blank', 'noopener,noreferrer')
+    // Check if it's an internal blog URL
+    if (props.url.startsWith('/blog/')) {
+      // Use Inertia.js for internal navigation
+      window.location.href = props.url
+    } else if (props.url !== '#') {
+      // External URL - open in new tab
+      window.open(props.url, '_blank', 'noopener,noreferrer')
+    }
   }
 }
 
