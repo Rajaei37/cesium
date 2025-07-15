@@ -262,15 +262,48 @@
             Stay ahead with the latest trends and strategies in iGaming marketing
           </p>
         </div>
+        
+        <!-- Featured Blog Post -->
+        <div class="mb-16 animate-fade-in-up">
+          <BlogCard
+            v-if="blogPosts.length > 0"
+            :id="blogPosts[0].id"
+            :title="blogPosts[0].title"
+            :desc="blogPosts[0].desc"
+            :image="blogPosts[0].image"
+            :author="blogPosts[0].author"
+            :date="blogPosts[0].date"
+            :readTime="blogPosts[0].readTime"
+            :tags="blogPosts[0].tags"
+            :url="blogPosts[0].url"
+            class="bg-white text-gray-900 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 max-w-4xl mx-auto"
+          />
+        </div>
+
+        <!-- Regular Blog Posts Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <BlogCard
-            v-for="(post, index) in blogPosts"
-            :key="index"
+            v-for="(post, index) in blogPosts.slice(1, 4)"
+            :key="post.id"
+            :id="post.id"
             :title="post.title"
             :desc="post.desc"
-            class="animate-fade-in-up bg-primary rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            :style="{ animationDelay: `${200 * index}ms` }"
+            :image="post.image"
+            :author="post.author"
+            :date="post.date"
+            :readTime="post.readTime"
+            :tags="post.tags"
+            :url="post.url"
+            class="animate-fade-in-up bg-white text-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            :style="{ animationDelay: `${200 * (index + 1)}ms` }"
           />
+        </div>
+
+        <!-- View All Blog Posts Button -->
+        <div class="text-center mt-12 animate-fade-in-up" style="animation-delay: 800ms;">
+          <a href="#" class="inline-block bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
+            View All Insights
+          </a>
         </div>
       </div>
     </section>

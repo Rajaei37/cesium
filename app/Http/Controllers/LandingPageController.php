@@ -107,22 +107,70 @@ class LandingPageController extends Controller
         $blogPosts = [
             [
                 'id' => 1,
-                'title' => 'The Future of iGaming Marketing',
-                'desc' => 'Explore emerging trends and technologies shaping the industry.',
-                'date' => 'July 10, 2025'
+                'title' => 'The Future of iGaming Marketing: AI and Personalization',
+                'desc' => 'Explore how artificial intelligence and machine learning are revolutionizing player acquisition and retention strategies in the iGaming industry.',
+                'date' => 'July 10, 2025',
+                'author' => 'Sarah Johnson',
+                'readTime' => 5,
+                'image' => '/assets/blog/ai-igaming-marketing.jpg',
+                'tags' => ['AI', 'Personalization', 'Marketing Trends', 'iGaming'],
+                'url' => '#'
             ],
             [
                 'id' => 2,
-                'title' => 'Data-Driven Player Acquisition',
-                'desc' => 'How to use analytics to optimize your acquisition funnel.',
-                'date' => 'July 8, 2025'
+                'title' => 'Data-Driven Player Acquisition: Maximizing ROI',
+                'desc' => 'Learn how to leverage analytics and data insights to optimize your acquisition funnel and reduce customer acquisition costs.',
+                'date' => 'July 8, 2025',
+                'author' => 'Michael Chen',
+                'readTime' => 7,
+                'image' => '/assets/blog/data-driven-acquisition.jpg',
+                'tags' => ['Data Analytics', 'ROI', 'Player Acquisition', 'Optimization'],
+                'url' => '#'
             ],
             [
                 'id' => 3,
-                'title' => 'Building Brand Loyalty in iGaming',
-                'desc' => 'Strategies for creating lasting relationships with players.',
-                'date' => 'July 5, 2025'
+                'title' => 'Building Brand Loyalty in the Competitive iGaming Space',
+                'desc' => 'Discover proven strategies for creating lasting relationships with players and increasing lifetime value through effective brand building.',
+                'date' => 'July 5, 2025',
+                'author' => 'Emma Rodriguez',
+                'readTime' => 6,
+                'image' => '/assets/blog/brand-loyalty-igaming.jpg',
+                'tags' => ['Brand Building', 'Player Retention', 'Loyalty Programs', 'LTV'],
+                'url' => '#'
             ],
+            [
+                'id' => 4,
+                'title' => 'Regulatory Compliance in iGaming Marketing',
+                'desc' => 'Navigate the complex landscape of iGaming regulations while maintaining effective marketing campaigns across different jurisdictions.',
+                'date' => 'July 3, 2025',
+                'author' => 'David Wilson',
+                'readTime' => 8,
+                'image' => '/assets/blog/regulatory-compliance.jpg',
+                'tags' => ['Compliance', 'Regulations', 'Legal', 'Marketing'],
+                'url' => '#'
+            ],
+            [
+                'id' => 5,
+                'title' => 'Social Media Strategies for iGaming Brands',
+                'desc' => 'Master the art of social media marketing in the iGaming industry with platform-specific strategies and content approaches.',
+                'date' => 'June 30, 2025',
+                'author' => 'Lisa Thompson',
+                'readTime' => 4,
+                'image' => '/assets/blog/social-media-strategies.jpg',
+                'tags' => ['Social Media', 'Content Marketing', 'Engagement', 'Branding'],
+                'url' => '#'
+            ],
+            [
+                'id' => 6,
+                'title' => 'The Rise of Mobile Gaming: Marketing Implications',
+                'desc' => 'Understand how the mobile gaming revolution is reshaping marketing strategies and player behavior in the iGaming sector.',
+                'date' => 'June 28, 2025',
+                'author' => 'Alex Martinez',
+                'readTime' => 6,
+                'image' => '/assets/blog/mobile-gaming-marketing.jpg',
+                'tags' => ['Mobile Gaming', 'User Experience', 'Mobile Marketing', 'Trends'],
+                'url' => '#'
+            ]
         ];
 
         $caseStudies = [
