@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class LandingPageController extends Controller
 {
@@ -103,16 +106,22 @@ class LandingPageController extends Controller
 
         $blogPosts = [
             [
+                'id' => 1,
                 'title' => 'The Future of iGaming Marketing',
                 'desc' => 'Explore emerging trends and technologies shaping the industry.',
+                'date' => 'July 10, 2025'
             ],
             [
+                'id' => 2,
                 'title' => 'Data-Driven Player Acquisition',
                 'desc' => 'How to use analytics to optimize your acquisition funnel.',
+                'date' => 'July 8, 2025'
             ],
             [
+                'id' => 3,
                 'title' => 'Building Brand Loyalty in iGaming',
                 'desc' => 'Strategies for creating lasting relationships with players.',
+                'date' => 'July 5, 2025'
             ],
         ];
 
@@ -150,4 +159,49 @@ class LandingPageController extends Controller
     }
 }
 
+
+
+    public function contact(Request $request)
+    {
+        // Validate the form data
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'message' => 'required|string|max:2000',
+        ]);
+
+        try {
+            // Log the contact form submission
+            Log::info('Contact form submission', [
+                'name' => $validated['name'],
+                'email' => $validated['email'],
+                'message' => substr($validated['message'], 0, 100) . '...',
+                'ip' => $request->ip(),
+                'user_agent' => $request->userAgent(),
+                'timestamp' => now()
+            ]);
+
+            // In a production environment, you would send an email here
+            // For now, we'll just log it and return a success response
+            
+            // Example of how you would send an email:
+            /*
+            Mail::send('emails.contact', $validated, function ($message) use ($validated) {
+                $message->to('info@cesiummarketing.com')
+                        ->subject('New Contact Form Submission from ' . $validated['name']);
+            });
+            */
+
+            return back()->with('success', 'Thank you for your message! We\'ll get back to you within 24 hours.');
+
+        } catch (\Exception $e) {
+            Log::error('Contact form submission failed', [
+                'error' => $e->getMessage(),
+                'email' => $validated['email'] ?? 'unknown',
+                'timestamp' => now()
+            ]);
+
+            return back()->withErrors(['general' => 'There was an error sending your message. Please try again.']);
+        }
+    }
 

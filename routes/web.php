@@ -8,6 +8,7 @@ use App\Http\Controllers\LandingPageController;
 
 
 Route::get('/', [LandingPageController::class, 'index']);
+Route::post('/contact', [LandingPageController::class, 'contact'])->name('contact');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
