@@ -1,16 +1,29 @@
 <template>
   <div
-    class="relative w-full min-h-64 sm:h-64 md:h-72 lg:h-80 rounded-xl shadow-lg transition-all duration-700 transform-style-preserve-3d cursor-pointer"
-    :class="{ 'rotate-y-180': isFlipped }"
+    class="relative w-full min-h-64 sm:h-64 md:h-72 lg:h-80 rounded-xl shadow-lg transition-all duration-700 cursor-pointer"
+    :class="[
+      'transform-style-preserve-3d',
+      { 'rotate-y-180': isFlipped }
+    ]"
     @click="toggleFlip"
     @keydown.enter="toggleFlip"
     @keydown.space.prevent="toggleFlip"
     tabindex="0"
     role="button"
     :aria-label="isFlipped ? 'Hide details for ' + title : 'Show details for ' + title"
+    :style="{ 
+      transformStyle: 'preserve-3d',
+      perspective: '1000px'
+    }"
   >
     <!-- Front of the card -->
-    <div class="absolute inset-0 backface-hidden bg-white p-4 sm:p-6 md:p-8 rounded-xl flex flex-col items-center justify-center text-center">
+    <div 
+      class="absolute inset-0 bg-white p-4 sm:p-6 md:p-8 rounded-xl flex flex-col items-center justify-center text-center"
+      :style="{ 
+        backfaceVisibility: 'hidden',
+        WebkitBackfaceVisibility: 'hidden'
+      }"
+    >
       <div class="relative mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center rounded-full bg-secondary-light group-hover:bg-secondary transition-all duration-300">
         <img :src="icon" :alt="title + ' icon'" class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 object-contain" />
       </div>
@@ -20,7 +33,14 @@
     </div>
 
     <!-- Back of the card -->
-    <div class="absolute inset-0 backface-hidden rotate-y-180 bg-primary text-white p-4 sm:p-6 md:p-8 rounded-xl flex flex-col items-center justify-center text-center overflow-y-auto">
+    <div 
+      class="absolute inset-0 bg-primary text-white p-4 sm:p-6 md:p-8 rounded-xl flex flex-col items-center justify-center text-center overflow-y-auto"
+      :style="{ 
+        backfaceVisibility: 'hidden',
+        WebkitBackfaceVisibility: 'hidden',
+        transform: 'rotateY(180deg)'
+      }"
+    >
       <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 leading-tight">{{ title }}</h3>
       <div class="flex-1 flex items-center justify-center">
         <p class="text-xs sm:text-sm md:text-base font-light text-justify leading-relaxed overflow-y-auto max-h-full">{{ long_desc }}</p>
@@ -54,14 +74,21 @@ const toggleFlip = () => {
 <style scoped>
 .transform-style-preserve-3d {
   transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .backface-hidden {
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+/* Ensure the parent container has proper 3D context */
+.relative {
+  transform-style: preserve-3d;
 }
 
 /* Responsive height adjustments */
