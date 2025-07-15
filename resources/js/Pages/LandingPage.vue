@@ -112,7 +112,7 @@
             Comprehensive marketing solutions designed specifically for the iGaming industry
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <FeatureCard
             v-for="(feature, index) in features"
             :key="index"
@@ -120,7 +120,7 @@
             :title="feature.title"
             :desc="feature.desc"
             :long_desc="feature.long_desc"
-            class="animate-fade-in-up bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-8 border border-gray-100"
+            class="animate-fade-in-up bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
             :style="{ animationDelay: `${200 * index}ms` }"
           />
         </div>
