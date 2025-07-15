@@ -20,9 +20,8 @@ class LandingPageController extends Controller
             ],
             [
                 'icon' => '/assets/icons/seo-optimization.png',
-                'title' => 'SEO Optimization',
-                'desc' => 'Boost your organic rankings and drive qualified traffic.',
-                'long_desc' => 'Achieve top search engine rankings and attract high-intent organic traffic with our comprehensive SEO services. We conduct in-depth keyword research, technical SEO audits, on-page optimization, and high-quality link building to improve your site\\\\'s visibility. Our strategies are tailored to the iGaming industry, focusing on compliance, local SEO, and content strategies that resonate with your target audience. We monitor algorithm changes and competitor strategies to ensure your site remains competitive and continues to grow its organic footprint.'
+                'title' => 'SEO Optimization',                'desc' => 'Boost your organic rankings and drive qualified traffic.',
+                'long_desc' => 'Achieve top search engine rankings and attract high-intent organic traffic with our comprehensive SEO services. We conduct in-depth keyword research, technical SEO audits, on-page optimization, and high-quality link building to improve your site\\\\\\\'s visibility. Our strategies are tailored to the iGaming industry, focusing on compliance, local SEO, and content strategies that resonate with your target audience. We monitor algorithm changes and competitor strategies to ensure your site remains competitive and continues to grow its organic footprint.'
             ],
             [
                 'icon' => '/assets/icons/social-media.png',
@@ -236,14 +235,14 @@ class LandingPageController extends Controller
             Log::info('Contact form submission', [
                 'name' => $validated['name'],
                 'email' => $validated['email'],
-                'message' => substr($validated['message'], 0, 100) . '...', // Truncate message for log
+                'message' => substr($validated['message'], 0, 100) . '...',
                 'ip' => $request->ip(),
                 'user_agent' => $request->userAgent(),
                 'timestamp' => now()
             ]);
 
             // In a production environment, you would send an email here
-            // For now, we'll just log it and return a success response
+            // For now, we\'ll just log it and return a success response
             
             // Example of how you would send an email:
             /*
