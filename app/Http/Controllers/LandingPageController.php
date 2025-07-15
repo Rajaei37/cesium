@@ -22,13 +22,13 @@ class LandingPageController extends Controller
                 'icon' => '/assets/icons/seo-optimization.png',
                 'title' => 'SEO Optimization',
                 'desc' => 'Boost your organic rankings and drive qualified traffic.',
-                'long_desc' => 'Achieve top search engine rankings and attract high-intent organic traffic with our comprehensive SEO services. We conduct in-depth keyword research, technical SEO audits, on-page optimization, and high-quality link building to improve your site's visibility. Our strategies are tailored to the iGaming industry, focusing on compliance, local SEO, and content strategies that resonate with your target audience. We monitor algorithm changes and competitor strategies to ensure your site remains competitive and continues to grow its organic footprint.'
+                'long_desc' => 'Achieve top search engine rankings and attract high-intent organic traffic with our comprehensive SEO services. We conduct in-depth keyword research, technical SEO audits, on-page optimization, and high-quality link building to improve your site\'s visibility. Our strategies are tailored to the iGaming industry, focusing on compliance, local SEO, and content strategies that resonate with your target audience. We monitor algorithm changes and competitor strategies to ensure your site remains competitive and continues to grow its organic footprint.'
             ],
             [
                 'icon' => '/assets/icons/social-media.png',
                 'title' => 'Social Media Marketing',
                 'desc' => 'Engage your audience and build lasting brand loyalty.',
-                'long_desc' => 'Build a vibrant community and amplify your brand message across all major social media platforms. Our social media marketing services include content creation, community management, paid social campaigns, and influencer collaborations. We develop strategies that foster engagement, drive traffic to your iGaming platform, and convert followers into loyal players. From captivating visuals to interactive campaigns, we ensure your social presence is dynamic, relevant, and aligned with your brand's voice.'
+                'long_desc' => 'Build a vibrant community and amplify your brand message across all major social media platforms. Our social media marketing services include content creation, community management, paid social campaigns, and influencer collaborations. We develop strategies that foster engagement, drive traffic to your iGaming platform, and convert followers into loyal players. From captivating visuals to interactive campaigns, we ensure your social presence is dynamic, relevant, and aligned with your brand\`s voice.'
             ],
             [
                 'icon' => '/assets/icons/data-analytics.png',
