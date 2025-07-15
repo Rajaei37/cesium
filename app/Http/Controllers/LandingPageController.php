@@ -205,9 +205,6 @@ class LandingPageController extends Controller
             ]
         );
     }
-}
-
-
 
     public function contact(Request $request)
     {
@@ -252,4 +249,5 @@ class LandingPageController extends Controller
             return back()->withErrors(['general' => 'There was an error sending your message. Please try again.']);
         }
     }
+}
 
