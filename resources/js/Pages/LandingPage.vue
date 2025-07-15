@@ -143,7 +143,7 @@
             v-for="(kpi, index) in kpis"
             :key="index"
             :icon="kpi.icon"
-            :value="kpi.value"
+            :value="kpi.number"
             :label="kpi.label"
             class="animate-fade-in-up bg-primary-light rounded-xl p-8 border border-primary-light hover:bg-primary-dark transition-all duration-300"
             :style="{ animationDelay: `${200 * index}ms` }"
