@@ -70,17 +70,17 @@ class LandingPageController extends Controller
 
         $kpis = [
             [
-                'icon' => '📈',
+                'icon' => 'chart-line',
                 'value' => '300%',
                 'label' => 'Average ROI Increase'
             ],
             [
-                'icon' => '🎯',
+                'icon' => 'target',
                 'value' => '85%',
                 'label' => 'Player Retention Rate'
             ],
             [
-                'icon' => '💰',
+                'icon' => 'dollar-sign',
                 'value' => '$2.5M+',
                 'label' => 'Revenue Generated'
             ],

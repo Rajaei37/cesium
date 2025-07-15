@@ -4,23 +4,13 @@
     role="region"
     :aria-labelledby="`kpi-label-${id}`"
   >
-    <!-- Icon with error handling -->
+    <!-- Icon with Lucide icons -->
     <div class="w-10 h-10 mx-auto mb-3 flex items-center justify-center">
-      <img 
-        v-if="!imageError"
-        :src="icon" 
-        :alt="`${label} icon`"
-        class="w-10 h-10"
-        @error="handleImageError"
-        loading="lazy"
+      <component 
+        :is="getIconComponent()" 
+        class="w-10 h-10 text-[#facb24]"
+        :aria-label="`${label} icon`"
       />
-      <div 
-        v-else
-        class="w-10 h-10 bg-[#facb24] rounded-full flex items-center justify-center text-[#362869] text-lg font-bold"
-        :aria-label="`${label} icon placeholder`"
-      >
-        {{ getIconFallback() }}
-      </div>
     </div>
     
     <!-- Animated counter -->
@@ -54,6 +44,7 @@
 <script setup>
 import { onMounted, ref, computed, watch } from 'vue'
 import gsap from 'gsap'
+import { TrendingUp, Target, DollarSign, BarChart3 } from 'lucide-vue-next'
 
 // Props
 const props = defineProps({
@@ -91,7 +82,6 @@ const props = defineProps({
 const emit = defineEmits(["animation-complete"])
 // State
 const counterRef = ref(null)
-const imageError = ref(false)
 const isAnimating = ref(false)
 const displayValue = ref("0")
 const currentValue = ref(0)
@@ -101,23 +91,15 @@ const finalValue = computed(() => Number(props.value) || 0)
 const formattedValue = computed(() => formatNumber(finalValue.value))
 
 // Methods
-const handleImageError = () => {
-  console.warn(`Failed to load KPI icon: ${props.icon}`)
-  imageError.value = true
-}
-
-const getIconFallback = () => {
-  const fallbacks = {
-    'player': '👥',
-    'spend': '💰',
-    'launches': '🚀',
-    'revenue': '📊',
-    'growth': '📈'
+const getIconComponent = () => {
+  const iconMap = {
+    'chart-line': TrendingUp,
+    'target': Target,
+    'dollar-sign': DollarSign,
+    'bar-chart': BarChart3
   }
   
-  // Try to match icon filename to emoji
-  const iconName = props.icon.split('/').pop()?.split('.')[0]?.toLowerCase()
-  return fallbacks[iconName] || '📊'
+  return iconMap[props.icon] || BarChart3
 }
 
 const formatNumber = (num) => {
@@ -245,5 +227,4 @@ div:focus-visible {
   border-radius: 0.5rem;
 }
 </style>
-
 
