@@ -301,9 +301,9 @@
 
         <!-- View All Blog Posts Button -->
         <div class="text-center mt-12 animate-fade-in-up" style="animation-delay: 800ms;">
-          <a href="#" class="inline-block bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
+          <Link href="/blog" class="inline-block bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
             View All Insights
-          </a>
+          </Link>
         </div>
       </div>
     </section>
