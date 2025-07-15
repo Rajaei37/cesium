@@ -1,15 +1,36 @@
 <template>
   <div class="min-h-screen bg-cesium-light-gray font-poppins antialiased">
-    <!-- Hero Section -->
+    <!-- Header Section (Hero Section modified to include header elements) -->
+    <section class="relative bg-primary text-white py-6 overflow-hidden">
+      <div class="container mx-auto px-6 relative z-10 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-12" />
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex items-center space-x-4">
+          <a href="https://www.tiktok.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <i class="fab fa-tiktok text-2xl"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <i class="fab fa-facebook-f text-2xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <i class="fab fa-linkedin-in text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Content Section -->
     <section class="relative bg-primary text-white py-20 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-95"></div>
       <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
-          <!-- Logo -->
-          <div class="mb-8">
-            <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-16 mx-auto lg:mx-0" />
-          </div>
-          
           <h1 class="text-5xl lg:text-6xl font-semibold leading-tight mb-6 animate-fade-in-up">
             Launch & Scale Your iGaming Business
           </h1>
@@ -61,7 +82,7 @@
           See How We Transform the iGaming World
         </h2>
         <p class="text-xl opacity-90 max-w-3xl mx-auto mb-12 animate-fade-in-up animation-delay-200 font-light">
-          We don't just market; we revolutionize. Our innovative strategies and deep industry insights help iGaming businesses achieve unprecedented growth and market leadership.
+          We don\\\'t just market; we revolutionize. Our innovative strategies and deep industry insights help iGaming businesses achieve unprecedented growth and market leadership.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="animate-fade-in-up" style="animation-delay: 0.1s;">
@@ -259,10 +280,10 @@
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-4 animate-fade-in-up">
-            Let's Build Your Winning Brand
+            Let\\\'s Build Your Winning Brand
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
-            Ready to take your iGaming business to the next level? Let's discuss your growth strategy.
+            Ready to take your iGaming business to the next level? Let\\\'s discuss your growth strategy.
           </p>
         </div>
         <form @submit.prevent="submitContactForm" class="max-w-2xl mx-auto bg-cesium-light-gray p-10 rounded-2xl shadow-xl animate-fade-in-up">
@@ -312,14 +333,68 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary text-white py-12">
+    <footer class="bg-gray-900 text-white py-16">
       <div class="container mx-auto px-6">
-        <div class="text-center">
-          <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-12 mx-auto mb-6" />
-          <p class="text-lg mb-6 font-light">&copy; {{ new Date().getFullYear() }} Cesium Marketing. All rights reserved.</p>
-          <div class="flex justify-center space-x-8 text-sm">
-            <a href="#" class="text-white hover:text-secondary transition-colors duration-300 font-light">Privacy Policy</a>
-            <a href="#" class="text-white hover:text-secondary transition-colors duration-300 font-light">Terms of Service</a>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
+          <!-- Company Info -->
+          <div class="lg:col-span-1">
+            <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-12 mb-6" />
+            <h3 class="text-xl font-semibold mb-4">Cesium Marketing</h3>
+            <p class="text-gray-300 font-light leading-relaxed mb-6">
+              We help iGaming entrepreneurs identify the values and experiences that make their brands relevant, unique and valuable to customers.
+            </p>
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4">
+              <a href="https://www.tiktok.com/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-secondary transition-colors duration-300">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-secondary transition-colors duration-300">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-secondary transition-colors duration-300">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-secondary transition-colors duration-300">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Latest Insights -->
+          <div class="lg:col-span-1">
+            <h3 class="text-xl font-semibold mb-6">LATEST INSIGHTS</h3>
+            <div class="space-y-4">
+              <div v-for="post in blogPosts.slice(0, 3)" :key="post.id" class="border-l-4 border-secondary pl-4">
+                <h4 class="text-sm font-medium text-white hover:text-secondary transition-colors duration-300 cursor-pointer">
+                  {{ post.title }}
+                </h4>
+                <p class="text-xs text-gray-400 mt-1">{{ post.date }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Apply Now Section -->
+          <div class="lg:col-span-1">
+            <h3 class="text-xl font-semibold mb-6">Ready to Scale Your iGaming Business?</h3>
+            <p class="text-gray-300 font-light mb-6">
+              Join successful iGaming operators who trust Cesium Marketing to drive their growth. Apply now to get started.
+            </p>
+            <a href="https://forms.google.com/your-form-link" target="_blank" class="inline-block bg-secondary text-primary font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
+              Apply Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm font-light mb-4 md:mb-0">
+              &copy; {{ new Date().getFullYear() }} Cesium Marketing. All Rights Reserved.
+            </p>
+            <div class="flex space-x-8 text-sm">
+              <a href="#" class="text-gray-400 hover:text-secondary transition-colors duration-300 font-light">Privacy Policy</a>
+              <a href="#" class="text-gray-400 hover:text-secondary transition-colors duration-300 font-light">Terms of Service</a>
+            </div>
           </div>
         </div>
       </div>
@@ -405,5 +480,7 @@ onMounted(() => {
   transition-duration: 300ms;
 }
 </style>
+
+
 
 
