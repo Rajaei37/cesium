@@ -27,6 +27,7 @@
       <div class="flex-1 flex flex-col justify-center px-4 sm:px-6 md:px-8 pb-12 sm:pb-14 md:pb-16">
         <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-primary mb-2 sm:mb-3 leading-tight text-center">{{ title }}</h3>
         <p class="text-xs sm:text-sm md:text-base text-gray-700 font-light leading-relaxed text-center flex-1 flex items-center justify-center">{{ desc }}</p>
+        <span v-if="long_desc" class="text-xs sm:text-sm text-secondary font-medium text-center mt-3">Tap to See More</span>
       </div>
 
       <!-- Expand Icon (only show if has long_desc) -->
@@ -54,17 +55,10 @@
       </div>
 
       <!-- Back Content -->
-      <div class="flex-1 px-4 sm:px-6 md:px-8 pb-12 sm:pb-14 md:pb-16 overflow-y-auto">
+      <div class="flex-1 px-4 sm:px-6 md:px-8 pb-8 sm:pb-10 md:pb-12 overflow-y-auto">
         <div class="h-full flex items-start justify-center">
           <p class="text-xs sm:text-sm md:text-base font-light leading-relaxed text-left">{{ long_desc }}</p>
         </div>
-      </div>
-
-      <!-- Collapse Icon -->
-      <div class="absolute bottom-3 sm:bottom-4 md:bottom-5 right-3 sm:right-4 md:right-5 w-8 h-8 sm:w-10 sm:h-10 bg-secondary rounded-full flex items-center justify-center shadow-md hover:bg-secondary-dark transition-all duration-300">
-        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-primary transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
       </div>
     </div>
 
