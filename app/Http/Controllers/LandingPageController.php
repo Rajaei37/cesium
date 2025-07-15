@@ -22,8 +22,7 @@ class LandingPageController extends Controller
                 'icon' => '/assets/icons/seo-optimization.png',
                 'title' => 'SEO Optimization',
                 'desc' => 'Boost your organic rankings and drive qualified traffic.',
-                'long_desc' => 'Achieve top search engine rankings and attract high-intent organic traffic with our comprehensive SEO services. We conduct in-depth keyword research, technical SEO audits, on-page optimization, and high-quality link building to improve your site\'s visibility. Our strategies are tailored to the iGaming industry, focusing on compliance, local SEO, and content strategies that resonate with your target audience. We monitor algorithm changes and competitor strategies to ensure your site remains competitive and continues to grow its organic footprint.'
-            ],
+                'long_desc' => 'Achieve top search engine rankings and attract high-intent organic traffic with our comprehensive SEO services. We conduct in-depth keyword research, technical SEO audits, on-page optimization, and high-quality link building to improve your site\'s visibility. Our strategies are tailored to the iGaming industry, focusing on compliance, local SEO, and content strategies that resonate with your target audience. We monitor algorithm changes and competitor strategies to ensure your site remains competitive and continues to grow its organic footprint.',
             [
                 'icon' => '/assets/icons/social-media.png',
                 'title' => 'Social Media Marketing',
