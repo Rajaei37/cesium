@@ -29,16 +29,6 @@
         <p class="text-xs sm:text-sm md:text-base text-gray-700 font-light leading-relaxed text-center flex-1 flex items-center justify-center">{{ desc }}</p>
         <span v-if="long_desc" class="text-xs sm:text-sm text-secondary font-medium text-center mt-3">Tap to See More</span>
       </div>
-
-      <!-- Expand Icon (only show if has long_desc) -->
-      <div 
-        v-if="long_desc"
-        class="absolute bottom-3 sm:bottom-4 md:bottom-5 right-3 sm:right-4 md:right-5 w-8 h-8 sm:w-10 sm:h-10 bg-secondary rounded-full flex items-center justify-center shadow-md group-hover:bg-secondary-dark transition-all duration-300"
-      >
-        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-primary transition-transform duration-300" :class="{ 'rotate-180': isFlipped }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </div>
     </div>
 
     <!-- Back of the card -->
@@ -62,12 +52,6 @@
       </div>
     </div>
 
-    <!-- Status Indicator (Top-left corner) -->
-    <div 
-      v-if="long_desc"
-      class="absolute top-3 sm:top-4 md:top-5 left-3 sm:left-4 md:left-5 w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300"
-      :class="isFlipped ? 'bg-secondary' : 'bg-gray-300'"
-    ></div>
   </div>
 </template>
 
