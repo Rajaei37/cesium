@@ -162,54 +162,7 @@
       </div>
     </section>
 
-    <!-- Affiliate Marketing Section -->
-    <section id="affiliate-marketing" class="py-20 bg-cesium-light-gray text-primary">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl lg:text-5xl font-semibold mb-8 animate-fade-in-up">
-          Unlock Your Affiliate Potential
-        </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12 animate-fade-in-up animation-delay-200 font-light">
-          Maximize your affiliate marketing success with our specialized strategies and tools designed for the iGaming industry.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <CaseStudyCard
-            v-for="(study, index) in caseStudies"
-            :key="index"
-            :title="study.title"
-            :description="study.description"
-            :image="study.image"
-            :metrics="study.metrics"
-            class="animate-fade-in-up bg-primary-light rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            :style="{ animationDelay: `${200 * index}ms` }"
-          />
-        </div>
-      </div>
-    </section>
 
-    <!-- Meet the Pros Section -->
-    <section id="team" class="py-20 bg-cesium-light-gray">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-4 animate-fade-in-up">
-            Meet the Pros
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
-            Our team of iGaming marketing experts with proven track records
-          </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <TeamCard
-            v-for="(member, index) in teamMembers"
-            :key="index"
-            :name="member.name"
-            :role="member.role"
-            :photo="member.photo"
-            class="animate-fade-in-up bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            :style="{ animationDelay: `${200 * index}ms` }"
-          />
-        </div>
-      </div>
-    </section>
 
     <!-- Latest Insights Section -->
     <section id="blog" class="py-20 bg-primary-dark text-white">
@@ -274,34 +227,7 @@
       </div>
     </section>
 
-    <!-- Affiliate Marketing Section -->
-    <section id="affiliate-marketing" class="py-20 bg-cesium-light-gray text-primary">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl lg:text-5xl font-semibold mb-8 animate-fade-in-up">
-          Unlock Your Affiliate Potential
-        </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12 animate-fade-in-up animation-delay-200 font-light">
-          Maximize your affiliate marketing success with our specialized strategies and tools designed for the iGaming industry.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <CaseStudyCard
-            v-for="(study, index) in caseStudies"
-            :key="index"
-            :title="study.title"
-            :description="study.description"
-            :image="study.image"
-            :metrics="study.metrics"
-            class="animate-fade-in-up bg-primary-light rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            :style="{ animationDelay: `${200 * index}ms` }"
-          />
-        </div>
-        <div class="text-center mt-12">
-          <a href="#calculator" class="inline-block bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
-            Calculate Your ROI
-          </a>
-        </div>
-      </div>
-    </section>
+
 
     <!-- Interactive Calculator Section -->
     <section id="calculator" class="py-20 bg-white">
