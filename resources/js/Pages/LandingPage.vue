@@ -495,7 +495,7 @@ const openScheduleModal = () => {
       script.onerror = () => {
         console.error('Failed to load Calendly script');
         // Fallback: redirect to Calendly page
-        window.open('https://calendly.com/cesium-marketing', '_blank');
+        window.open("https://calendly.com/ragaee37/30min", "_blank");
         scheduleModalOpen.value = false;
       };
     } else {
@@ -508,7 +508,7 @@ const initCalendlyWidget = () => {
   const element = document.querySelector('.calendly-inline-widget');
   if (element && window.Calendly) {
     window.Calendly.initInlineWidget({
-      url: 'https://calendly.com/cesium-marketing',
+      url: 'https://calendly.com/ragaee37/30min',
       parentElement: element,
       prefill: {},
       utm: {}
