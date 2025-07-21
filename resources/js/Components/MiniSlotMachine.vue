@@ -45,19 +45,19 @@
         <div 
           class="flex space-x-4 text-6xl font-mono mb-4 select-none"
           role="img"
-          :aria-label="`Current slots: ${slots.join(', ')}`"
+          :aria-label="`Current slots: ${slots.map(s => s.name).join(', ')}`"
         >
           <span 
             v-for="(symbol, i) in slots" 
             :key="i" 
             :class="[
               'transition-transform duration-300 flex items-center justify-center w-16 h-16 rounded-lg',
-              getColor(symbol),
+              symbol.colorClass,
               spinning ? 'animate-bounce' : ''
             ]"
             :style="{ animationDelay: `${i * 0.1}s` }"
           >
-            {{ symbol }}
+            <img :src="symbol.path" :alt="symbol.name" class="w-12 h-12" />
           </span>
         </div>
 
@@ -149,7 +149,7 @@ import lottie from 'lottie-web'
 const emit = defineEmits(['discount-won', 'spin-complete'])
 
 // State
-const slots = ref(['🍒', '🍋', '🔔'])
+const slots = ref([])
 const spinning = ref(false)
 const result = ref('')
 const showConfetti = ref(false)
@@ -171,7 +171,15 @@ const gameStats = ref({
 })
 
 // Constants
-const symbols = ['🍒', '🍋', '🔔', '7️⃣', '🍀', '💎']
+const symbols = [
+  { name: 'cherry', path: '/assets/icons/slotmachine/cherry.svg', colorClass: 'bg-red-50' },
+  { name: 'lemon', path: '/assets/icons/slotmachine/lemon.svg', colorClass: 'bg-yellow-50' },
+  { name: 'bell', path: '/assets/icons/slotmachine/bell.svg', colorClass: 'bg-gray-50' },
+  { name: 'seven', path: '/assets/icons/slotmachine/seven.svg', colorClass: 'bg-red-50' },
+  { name: 'clover', path: '/assets/icons/slotmachine/clover.svg', colorClass: 'bg-green-50' },
+  { name: 'diamond', path: '/assets/icons/slotmachine/diamond.svg', colorClass: 'bg-blue-50' }
+]
+
 const funMessages = [
   'Luck is just a spin away!',
   'Feeling lucky today?',
@@ -199,15 +207,8 @@ const winRate = computed(() => {
 
 // Methods
 const getColor = (symbol) => {
-  const colors = {
-    '7️⃣': 'text-red-600 drop-shadow-lg bg-red-50',
-    '💎': 'text-blue-600 drop-shadow-lg bg-blue-50',
-    '🍀': 'text-green-600 drop-shadow-lg bg-green-50',
-    '🍒': 'text-red-500 bg-red-50',
-    '🍋': 'text-yellow-500 bg-yellow-50',
-    '🔔': 'text-gray-600 bg-gray-50'
-  }
-  return colors[symbol] || 'text-[#362869] bg-gray-50'
+  // The color is now part of the symbol object itself, applied as a background class
+  return symbol.colorClass || 'bg-gray-50'
 }
 
 const getButtonText = () => {
@@ -319,7 +320,7 @@ const evaluateResult = () => {
   let isWin = false
   let isJackpotWin = false
   
-  if (first === second && second === third) {
+  if (first.name === second.name && second.name === third.name) {
     // Jackpot - all three match
     result.value = ' JACKPOT! '
     jackpot.value = true
@@ -349,7 +350,7 @@ const evaluateResult = () => {
       showConfetti.value = false
     }, 3000)
     
-  } else if (first === second || second === third || first === third) {
+  } else if (first.name === second.name || second.name === third.name || first.name === third.name) {
     // Partial match - two symbols match
     result.value = 'Nice! You got a match! '
     discount.value = discountCodes.match
@@ -368,7 +369,7 @@ const evaluateResult = () => {
   emit('discount-won', {
     code: discount.value,
     type: isJackpotWin ? 'jackpot' : isWin ? 'match' : 'consolation',
-    slots: [...slots.value]
+    slots: slots.value.map(s => s.name)
   })
   
   emit('spin-complete', {
@@ -388,6 +389,12 @@ onMounted(() => {
   if (gameStats.value.totalSpins > 0) {
     showStats.value = true
   }
+  // Initialize slots with random symbols on mount
+  slots.value = [
+    symbols[Math.floor(Math.random() * symbols.length)],
+    symbols[Math.floor(Math.random() * symbols.length)],
+    symbols[Math.floor(Math.random() * symbols.length)],
+  ]
 })
 
 onUnmounted(() => {
