@@ -172,12 +172,12 @@ const gameStats = ref({
 
 // Constants
 const symbols = [
-  { name: 'cherry', path: '/assets/icons/slotmachine/cherry.svg', colorClass: 'bg-red-50' },
-  { name: 'lemon', path: '/assets/icons/slotmachine/lemon.svg', colorClass: 'bg-yellow-50' },
-  { name: 'bell', path: '/assets/icons/slotmachine/bell.svg', colorClass: 'bg-gray-50' },
-  { name: 'seven', path: '/assets/icons/slotmachine/seven.svg', colorClass: 'bg-red-50' },
-  { name: 'clover', path: '/assets/icons/slotmachine/clover.svg', colorClass: 'bg-green-50' },
-  { name: 'diamond', path: '/assets/icons/slotmachine/diamond.svg', colorClass: 'bg-blue-50' }
+  { name: 'cherry', path: '/assets/icons/slotmachine/cherry_new.png', colorClass: 'bg-red-50' },
+  { name: 'lemon', path: '/assets/icons/slotmachine/lemon_new.png', colorClass: 'bg-yellow-50' },
+  { name: 'bell', path: '/assets/icons/slotmachine/bell_new.png', colorClass: 'bg-gray-50' },
+  { name: 'seven', path: '/assets/icons/slotmachine/seven_new.png', colorClass: 'bg-red-50' },
+  { name: 'clover', path: '/assets/icons/slotmachine/clover_new.png', colorClass: 'bg-green-50' },
+  { name: 'diamond', path: '/assets/icons/slotmachine/diamond_new.png', colorClass: 'bg-blue-50' }
 ]
 
 const funMessages = [
