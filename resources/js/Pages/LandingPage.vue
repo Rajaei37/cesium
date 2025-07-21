@@ -40,16 +40,18 @@
           <!-- Calendly Embed -->
           <div class="calendly-inline-widget" style="min-width:320px;height:630px;">
             <!-- Loading state -->
-            <div class="flex items-center justify-center h-full">
+            <div v-if="calendlyLoading" class="flex items-center justify-center h-full">
               <div class="text-center">
                 <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
                 <p class="text-gray-600">Loading calendar...</p>
-                <p class="text-sm text-gray-500 mt-2">
-                  Having trouble? 
-                  <a href="https://calendly.com/cesium-marketing" target="_blank" class="text-secondary hover:underline">
-                    Open in new tab
-                  </a>
-                </p>
+              </div>
+            </div>
+            <div v-else-if="calendlyError" class="flex items-center justify-center h-full">
+              <div class="text-center">
+                <p class="text-red-500 text-lg mb-4">Unable to load calendar widget</p>
+                <a :href="calendlyUrl" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                  Open Calendly in New Tab
+                </a>
               </div>
             </div>
           </div>
@@ -466,6 +468,9 @@ import MiniSlotMachine from "../Components/MiniSlotMachine.vue";
 const mobileMenuOpen = ref(false);
 const scrolled = ref(false);
 const scheduleModalOpen = ref(false);
+const calendlyLoading = ref(true);
+const calendlyError = ref(false);
+const calendlyUrl = ref('https://calendly.com/ragaee37/30min');
 
 // Mobile menu methods
 const toggleMobileMenu = () => {
@@ -479,46 +484,80 @@ const closeMobileMenu = () => {
 // Floating button methods
 const openScheduleModal = () => {
   scheduleModalOpen.value = true;
-  
-  // Load Calendly script if not already loaded
+  calendlyLoading.value = true;
+  calendlyError.value = false;
+
   nextTick(() => {
+    // Clear previous Calendly content to ensure fresh load
+    const existingCalendlyWidget = document.querySelector('.calendly-inline-widget');
+    if (existingCalendlyWidget) {
+      existingCalendlyWidget.innerHTML = '';
+    }
+
+    // Check if Calendly script is already loaded
     if (!window.Calendly) {
       const script = document.createElement('script');
       script.src = 'https://assets.calendly.com/assets/external/widget.js';
       script.async = true;
       document.head.appendChild(script);
-      
+
       script.onload = () => {
+        console.log('Calendly script loaded successfully');
         initCalendlyWidget();
       };
-      
+
       script.onerror = () => {
         console.error('Failed to load Calendly script');
-        // Fallback: redirect to Calendly page
-        window.open("https://calendly.com/ragaee37/30min", "_blank");
-        scheduleModalOpen.value = false;
+        calendlyLoading.value = false;
+        calendlyError.value = true;
       };
     } else {
+      console.log('Calendly script already loaded');
       initCalendlyWidget();
     }
+
+    // Set a timeout for loading, if Calendly doesn't load within this time, show error
+    setTimeout(() => {
+      if (calendlyLoading.value) {
+        console.warn('Calendly widget timed out');
+        calendlyLoading.value = false;
+        calendlyError.value = true;
+      }
+    }, 6000); // 6 seconds timeout
   });
 };
 
 const initCalendlyWidget = () => {
   const element = document.querySelector('.calendly-inline-widget');
   if (element && window.Calendly) {
-    window.Calendly.initInlineWidget({
-      url: 'https://calendly.com/ragaee37/30min',
-      parentElement: element,
-      prefill: {},
-      utm: {}
-    });
+    try {
+      window.Calendly.initInlineWidget({
+        url: calendlyUrl.value,
+        parentElement: element,
+        prefill: {},
+        utm: {}
+      });
+      calendlyLoading.value = false;
+      console.log('Calendly widget initialized');
+    } catch (e) {
+      console.error('Error initializing Calendly widget:', e);
+      calendlyLoading.value = false;
+      calendlyError.value = true;
+    }
+  } else if (!element) {
+    console.error('Calendly inline widget element not found');
+    calendlyLoading.value = false;
+    calendlyError.value = true;
+  } else if (!window.Calendly) {
+    console.error('window.Calendly not available after script load');
+    calendlyLoading.value = false;
+    calendlyError.value = true;
   }
 };
 
 const closeScheduleModal = () => {
   scheduleModalOpen.value = false;
-  // Clean up Calendly widget
+  // Clean up Calendly widget to allow fresh load next time
   const element = document.querySelector('.calendly-inline-widget');
   if (element) {
     element.innerHTML = '';
@@ -645,4 +684,5 @@ onUnmounted(() => {
   }
 }
 </style>
+
 
