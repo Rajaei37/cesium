@@ -4,7 +4,7 @@
     <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
       <!-- Schedule Time Button -->
       <button 
-        @click="openScheduleModal"
+        @click="openScheduleWindow"
         class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center space-x-2"
       >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -25,39 +25,7 @@
       </button>
     </div>
 
-    <!-- Schedule Modal -->
-    <div v-if="scheduleModalOpen" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" @click="closeScheduleModal">
-      <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden" @click.stop>
-        <div class="flex justify-between items-center p-6 border-b">
-          <h3 class="text-xl font-semibold text-primary">Schedule a Time with Us</h3>
-          <button @click="closeScheduleModal" class="text-gray-500 hover:text-gray-700">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="p-6">
-          <!-- Calendly Embed -->
-          <div class="calendly-inline-widget" style="min-width:320px;height:630px;">
-            <!-- Loading state -->
-            <div v-if="calendlyLoading" class="flex items-center justify-center h-full">
-              <div class="text-center">
-                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-                <p class="text-gray-600">Loading calendar...</p>
-              </div>
-            </div>
-            <div v-else-if="calendlyError" class="flex items-center justify-center h-full">
-              <div class="text-center">
-                <p class="text-red-500 text-lg mb-4">Unable to load calendar widget</p>
-                <a :href="calendlyUrl" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-                  Open Calendly in New Tab
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Schedule Modal - Removed as we are opening a new window -->
 
     <!-- Sticky Navigation Header -->
     <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg z-50 transition-all duration-300" :class="{ 'shadow-xl': scrolled }">
@@ -452,7 +420,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, nextTick } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { useForm } from "@inertiajs/vue3";
 import ScrollReveal from "scrollreveal";
 import FeatureCard from "../Components/FeatureCard.vue";
@@ -467,10 +435,6 @@ import MiniSlotMachine from "../Components/MiniSlotMachine.vue";
 // Mobile menu state
 const mobileMenuOpen = ref(false);
 const scrolled = ref(false);
-const scheduleModalOpen = ref(false);
-const calendlyLoading = ref(true);
-const calendlyError = ref(false);
-const calendlyUrl = ref('https://calendly.com/ragaee37/30min');
 
 // Mobile menu methods
 const toggleMobileMenu = () => {
@@ -482,93 +446,16 @@ const closeMobileMenu = () => {
 };
 
 // Floating button methods
-const openScheduleModal = () => {
-  scheduleModalOpen.value = true;
-  calendlyLoading.value = true;
-  calendlyError.value = false;
-
-  nextTick(() => {
-    // Clear previous Calendly content to ensure fresh load
-    const existingCalendlyWidget = document.querySelector('.calendly-inline-widget');
-    if (existingCalendlyWidget) {
-      existingCalendlyWidget.innerHTML = '';
-    }
-
-    // Check if Calendly script is already loaded
-    if (!window.Calendly) {
-      const script = document.createElement('script');
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
-      script.async = true;
-      document.head.appendChild(script);
-
-      script.onload = () => {
-        console.log('Calendly script loaded successfully');
-        initCalendlyWidget();
-      };
-
-      script.onerror = () => {
-        console.error('Failed to load Calendly script');
-        calendlyLoading.value = false;
-        calendlyError.value = true;
-      };
-    } else {
-      console.log('Calendly script already loaded');
-      initCalendlyWidget();
-    }
-
-    // Set a timeout for loading, if Calendly doesn't load within this time, show error
-    setTimeout(() => {
-      if (calendlyLoading.value) {
-        console.warn('Calendly widget timed out');
-        calendlyLoading.value = false;
-        calendlyError.value = true;
-      }
-    }, 6000); // 6 seconds timeout
-  });
-};
-
-const initCalendlyWidget = () => {
-  const element = document.querySelector('.calendly-inline-widget');
-  if (element && window.Calendly) {
-    try {
-      window.Calendly.initInlineWidget({
-        url: calendlyUrl.value,
-        parentElement: element,
-        prefill: {},
-        utm: {}
-      });
-      calendlyLoading.value = false;
-      console.log('Calendly widget initialized');
-    } catch (e) {
-      console.error('Error initializing Calendly widget:', e);
-      calendlyLoading.value = false;
-      calendlyError.value = true;
-    }
-  } else if (!element) {
-    console.error('Calendly inline widget element not found');
-    calendlyLoading.value = false;
-    calendlyError.value = true;
-  } else if (!window.Calendly) {
-    console.error('window.Calendly not available after script load');
-    calendlyLoading.value = false;
-    calendlyError.value = true;
-  }
-};
-
-const closeScheduleModal = () => {
-  scheduleModalOpen.value = false;
-  // Clean up Calendly widget to allow fresh load next time
-  const element = document.querySelector('.calendly-inline-widget');
-  if (element) {
-    element.innerHTML = '';
-  }
-};
-
-// Handle Escape key to close modal
-const handleKeydown = (event) => {
-  if (event.key === 'Escape' && scheduleModalOpen.value) {
-    closeScheduleModal();
-  }
+const openScheduleWindow = () => {
+  const width = 800;
+  const height = 700;
+  const left = (window.screen.width / 2) - (width / 2);
+  const top = (window.screen.height / 2) - (height / 2);
+  window.open(
+    'https://calendly.com/ragaee37/30min',
+    'Calendly',
+    `width=${width},height=${height},top=${top},left=${left},toolbar=no,menubar=no,location=no,status=no`
+  );
 };
 
 const scrollToContact = () => {
