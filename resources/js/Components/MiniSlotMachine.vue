@@ -53,7 +53,8 @@
             :class="[
               'transition-transform duration-300 flex items-center justify-center w-16 h-16 rounded-lg',
               symbol.colorClass,
-              spinning ? 'animate-bounce' : ''
+              spinning ? 'animate-spin-slot' : '',
+              jackpot && symbol.name === slots[0].name ? 'animate-jackpot-glow' : ''
             ]"
             :style="{ animationDelay: `${i * 0.1}s` }"
           >
@@ -85,7 +86,7 @@
         <div 
           v-if="result" 
           class="mt-4 text-lg font-bold text-center transition-all duration-300" 
-          :class="jackpot ? 'text-green-600 animate-pulse' : 'text-[#362869]'"
+          :class="jackpot ? 'text-green-600 animate-pulse-strong' : 'text-[#362869]'"
           role="status"
           aria-live="assertive"
         >
@@ -144,6 +145,11 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import lottie from 'lottie-web'
+
+// Audio objects
+const spinSound = new Audio('/assets/audio/slotmachine/spin_sound.wav')
+const winSound = new Audio('/assets/audio/slotmachine/win_sound.wav')
+const loseSound = new Audio('/assets/audio/slotmachine/lose_sound.wav')
 
 // Emits
 const emit = defineEmits(['discount-won', 'spin-complete'])
@@ -295,6 +301,9 @@ const spin = () => {
   copied.value = false
   funMessage.value = funMessages[Math.floor(Math.random() * funMessages.length)]
 
+  // Play spin sound
+  spinSound.play()
+
   let spins = 0
   const spinDuration = 20 + Math.floor(Math.random() * 10) // 20-30 spins
   
@@ -328,6 +337,7 @@ const evaluateResult = () => {
     discount.value = discountCodes.jackpot
     isWin = true
     isJackpotWin = true
+    winSound.play()
     
     // Show confetti animation
     setTimeout(() => {
@@ -355,30 +365,17 @@ const evaluateResult = () => {
     result.value = 'Nice! You got a match! '
     discount.value = discountCodes.match
     isWin = true
+    winSound.play()
     
   } else {
     // No match - consolation prize
     result.value = 'Try again! '
     discount.value = discountCodes.consolation
+    loseSound.play()
   }
   
   // Update statistics
   updateGameStats(isWin, isJackpotWin)
-  
-  // Emit events
-  emit('discount-won', {
-    code: discount.value,
-    type: isJackpotWin ? 'jackpot' : isWin ? 'match' : 'consolation',
-    slots: slots.value.map(s => s.name)
-  })
-  
-  emit('spin-complete', {
-    result: result.value,
-    discount: discount.value,
-    isWin,
-    isJackpot: isJackpotWin,
-    stats: { ...gameStats.value }
-  })
 }
 
 // Lifecycle
@@ -554,5 +551,51 @@ button:focus-visible {
   background: #555;
 }
 </style>
+
+
+
+
+/* New spin animation for individual slots */
+@keyframes spin-slot {
+  0% { transform: translateY(0) rotateX(0deg); opacity: 1; }
+  25% { transform: translateY(-20px) rotateX(90deg); opacity: 0.5; }
+  50% { transform: translateY(0) rotateX(180deg); opacity: 1; }
+  75% { transform: translateY(20px) rotateX(270deg); opacity: 0.5; }
+  100% { transform: translateY(0) rotateX(360deg); opacity: 1; }
+}
+
+.animate-spin-slot {
+  animation: spin-slot 0.5s ease-in-out infinite;
+}
+
+/* Jackpot glow animation */
+@keyframes jackpot-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.4), 0 0 10px rgba(255, 215, 0, 0.4), 0 0 15px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.8);
+  }
+}
+
+.animate-jackpot-glow {
+  animation: jackpot-glow 1.5s infinite alternate;
+}
+
+/* Stronger pulse for jackpot text */
+@keyframes pulse-strong {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-strong {
+  animation: pulse-strong 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 
 
