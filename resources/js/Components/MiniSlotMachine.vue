@@ -172,12 +172,12 @@ const gameStats = ref({
 
 // Constants
 const symbols = [
-  { name: 'cherry', path: '/assets/icons/slotmachine/cherry.svg', colorClass: 'bg-red-50' },
-  { name: 'lemon', path: '/assets/icons/slotmachine/lemon.svg', colorClass: 'bg-yellow-50' },
-  { name: 'bell', path: '/assets/icons/slotmachine/bell.svg', colorClass: 'bg-gray-50' },
-  { name: 'seven', path: '/assets/icons/slotmachine/seven.svg', colorClass: 'bg-red-50' },
-  { name: 'clover', path: '/assets/icons/slotmachine/clover.svg', colorClass: 'bg-green-50' },
-  { name: 'diamond', path: '/assets/icons/slotmachine/diamond.svg', colorClass: 'bg-blue-50' }
+  { name: 'cherry', path: '/assets/icons/slotmachine/cherry_icon.svg', colorClass: 'bg-red-50' },
+  { name: 'lemon', path: '/assets/icons/slotmachine/lemon_icon.svg', colorClass: 'bg-yellow-50' },
+  { name: 'bell', path: '/assets/icons/slotmachine/bell_icon.svg', colorClass: 'bg-gray-50' },
+  { name: 'seven', path: '/assets/icons/slotmachine/number_seven_icon.svg', colorClass: 'bg-red-50' },
+  { name: 'clover', path: '/assets/icons/slotmachine/four_leaf_clover_icon.svg', colorClass: 'bg-green-50' },
+  { name: 'diamond', path: '/assets/icons/slotmachine/diamond_icon.svg', colorClass: 'bg-blue-50' }
 ]
 
 const funMessages = [
