@@ -3,6 +3,7 @@
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 Route::get('/', [LandingPageController::class, 'index'])->name('home');
 Route::post('/contact', [LandingPageController::class, 'contact'])->name('contact');
