@@ -23,9 +23,7 @@
 
         <!-- CTA Button -->
         <div class="flex items-center space-x-4">
-          <a href="/#contact" class="bg-secondary text-primary font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
-            Request Strategy Call
-          </a>
+          <!-- Mobile Menu Button (if applicable, add mobile menu toggle here) -->
         </div>
       </div>
     </nav>

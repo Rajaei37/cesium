@@ -14,15 +14,12 @@
       </button>
       
       <!-- Request Strategy Call Button -->
-      <button 
-        @click="scrollToContact"
-        class="bg-secondary hover:bg-secondary-dark text-primary font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center space-x-2"
-      >
+      <Link href="/contact-us" class="bg-secondary hover:bg-secondary-dark text-primary font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center space-x-2">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
         </svg>
         <span>Request Call</span>
-      </button>
+      </Link>
     </div>
 
     <!-- Schedule Modal - Removed as we are opening a new window -->
@@ -37,20 +34,16 @@
 
         <!-- Navigation Menu -->
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#home" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</a>
+          <Link href="/" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
           <a href="#services" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</a>
           <a href="#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</a>
           <a href="#affiliate-marketing" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Affiliate</a>
           <a href="#blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</a>
-          <a href="#contact" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</a>
+          <Link href="/contact-us" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</Link>
         </div>
 
         <!-- CTA Button -->
         <div class="flex items-center space-x-4">
-          <a href="#contact" class="bg-secondary text-primary font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
-            Request Strategy Call
-          </a>
-          
           <!-- Mobile Menu Button -->
           <button @click="toggleMobileMenu" class="md:hidden text-primary hover:text-secondary transition-colors duration-300">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,12 +56,12 @@
       <!-- Mobile Menu -->
       <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200">
         <div class="px-6 py-4 space-y-4">
-          <a href="#home" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</a>
+          <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
           <a href="#services" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</a>
           <a href="#results" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</a>
           <a href="#affiliate-marketing" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Affiliate</a>
           <a href="#blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</a>
-          <a href="#contact" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</a>
+          <Link href="/contact-us" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</Link>
         </div>
       </div>
     </nav>
@@ -105,9 +98,9 @@
           <p class="text-xl lg:text-2xl mb-8 opacity-90 animate-fade-in-up animation-delay-200 font-light">
             We help iGaming operators grow faster with data-driven acquisition, retention, and brand building.
           </p>
-          <a href="#contact" class="inline-block bg-secondary text-primary font-medium py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
+          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-medium py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
             Request Strategy Call
-          </a>
+          </Link>
         </div>
         <div class="lg:w-1/2 flex justify-center lg:justify-end animate-fade-in-up animation-delay-600">
           <MiniSlotMachine class="w-full max-w-md" />
@@ -297,9 +290,9 @@
         <p class="text-xl opacity-90 max-w-3xl mx-auto mb-8 animate-fade-in-up animation-delay-200 font-light">
           Get in touch with our experts to discuss your custom growth strategy.
         </p>
-        <a href="#contact" class="inline-block bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
+        <Link href="/contact-us" class="inline-block bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
           Contact Our Team
-        </a>
+        </Link>
       </div>
     </section>
 
@@ -406,7 +399,7 @@ const openScheduleWindow = () => {
 };
 
 const scrollToContact = () => {
-  router.push("/contact-us");
+  router.visit("/contact-us");
 };
 
 // Scroll detection for sticky header
