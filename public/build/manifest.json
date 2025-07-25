@@ -3,104 +3,120 @@
     "file": "assets/_plugin-vue_export-helper-DlAUqK2U.js",
     "name": "_plugin-vue_export-helper"
   },
-  "_index.esm-Ck_DZsTm.js": {
-    "file": "assets/index.esm-Ck_DZsTm.js",
+  "_index.esm-BXbfvdR-.js": {
+    "file": "assets/index.esm-BXbfvdR-.js",
     "name": "index.esm",
     "imports": [
       "resources/js/app.js"
     ]
   },
   "resources/css/app.css": {
-    "file": "assets/app-OCKLp71Z.css",
+    "file": "assets/app-CwpgCmV6.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/Pages/BlogPage.vue": {
-    "file": "assets/BlogPage-BIKXUsiG.js",
+    "file": "assets/BlogPage-CZ6R78DZ.js",
     "name": "BlogPage",
     "src": "resources/js/Pages/BlogPage.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_index.esm-Ck_DZsTm.js",
+      "_index.esm-BXbfvdR-.js",
       "__plugin-vue_export-helper-DlAUqK2U.js"
     ],
     "css": [
       "assets/BlogPage-Nu5pCdzc.css",
-      "assets/app-OCKLp71Z.css"
+      "assets/app-CwpgCmV6.css"
     ]
   },
   "resources/js/Pages/BlogPost.vue": {
-    "file": "assets/BlogPost-Dxu0B5dO.js",
+    "file": "assets/BlogPost-D0SLh_Vu.js",
     "name": "BlogPost",
     "src": "resources/js/Pages/BlogPost.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_index.esm-Ck_DZsTm.js",
+      "_index.esm-BXbfvdR-.js",
       "__plugin-vue_export-helper-DlAUqK2U.js"
     ],
     "css": [
       "assets/BlogPost-B4xlPRXr.css",
-      "assets/app-OCKLp71Z.css"
+      "assets/app-CwpgCmV6.css"
+    ]
+  },
+  "resources/js/Pages/ContactUs.vue": {
+    "file": "assets/ContactUs-CCqbS_zE.js",
+    "name": "ContactUs",
+    "src": "resources/js/Pages/ContactUs.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_index.esm-BXbfvdR-.js",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ],
+    "css": [
+      "assets/ContactUs-tn0RQdqM.css",
+      "assets/app-CwpgCmV6.css"
     ]
   },
   "resources/js/Pages/Dashboard.vue": {
-    "file": "assets/Dashboard-DWFghsKQ.js",
+    "file": "assets/Dashboard-CZvjR-ok.js",
     "name": "Dashboard",
     "src": "resources/js/Pages/Dashboard.vue",
     "isDynamicEntry": true,
     "imports": [
       "__plugin-vue_export-helper-DlAUqK2U.js",
       "resources/js/app.js",
-      "_index.esm-Ck_DZsTm.js"
+      "_index.esm-BXbfvdR-.js"
     ],
     "css": [
-      "assets/app-OCKLp71Z.css"
+      "assets/app-CwpgCmV6.css"
     ]
   },
   "resources/js/Pages/LandingPage.vue": {
-    "file": "assets/LandingPage-BGKry8iu.js",
+    "file": "assets/LandingPage-D6ivmyIV.js",
     "name": "LandingPage",
     "src": "resources/js/Pages/LandingPage.vue",
     "isDynamicEntry": true,
     "imports": [
+      "_index.esm-BXbfvdR-.js",
       "resources/js/app.js",
-      "_index.esm-Ck_DZsTm.js",
       "__plugin-vue_export-helper-DlAUqK2U.js"
     ],
     "css": [
-      "assets/LandingPage-CWZ_KwMi.css",
-      "assets/app-OCKLp71Z.css"
+      "assets/LandingPage-BrbjVVmY.css",
+      "assets/app-CwpgCmV6.css"
     ]
   },
   "resources/js/Pages/Welcome.vue": {
-    "file": "assets/Welcome-DHl7xVar.js",
+    "file": "assets/Welcome-BBC22_Bd.js",
     "name": "Welcome",
     "src": "resources/js/Pages/Welcome.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_index.esm-Ck_DZsTm.js",
+      "_index.esm-BXbfvdR-.js",
       "resources/js/app.js"
     ],
     "css": [
-      "assets/app-OCKLp71Z.css"
+      "assets/app-CwpgCmV6.css"
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-DCDrY7da.js",
+    "file": "assets/app-Dw1COd2u.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
       "resources/js/Pages/BlogPage.vue",
       "resources/js/Pages/BlogPost.vue",
+      "resources/js/Pages/ContactUs.vue",
       "resources/js/Pages/Dashboard.vue",
       "resources/js/Pages/LandingPage.vue",
       "resources/js/Pages/Welcome.vue"
     ],
     "css": [
-      "assets/app-OCKLp71Z.css"
+      "assets/app-CwpgCmV6.css"
     ]
   }
 }

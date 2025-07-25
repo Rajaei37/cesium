@@ -288,71 +288,18 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-primary text-white">
+    <!-- Contact Section - Replaced with link to dedicated Contact Us page -->
+    <section class="py-20 bg-primary text-white text-center">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up">
-            Let's Build Your Winning Brand
-          </h2>
-          <p class="text-xl opacity-90 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
-            Ready to take your iGaming business to the next level? Let's discuss your growth strategy.
-          </p>
-        </div>
-        <div class="max-w-2xl mx-auto">
-          <form @submit.prevent="submitForm" class="space-y-6 animate-fade-in-up animation-delay-400">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label for="name" class="block text-sm font-medium mb-2">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  v-model="form.name"
-                  required
-                  class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent"
-                  placeholder="Your Name"
-                />
-                <div v-if="form.errors.name" class="text-red-300 text-sm mt-1">{{ form.errors.name }}</div>
-              </div>
-              <div>
-                <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  v-model="form.email"
-                  required
-                  class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent"
-                  placeholder="your@email.com"
-                />
-                <div v-if="form.errors.email" class="text-red-300 text-sm mt-1">{{ form.errors.email }}</div>
-              </div>
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium mb-2">Message</label>
-              <textarea
-                id="message"
-                v-model="form.message"
-                required
-                rows="5"
-                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent resize-none"
-                placeholder="Tell us about your project and goals..."
-              ></textarea>
-              <div v-if="form.errors.message" class="text-red-300 text-sm mt-1">{{ form.errors.message }}</div>
-            </div>
-            <div class="text-center">
-              <button
-                type="submit"
-                :disabled="form.processing"
-                class="bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {{ form.processing ? 'Sending...' : 'Send Message' }}
-              </button>
-            </div>
-            <div v-if="form.successMessage" class="text-center text-secondary font-medium">
-              {{ form.successMessage }}
-            </div>
-          </form>
-        </div>
+        <h2 class="text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up">
+          Ready to Transform Your iGaming Business?
+        </h2>
+        <p class="text-xl opacity-90 max-w-3xl mx-auto mb-8 animate-fade-in-up animation-delay-200 font-light">
+          Get in touch with our experts to discuss your custom growth strategy.
+        </p>
+        <a href="#contact" class="inline-block bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
+          Contact Our Team
+        </a>
       </div>
     </section>
 
@@ -421,7 +368,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { useForm } from "@inertiajs/vue3";
+import { Link } from "@inertiajs/vue3";
 import ScrollReveal from "scrollreveal";
 import FeatureCard from "../Components/FeatureCard.vue";
 import KpiCard from "../Components/KpiCard.vue";
@@ -459,10 +406,7 @@ const openScheduleWindow = () => {
 };
 
 const scrollToContact = () => {
-  const contactSection = document.getElementById('contact');
-  if (contactSection) {
-    contactSection.scrollIntoView({ behavior: 'smooth' });
-  }
+  router.push("/contact-us");
 };
 
 // Scroll detection for sticky header
@@ -478,26 +422,6 @@ const props = defineProps({
   teamMembers: Array,
   blogPosts: Array,
 });
-
-// Contact form
-const form = useForm({
-  name: "",
-  email: "",
-  message: "",
-  successMessage: "",
-});
-
-const submitForm = () => {
-  form.post("/contact", {
-    onSuccess: () => {
-      form.reset("name", "email", "message");
-      form.successMessage = "Thank you for your message! We'll get back to you soon.";
-    },
-    onError: () => {
-      form.successMessage = "";
-    },
-  });
-};
 
 onMounted(() => {
   // Initialize ScrollReveal with enhanced settings
