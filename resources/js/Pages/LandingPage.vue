@@ -1,26 +1,6 @@
 <template>
   <div class="min-h-screen bg-cesium-light-gray font-poppins antialiased">
-    <!-- Floating Action Buttons -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
-      <!-- Schedule Time Button -->
-      <button 
-        @click="openScheduleWindow"
-        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center space-x-2"
-      >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-        </svg>
-        <span>Schedule Time</span>
-      </button>
-      
-      <!-- Request Strategy Call Button -->
-      <Link href="/contact-us" class="bg-secondary hover:bg-secondary-dark text-primary font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center space-x-2">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-        </svg>
-        <span>Request Call</span>
-      </Link>
-    </div>
+
 
     <!-- Schedule Modal - Removed as we are opening a new window -->
 
@@ -31,63 +11,19 @@
         <div class="flex-shrink-0">
           <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-10" />
         </div>
-
         <!-- Navigation Menu -->
         <div class="hidden md:flex items-center space-x-8">
           <Link href="/" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
-          <a href="#services" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</a>
-          <a href="#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</a>
-          <a href="#affiliate-marketing" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Affiliate</a>
-          <a href="#blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</a>
+          <Link href="/#services" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
+          <Link href="/#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</Link>
+          <Link href="/#affiliate-marketing" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Affiliate</Link>
+          <Link href="/blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</Link>
           <Link href="/contact-us" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</Link>
-        </div>
-
-        <!-- CTA Button -->
-        <div class="flex items-center space-x-4">
-          <!-- Mobile Menu Button -->
-          <button @click="toggleMobileMenu" class="md:hidden text-primary hover:text-secondary transition-colors duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200">
-        <div class="px-6 py-4 space-y-4">
-          <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
-          <a href="#services" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</a>
-          <a href="#results" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</a>
-          <a href="#affiliate-marketing" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Affiliate</a>
-          <a href="#blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</a>
-          <Link href="/contact-us" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</Link>
         </div>
       </div>
     </nav>
 
-    <!-- Header Section (Hero Section modified to include header elements) -->
-    <section id="home" class="relative bg-primary text-white py-6 overflow-hidden mt-20">
-      <div class="container mx-auto px-6 relative z-10 flex items-center justify-between">
-        <!-- Social Media Icons -->
-        <div class="flex items-center space-x-4 ml-auto">
-          <a href="https://www.tiktok.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-tiktok text-2xl"></i>
-          </a>
-          <a href="https://www.instagram.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-instagram text-2xl"></i>
-          </a>
-          <a href="https://www.facebook.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-facebook-f text-2xl"></i>
-          </a>
-          <a href="https://www.linkedin.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-linkedin-in text-2xl"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hero Content Section -->
+    <!-- Hero Section -->
     <section class="relative bg-primary text-white py-20 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-95"></div>
       <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
@@ -98,9 +34,7 @@
           <p class="text-xl lg:text-2xl mb-8 opacity-90 animate-fade-in-up animation-delay-200 font-light">
             We help iGaming operators grow faster with data-driven acquisition, retention, and brand building.
           </p>
-          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-medium py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
-            Request Strategy Call
-          </Link>
+
         </div>
         <div class="lg:w-1/2 flex justify-center lg:justify-end animate-fade-in-up animation-delay-600">
           <MiniSlotMachine class="w-full max-w-md" />
@@ -237,32 +171,6 @@
             :style="{ animationDelay: `${200 * (index + 1)}ms` }"
           />
         </div>
-
-        <!-- View All Blog Posts -->
-        <div class="text-center">
-          <a href="/blog" class="inline-block bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
-            View All Insights
-          </a>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- Interactive Calculator Section -->
-    <section id="calculator" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-4 animate-fade-in-up">
-            Calculate Your Growth Potential
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
-            Use our interactive calculator to estimate your potential ROI with our marketing strategies
-          </p>
-        </div>
-        <div class="max-w-4xl mx-auto">
-          <InteractiveCalculator class="animate-fade-in-up animation-delay-400" />
-        </div>
       </div>
     </section>
 
@@ -290,7 +198,7 @@
         <p class="text-xl opacity-90 max-w-3xl mx-auto mb-8 animate-fade-in-up animation-delay-200 font-light">
           Get in touch with our experts to discuss your custom growth strategy.
         </p>
-        <Link href="/contact-us" class="inline-block bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
+        <Link href="/contact-us" class="bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
           Contact Our Team
         </Link>
       </div>
@@ -341,9 +249,9 @@
             <p class="text-gray-300 mb-6 font-light">
               Join successful iGaming operators who have transformed their growth with our proven strategies.
             </p>
-            <a href="https://forms.google.com/your-form-link" target="_blank" class="inline-block bg-secondary text-primary font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
-              Apply Now
-            </a>
+            <Link href="/contact-us" class="bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
+              Contact Our Team
+            </Link>
           </div>
         </div>
 
@@ -372,31 +280,10 @@ import TrustBadges from "../Components/TrustBadges.vue";
 import InteractiveCalculator from "../Components/InteractiveCalculator.vue";
 import MiniSlotMachine from "../Components/MiniSlotMachine.vue";
 
-// Mobile menu state
-const mobileMenuOpen = ref(false);
-const scrolled = ref(false);
 
-// Mobile menu methods
-const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value;
-};
-
-const closeMobileMenu = () => {
-  mobileMenuOpen.value = false;
-};
 
 // Floating button methods
-const openScheduleWindow = () => {
-  const width = 800;
-  const height = 700;
-  const left = (window.screen.width / 2) - (width / 2);
-  const top = (window.screen.height / 2) - (height / 2);
-  window.open(
-    'https://calendly.com/ragaee37/30min',
-    'Calendly',
-    `width=${width},height=${height},top=${top},left=${left},toolbar=no,menubar=no,location=no,status=no`
-  );
-};
+
 
 const scrollToContact = () => {
   router.visit("/contact-us");
@@ -488,5 +375,4 @@ onUnmounted(() => {
   }
 }
 </style>
-
 
