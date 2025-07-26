@@ -15,9 +15,9 @@
         <!-- Navigation Menu -->
         <div class="hidden md:flex items-center space-x-8">
           <Link href="/" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
-          <Link href="/#services" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
-          <Link href="/#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</Link>
-          <Link href="/blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</Link>
+          <a href="/#services" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</a>
+          <a href="/#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</a>
+          <a href="/#blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</a>
           <Link href="/contact-us" class="text-secondary font-medium">Contact</Link>
         </div>
 
@@ -212,7 +212,13 @@
           Join successful iGaming operators who have transformed their growth with our proven strategies.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-400">
-          <a href="tel:+1234567890" class="bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
+          <button 
+            @click="openScheduleWindow"
+            class="bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105"
+          >
+            Schedule Strategy Call
+          </button>
+          <a href="tel:+1234567890" class="bg-transparent border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-primary transition duration-300 transform hover:scale-105">
             Call Now
           </a>
         </div>
@@ -315,6 +321,18 @@ const submitForm = async () => {
     };
     isSubmitting.value = false;
   }, 1000);
+};
+
+const openScheduleWindow = () => {
+  const width = 800;
+  const height = 700;
+  const left = (window.screen.width / 2) - (width / 2);
+  const top = (window.screen.height / 2) - (height / 2);
+  window.open(
+    'https://calendly.com/ragaee37/30min',
+    'Calendly',
+    `width=${width},height=${height},top=${top},left=${left},toolbar=no,menubar=no,location=no,status=no`
+  );
 };
 
 onMounted(() => {
