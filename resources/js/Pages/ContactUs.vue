@@ -19,6 +19,7 @@
           <a href="/#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</a>
           <a href="/#blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</a>
           <Link href="/contact-us" class="text-secondary font-medium">Contact</Link>
+          <Link href="/join-our-team" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Join Our Team</Link>
         </div>
 
         <!-- CTA Button -->

@@ -26,3 +26,10 @@ Route::get("/what-we-offer", function () {
 })->name("what-we-offer");
 
 
+
+
+Route::get("/join-our-team", function () {
+    return Inertia::render("JoinOurTeam");
+})->name("join-our-team");
+
+
