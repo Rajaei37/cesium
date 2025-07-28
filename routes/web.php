@@ -19,3 +19,10 @@ Route::get("/contact-us", function () {
 })->name("contact-us");
 
 
+
+
+Route::get("/what-we-offer", function () {
+    return Inertia::render("WhatWeOffer");
+})->name("what-we-offer");
+
+

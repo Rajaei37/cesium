@@ -35,7 +35,7 @@
         <!-- Navigation Menu -->
         <div class="hidden md:flex items-center space-x-8">
           <Link href="/" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
-          <a href="#services" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</a>
+          <Link href="/what-we-offer" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
           <a href="#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</a>
           <a href="#affiliate-marketing" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Affiliate</a>
           <a href="#blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</a>
@@ -57,7 +57,7 @@
       <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200">
         <div class="px-6 py-4 space-y-4">
           <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
-          <a href="#services" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</a>
+          <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
           <a href="#results" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</a>
           <a href="#affiliate-marketing" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Affiliate</a>
           <a href="#blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</a>

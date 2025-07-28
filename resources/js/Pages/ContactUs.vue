@@ -15,7 +15,7 @@
         <!-- Navigation Menu -->
         <div class="hidden md:flex items-center space-x-8">
           <Link href="/" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
-          <a href="/#services" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</a>
+          <Link href="/what-we-offer" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
           <a href="/#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</a>
           <a href="/#blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</a>
           <Link href="/contact-us" class="text-secondary font-medium">Contact</Link>
