@@ -94,7 +94,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 service-section">
           <div class="animate-fade-in-up service-image">
             <div class="relative overflow-hidden rounded-xl shadow-lg group">
-              <img src="/assets/images/player-acquisition.jpg" alt="Player Acquisition" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
+              <img src="/assets/images/player-acquisition.jpg" alt="Player Acquisition" class="w-full h-auto max-h-80 object-contain transition-transform duration-500 group-hover:scale-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h4 class="text-lg font-semibold">Drive Quality Traffic</h4>
@@ -132,7 +132,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 service-section">
           <div class="animate-fade-in-up animation-delay-200 md:order-2 service-image">
             <div class="relative overflow-hidden rounded-xl shadow-lg group">
-              <img src="/assets/images/retention-strategies.jpg" alt="Retention Strategies" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
+              <img src="/assets/images/retention-strategies.jpg" alt="Retention Strategies" class="w-full h-auto max-h-80 object-contain transition-transform duration-500 group-hover:scale-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h4 class="text-lg font-semibold">Build Lasting Relationships</h4>
@@ -170,7 +170,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 service-section">
           <div class="animate-fade-in-up service-image">
             <div class="relative overflow-hidden rounded-xl shadow-lg group">
-              <img src="/assets/images/brand-building.jpg" alt="Brand Building" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
+              <img src="/assets/images/brand-building.jpg" alt="Brand Building" class="w-full h-auto max-h-80 object-contain transition-transform duration-500 group-hover:scale-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h4 class="text-lg font-semibold">Build Trust & Recognition</h4>
@@ -208,7 +208,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center service-section">
           <div class="animate-fade-in-up animation-delay-200 md:order-2 service-image">
             <div class="relative overflow-hidden rounded-xl shadow-lg group">
-              <img src="/assets/images/data-analytics.jpg" alt="Data Analytics" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
+              <img src="/assets/images/data-analytics.jpg" alt="Data Analytics" class="w-full h-auto max-h-80 object-contain transition-transform duration-500 group-hover:scale-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h4 class="text-lg font-semibold">Data-Driven Decisions</h4>
