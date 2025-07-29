@@ -2,7 +2,7 @@ import { createApp, h } from 'vue';
 import '../css/app.css';
 import './bootstrap';
 
-import { createInertiaApp } from '@inertiajs/inertia-vue3';
+import { createInertiaApp } from '@inertiajs/vue3';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';

@@ -363,7 +363,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { Link } from "@inertiajs/vue3";
+import { Link, router } from "@inertiajs/vue3";
 import ScrollReveal from "scrollreveal";
 import FeatureCard from "../Components/FeatureCard.vue";
 import KpiCard from "../Components/KpiCard.vue";
