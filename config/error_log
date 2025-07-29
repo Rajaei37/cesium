@@ -1,0 +1,4 @@
+[29-Jul-2025 23:16:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/odingjyi/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/odingjyi/public_html/config/app.php on line 16
