@@ -268,20 +268,7 @@
       </div>
     </section>
 
-    <!-- Trust Badges Section -->
-    <section class="py-20 bg-cesium-light-gray">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-4 animate-fade-in-up">
-            Trusted by Industry Leaders
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
-            Join the ranks of successful iGaming operators who trust us with their growth
-          </p>
-        </div>
-        <TrustBadges class="animate-fade-in-up animation-delay-400" />
-      </div>
-    </section>
+
 
     <!-- Contact Section - Replaced with link to dedicated Contact Us page -->
     <section class="py-20 bg-primary text-white text-center">
