@@ -16,10 +16,10 @@
         <div class="hidden md:flex items-center space-x-8">
           <Link href="/" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
           <Link href="/what-we-offer" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
-          <a href="/#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</a>
-          <a href="/#blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</a>
+          <Link href="/#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</Link>
+          <Link href="/#blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</Link>
           <Link href="/contact-us" class="text-secondary font-medium">Contact</Link>
-
+          <Link href="/join-our-team" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Join Our Team</Link>
         </div>
 
         <!-- CTA Button -->

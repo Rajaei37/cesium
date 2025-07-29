@@ -111,6 +111,13 @@
           <span v-if="copied" class="text-sm text-green-600 ml-2">✓ Copied!</span>
         </div>
 
+        <!-- Call to Action for Discount -->
+        <div v-if="discount" class="mt-4">
+          <a href="/contact-us" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+            Claim Your Discount Now!
+          </a>
+        </div>
+
         <!-- Fun Message -->
         <div 
           v-if="funMessage" 
