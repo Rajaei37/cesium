@@ -6,7 +6,7 @@
     <AppHeader current-page="services" />
 
     <!-- Hero Section with Parallax Effect -->
-    <section class="relative bg-primary text-white py-20 overflow-hidden">
+    <section class="relative bg-primary text-white py-20 pt-28 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-95"></div>
       <!-- Animated Background Elements -->
       <div class="absolute inset-0 overflow-hidden">

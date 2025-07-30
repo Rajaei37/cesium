@@ -6,7 +6,7 @@
     <AppHeader current-page="contact" />
 
     <!-- Hero Section -->
-    <section class="relative bg-primary text-white py-20 overflow-hidden">
+    <section class="relative bg-primary text-white py-20 pt-28 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-95"></div>
       <div class="container mx-auto px-6 relative z-10 text-center">
         <h1 class="text-5xl lg:text-6xl font-semibold leading-tight mb-6 animate-fade-in-up">

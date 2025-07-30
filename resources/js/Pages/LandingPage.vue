@@ -28,7 +28,7 @@
     <AppHeader current-page="home" />
 
     <!-- Header Section (Hero Section modified to include header elements) -->
-    <section id="home" class="relative bg-primary text-white py-6 overflow-hidden mt-20">
+    <section id="home" class="relative bg-primary text-white py-6 pt-28 overflow-hidden">
       <div class="container mx-auto px-6 relative z-10 flex items-center justify-between">
         <!-- Social Media Icons -->
         <div class="flex items-center space-x-4 ml-auto">
