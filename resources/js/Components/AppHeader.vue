@@ -1,6 +1,6 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 bg-white shadow-xl z-50 transition-all duration-300">
-    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+  <nav class="fixed top-0 left-0 right-0 bg-white shadow-xl z-50 transition-all duration-300 w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
       <div class="flex-shrink-0">
         <Link href="/">
@@ -92,8 +92,8 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200 shadow-lg animate-slide-down">
-      <div class="px-6 py-4 space-y-4">
+    <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200 shadow-lg animate-slide-down absolute top-full left-0 right-0 w-full">
+      <div class="px-4 sm:px-6 py-4 space-y-4 max-w-7xl mx-auto">
         <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
         <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
         <Link href="/#results" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</Link>
