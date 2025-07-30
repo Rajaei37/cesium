@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg z-50 transition-all duration-300" :class="{ 'shadow-xl': scrolled }">
+  <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" :class="scrolled ? 'bg-white shadow-xl' : 'bg-white/90 backdrop-blur-md shadow-lg'">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
       <div class="flex-shrink-0">
@@ -70,6 +70,13 @@
         </Link>
       </div>
 
+      <!-- CTA Button -->
+      <div class="hidden md:flex items-center space-x-4">
+        <Link href="/contact-us" class="bg-secondary hover:bg-secondary-dark text-primary font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          Get Started
+        </Link>
+      </div>
+
       <!-- Mobile Menu Button -->
       <div class="flex items-center space-x-4">
         <button @click="toggleMobileMenu" class="md:hidden text-primary hover:text-secondary transition-colors duration-300">
@@ -81,7 +88,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200 animate-slide-down">
+    <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200 shadow-lg animate-slide-down">
       <div class="px-6 py-4 space-y-4">
         <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
         <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
@@ -89,6 +96,13 @@
         <Link href="/#blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</Link>
         <Link href="/contact-us" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</Link>
         <Link href="/join-our-team" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Join Our Team</Link>
+        
+        <!-- Mobile CTA -->
+        <div class="pt-4 border-t border-gray-200">
+          <Link href="/contact-us" @click="closeMobileMenu" class="w-full bg-secondary hover:bg-secondary-dark text-primary font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center">
+            Get Started
+          </Link>
+        </div>
       </div>
     </div>
   </nav>
