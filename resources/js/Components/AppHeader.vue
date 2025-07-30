@@ -91,19 +91,22 @@
       </div>
     </div>
 
+    <!-- Mobile Menu Backdrop -->
+    <div v-if="mobileMenuOpen" class="fixed inset-0 bg-black bg-opacity-50 z-[9998] md:hidden" @click="closeMobileMenu"></div>
+
     <!-- Mobile Menu -->
-    <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200 shadow-lg animate-slide-down absolute top-full left-0 w-screen max-w-full overflow-x-hidden">
-      <div class="px-4 py-4 space-y-4 w-full">
-        <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
-        <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
-        <Link href="/#results" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</Link>
-        <Link href="/blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</Link>
-        <Link href="/contact-us" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</Link>
-        <Link href="/join-our-team" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Join Our Team</Link>
+    <div v-if="mobileMenuOpen" class="fixed top-20 left-0 right-0 bottom-0 bg-white shadow-lg animate-slide-down z-[9999] md:hidden overflow-y-auto">
+      <div class="px-4 py-6 space-y-6 w-full">
+        <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Home</Link>
+        <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Services</Link>
+        <Link href="/#results" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Results</Link>
+        <Link href="/blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Insights</Link>
+        <Link href="/contact-us" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Contact</Link>
+        <Link href="/join-our-team" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Join Our Team</Link>
         
         <!-- Mobile CTA -->
-        <div class="pt-4 border-t border-gray-200">
-          <Link href="/contact-us" @click="closeMobileMenu" class="w-full bg-secondary hover:bg-secondary-dark text-primary font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center">
+        <div class="pt-6 border-t border-gray-200">
+          <Link href="/contact-us" @click="closeMobileMenu" class="w-full bg-secondary hover:bg-secondary-dark text-primary font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center text-lg">
             Get Started
           </Link>
         </div>
@@ -131,10 +134,19 @@ const scrolled = ref(false);
 // Mobile menu methods
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value;
+  
+  // Prevent body scroll when menu is open
+  if (mobileMenuOpen.value) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
 };
 
 const closeMobileMenu = () => {
   mobileMenuOpen.value = false;
+  // Re-enable body scroll
+  document.body.style.overflow = '';
 };
 
 // Scroll detection for sticky header
@@ -150,6 +162,8 @@ onMounted(() => {
 // Cleanup on unmount
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
+  // Ensure body scroll is re-enabled on component unmount
+  document.body.style.overflow = '';
 });
 </script>
 
