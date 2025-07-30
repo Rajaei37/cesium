@@ -2,32 +2,8 @@
   <Head title="Contact Us - Cesium Marketing" />
 
   <div class="min-h-screen bg-cesium-light-gray font-poppins antialiased">
-    <!-- Navigation Header -->
-    <nav class="bg-white/95 backdrop-blur-sm shadow-lg">
-      <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex-shrink-0">
-          <Link href="/">
-            <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-10" />
-          </Link>
-        </div>
-
-        <!-- Navigation Menu -->
-        <div class="hidden md:flex items-center space-x-8">
-          <Link href="/" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
-          <Link href="/what-we-offer" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
-          <Link href="/#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</Link>
-          <Link href="/#blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</Link>
-          <Link href="/contact-us" class="text-secondary font-medium">Contact</Link>
-          <Link href="/join-our-team" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Join Our Team</Link>
-        </div>
-
-        <!-- CTA Button -->
-        <div class="flex items-center space-x-4">
-          <!-- Mobile Menu Button (if applicable, add mobile menu toggle here) -->
-        </div>
-      </div>
-    </nav>
+    <!-- Header -->
+    <AppHeader current-page="contact" />
 
     <!-- Hero Section -->
     <section class="relative bg-primary text-white py-20 overflow-hidden">
@@ -226,7 +202,8 @@
       </div>
     </section>
 
-
+    <!-- Footer -->
+    <AppFooter />
   </div>
 </template>
 
@@ -234,6 +211,8 @@
 import { ref, onMounted } from 'vue';
 import { Head, Link, router } from '@inertiajs/vue3';
 import ScrollReveal from "scrollreveal";
+import AppHeader from "../Components/AppHeader.vue";
+import AppFooter from "../Components/AppFooter.vue";
 
 const form = ref({
   name: '',

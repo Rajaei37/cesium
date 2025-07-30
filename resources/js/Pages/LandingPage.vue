@@ -24,49 +24,8 @@
 
     <!-- Schedule Modal - Removed as we are opening a new window -->
 
-    <!-- Sticky Navigation Header -->
-    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg z-50 transition-all duration-300" :class="{ 'shadow-xl': scrolled }">
-      <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex-shrink-0">
-          <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-10" />
-        </div>
-
-        <!-- Navigation Menu -->
-        <div class="hidden md:flex items-center space-x-8">
-          <Link href="/" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
-          <Link href="/what-we-offer" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
-          <Link href="/#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</Link>
-          <Link href="/#affiliate-marketing" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Affiliate</Link>
-          <Link href="/#blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</Link>
-          <Link href="/contact-us" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</Link>
-          <Link href="/join-our-team" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Join Our Team</Link>
-        </div>
-
-        <!-- CTA Button -->
-        <div class="flex items-center space-x-4">
-          <!-- Mobile Menu Button -->
-          <button @click="toggleMobileMenu" class="md:hidden text-primary hover:text-secondary transition-colors duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200">
-        <div class="px-6 py-4 space-y-4">
-          <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
-          <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
-          <Link href="/#results" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</Link>
-          <Link href="/#affiliate-marketing" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Affiliate</Link>
-          <Link href="/#blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</Link>
-          <Link href="/contact-us" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</Link>
-          <Link href="/join-our-team" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Join Our Team</Link>
-        </div>
-      </div>
-    </nav>
+    <!-- Header -->
+    <AppHeader current-page="home" />
 
     <!-- Header Section (Hero Section modified to include header elements) -->
     <section id="home" class="relative bg-primary text-white py-6 overflow-hidden mt-20">
@@ -286,65 +245,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary-dark text-white py-16">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <!-- Company Info -->
-          <div>
-            <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-12 mb-6" />
-            <p class="text-gray-300 mb-6 font-light">
-              Cesium Marketing specializes in data-driven growth strategies for iGaming operators. We help businesses scale faster with proven acquisition, retention, and brand building techniques.
-            </p>
-            <div class="flex space-x-4">
-              <a href="https://www.tiktok.com/" target="_blank" class="text-gray-300 hover:text-secondary transition-colors duration-300">
-                <i class="fab fa-tiktok text-xl"></i>
-              </a>
-              <a href="https://www.instagram.com/" target="_blank" class="text-gray-300 hover:text-secondary transition-colors duration-300">
-                <i class="fab fa-instagram text-xl"></i>
-              </a>
-              <a href="https://www.facebook.com/" target="_blank" class="text-gray-300 hover:text-secondary transition-colors duration-300">
-                <i class="fab fa-facebook-f text-xl"></i>
-              </a>
-              <a href="https://www.linkedin.com/" target="_blank" class="text-gray-300 hover:text-secondary transition-colors duration-300">
-                <i class="fab fa-linkedin-in text-xl"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Latest Insights -->
-          <div>
-            <h3 class="text-xl font-semibold mb-6">Latest Insights</h3>
-            <div class="space-y-4">
-              <div v-for="(post, index) in blogPosts.slice(0, 3)" :key="index" class="border-b border-gray-600 pb-4 last:border-b-0">
-                <a :href="post.url" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">
-                  {{ post.title }}
-                </a>
-                <p class="text-sm text-gray-400 mt-1">{{ post.date }}</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Apply Now Section -->
-          <div>
-            <h3 class="text-xl font-semibold mb-6">Ready to Scale Your Business?</h3>
-            <p class="text-gray-300 mb-6 font-light">
-              Join successful iGaming operators who have transformed their growth with our proven strategies.
-            </p>
-            <a href="https://forms.google.com/your-form-link" target="_blank" class="inline-block bg-secondary text-primary font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
-              Apply Now
-            </a>
-          </div>
-        </div>
-
-        <div class="border-t border-gray-600 mt-12 pt-8 text-center">
-          <p class="text-gray-400 font-light">
-            © 2024 Cesium Marketing. All rights reserved. | 
-            <a href="/privacy" class="hover:text-white transition-colors duration-300">Privacy Policy</a> | 
-            <a href="/terms" class="hover:text-white transition-colors duration-300">Terms of Service</a>
-          </p>
-        </div>
-      </div>
-    </footer>
+    <AppFooter />
   </div>
 </template>
 
@@ -360,19 +261,8 @@ import BlogCard from "../Components/BlogCard.vue";
 import TrustBadges from "../Components/TrustBadges.vue";
 import InteractiveCalculator from "../Components/InteractiveCalculator.vue";
 import MiniSlotMachine from "../Components/MiniSlotMachine.vue";
-
-// Mobile menu state
-const mobileMenuOpen = ref(false);
-const scrolled = ref(false);
-
-// Mobile menu methods
-const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value;
-};
-
-const closeMobileMenu = () => {
-  mobileMenuOpen.value = false;
-};
+import AppHeader from "../Components/AppHeader.vue";
+import AppFooter from "../Components/AppFooter.vue";
 
 // Floating button methods
 const openScheduleWindow = () => {
@@ -389,11 +279,6 @@ const openScheduleWindow = () => {
 
 const scrollToContact = () => {
   router.visit("/contact-us");
-};
-
-// Scroll detection for sticky header
-const handleScroll = () => {
-  scrolled.value = window.scrollY > 50;
 };
 
 // Props
@@ -416,18 +301,6 @@ onMounted(() => {
     interval: 150,
     reset: false,
   });
-
-  // Add scroll event listener for sticky header
-  window.addEventListener('scroll', handleScroll);
-  
-  // Add keyboard event listener for modal
-  window.addEventListener('keydown', handleKeydown);
-});
-
-// Cleanup on unmount
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
-  window.removeEventListener('keydown', handleKeydown);
 });
 </script>
 

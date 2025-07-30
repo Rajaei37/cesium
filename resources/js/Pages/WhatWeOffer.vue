@@ -2,61 +2,8 @@
   <Head title="What We Offer - Cesium Marketing" />
 
   <div class="min-h-screen bg-cesium-light-gray font-poppins antialiased">
-    <!-- Navigation Header -->
-    <nav class="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50">
-      <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex-shrink-0">
-          <Link href="/">
-            <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-10 transition-transform duration-300 hover:scale-105" />
-          </Link>
-        </div>
-
-        <!-- Navigation Menu -->
-        <div class="hidden md:flex items-center space-x-8">
-          <Link href="/" class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group">
-            Home
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-          <Link href="/what-we-offer" class="text-secondary font-medium relative">
-            Services
-            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>
-          </Link>
-          <Link href="/#results" class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group">
-            Results
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-          <Link href="/blog" class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group">
-            Insights
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-          <Link href="/contact-us" class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group">
-            Contact
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="flex items-center space-x-4">
-          <button @click="toggleMobileMenu" class="md:hidden text-primary hover:text-secondary transition-colors duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200 animate-slide-down">
-        <div class="px-6 py-4 space-y-4">
-          <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
-          <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-secondary font-medium">Services</Link>
-          <Link href="/#results" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</Link>
-          <Link href="/blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</Link>
-          <Link href="/contact-us" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</Link>
-        </div>
-      </div>
-    </nav>
+    <!-- Header -->
+    <AppHeader current-page="services" />
 
     <!-- Hero Section with Parallax Effect -->
     <section class="relative bg-primary text-white py-20 overflow-hidden">
@@ -283,68 +230,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary-dark text-white py-16">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <!-- Company Info -->
-          <div>
-            <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-12 mb-6" />
-            <p class="text-gray-300 mb-6 font-light">
-              Cesium Marketing specializes in data-driven growth strategies for iGaming operators. We help businesses scale faster with proven acquisition, retention, and brand building techniques.
-            </p>
-            <div class="flex space-x-4">
-              <a href="https://www.tiktok.com/" target="_blank" class="text-gray-300 hover:text-secondary transition-colors duration-300 transform hover:scale-110">
-                <i class="fab fa-tiktok text-xl"></i>
-              </a>
-              <a href="https://www.instagram.com/" target="_blank" class="text-gray-300 hover:text-secondary transition-colors duration-300 transform hover:scale-110">
-                <i class="fab fa-instagram text-xl"></i>
-              </a>
-              <a href="https://www.facebook.com/" target="_blank" class="text-gray-300 hover:text-secondary transition-colors duration-300 transform hover:scale-110">
-                <i class="fab fa-facebook-f text-xl"></i>
-              </a>
-              <a href="https://www.linkedin.com/" target="_blank" class="text-gray-300 hover:text-secondary transition-colors duration-300 transform hover:scale-110">
-                <i class="fab fa-linkedin-in text-xl"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Quick Links -->
-          <div>
-            <h3 class="text-xl font-semibold mb-6">Quick Links</h3>
-            <div class="space-y-3">
-              <Link href="/" class="block text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform">Home</Link>
-              <Link href="/what-we-offer" class="block text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform">Services</Link>
-              <a href="/#results" class="block text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform">Results</a>
-              <a href="/#blog" class="block text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform">Insights</a>
-              <Link href="/contact-us" class="block text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform">Contact</Link>
-            </div>
-          </div>
-
-          <!-- Contact Info -->
-          <div>
-            <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
-            <div class="space-y-3 text-gray-300">
-              <p class="hover:text-white transition-colors duration-300">123 Marketing Lane, Suite 400</p>
-              <p class="hover:text-white transition-colors duration-300">Business City, BC 12345</p>
-              <p>
-                <a href="tel:+1234567890" class="hover:text-white transition-colors duration-300 hover:underline">+1 (234) 567-890</a>
-              </p>
-              <p>
-                <a href="mailto:info@cesiummarketing.com" class="hover:text-white transition-colors duration-300 hover:underline">info@cesiummarketing.com</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="border-t border-gray-600 mt-12 pt-8 text-center">
-          <p class="text-gray-400 font-light">
-            © 2024 Cesium Marketing. All rights reserved. | 
-            <a href="/privacy" class="hover:text-white transition-colors duration-300">Privacy Policy</a> | 
-            <a href="/terms" class="hover:text-white transition-colors duration-300">Terms of Service</a>
-          </p>
-        </div>
-      </div>
-    </footer>
+    <AppFooter />
   </div>
 </template>
 
@@ -352,6 +238,8 @@
 import { Head, Link } from "@inertiajs/vue3";
 import { ref, onMounted, onUnmounted } from "vue";
 import ScrollReveal from "scrollreveal";
+import AppHeader from "../Components/AppHeader.vue";
+import AppFooter from "../Components/AppFooter.vue";
 
 // Mobile menu state
 const mobileMenuOpen = ref(false);
