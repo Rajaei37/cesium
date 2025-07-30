@@ -1,28 +1,10 @@
 <template>
   <div class="min-h-screen bg-gray-50">
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-      <div class="container mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-4">
-            <Link href="/" class="flex items-center space-x-2">
-              <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing" class="h-8 w-auto" />
-              <span class="text-xl font-bold text-primary">Cesium Marketing</span>
-            </Link>
-          </div>
-          <nav class="hidden md:flex items-center space-x-8">
-            <Link href="/" class="text-gray-600 hover:text-primary transition-colors">Home</Link>
-            <Link href="/#services" class="text-gray-600 hover:text-primary transition-colors">Services</Link>
-            <Link href="/#about" class="text-gray-600 hover:text-primary transition-colors">About</Link>
-            <Link href="/blog" class="text-primary font-medium">Blog</Link>
-            <Link href="/#contact" class="text-gray-600 hover:text-primary transition-colors">Contact</Link>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <AppHeader current-page="blog" />
 
     <!-- Hero Section -->
-    <section class="bg-primary text-white py-20">
+    <section class="bg-primary text-white py-20 mt-20">
       <div class="container mx-auto px-6 text-center">
         <h1 class="text-4xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
           Latest Insights
@@ -192,6 +174,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { Link } from '@inertiajs/vue3'
+import AppHeader from '@/Components/AppHeader.vue'
 
 // Props
 const props = defineProps({
