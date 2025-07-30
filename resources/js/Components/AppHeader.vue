@@ -1,6 +1,6 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 bg-white shadow-xl z-50 transition-all duration-300 w-full">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+  <nav class="fixed top-0 left-0 right-0 bg-white shadow-xl z-50 transition-all duration-300 w-full max-w-full overflow-x-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between w-full">
       <!-- Logo -->
       <div class="flex-shrink-0">
         <Link href="/">
@@ -92,8 +92,8 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200 shadow-lg animate-slide-down absolute top-full left-0 right-0 w-full">
-      <div class="px-4 sm:px-6 py-4 space-y-4 max-w-7xl mx-auto">
+    <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200 shadow-lg animate-slide-down absolute top-full left-0 w-screen max-w-full overflow-x-hidden">
+      <div class="px-4 py-4 space-y-4 w-full">
         <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
         <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
         <Link href="/#results" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</Link>
@@ -169,5 +169,40 @@ onUnmounted(() => {
     transform: translateY(0);
   }
 }
-</style>
 
+/* Mobile Menu Specific Styles */
+.mobile-menu-container {
+  width: 100vw;
+  max-width: 100vw;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Ensure mobile menu content doesn't overflow */
+@media (max-width: 768px) {
+  .mobile-menu-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .mobile-menu-content {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Prevent any element from causing horizontal overflow */
+  .mobile-menu-container * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+</style>
