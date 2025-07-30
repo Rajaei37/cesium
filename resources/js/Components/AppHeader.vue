@@ -40,11 +40,15 @@
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
         </Link>
         <Link 
-          href="/#blog" 
+          href="/blog" 
           class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group"
+          :class="{ 'text-secondary': currentPage === 'blog' }"
         >
           Insights
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+          <span 
+            class="absolute bottom-0 left-0 h-0.5 bg-secondary transition-all duration-300"
+            :class="currentPage === 'blog' ? 'w-full' : 'w-0 group-hover:w-full'"
+          ></span>
         </Link>
         <Link 
           href="/contact-us" 
@@ -93,7 +97,7 @@
         <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Home</Link>
         <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Services</Link>
         <Link href="/#results" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Results</Link>
-        <Link href="/#blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</Link>
+        <Link href="/blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Insights</Link>
         <Link href="/contact-us" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Contact</Link>
         <Link href="/join-our-team" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium">Join Our Team</Link>
         
