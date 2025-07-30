@@ -4,7 +4,7 @@
     <AppHeader current-page="blog" />
 
     <!-- Hero Section -->
-    <section class="bg-primary text-white py-20">
+    <section class="bg-primary text-white py-20 mt-20">
       <div class="container mx-auto px-6 text-center">
         <h1 class="text-4xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
           Latest Insights

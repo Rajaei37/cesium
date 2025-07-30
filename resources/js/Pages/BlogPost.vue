@@ -4,7 +4,7 @@
     <AppHeader current-page="blog" />
 
     <!-- Breadcrumb -->
-    <div class="bg-white border-b">
+    <div class="bg-white border-b mt-20">
       <div class="container mx-auto px-6 py-4">
         <nav class="flex items-center space-x-2 text-sm">
           <Link href="/" class="text-gray-500 hover:text-primary">Home</Link>
