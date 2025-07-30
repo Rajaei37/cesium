@@ -1,10 +1,12 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Allow access to existing files/directories in public_html
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
+    # Prevent directory listing
+    Options -Indexes
 
-    # Rewrite all other requests to /public/index.php
+    # If request is not already pointing to /public
+    RewriteCond %{REQUEST_URI} !^/public/
+
+    # Rewrite everything to /public
     RewriteRule ^(.*)$ public/$1 [L,QSA]
 </IfModule>
