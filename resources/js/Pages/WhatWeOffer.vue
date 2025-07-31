@@ -198,14 +198,14 @@
           Why Choose Our Services?
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <KpiCard
+          <Enhanced3DKpiCard
             v-for="(kpi, index) in kpis"
             :key="index"
             :icon="kpi.icon"
             :value="kpi.number"
             :suffix="kpi.suffix"
             :label="kpi.label"
-            class="animate-fade-in-up bg-primary-light rounded-xl p-8 border border-primary-light hover:bg-primary-dark transition-all duration-300"
+            class="animate-fade-in-up"
             :style="{ animationDelay: `${200 * index}ms` }"
           />
         </div>
@@ -244,6 +244,7 @@ import ScrollReveal from "scrollreveal";
 import AppHeader from "../Components/AppHeader.vue";
 import AppFooter from "../Components/AppFooter.vue";
 import KpiCard from "../Components/KpiCard.vue";
+import Enhanced3DKpiCard from "../Components/Enhanced3DKpiCard.vue";
 
 // Props
 const props = defineProps({

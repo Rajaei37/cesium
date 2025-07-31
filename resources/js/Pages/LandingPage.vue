@@ -50,6 +50,9 @@
 
     <!-- Hero Content Section -->
     <section class="relative bg-primary text-white py-20 overflow-hidden">
+      <!-- Floating Shapes Background -->
+      <FloatingShapes />
+      
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-95"></div>
       <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
@@ -130,14 +133,14 @@
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <KpiCard
+          <Enhanced3DKpiCard
             v-for="(kpi, index) in kpis"
             :key="index"
             :icon="kpi.icon"
             :value="kpi.number"
             :suffix="kpi.suffix"
             :label="kpi.label"
-            class="animate-fade-in-up bg-primary-light rounded-xl p-8 border border-primary-light hover:bg-primary-dark transition-all duration-300"
+            class="animate-fade-in-up"
             :style="{ animationDelay: `${200 * index}ms` }"
           />
         </div>
@@ -256,6 +259,8 @@ import { Link, router } from "@inertiajs/vue3";
 import ScrollReveal from "scrollreveal";
 import FeatureCard from "../Components/FeatureCard.vue";
 import KpiCard from "../Components/KpiCard.vue";
+import Enhanced3DKpiCard from "../Components/Enhanced3DKpiCard.vue";
+import FloatingShapes from "../Components/FloatingShapes.vue";
 import CaseStudyCard from "../Components/CaseStudyCard.vue";
 import TeamCard from "../Components/TeamCard.vue";
 import BlogCard from "../Components/BlogCard.vue";
