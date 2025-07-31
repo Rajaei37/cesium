@@ -154,10 +154,9 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import lottie from 'lottie-web'
 
 // Audio objects
-// Audio objects
-// const spinSound = new Audio("/assets/audio/slotmachine/spin_sound.wav")
-// const winSound = new Audio("/assets/audio/slotmachine/win_sound.wav")
-// const loseSound = new Audio("/assets/audio/slotmachine/lose_sound.wav")
+const spinSound = new Audio("/assets/audio/slotmachine/spin_sound.wav")
+const winSound = new Audio("/assets/audio/slotmachine/win_sound.wav")
+const loseSound = new Audio("/assets/audio/slotmachine/lose_sound.wav")
 
 // Emits
 const emit = defineEmits(['discount-won', 'spin-complete'])
@@ -190,7 +189,7 @@ const symbols = [
   { name: 'lemon', path: '/assets/icons/slotmachine/Lemon.svg', colorClass: 'bg-yellow-50' },
   { name: 'bell', path: '/assets/icons/slotmachine/Bell.svg', colorClass: 'bg-gray-50' },
   { name: 'seven', path: '/assets/icons/slotmachine/NumberSeven.svg', colorClass: 'bg-red-50' },
-  { name: 'clover', path: '/assets/icons/slotmachine/Four-leafClover.svg', colorClass: 'bg-green-50' },
+  { name: 'clover', path: '/assets/icons/slotmachine/FourLeafClover.svg', colorClass: 'bg-green-50' },
   { name: 'diamond', path: '/assets/icons/slotmachine/Diamond.svg', colorClass: 'bg-blue-50' },
   { name: 'horseshoe', path: '/assets/icons/slotmachine/horseshoe.svg', colorClass: 'bg-orange-50' }
 ]
@@ -311,7 +310,7 @@ const spin = () => {
   funMessage.value = funMessages[Math.floor(Math.random() * funMessages.length)]
 
   // Play spin sound
-  // spinSound.play()
+  spinSound.play()
 
   let spins = 0
   const spinDuration = 20 + Math.floor(Math.random() * 10) // 20-30 spins
