@@ -24,11 +24,11 @@
       <!-- Slot Machine Container -->
       <div
         :class="[
-          'bg-white/90 rounded-2xl shadow-2xl p-8 flex flex-col items-center border-4 relative',
+          'bg-white rounded-3xl shadow-2xl p-6 flex flex-col items-center border-4 relative',
           spinning ? 'border-[#facb24] animate-shake' : 'border-[#362869]',
           jackpot ? 'ring-4 ring-green-400 ring-offset-2' : ''
         ]"
-        style="width: 340px; min-height: 220px; transition: box-shadow 0.3s;"
+        style="width: 400px; min-height: 280px; transition: box-shadow 0.3s; border-radius: 24px;"
         role="application"
         aria-label="Slot machine game"
       >
@@ -43,29 +43,37 @@
 
         <!-- Slot Display -->
         <div 
-          class="flex space-x-4 text-6xl font-mono mb-4 select-none"
-          role="img"
-          :aria-label="`Current slots: ${slots.map(s => s.name).join(', ')}`"
+          class="bg-[#362869] rounded-2xl p-4 mb-6 shadow-inner"
+          style="width: 100%; max-width: 320px;"
         >
-          <span 
-            v-for="(symbol, i) in slots" 
-            :key="i" 
-            :class="[
-              'transition-transform duration-300 flex items-center justify-center w-16 h-16 rounded-lg',
-              symbol.colorClass,
-              spinning ? 'animate-spin-slot' : '',
-              jackpot && symbol.name === slots[0].name ? 'animate-jackpot-glow' : ''
-            ]"
-            :style="{ animationDelay: `${i * 0.1}s` }"
+          <div 
+            class="flex space-x-2 justify-center"
+            role="img"
+            :aria-label="`Current slots: ${slots.map(s => s.name).join(', ')}`"
           >
-            <img :src="symbol.path" :alt="symbol.name" class="w-12 h-12" />
-          </span>
+            <div 
+              v-for="(symbol, i) in slots" 
+              :key="i" 
+              :class="[
+                'bg-gray-100 rounded-lg flex items-center justify-center transition-transform duration-300',
+                spinning ? 'animate-spin-slot' : '',
+                jackpot && symbol.name === slots[0].name ? 'animate-jackpot-glow' : ''
+              ]"
+              :style="{ 
+                animationDelay: `${i * 0.1}s`,
+                width: '80px',
+                height: '80px'
+              }"
+            >
+              <img :src="symbol.path" :alt="symbol.name" class="w-12 h-12" />
+            </div>
+          </div>
         </div>
 
         <!-- Spin Button -->
         <button
           @click="spin"
-          class="px-10 py-4 bg-[#facb24] text-[#362869] rounded-full font-bold text-xl shadow-lg hover:bg-yellow-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#facb24] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          class="px-12 py-3 bg-[#facb24] text-[#362869] rounded-full font-bold text-lg shadow-lg hover:bg-yellow-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#facb24] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed mb-4"
           :disabled="spinning || cooldown"
           :aria-label="spinning ? 'Spinning in progress' : 'Spin the slot machine'"
         >
@@ -85,7 +93,7 @@
         <!-- Result Display -->
         <div 
           v-if="result" 
-          class="mt-4 text-lg font-bold text-center transition-all duration-300" 
+          class="mt-2 text-lg font-bold text-center transition-all duration-300" 
           :class="jackpot ? 'text-green-600 animate-pulse-strong' : 'text-[#362869]'"
           role="status"
           aria-live="assertive"
@@ -96,7 +104,7 @@
         <!-- Discount Code Display -->
         <div 
           v-if="discount" 
-          class="mt-2 text-2xl font-bold text-green-700 text-center"
+          class="mt-2 text-xl font-bold text-green-700 text-center"
           role="status"
           aria-live="assertive"
         >
