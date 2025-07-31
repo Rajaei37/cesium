@@ -23,8 +23,11 @@ Route::get("/contact-us", function () {
 
 Route::get("/what-we-offer", [LandingPageController::class, 'whatWeOffer'])->name("what-we-offer");
 
-
-
+Route::get("/our-process", function () {
+    return Inertia::render("OurProcess", [
+        'title' => 'Our Process - Cesium Marketing'
+    ]);
+})->name("our-process");
 
 Route::get("/join-our-team", function () {
     return Inertia::render("JoinOurTeam");

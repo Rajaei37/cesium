@@ -32,12 +32,17 @@
             :class="currentPage === 'services' ? 'w-full' : 'w-0 group-hover:w-full'"
           ></span>
         </Link>
+
         <Link 
-          href="/#results" 
+          href="/our-process" 
           class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group"
+          :class="{ 'text-secondary': currentPage === 'our-process' }"
         >
-          Results
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+          Our Process
+          <span 
+            class="absolute bottom-0 left-0 h-0.5 bg-secondary transition-all duration-300"
+            :class="currentPage === 'our-process' ? 'w-full' : 'w-0 group-hover:w-full'"
+          ></span>
         </Link>
         <Link 
           href="/blog" 
@@ -99,7 +104,8 @@
       <div class="px-4 py-6 space-y-6 w-full">
         <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Home</Link>
         <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Services</Link>
-        <Link href="/#results" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Results</Link>
+
+        <Link href="/our-process" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Our Process</Link>
         <Link href="/blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Insights</Link>
         <Link href="/contact-us" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Contact</Link>
         <Link href="/join-our-team" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Join Our Team</Link>
