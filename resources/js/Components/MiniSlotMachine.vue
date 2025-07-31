@@ -24,11 +24,11 @@
       <!-- Slot Machine Container -->
       <div
         :class="[
-          'bg-white rounded-3xl shadow-2xl p-6 flex flex-col items-center border-4 relative',
-          spinning ? 'border-[#facb24] animate-shake' : 'border-[#362869]',
+          'bg-gray-200 rounded-lg shadow-2xl p-6 flex flex-col items-center relative',
+          spinning ? 'animate-shake' : '',
           jackpot ? 'ring-4 ring-green-400 ring-offset-2' : ''
         ]"
-        style="width: 400px; min-height: 280px; transition: box-shadow 0.3s; border-radius: 24px;"
+        style="width: 400px; min-height: 300px; transition: box-shadow 0.3s;"
         role="application"
         aria-label="Slot machine game"
       >
@@ -43,11 +43,11 @@
 
         <!-- Slot Display -->
         <div 
-          class="bg-[#362869] rounded-2xl p-4 mb-6 shadow-inner"
+          class="bg-[#362869] rounded-lg p-3 mb-6 shadow-inner border-4 border-[#362869]"
           style="width: 100%; max-width: 320px;"
         >
           <div 
-            class="flex space-x-2 justify-center"
+            class="flex space-x-1 justify-center"
             role="img"
             :aria-label="`Current slots: ${slots.map(s => s.name).join(', ')}`"
           >
@@ -55,17 +55,17 @@
               v-for="(symbol, i) in slots" 
               :key="i" 
               :class="[
-                'bg-gray-100 rounded-lg flex items-center justify-center transition-transform duration-300',
+                'bg-gray-300 border-2 border-gray-400 flex items-center justify-center transition-transform duration-300',
                 spinning ? 'animate-spin-slot' : '',
                 jackpot && symbol.name === slots[0].name ? 'animate-jackpot-glow' : ''
               ]"
               :style="{ 
                 animationDelay: `${i * 0.1}s`,
-                width: '80px',
-                height: '80px'
+                width: '90px',
+                height: '90px'
               }"
             >
-              <img :src="symbol.path" :alt="symbol.name" class="w-12 h-12" />
+              <img :src="symbol.path" :alt="symbol.name" class="w-14 h-14" />
             </div>
           </div>
         </div>
