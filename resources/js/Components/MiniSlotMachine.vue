@@ -185,12 +185,13 @@ const gameStats = ref({
 
 // Constants
 const symbols = [
-  { name: 'cherry', path: '/assets/icons/slotmachine/cherry_icon.svg', colorClass: 'bg-red-50' },
-  { name: 'lemon', path: '/assets/icons/slotmachine/lemon_icon.svg', colorClass: 'bg-yellow-50' },
-  { name: 'bell', path: '/assets/icons/slotmachine/bell_icon.svg', colorClass: 'bg-gray-50' },
-  { name: 'seven', path: '/assets/icons/slotmachine/number_seven_icon.svg', colorClass: 'bg-red-50' },
-  { name: 'clover', path: '/assets/icons/slotmachine/four_leaf_clover_icon.svg', colorClass: 'bg-green-50' },
-  { name: 'diamond', path: '/assets/icons/slotmachine/diamond_icon.svg', colorClass: 'bg-blue-50' }
+  { name: 'cherry', path: '/assets/icons/slotmachine/Cherry.svg', colorClass: 'bg-red-50' },
+  { name: 'lemon', path: '/assets/icons/slotmachine/Lemon.svg', colorClass: 'bg-yellow-50' },
+  { name: 'bell', path: '/assets/icons/slotmachine/Bell.svg', colorClass: 'bg-gray-50' },
+  { name: 'seven', path: '/assets/icons/slotmachine/NumberSeven.svg', colorClass: 'bg-red-50' },
+  { name: 'clover', path: '/assets/icons/slotmachine/Four-leafClover.svg', colorClass: 'bg-green-50' },
+  { name: 'diamond', path: '/assets/icons/slotmachine/Diamond.svg', colorClass: 'bg-blue-50' },
+  { name: 'horseshoe', path: '/assets/icons/slotmachine/horseshoe.svg', colorClass: 'bg-orange-50' }
 ]
 
 const funMessages = [
@@ -562,17 +563,15 @@ button:focus-visible {
 
 
 
-/* New spin animation for individual slots */
 @keyframes spin-slot {
-  0% { transform: translateY(0) rotateX(0deg); opacity: 1; }
-  25% { transform: translateY(-20px) rotateX(90deg); opacity: 0.5; }
-  50% { transform: translateY(0) rotateX(180deg); opacity: 1; }
-  75% { transform: translateY(20px) rotateX(270deg); opacity: 0.5; }
-  100% { transform: translateY(0) rotateX(360deg); opacity: 1; }
+  0% { transform: translateY(0) scaleY(1); opacity: 1; }
+  50% { transform: translateY(50%) scaleY(0.1); opacity: 0; }
+  51% { transform: translateY(-50%) scaleY(0.1); opacity: 0; }
+  100% { transform: translateY(0) scaleY(1); opacity: 1; }
 }
 
 .animate-spin-slot {
-  animation: spin-slot 0.5s ease-in-out infinite;
+  animation: spin-slot 0.1s linear infinite;
 }
 
 /* Jackpot glow animation */
