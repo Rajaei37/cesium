@@ -64,24 +64,24 @@ class LandingPageController extends Controller
         $kpis = [
             [
                 'icon' => 'trending-up',
-                'number' => 300,
+                'number' => 180,
                 'label' => 'Average ROI Increase',
                 'suffix' => '%',
-                'description' => 'Our clients see an average 300% return on their marketing investment within the first 6 months.'
+                'description' => 'Percentage improvement in client performance across our marketing campaigns.'
             ],
             [
                 'icon' => 'target',
-                'number' => 150,
+                'number' => 250,
                 'label' => 'Successful Campaigns',
                 'suffix' => '+',
-                'description' => 'Over 150 successful marketing campaigns launched across various iGaming verticals.'
+                'description' => 'Marketing campaigns delivered across multiple iGaming verticals.'
             ],
             [
                 'icon' => 'dollar-sign',
-                'number' => 50,
-                'label' => 'Revenue Generated',
-                'suffix' => 'M+',
-                'description' => 'Our strategies have generated over $50 million in revenue for our iGaming clients.'
+                'number' => 95,
+                'label' => 'Client Satisfaction',
+                'suffix' => '%',
+                'description' => 'Average satisfaction rate from our partners and clients.'
             ]
         ];
 
@@ -222,6 +222,37 @@ class LandingPageController extends Controller
                 'caseStudies' => $caseStudies,
             ]
         );
+    }
+
+    public function whatWeOffer()
+    {
+        $kpis = [
+            [
+                'icon' => 'trending-up',
+                'number' => 180,
+                'label' => 'Average ROI Increase',
+                'suffix' => '%',
+                'description' => 'Percentage improvement in client performance across our marketing campaigns.'
+            ],
+            [
+                'icon' => 'target',
+                'number' => 250,
+                'label' => 'Successful Campaigns',
+                'suffix' => '+',
+                'description' => 'Marketing campaigns delivered across multiple iGaming verticals.'
+            ],
+            [
+                'icon' => 'dollar-sign',
+                'number' => 95,
+                'label' => 'Client Satisfaction',
+                'suffix' => '%',
+                'description' => 'Average satisfaction rate from our partners and clients.'
+            ]
+        ];
+
+        return Inertia::render('WhatWeOffer', [
+            'kpis' => $kpis,
+        ]);
     }
 
     public function contact(Request $request)

@@ -197,14 +197,17 @@
         <h2 class="text-4xl lg:text-5xl font-semibold mb-12 text-center animate-fade-in-up">
           Why Choose Our Services?
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div v-for="(stat, index) in stats" :key="index" 
-               class="text-center p-8 rounded-xl bg-primary-light hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 animate-fade-in-up"
-               :style="{ animationDelay: `${200 * index}ms` }">
-            <div class="text-5xl font-bold text-secondary mb-4 counter" :data-target="stat.value">0</div>
-            <h3 class="text-xl font-semibold mb-2">{{ stat.label }}</h3>
-            <p class="text-gray-300">{{ stat.description }}</p>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <KpiCard
+            v-for="(kpi, index) in kpis"
+            :key="index"
+            :icon="kpi.icon"
+            :value="kpi.number"
+            :suffix="kpi.suffix"
+            :label="kpi.label"
+            class="animate-fade-in-up bg-primary-light rounded-xl p-8 border border-primary-light hover:bg-primary-dark transition-all duration-300"
+            :style="{ animationDelay: `${200 * index}ms` }"
+          />
         </div>
       </div>
     </section>
@@ -240,6 +243,12 @@ import { ref, onMounted, onUnmounted } from "vue";
 import ScrollReveal from "scrollreveal";
 import AppHeader from "../Components/AppHeader.vue";
 import AppFooter from "../Components/AppFooter.vue";
+import KpiCard from "../Components/KpiCard.vue";
+
+// Props
+const props = defineProps({
+  kpis: Array,
+});
 
 // Mobile menu state
 const mobileMenuOpen = ref(false);
@@ -282,48 +291,6 @@ const analyticsFeatures = ref([
   "A/B Testing: Optimizing campaigns for maximum impact"
 ]);
 
-// Stats data
-const stats = ref([
-  {
-    value: 250,
-    label: "Successful Campaigns",
-    description: "Delivered across multiple iGaming verticals"
-  },
-  {
-    value: 95,
-    label: "Client Satisfaction",
-    description: "Average satisfaction rate from our partners"
-  },
-  {
-    value: 180,
-    label: "Average ROI Increase",
-    description: "Percentage improvement in client performance"
-  }
-]);
-
-// Counter animation
-const animateCounters = () => {
-  const counters = document.querySelectorAll('.counter');
-  
-  counters.forEach(counter => {
-    const target = parseInt(counter.getAttribute('data-target'));
-    const increment = target / 100;
-    let current = 0;
-    
-    const updateCounter = () => {
-      if (current < target) {
-        current += increment;
-        counter.textContent = Math.ceil(current);
-        setTimeout(updateCounter, 20);
-      } else {
-        counter.textContent = target;
-      }
-    };
-    
-    updateCounter();
-  });
-};
-
 // Schedule window method
 const openScheduleWindow = () => {
   const width = 800;
@@ -348,21 +315,6 @@ onMounted(() => {
     interval: 150,
     reset: false,
   });
-
-  // Animate counters when they come into view
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounters();
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  const statsSection = document.querySelector('.counter');
-  if (statsSection) {
-    observer.observe(statsSection.closest('section'));
-  }
 });
 
 // Cleanup on unmount

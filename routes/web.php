@@ -21,9 +21,7 @@ Route::get("/contact-us", function () {
 
 
 
-Route::get("/what-we-offer", function () {
-    return Inertia::render("WhatWeOffer");
-})->name("what-we-offer");
+Route::get("/what-we-offer", [LandingPageController::class, 'whatWeOffer'])->name("what-we-offer");
 
 
 
