@@ -273,48 +273,65 @@ class Particle {
 }
 
 const startParticles = () => {
-  if (!particlesCanvas.value) return
+  if (!particlesCanvas.value || !cardRef.value) return
   
-  const canvas = particlesCanvas.value
-  const rect = cardRef.value.getBoundingClientRect()
-  canvas.width = rect.width
-  canvas.height = rect.height
-  
-  particlesCtx = canvas.getContext('2d')
-  particles = []
-  
-  const animateParticles = () => {
-    if (!isHovered.value) return
+  try {
+    const canvas = particlesCanvas.value
+    const rect = cardRef.value.getBoundingClientRect()
+    canvas.width = rect.width
+    canvas.height = rect.height
     
-    particlesCtx.clearRect(0, 0, canvas.width, canvas.height)
-    
-    // Add new particles
-    if (Math.random() < 0.3) {
-      particles.push(new Particle(
-        Math.random() * canvas.width,
-        canvas.height
-      ))
+    particlesCtx = canvas.getContext('2d')
+    if (!particlesCtx) {
+      console.warn('Enhanced3DKpiCard: Could not get particles context')
+      return
     }
     
-    // Update and draw particles
-    particles = particles.filter(particle => {
-      particle.update()
-      particle.draw()
-      return particle.life > 0
-    })
+    particles = []
     
-    particlesAnimationId = requestAnimationFrame(animateParticles)
+    const animateParticles = () => {
+      if (!isHovered.value || !particlesCtx) return
+      
+      try {
+        particlesCtx.clearRect(0, 0, canvas.width, canvas.height)
+        
+        // Add new particles
+        if (Math.random() < 0.3) {
+          particles.push(new Particle(
+            Math.random() * canvas.width,
+            canvas.height
+          ))
+        }
+        
+        // Update and draw particles
+        particles = particles.filter(particle => {
+          particle.update()
+          particle.draw()
+          return particle.life > 0
+        })
+        
+        particlesAnimationId = requestAnimationFrame(animateParticles)
+      } catch (error) {
+        console.warn('Enhanced3DKpiCard: Error in particle animation:', error)
+      }
+    }
+    
+    animateParticles()
+  } catch (error) {
+    console.warn('Enhanced3DKpiCard: Error starting particles:', error)
   }
-  
-  animateParticles()
 }
 
 const stopParticles = () => {
-  if (particlesAnimationId) {
-    cancelAnimationFrame(particlesAnimationId)
-    particlesAnimationId = null
+  try {
+    if (particlesAnimationId) {
+      cancelAnimationFrame(particlesAnimationId)
+      particlesAnimationId = null
+    }
+    particles = []
+  } catch (error) {
+    console.warn('Enhanced3DKpiCard: Error stopping particles:', error)
   }
-  particles = []
 }
 
 // Watchers
@@ -328,16 +345,24 @@ watch(() => props.value, () => {
 
 // Lifecycle
 onMounted(() => {
-  // Set up 3D perspective
-  gsap.set(cardContainer.value, {
-    transformPerspective: 1000,
-    transformOrigin: "center center"
-  })
-  
-  // Delay animation slightly to ensure proper mounting
-  setTimeout(() => {
-    animateCounter()
-  }, 100)
+  try {
+    // Set up 3D perspective
+    if (cardContainer.value) {
+      gsap.set(cardContainer.value, {
+        transformPerspective: 1000,
+        transformOrigin: "center center"
+      })
+    }
+    
+    // Delay animation slightly to ensure proper mounting
+    setTimeout(() => {
+      animateCounter()
+    }, 100)
+  } catch (error) {
+    console.warn('Enhanced3DKpiCard: Error during mount:', error)
+    // Fallback to display final value without animation
+    displayValue.value = formattedValue.value
+  }
 })
 </script>
 

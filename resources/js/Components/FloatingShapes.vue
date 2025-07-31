@@ -223,33 +223,57 @@ const handleMouseMove = (event) => {
 const handleResize = () => {
   if (!canvas || !containerRef.value) return
   
-  canvas.width = containerRef.value.offsetWidth
-  canvas.height = containerRef.value.offsetHeight
-  
-  initShapes()
+  try {
+    canvas.width = containerRef.value.offsetWidth
+    canvas.height = containerRef.value.offsetHeight
+    
+    initShapes()
+  } catch (error) {
+    console.warn('FloatingShapes: Error during resize:', error)
+  }
 }
 
 onMounted(() => {
-  canvas = canvasRef.value
-  ctx = canvas.getContext('2d')
-  
-  handleResize()
-  
-  canvas.addEventListener('mousemove', handleMouseMove)
-  window.addEventListener('resize', handleResize)
-  
-  animate()
+  try {
+    canvas = canvasRef.value
+    if (!canvas) {
+      console.warn('FloatingShapes: Canvas element not found')
+      return
+    }
+    
+    ctx = canvas.getContext('2d')
+    if (!ctx) {
+      console.warn('FloatingShapes: Could not get 2D context')
+      return
+    }
+    
+    handleResize()
+    
+    if (canvas) {
+      canvas.addEventListener('mousemove', handleMouseMove)
+    }
+    window.addEventListener('resize', handleResize)
+    
+    animate()
+  } catch (error) {
+    console.warn('FloatingShapes: Error during initialization:', error)
+  }
 })
 
 onUnmounted(() => {
-  if (animationId) {
-    cancelAnimationFrame(animationId)
+  try {
+    if (animationId) {
+      cancelAnimationFrame(animationId)
+      animationId = null
+    }
+    
+    if (canvas) {
+      canvas.removeEventListener('mousemove', handleMouseMove)
+    }
+    window.removeEventListener('resize', handleResize)
+  } catch (error) {
+    console.warn('FloatingShapes: Error during cleanup:', error)
   }
-  
-  if (canvas) {
-    canvas.removeEventListener('mousemove', handleMouseMove)
-  }
-  window.removeEventListener('resize', handleResize)
 })
 </script>
 
