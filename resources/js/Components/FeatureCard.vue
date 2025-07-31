@@ -19,7 +19,7 @@
       <!-- Card Header with Icon -->
       <div class="flex-shrink-0 p-4 sm:p-6 md:p-8 pb-2 sm:pb-3 md:pb-4">
         <div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-full bg-secondary-light group-hover:bg-secondary transition-all duration-300">
-          <img :src="icon" :alt="title + ' icon'" class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 object-contain" />
+          <img :src="icon" :alt="title + ' icon'" class="w-full h-full object-cover rounded-full" />
         </div>
       </div>
 
