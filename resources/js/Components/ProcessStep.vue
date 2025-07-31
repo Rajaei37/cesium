@@ -1,126 +1,162 @@
 <template>
-  <div class="relative">
+  <div 
+    class="relative group cursor-pointer"
+    @mouseenter="$emit('step-focus', stepNumber)"
+    @click="$emit('step-focus', stepNumber)"
+  >
     <!-- Desktop Layout -->
-    <div class="hidden lg:flex items-center" :class="isLeft ? 'flex-row' : 'flex-row-reverse'">
-      <!-- Content Side -->
-      <div class="w-5/12" :class="isLeft ? 'pr-16' : 'pl-16'">
-        <div 
-          class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 transform hover:scale-105 border border-gray-100"
-          :class="isLeft ? 'text-right' : 'text-left'"
-        >
-          <!-- Step Number -->
-          <div 
-            class="inline-flex items-center justify-center w-12 h-12 rounded-full text-white font-bold text-lg mb-4"
-            :class="`bg-gradient-to-r ${color}`"
-          >
-            {{ stepNumber }}
-          </div>
-          
-          <!-- Title -->
-          <h3 class="text-3xl font-bold text-primary mb-4">{{ title }}</h3>
-          
-          <!-- Description -->
-          <p class="text-gray-600 text-lg leading-relaxed">{{ description }}</p>
-          
-          <!-- Decorative Elements -->
-          <div class="mt-6 flex" :class="isLeft ? 'justify-end' : 'justify-start'">
-            <div class="flex space-x-2">
-              <div class="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
-              <div class="w-2 h-2 bg-primary rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
-              <div class="w-2 h-2 bg-secondary rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Central Icon -->
-      <div class="w-2/12 flex justify-center relative z-10">
-        <div 
-          class="w-24 h-24 rounded-full bg-white shadow-2xl flex items-center justify-center text-4xl transform hover:rotate-12 transition-all duration-500 border-4 border-gray-100 hover:border-secondary"
-        >
-          {{ icon }}
-        </div>
-        
-        <!-- Connecting Lines -->
-        <div class="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-gray-300 to-transparent -z-10"></div>
-      </div>
-
+    <div class="hidden lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center lg:min-h-[400px]">
       <!-- Visual Side -->
-      <div class="w-5/12" :class="isLeft ? 'pl-16' : 'pr-16'">
-        <div class="relative">
-          <!-- Main Visual Element -->
+      <div class="col-span-5 relative">
+        <div 
+          class="relative overflow-hidden rounded-3xl transition-all duration-700 transform"
+          :class="isActive ? 'scale-105 shadow-2xl' : 'scale-100 shadow-lg opacity-60'"
+        >
+          <!-- Visual Element -->
           <div 
-            class="w-80 h-64 rounded-2xl bg-gradient-to-br shadow-xl transform hover:scale-105 transition-all duration-500 flex items-center justify-center relative overflow-hidden"
-            :class="color"
+            class="w-full h-80 bg-gradient-to-br flex items-center justify-center relative"
+            :class="getVisualGradient()"
           >
             <!-- Background Pattern -->
             <div class="absolute inset-0 opacity-20">
-              <div class="absolute top-4 left-4 w-8 h-8 border-2 border-white rounded-full"></div>
-              <div class="absolute top-12 right-8 w-6 h-6 border-2 border-white rounded-full"></div>
-              <div class="absolute bottom-8 left-12 w-10 h-10 border-2 border-white rounded-full"></div>
-              <div class="absolute bottom-4 right-4 w-4 h-4 border-2 border-white rounded-full"></div>
+              <div class="absolute top-8 left-8 w-12 h-12 border-2 border-white rounded-full animate-pulse"></div>
+              <div class="absolute top-16 right-12 w-8 h-8 border-2 border-white rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+              <div class="absolute bottom-12 left-16 w-16 h-16 border-2 border-white rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+              <div class="absolute bottom-8 right-8 w-6 h-6 border-2 border-white rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
             </div>
             
-            <!-- Central Icon Large -->
-            <div class="text-8xl text-white opacity-80">{{ icon }}</div>
+            <!-- Central Visual -->
+            <div 
+              class="text-8xl text-white transition-all duration-500 transform"
+              :class="isActive ? 'scale-110 rotate-12' : 'scale-100 rotate-0'"
+            >
+              {{ getVisualIcon() }}
+            </div>
             
             <!-- Floating Elements -->
-            <div class="absolute top-6 right-6 w-3 h-3 bg-white rounded-full animate-bounce"></div>
-            <div class="absolute bottom-6 left-6 w-2 h-2 bg-white rounded-full animate-bounce" style="animation-delay: 0.5s;"></div>
+            <div 
+              class="absolute top-6 right-6 w-4 h-4 bg-white rounded-full transition-all duration-300"
+              :class="isActive ? 'animate-bounce' : 'opacity-50'"
+            ></div>
+            <div 
+              class="absolute bottom-6 left-6 w-3 h-3 bg-white rounded-full transition-all duration-300"
+              :class="isActive ? 'animate-bounce' : 'opacity-50'"
+              style="animation-delay: 0.3s;"
+            ></div>
           </div>
-          
-          <!-- Additional Visual Elements -->
-          <div class="absolute -top-4 -right-4 w-16 h-16 bg-secondary/20 rounded-full blur-xl animate-pulse"></div>
-          <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-primary/20 rounded-full blur-lg animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+      </div>
+
+      <!-- Content Side -->
+      <div class="col-span-7 relative">
+        <!-- Step Index -->
+        <div 
+          class="text-8xl font-black mb-4 transition-all duration-500 transform"
+          :class="isActive ? 'text-secondary scale-110' : 'text-gray-200 scale-100'"
+        >
+          {{ stepIndex }}
+        </div>
+        
+        <!-- Title -->
+        <h3 
+          class="text-5xl font-black mb-6 transition-all duration-500 transform"
+          :class="isActive ? 'text-primary scale-105' : 'text-gray-400 scale-100'"
+        >
+          {{ title }}
+        </h3>
+        
+        <!-- Description -->
+        <p 
+          class="text-xl leading-relaxed font-light transition-all duration-500"
+          :class="isActive ? 'text-gray-700' : 'text-gray-400'"
+        >
+          {{ description }}
+        </p>
+        
+        <!-- Progress Indicator -->
+        <div class="mt-8 flex items-center space-x-3">
+          <div 
+            class="h-1 bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-700"
+            :class="isActive ? 'w-24' : 'w-8'"
+          ></div>
+          <div 
+            class="text-sm font-semibold transition-all duration-500"
+            :class="isActive ? 'text-primary' : 'text-gray-400'"
+          >
+            Step {{ stepNumber }} of 5
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Mobile Layout -->
     <div class="lg:hidden">
-      <div class="bg-white rounded-2xl shadow-xl p-6 mx-4 transform hover:scale-105 transition-all duration-300">
-        <!-- Step Header -->
-        <div class="flex items-center mb-4">
+      <div 
+        class="bg-white rounded-3xl shadow-xl p-8 transition-all duration-500 transform"
+        :class="isActive ? 'scale-105 shadow-2xl' : 'scale-100 shadow-lg'"
+      >
+        <!-- Mobile Header -->
+        <div class="flex items-center justify-between mb-6">
           <div 
-            class="w-12 h-12 rounded-full text-white font-bold text-lg flex items-center justify-center mr-4"
-            :class="`bg-gradient-to-r ${color}`"
+            class="text-4xl font-black transition-all duration-500"
+            :class="isActive ? 'text-secondary' : 'text-gray-300'"
           >
-            {{ stepNumber }}
+            {{ stepIndex }}
           </div>
-          <div class="text-4xl">{{ icon }}</div>
+          <div 
+            class="text-4xl transition-all duration-500 transform"
+            :class="isActive ? 'scale-110' : 'scale-100'"
+          >
+            {{ getVisualIcon() }}
+          </div>
         </div>
         
-        <!-- Title -->
-        <h3 class="text-2xl font-bold text-primary mb-3">{{ title }}</h3>
+        <!-- Mobile Title -->
+        <h3 
+          class="text-3xl font-black mb-4 transition-all duration-500"
+          :class="isActive ? 'text-primary' : 'text-gray-400'"
+        >
+          {{ title }}
+        </h3>
         
-        <!-- Description -->
-        <p class="text-gray-600 leading-relaxed">{{ description }}</p>
+        <!-- Mobile Description -->
+        <p 
+          class="text-lg leading-relaxed font-light transition-all duration-500"
+          :class="isActive ? 'text-gray-700' : 'text-gray-400'"
+        >
+          {{ description }}
+        </p>
         
         <!-- Mobile Visual Element -->
-        <div class="mt-6 h-32 rounded-xl bg-gradient-to-r flex items-center justify-center relative overflow-hidden" :class="color">
+        <div class="mt-6 h-32 rounded-2xl bg-gradient-to-r flex items-center justify-center relative overflow-hidden" :class="getVisualGradient()">
           <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-2 left-2 w-4 h-4 border border-white rounded-full"></div>
-            <div class="absolute top-4 right-4 w-3 h-3 border border-white rounded-full"></div>
-            <div class="absolute bottom-2 left-6 w-5 h-5 border border-white rounded-full"></div>
+            <div class="absolute top-2 left-2 w-6 h-6 border border-white rounded-full"></div>
+            <div class="absolute top-4 right-4 w-4 h-4 border border-white rounded-full"></div>
+            <div class="absolute bottom-2 left-6 w-8 h-8 border border-white rounded-full"></div>
           </div>
-          <div class="text-4xl text-white opacity-80">{{ icon }}</div>
+          <div class="text-4xl text-white opacity-80">{{ getVisualIcon() }}</div>
         </div>
       </div>
-      
-      <!-- Mobile Connector -->
-      <div v-if="stepNumber < 5" class="flex justify-center py-6">
-        <div class="w-1 h-12 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
-      </div>
     </div>
+
+    <!-- Active Step Indicator -->
+    <div 
+      class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-2 h-16 bg-gradient-to-b from-primary to-secondary rounded-full transition-all duration-500 hidden lg:block"
+      :class="isActive ? 'opacity-100 scale-110' : 'opacity-0 scale-100'"
+    ></div>
   </div>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps({
   stepNumber: {
     type: Number,
+    required: true
+  },
+  stepIndex: {
+    type: String,
     required: true
   },
   title: {
@@ -131,19 +167,41 @@ const props = defineProps({
     type: String,
     required: true
   },
-  isLeft: {
-    type: Boolean,
-    default: true
-  },
-  icon: {
+  visualType: {
     type: String,
     required: true
   },
-  color: {
-    type: String,
-    default: 'from-primary to-primary-dark'
+  isActive: {
+    type: Boolean,
+    default: false
   }
 });
+
+const emit = defineEmits(['step-focus']);
+
+// Get visual icon based on type
+const getVisualIcon = () => {
+  const icons = {
+    atom: '⚛️',
+    balance: '⚖️',
+    catalyst: '🧪',
+    rocket: '🚀',
+    wave: '📊'
+  };
+  return icons[props.visualType] || '⚛️';
+};
+
+// Get visual gradient based on type
+const getVisualGradient = () => {
+  const gradients = {
+    atom: 'from-blue-500 to-purple-600',
+    balance: 'from-green-500 to-teal-600',
+    catalyst: 'from-orange-500 to-red-600',
+    rocket: 'from-purple-500 to-pink-600',
+    wave: 'from-indigo-500 to-blue-600'
+  };
+  return gradients[props.visualType] || 'from-blue-500 to-purple-600';
+};
 </script>
 
 <style scoped>
@@ -166,21 +224,27 @@ const props = defineProps({
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
-/* Hover effects */
+/* Typography enhancements */
+.font-black {
+  font-weight: 900;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced hover effects */
 .group:hover .group-hover\:scale-110 {
   transform: scale(1.1);
 }
 
 .group:hover .group-hover\:rotate-12 {
   transform: rotate(12deg);
-}
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #362869, #facb24);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 </style>
 
