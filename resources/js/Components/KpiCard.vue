@@ -60,6 +60,10 @@ const props = defineProps({
     type: [String, Number],
     required: true
   },
+  suffix: {
+    type: String,
+    default: ''
+  },
   label: {
     type: String,
     required: true
@@ -88,12 +92,19 @@ const currentValue = ref(0)
 
 // Computed
 const finalValue = computed(() => Number(props.value) || 0)
-const formattedValue = computed(() => formatNumber(finalValue.value))
+const formattedValue = computed(() => {
+  const num = finalValue.value
+  if (props.suffix) {
+    return `${num}${props.suffix}`
+  }
+  return formatNumber(num)
+})
 
 // Methods
 const getIconComponent = () => {
   const iconMap = {
     'chart-line': TrendingUp,
+    'trending-up': TrendingUp,
     'target': Target,
     'dollar-sign': DollarSign,
     'bar-chart': BarChart3
@@ -117,14 +128,15 @@ const animateCounter = () => {
 
   isAnimating.value = true
   currentValue.value = 0
-  displayValue.value = '0'
+  displayValue.value = props.suffix ? `0${props.suffix}` : '0'
 
   gsap.to(currentValue, {
     value: finalValue.value,
     duration: props.animationDuration,
     ease: 'power2.out',
     onUpdate: () => {
-      displayValue.value = formatNumber(Math.round(currentValue.value))
+      const currentNum = Math.round(currentValue.value)
+      displayValue.value = props.suffix ? `${currentNum}${props.suffix}` : formatNumber(currentNum)
     },
     onComplete: () => {
       isAnimating.value = false
@@ -143,7 +155,7 @@ const resetAnimation = () => {
     gsap.killTweensOf(currentValue)
   }
   currentValue.value = 0
-  displayValue.value = '0'
+  displayValue.value = props.suffix ? `0${props.suffix}` : '0'
   isAnimating.value = false
 }
 

@@ -64,20 +64,23 @@ class LandingPageController extends Controller
         $kpis = [
             [
                 'icon' => 'trending-up',
-                'number' => '300%',
+                'number' => 300,
                 'label' => 'Average ROI Increase',
+                'suffix' => '%',
                 'description' => 'Our clients see an average 300% return on their marketing investment within the first 6 months.'
             ],
             [
                 'icon' => 'target',
-                'number' => '150+',
+                'number' => 150,
                 'label' => 'Successful Campaigns',
+                'suffix' => '+',
                 'description' => 'Over 150 successful marketing campaigns launched across various iGaming verticals.'
             ],
             [
                 'icon' => 'dollar-sign',
-                'number' => '50M+',
+                'number' => 50,
                 'label' => 'Revenue Generated',
+                'suffix' => 'M+',
                 'description' => 'Our strategies have generated over $50 million in revenue for our iGaming clients.'
             ]
         ];
