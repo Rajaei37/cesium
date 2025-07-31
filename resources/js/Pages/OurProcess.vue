@@ -266,14 +266,11 @@ const setActiveStep = (stepNumber) => {
   activeStep.value = stepNumber;
 };
 
-// Auto-cycle through steps
+// Auto-cycle through steps - REMOVED for manual navigation only
 let intervalId = null;
 
 onMounted(() => {
-  // Auto-cycle through steps every 8 seconds
-  intervalId = setInterval(() => {
-    activeStep.value = activeStep.value === 5 ? 1 : activeStep.value + 1;
-  }, 8000);
+  // Auto-cycling disabled - users can manually navigate through steps
 });
 
 onUnmounted(() => {

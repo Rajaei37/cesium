@@ -68,14 +68,10 @@
         </Link>
         <Link 
           href="/join-our-team" 
-          class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group"
-          :class="{ 'text-secondary': currentPage === 'join-team' }"
+          class="text-primary hover:text-secondary transition-colors duration-300 font-medium px-4 py-2 rounded-full border border-primary hover:border-secondary"
+          :class="{ 'text-secondary border-secondary': currentPage === 'join-team' }"
         >
           Join Our Team
-          <span 
-            class="absolute bottom-0 left-0 h-0.5 bg-secondary transition-all duration-300"
-            :class="currentPage === 'join-team' ? 'w-full' : 'w-0 group-hover:w-full'"
-          ></span>
         </Link>
       </div>
 
@@ -108,7 +104,7 @@
         <Link href="/our-process" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Our Process</Link>
         <Link href="/blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Insights</Link>
         <Link href="/contact-us" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Contact</Link>
-        <Link href="/join-our-team" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Join Our Team</Link>
+        <Link href="/join-our-team" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2 border border-primary rounded-full text-center">Join Our Team</Link>
         
         <!-- Mobile CTA -->
         <div class="pt-6 border-t border-gray-200">
