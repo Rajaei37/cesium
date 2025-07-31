@@ -30,7 +30,7 @@ class LandingPageController extends Controller
                 'long_desc' => 'Build a vibrant community and amplify your brand message across all major social media platforms. Our social media marketing services include content creation, community management, paid social campaigns, and influencer collaborations. We develop strategies that foster engagement, drive traffic to your iGaming platform, and convert followers into loyal players. From captivating visuals to interactive campaigns, we ensure your social presence is dynamic, relevant, and aligned with your brand\\`s voice.'
             ],
             [
-                'icon' => '/assets/icons/data-analytics.png',
+                'icon' => '/assets/icons/data_driven_strategy.png',
                 'title' => 'Data Analytics',
                 'desc' => 'Gain actionable insights to optimize your marketing strategies.',
                 'long_desc' => 'Unlock the power of your data with our advanced analytics services. We help you collect, analyze, and interpret complex marketing data to identify trends, measure campaign performance, and uncover actionable insights. Our expertise includes setting up tracking systems, creating custom dashboards, and providing regular performance reports. By understanding player behavior, acquisition costs, and retention rates, we empower you to make informed decisions that optimize your marketing spend and drive sustainable growth.'
@@ -54,7 +54,7 @@ class LandingPageController extends Controller
                 'long_desc' => 'Create a powerful and memorable brand identity that resonates with your target audience and differentiates you from competitors. Our branding services include logo design, visual identity development, brand guidelines creation, and brand positioning strategy. We work closely with you to understand your vision and values, translating them into a cohesive visual language that speaks to iGaming players. From color palettes and typography to imagery and tone of voice, we ensure every element of your brand works together to create a compelling and trustworthy presence.'
             ],
             [
-                'icon' => '/assets/icons/influencer-marketing.png',
+                'icon' => '/assets/icons/influencer_marketing.png',
                 'title' => 'Influencer Marketing',
                 'desc' => 'Leverage trusted voices to expand your reach and credibility.',
                 'long_desc' => 'Partner with influential personalities and content creators to amplify your brand message and reach new audiences. Our influencer marketing services include influencer identification and vetting, campaign strategy development, content collaboration, and performance tracking. We focus on building authentic partnerships with influencers who align with your brand values and have genuine connections with your target demographic. From micro-influencers to industry thought leaders, we help you leverage trusted voices to build credibility and drive player acquisition.'
