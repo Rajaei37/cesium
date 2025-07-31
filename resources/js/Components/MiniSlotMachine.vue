@@ -154,9 +154,10 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import lottie from 'lottie-web'
 
 // Audio objects
-const spinSound = new Audio('/assets/audio/slotmachine/spin_sound.wav')
-const winSound = new Audio('/assets/audio/slotmachine/win_sound.wav')
-const loseSound = new Audio('/assets/audio/slotmachine/lose_sound.wav')
+// Audio objects
+// const spinSound = new Audio("/assets/audio/slotmachine/spin_sound.wav")
+// const winSound = new Audio("/assets/audio/slotmachine/win_sound.wav")
+// const loseSound = new Audio("/assets/audio/slotmachine/lose_sound.wav")
 
 // Emits
 const emit = defineEmits(['discount-won', 'spin-complete'])
@@ -310,7 +311,7 @@ const spin = () => {
   funMessage.value = funMessages[Math.floor(Math.random() * funMessages.length)]
 
   // Play spin sound
-  spinSound.play()
+  // spinSound.play()
 
   let spins = 0
   const spinDuration = 20 + Math.floor(Math.random() * 10) // 20-30 spins
