@@ -36,7 +36,7 @@
                 style="top: -60px; left: 50%; transform: translateX(-50%);"
               >
                 <img 
-                  src="/images/process/ionization.png" 
+                  src="/images/process/ionization.svg" 
                   alt="Ionization" 
                   class="w-12 h-12 mx-auto"
                   :class="activeStep === 1 ? 'filter brightness-0' : 'filter grayscale'"
@@ -51,7 +51,7 @@
                 style="top: -30px; right: -60px;"
               >
                 <img 
-                  src="/images/process/stabilization.png" 
+                  src="/images/process/stabilization.svg" 
                   alt="Stabilization" 
                   class="w-12 h-12 mx-auto"
                   :class="activeStep === 2 ? 'filter brightness-0' : 'filter grayscale'"
@@ -66,7 +66,7 @@
                 style="bottom: -30px; right: -60px;"
               >
                 <img 
-                  src="/images/process/catalysis.png" 
+                  src="/images/process/catalysis.svg" 
                   alt="Catalysis" 
                   class="w-12 h-12 mx-auto"
                   :class="activeStep === 3 ? 'filter brightness-0' : 'filter grayscale'"
@@ -81,7 +81,7 @@
                 style="bottom: -30px; left: -60px;"
               >
                 <img 
-                  src="/images/process/activation.png" 
+                  src="/images/process/activation.svg" 
                   alt="Activation" 
                   class="w-12 h-12 mx-auto"
                   :class="activeStep === 4 ? 'filter brightness-0' : 'filter grayscale'"
@@ -96,7 +96,7 @@
                 style="top: -30px; left: -60px;"
               >
                 <img 
-                  src="/images/process/oscillation.png" 
+                  src="/images/process/oscillation.svg" 
                   alt="Oscillation" 
                   class="w-12 h-12 mx-auto"
                   :class="activeStep === 5 ? 'filter brightness-0' : 'filter grayscale'"
@@ -232,27 +232,27 @@ const processSteps = {
   1: {
     title: 'Ionization',
     description: 'We isolate your business essence, define your brand identity, and give it the atomic charge it needs to interact with its market.',
-    icon: '/images/process/ionization.png'
+    icon: '/images/process/ionization.svg'
   },
   2: {
     title: 'Stabilization',
     description: 'We analyze your business model and market to identify friction points and ensure your foundation is optimized before ignition.',
-    icon: '/images/process/stabilization.png'
+    icon: '/images/process/stabilization.svg'
   },
   3: {
     title: 'Catalysis',
     description: 'We engineer tailored go-to-market strategies — modular, scalable, and performance-tuned to your specific vertical.',
-    icon: '/images/process/catalysis.png'
+    icon: '/images/process/catalysis.svg'
   },
   4: {
     title: 'Activation',
     description: 'We launch and react: campaigns, funnels, content, bonuses, and behavioral triggers — all executed with precision and control.',
-    icon: '/images/process/activation.png'
+    icon: '/images/process/activation.svg'
   },
   5: {
     title: 'Oscillation',
     description: 'Post-launch, we track signals and market feedback to recalibrate. Bonuses evolve. Campaigns adapt. Growth compounds.',
-    icon: '/images/process/oscillation.png'
+    icon: '/images/process/oscillation.svg'
   }
 };
 
