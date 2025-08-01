@@ -69,6 +69,10 @@
             :class="currentPage === 'contact' ? 'w-full' : 'w-0 group-hover:w-full'"
           ></span>
         </Link>
+      </div>
+
+      <!-- CTA Buttons and Social Media Icons -->
+      <div class="hidden md:flex items-center space-x-4">
         <Link 
           href="/join-our-team" 
           class="text-white hover:text-secondary transition-colors duration-300 font-medium px-4 py-2 rounded-full border border-white hover:border-secondary"
@@ -76,29 +80,25 @@
         >
           Join Our Team
         </Link>
-      </div>
-
-      <!-- CTA Button -->
-      <div class="hidden md:flex items-center space-x-4">
         <Link href="/contact-us" class="bg-secondary text-primary font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-          Get Started
+          contact us
         </Link>
-      </div>
-
-      <!-- Social Media Icons -->
-      <div class="hidden md:flex items-center space-x-4">
-        <a href="https://www.linkedin.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-          <i class="fab fa-linkedin-in text-xl"></i>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-          <i class="fab fa-instagram text-xl"></i>
-        </a>
-        <a href="https://www.facebook.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-          <i class="fab fa-facebook-f text-xl"></i>
-        </a>
-        <a href="https://www.tiktok.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-          <i class="fab fa-tiktok text-xl"></i>
-        </a>
+        
+        <!-- Social Media Icons -->
+        <div class="flex items-center space-x-3 ml-4">
+          <a href="https://www.linkedin.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <i class="fab fa-linkedin-in text-lg"></i>
+          </a>
+          <a href="https://www.tiktok.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <i class="fab fa-tiktok text-lg"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <i class="fab fa-instagram text-lg"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <i class="fab fa-facebook-f text-lg"></i>
+          </a>
+        </div>
       </div>
 
       <!-- Mobile Menu Button -->
