@@ -59,25 +59,38 @@
       
       <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
-          <!-- Small Yellow Text Above -->
-          <p class="text-secondary text-lg font-medium mb-2 animate-fade-in-up">
-            is Active by nature
-          </p>
+          <!-- Small Yellow Text Above - positioned more dynamically -->
+          <div class="relative mb-6">
+            <p class="text-secondary text-lg font-medium animate-fade-in-up absolute -top-2 left-0 lg:left-8">
+              is Active by nature
+            </p>
+          </div>
           
-          <!-- Large Company Name -->
-          <h1 class="text-6xl lg:text-8xl font-bold leading-tight mb-6 animate-fade-in-up">
+          <!-- Large Company Name with dynamic positioning -->
+          <h1 class="text-6xl lg:text-8xl font-bold leading-tight mb-6 animate-fade-in-up relative">
             Cesium
           </h1>
           
-          <!-- Sub-headline -->
-          <p class="text-lg lg:text-xl mb-4 opacity-90 animate-fade-in-up animation-delay-200 font-medium">
-            Cesium isn't a marketing agency.
-          </p>
-          <p class="text-base lg:text-lg mb-8 opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed">
-            It's a high-energy force designed to react with your business sparking momentum, amplifying results, and scaling with precision. From identity to ignition to intelligent growth we catalyze your brand's trajectory.
-          </p>
+          <!-- Sub-headline with better spacing -->
+          <div class="space-y-4 mb-8">
+            <p class="text-lg lg:text-xl font-medium opacity-90 animate-fade-in-up animation-delay-200">
+              Cesium isn't a marketing agency.
+            </p>
+            <p class="text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed max-w-lg">
+              It's a high-energy force designed to react with your business
+            </p>
+            <p class="text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed max-w-lg">
+              sparking momentum, amplifying results, and scaling with precision.
+            </p>
+            <p class="text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-500 font-light leading-relaxed max-w-lg">
+              From identity to ignition to intelligent growth
+            </p>
+            <p class="text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed max-w-lg">
+              we catalyze your brand's trajectory.
+            </p>
+          </div>
           
-          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
+          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-bold py-4 px-8 shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-700">
             Request Strategy Call
           </Link>
         </div>

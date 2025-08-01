@@ -75,12 +75,12 @@
       <div class="hidden md:flex items-center space-x-4">
         <Link 
           href="/join-our-team" 
-          class="text-white hover:text-secondary transition-colors duration-300 font-medium px-4 py-2 rounded-full border border-white hover:border-secondary"
+          class="text-white hover:text-secondary transition-colors duration-300 font-medium px-4 py-2 border border-white hover:border-secondary"
           :class="{ 'text-secondary border-secondary': currentPage === 'join-team' }"
         >
           Join Our Team
         </Link>
-        <Link href="/contact-us" class="bg-secondary text-primary font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+        <Link href="/contact-us" class="bg-secondary text-primary font-semibold px-6 py-2.5 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
           contact us
         </Link>
         
