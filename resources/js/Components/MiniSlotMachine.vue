@@ -161,10 +161,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import lottie from 'lottie-web'
 
-// Audio objects
-const spinSound = new Audio("/assets/audio/slotmachine/spin_sound.wav")
-const winSound = new Audio("/assets/audio/slotmachine/win_sound.wav")
-const loseSound = new Audio("/assets/audio/slotmachine/lose_sound.wav")
+
 
 // Emits
 const emit = defineEmits(['discount-won', 'spin-complete'])
@@ -318,7 +315,7 @@ const spin = () => {
   funMessage.value = funMessages[Math.floor(Math.random() * funMessages.length)]
 
   // Play spin sound
-  spinSound.play()
+
 
   let spins = 0
   const spinDuration = 20 + Math.floor(Math.random() * 10) // 20-30 spins
@@ -353,7 +350,7 @@ const evaluateResult = () => {
     discount.value = discountCodes.jackpot
     isWin = true
     isJackpotWin = true
-    winSound.play()
+
     
     // Show confetti animation
     setTimeout(() => {
@@ -381,13 +378,13 @@ const evaluateResult = () => {
     result.value = 'Nice! You got a match! '
     discount.value = discountCodes.match
     isWin = true
-    winSound.play()
+
     
   } else {
     // No match - consolation prize
     result.value = 'Try again! '
     discount.value = discountCodes.consolation
-    loseSound.play()
+
   }
   
   // Update statistics
