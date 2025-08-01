@@ -1,10 +1,13 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 bg-primary text-white shadow-xl z-50 transition-all duration-300 w-full max-w-full overflow-x-hidden">
+  <nav :class="[
+    'fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full max-w-full overflow-x-hidden',
+    scrolled ? 'bg-primary bg-opacity-90 shadow-xl py-2' : 'bg-primary bg-opacity-0 py-4'
+  ]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between w-full">
       <!-- Logo -->
       <div class="flex-shrink-0">
         <Link href="/">
-          <img src="/assets/logos/logo-main.svg" alt="Cesium Marketing Logo" class="h-10 transition-transform duration-300 hover:scale-105" />
+          <img src="/assets/logos/Asset31.svg" alt="Cesium Marketing Logo" class="h-10 transition-transform duration-300 hover:scale-105" />
         </Link>
       </div>
 
@@ -77,9 +80,25 @@
 
       <!-- CTA Button -->
       <div class="hidden md:flex items-center space-x-4">
-        <Link href="/contact-us" class="bg-secondary hover:bg-secondary-dark text-primary font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+        <Link href="/contact-us" class="bg-secondary text-primary font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
           Get Started
         </Link>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="https://www.linkedin.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+          <i class="fab fa-linkedin-in text-xl"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+          <i class="fab fa-instagram text-xl"></i>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+          <i class="fab fa-facebook-f text-xl"></i>
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+          <i class="fab fa-tiktok text-xl"></i>
+        </a>
       </div>
 
       <!-- Mobile Menu Button -->
