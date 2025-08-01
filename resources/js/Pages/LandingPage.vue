@@ -50,19 +50,9 @@
 
     <!-- Hero Content Section -->
     <section class="relative bg-primary text-white py-20 overflow-hidden">
-      <!-- Dynamic Background with Abstract Shapes -->
+      <!-- Dynamic Background with Vector.svg -->
       <div class="absolute inset-0 overflow-hidden">
-        <!-- Large Abstract Yellow Shapes -->
-        <div class="absolute top-0 left-0 w-full h-full">
-          <!-- Shape 1 - Top Left -->
-          <div class="absolute -top-20 -left-20 w-96 h-96 bg-secondary opacity-80 transform rotate-45 rounded-3xl"></div>
-          <!-- Shape 2 - Center Right -->
-          <div class="absolute top-1/4 right-0 w-80 h-80 bg-secondary opacity-60 transform -rotate-12 rounded-full"></div>
-          <!-- Shape 3 - Bottom Center -->
-          <div class="absolute bottom-0 left-1/3 w-72 h-72 bg-secondary opacity-70 transform rotate-12 rounded-2xl"></div>
-          <!-- Shape 4 - Large Diagonal -->
-          <div class="absolute top-1/2 left-1/4 w-full h-32 bg-secondary opacity-50 transform -rotate-12 origin-left"></div>
-        </div>
+        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-50 animate-float" />
       </div>
       
       <!-- Floating Logo Background -->

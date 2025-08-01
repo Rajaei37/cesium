@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 bg-white shadow-xl z-50 transition-all duration-300 w-full max-w-full overflow-x-hidden">
+  <nav class="fixed top-0 left-0 right-0 bg-primary text-white shadow-xl z-50 transition-all duration-300 w-full max-w-full overflow-x-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between w-full">
       <!-- Logo -->
       <div class="flex-shrink-0">
@@ -12,7 +12,7 @@
       <div class="hidden md:flex items-center space-x-8">
         <Link 
           href="/" 
-          class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group"
+          class="text-white hover:text-secondary transition-colors duration-300 font-medium relative group"
           :class="{ 'text-secondary': currentPage === 'home' }"
         >
           Home
@@ -23,7 +23,7 @@
         </Link>
         <Link 
           href="/what-we-offer" 
-          class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group"
+          class="text-white hover:text-secondary transition-colors duration-300 font-medium relative group"
           :class="{ 'text-secondary': currentPage === 'services' }"
         >
           Services
@@ -35,7 +35,7 @@
 
         <Link 
           href="/our-process" 
-          class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group"
+          class="text-white hover:text-secondary transition-colors duration-300 font-medium relative group"
           :class="{ 'text-secondary': currentPage === 'our-process' }"
         >
           Our Process
@@ -46,7 +46,7 @@
         </Link>
         <Link 
           href="/blog" 
-          class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group"
+          class="text-white hover:text-secondary transition-colors duration-300 font-medium relative group"
           :class="{ 'text-secondary': currentPage === 'blog' }"
         >
           Insights
@@ -57,7 +57,7 @@
         </Link>
         <Link 
           href="/contact-us" 
-          class="text-primary hover:text-secondary transition-colors duration-300 font-medium relative group"
+          class="text-white hover:text-secondary transition-colors duration-300 font-medium relative group"
           :class="{ 'text-secondary': currentPage === 'contact' }"
         >
           Contact
@@ -68,7 +68,7 @@
         </Link>
         <Link 
           href="/join-our-team" 
-          class="text-primary hover:text-secondary transition-colors duration-300 font-medium px-4 py-2 rounded-full border border-primary hover:border-secondary"
+          class="text-white hover:text-secondary transition-colors duration-300 font-medium px-4 py-2 rounded-full border border-white hover:border-secondary"
           :class="{ 'text-secondary border-secondary': currentPage === 'join-team' }"
         >
           Join Our Team
@@ -84,7 +84,7 @@
 
       <!-- Mobile Menu Button -->
       <div class="flex items-center space-x-4">
-        <button @click="toggleMobileMenu" class="md:hidden text-primary hover:text-secondary transition-colors duration-300">
+        <button @click="toggleMobileMenu" class="md:hidden text-white hover:text-secondary transition-colors duration-300">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -96,15 +96,15 @@
     <div v-if="mobileMenuOpen" class="fixed inset-0 bg-black bg-opacity-50 z-[9998] md:hidden" @click="closeMobileMenu"></div>
 
     <!-- Mobile Menu -->
-    <div v-if="mobileMenuOpen" class="fixed top-20 left-0 right-0 bottom-0 bg-white shadow-lg animate-slide-down z-[9999] md:hidden overflow-y-auto">
+    <div v-if="mobileMenuOpen" class="fixed top-20 left-0 right-0 bottom-0 bg-primary text-white shadow-lg animate-slide-down z-[9999] md:hidden overflow-y-auto">
       <div class="px-4 py-6 space-y-6 w-full">
-        <Link href="/" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Home</Link>
-        <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Services</Link>
+        <Link href="/" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Home</Link>
+        <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Services</Link>
 
-        <Link href="/our-process" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Our Process</Link>
-        <Link href="/blog" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Insights</Link>
-        <Link href="/contact-us" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Contact</Link>
-        <Link href="/join-our-team" @click="closeMobileMenu" class="block text-primary hover:text-secondary transition-colors duration-300 font-medium text-lg py-2 border border-primary rounded-full text-center">Join Our Team</Link>
+        <Link href="/our-process" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Our Process</Link>
+        <Link href="/blog" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Insights</Link>
+        <Link href="/contact-us" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Contact</Link>
+        <Link href="/join-our-team" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2 border border-white rounded-full text-center">Join Our Team</Link>
         
         <!-- Mobile CTA -->
         <div class="pt-6 border-t border-gray-200">
