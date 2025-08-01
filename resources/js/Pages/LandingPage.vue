@@ -87,24 +87,73 @@
       </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="py-20 bg-white">
+    <!-- Why Cesium Section -->
+    <section class="py-20 bg-gray-100">
       <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-8 animate-fade-in-up">
-          Why Partner with Cesium Marketing?
+        <!-- Main Title -->
+        <h2 class="text-5xl lg:text-6xl font-bold text-primary mb-4">
+          Why <span class="text-primary">Cesium</span>?
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="animate-fade-in-up bg-cesium-light-gray p-8 rounded-xl shadow-lg" style="animation-delay: 0.1s;">
-            <h3 class="text-2xl font-semibold text-primary mb-4">Data-Driven Strategies</h3>
-            <p class="text-gray-700 font-light">Our decisions are backed by extensive data analysis, ensuring optimal performance and measurable ROI for your iGaming business.</p>
+        <!-- Subtitle -->
+        <p class="text-xl text-gray-600 mb-16 font-medium">
+          Because Inactive Doesn't Win.
+        </p>
+        
+        <!-- Three Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Card 1: Precision-Fueled Reactions -->
+          <div class="bg-white rounded-xl shadow-lg p-8 relative overflow-hidden">
+            <!-- Large Background Number -->
+            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30">1</div>
+            <!-- Yellow Number Badge -->
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6">
+              1)
+            </div>
+            <!-- Card Title -->
+            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight">
+              Precision-Fueled<br>Reactions
+            </h3>
+            <!-- Card Description -->
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Every move we make is based on calculated data and tested hypotheses.<br><br>
+              Our strategies aren't just data-driven, they're reaction-tuned to create maximum market ignition.
+            </p>
           </div>
-          <div class="animate-fade-in-up bg-cesium-light-gray p-8 rounded-xl shadow-lg" style="animation-delay: 0.3s;">
-            <h3 class="text-2xl font-semibold text-primary mb-4">Industry Expertise</h3>
-            <p class="text-gray-700 font-light">With years of experience in the iGaming sector, we understand the unique challenges and opportunities in this dynamic industry.</p>
+
+          <!-- Card 2: Repeatable Chain Reactions -->
+          <div class="bg-white rounded-xl shadow-lg p-8 relative overflow-hidden">
+            <!-- Large Background Number -->
+            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30">2</div>
+            <!-- Yellow Number Badge -->
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6">
+              2)
+            </div>
+            <!-- Card Title -->
+            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight">
+              Repeatable Chain<br>Reactions
+            </h3>
+            <!-- Card Description -->
+            <p class="text-gray-600 text-sm leading-relaxed">
+              We don't rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
+            </p>
           </div>
-          <div class="animate-fade-in-up bg-cesium-light-gray p-8 rounded-xl shadow-lg" style="animation-delay: 0.5s;">
-            <h3 class="text-2xl font-semibold text-primary mb-4">Proven Results</h3>
-            <p class="text-gray-700 font-light">Our track record speaks for itself - we've helped numerous iGaming businesses achieve significant growth and market success.</p>
+
+          <!-- Card 3: Domain Chemistry -->
+          <div class="bg-white rounded-xl shadow-lg p-8 relative overflow-hidden">
+            <!-- Large Background Number -->
+            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30">3</div>
+            <!-- Yellow Number Badge -->
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6">
+              3)
+            </div>
+            <!-- Card Title -->
+            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight">
+              Domain<br>Chemistry
+            </h3>
+            <!-- Card Description -->
+            <p class="text-gray-600 text-sm leading-relaxed">
+              We don't just work in your industry — we react with it. Years of deep learning give us the ability to anticipate volatility, exploit opportunity, and maximize momentum.
+            </p>
           </div>
         </div>
       </div>
