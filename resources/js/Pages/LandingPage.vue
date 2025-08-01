@@ -50,19 +50,47 @@
 
     <!-- Hero Content Section -->
     <section class="relative bg-primary text-white py-20 overflow-hidden">
-      <!-- Floating Shapes Background -->
-      <FloatingShapes />
+      <!-- Dynamic Background with Abstract Shapes -->
+      <div class="absolute inset-0 overflow-hidden">
+        <!-- Large Abstract Yellow Shapes -->
+        <div class="absolute top-0 left-0 w-full h-full">
+          <!-- Shape 1 - Top Left -->
+          <div class="absolute -top-20 -left-20 w-96 h-96 bg-secondary opacity-80 transform rotate-45 rounded-3xl"></div>
+          <!-- Shape 2 - Center Right -->
+          <div class="absolute top-1/4 right-0 w-80 h-80 bg-secondary opacity-60 transform -rotate-12 rounded-full"></div>
+          <!-- Shape 3 - Bottom Center -->
+          <div class="absolute bottom-0 left-1/3 w-72 h-72 bg-secondary opacity-70 transform rotate-12 rounded-2xl"></div>
+          <!-- Shape 4 - Large Diagonal -->
+          <div class="absolute top-1/2 left-1/4 w-full h-32 bg-secondary opacity-50 transform -rotate-12 origin-left"></div>
+        </div>
+      </div>
       
-      <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-95"></div>
+      <!-- Floating Logo Background -->
+      <div class="absolute inset-0 flex items-center justify-center opacity-10">
+        <img src="/assets/images/cesium-logo.png" alt="Cesium Logo" class="w-96 h-96 object-contain animate-float" />
+      </div>
+      
       <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
-          <h1 class="text-5xl lg:text-6xl font-semibold leading-tight mb-6 animate-fade-in-up">
-            Launch & Scale Your iGaming Business
-          </h1>
-          <p class="text-xl lg:text-2xl mb-8 opacity-90 animate-fade-in-up animation-delay-200 font-light">
-            We help iGaming operators grow faster with data-driven acquisition, retention, and brand building.
+          <!-- Small Yellow Text Above -->
+          <p class="text-secondary text-lg font-medium mb-2 animate-fade-in-up">
+            is Active by nature
           </p>
-          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-medium py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
+          
+          <!-- Large Company Name -->
+          <h1 class="text-6xl lg:text-8xl font-bold leading-tight mb-6 animate-fade-in-up">
+            Cesium
+          </h1>
+          
+          <!-- Sub-headline -->
+          <p class="text-lg lg:text-xl mb-4 opacity-90 animate-fade-in-up animation-delay-200 font-medium">
+            Cesium isn't a marketing agency.
+          </p>
+          <p class="text-base lg:text-lg mb-8 opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed">
+            It's a high-energy force designed to react with your business sparking momentum, amplifying results, and scaling with precision. From identity to ignition to intelligent growth we catalyze your brand's trajectory.
+          </p>
+          
+          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400">
             Request Strategy Call
           </Link>
         </div>
@@ -325,6 +353,20 @@ onMounted(() => {
 /* Enhanced hover effects */
 .hover\:shadow-xl:hover {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Floating animation for logo */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
 /* Smooth transitions for all interactive elements */
