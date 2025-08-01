@@ -52,13 +52,10 @@
     <section class="relative bg-primary text-white py-20 overflow-hidden">
       <!-- Dynamic Background with Vector.svg -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-50 animate-float" />
+        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-50" />
       </div>
       
-      <!-- Floating Logo Background -->
-      <div class="absolute inset-0 flex items-center justify-center opacity-10">
-        <img src="/assets/images/cesium-logo.png" alt="Cesium Logo" class="w-96 h-96 object-contain animate-float" />
-      </div>
+
       
       <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
