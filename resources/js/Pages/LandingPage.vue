@@ -291,13 +291,13 @@
         </h2>
         <!-- Subtitle -->
         <p class="text-xl opacity-90 mb-16 font-light max-w-3xl mx-auto">
-          Our data-driven approach delivers measurable growth for iGaming operators
+          Real numbers. Real ignition. Measurable explosions in growth and performance.
         </p>
         
         <!-- Enhanced KPI Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <Enhanced3DKpiCard
-            icon="📈"
+            icon="/assets/images/Frame20.svg"
             value="180"
             suffix="%"
             label="Combustion Boost"
@@ -305,7 +305,7 @@
             style="animation-delay: 0ms"
           />
           <Enhanced3DKpiCard
-            icon="🚀"
+            icon="/assets/images/Frame20.svg"
             value="250"
             suffix="+"
             label="Ignitions Triggered"
@@ -313,7 +313,7 @@
             style="animation-delay: 200ms"
           />
           <Enhanced3DKpiCard
-            icon="🎯"
+            icon="/assets/images/Frame20.svg"
             value="97"
             suffix="%"
             label="Stable Reaction Rate"
@@ -321,7 +321,7 @@
             style="animation-delay: 400ms"
           />
           <Enhanced3DKpiCard
-            icon="💰"
+            icon="/assets/images/Frame20.svg"
             value="35"
             suffix="%"
             label="Cost-to-Acquisition Drop"
