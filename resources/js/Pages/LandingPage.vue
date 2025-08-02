@@ -32,6 +32,9 @@
       <div class="container mx-auto px-6 relative z-10 flex items-center justify-between">
         <!-- Social Media Icons -->
         <div class="flex items-center space-x-4 ml-auto">
+          <a href="https://www.linkedin.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <i class="fab fa-linkedin-in text-2xl"></i>
+          </a>
           <a href="https://www.tiktok.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
             <i class="fab fa-tiktok text-2xl"></i>
           </a>
@@ -40,9 +43,6 @@
           </a>
           <a href="https://www.facebook.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
             <i class="fab fa-facebook-f text-2xl"></i>
-          </a>
-          <a href="https://www.linkedin.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-linkedin-in text-2xl"></i>
           </a>
         </div>
       </div>
@@ -54,8 +54,6 @@
       <div class="absolute inset-0 overflow-hidden">
         <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-50 animate-float" />
       </div>
-      
-
       
       <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
@@ -74,10 +72,10 @@
           <!-- Sub-headline with better spacing -->
           <div class="space-y-4 mb-8">
             <p class="text-lg lg:text-xl font-medium opacity-90 animate-fade-in-up animation-delay-200">
-              Cesium isn't a marketing agency.
+              Cesium isn\'t a marketing agency.
             </p>
             <p class="text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed max-w-lg">
-              It's a high-energy force designed to react with your business
+              It\'s a high-energy force designed to react with your business
             </p>
             <p class="text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed max-w-lg">
               sparking momentum, amplifying results, and scaling with precision.
@@ -86,7 +84,7 @@
               From identity to ignition to intelligent growth
             </p>
             <p class="text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed max-w-lg">
-              we catalyze your brand's trajectory.
+              we catalyze your brand\'s trajectory.
             </p>
           </div>
           
@@ -101,8 +99,16 @@
     </section>
 
     <!-- Why Cesium Section -->
-    <section class="py-20 bg-gray-100">
-      <div class="container mx-auto px-6 text-center">
+    <section class="py-20 bg-gray-100 relative overflow-hidden">
+      <!-- Molecular Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="/assets/images/Group22.svg" alt="Molecular Element" class="absolute top-10 left-10 w-16 h-16 opacity-30" />
+        <img src="/assets/images/Group23.svg" alt="Molecular Element" class="absolute top-20 right-20 w-20 h-20 opacity-30" />
+        <img src="/assets/images/Group24.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-30" />
+        <img src="/assets/images/Group25.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-16 h-16 opacity-30" />
+      </div>
+      
+      <div class="container mx-auto px-6 text-center relative z-10">
         <!-- Main Title -->
         <h2 class="text-5xl lg:text-6xl font-bold text-primary mb-4">
           Why <span class="text-primary">Cesium</span>?
@@ -173,8 +179,16 @@
     </section>
 
     <!-- What We Offer Section -->
-    <section id="services" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
+    <section id="services" class="py-20 bg-white relative overflow-hidden">
+      <!-- Molecular Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="/assets/images/Group30.svg" alt="Molecular Element" class="absolute top-10 left-10 w-16 h-16 opacity-20" />
+        <img src="/assets/images/Group31.svg" alt="Molecular Element" class="absolute top-20 right-20 w-20 h-20 opacity-20" />
+        <img src="/assets/images/Group32.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-20" />
+        <img src="/assets/images/Group33.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-16 h-16 opacity-20" />
+      </div>
+      
+      <div class="container mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
           <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-4 animate-fade-in-up">
             What We Offer
@@ -183,43 +197,144 @@
             Comprehensive marketing solutions designed specifically for the iGaming industry
           </p>
         </div>
+        
+        <!-- Service Cards Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <FeatureCard
-            v-for="(feature, index) in features"
-            :key="index"
-            :icon="feature.icon"
-            :title="feature.title"
-            :desc="feature.desc"
-            :long_desc="feature.long_desc"
-            class="animate-fade-in-up bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
-            :style="{ animationDelay: `${200 * index}ms` }"
-          />
+          <!-- Service Card 1: Paid Media -->
+          <div class="bg-secondary rounded-xl shadow-lg p-8 text-center relative overflow-hidden">
+            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+              <img src="/assets/images/CS11.svg" alt="Paid Media" class="w-10 h-10" />
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4">Paid Media</h3>
+            <p class="text-primary text-sm leading-relaxed">
+              Strategic advertising campaigns across multiple platforms to maximize your reach and ROI.
+            </p>
+          </div>
+
+          <!-- Service Card 2: SEO Optimization -->
+          <div class="bg-white rounded-xl shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+              <img src="/assets/images/CS2.svg" alt="SEO Optimization" class="w-10 h-10" />
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4">SEO Optimization</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Improve your search engine rankings and organic visibility with our proven SEO strategies.
+            </p>
+          </div>
+
+          <!-- Service Card 3: Social Media -->
+          <div class="bg-secondary rounded-xl shadow-lg p-8 text-center relative overflow-hidden">
+            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+              <img src="/assets/images/CS3.svg" alt="Social Media" class="w-10 h-10" />
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4">Social Media</h3>
+            <p class="text-primary text-sm leading-relaxed">
+              Build and engage your community across all major social media platforms.
+            </p>
+          </div>
+
+          <!-- Service Card 4: Data Analytics -->
+          <div class="bg-white rounded-xl shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+              <img src="/assets/images/CS41.svg" alt="Data Analytics" class="w-10 h-10" />
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4">Data Analytics</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Make informed decisions with comprehensive data analysis and reporting.
+            </p>
+          </div>
+
+          <!-- Service Card 5: Content Marketing -->
+          <div class="bg-secondary rounded-xl shadow-lg p-8 text-center relative overflow-hidden">
+            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+              <img src="/assets/images/CS4.svg" alt="Content Marketing" class="w-10 h-10" />
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4">Content Marketing</h3>
+            <p class="text-primary text-sm leading-relaxed">
+              Create compelling content that resonates with your audience and drives engagement.
+            </p>
+          </div>
+
+          <!-- Service Card 6: Email Marketing -->
+          <div class="bg-white rounded-xl shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+              <img src="/assets/images/CS51.svg" alt="Email Marketing" class="w-10 h-10" />
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4">Email Marketing</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Nurture leads and retain customers with targeted email campaigns.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Explore All Services Button -->
+        <div class="text-center mt-12">
+          <img src="/assets/images/Exploreallservicesindetail.svg" alt="Explore all services in detail" class="mx-auto cursor-pointer hover:scale-105 transition-transform duration-300" />
         </div>
       </div>
     </section>
 
-    <!-- KPI Section -->
-    <section id="results" class="py-20 bg-primary text-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up">
-            Proven Results
-          </h2>
-          <p class="text-xl opacity-90 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
-            Our data-driven approach delivers measurable growth for iGaming operators
-          </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <Enhanced3DKpiCard
-            v-for="(kpi, index) in kpis"
-            :key="index"
-            :icon="kpi.icon"
-            :value="kpi.number"
-            :suffix="kpi.suffix"
-            :label="kpi.label"
-            class="animate-fade-in-up"
-            :style="{ animationDelay: `${200 * index}ms` }"
-          />
+    <!-- After the Cesium Reaction Section -->
+    <section class="py-20 bg-primary text-white relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="/assets/images/Group26.svg" alt="Molecular Element" class="absolute top-10 left-10 w-20 h-20 opacity-20" />
+        <img src="/assets/images/Group27.svg" alt="Molecular Element" class="absolute top-20 right-20 w-24 h-24 opacity-20" />
+        <img src="/assets/images/Group28.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-20" />
+        <img src="/assets/images/Group29.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-20 h-20 opacity-20" />
+      </div>
+      
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <!-- Main Title -->
+        <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+          After the Cesium Reaction
+        </h2>
+        <!-- Subtitle -->
+        <p class="text-xl opacity-90 mb-16 font-light max-w-3xl mx-auto">
+          Our data-driven approach delivers measurable growth for iGaming operators
+        </p>
+        
+        <!-- KPI Statistics Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <!-- KPI 1: 180% -->
+          <div class="text-center">
+            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-2">
+              180%
+            </div>
+            <p class="text-lg opacity-90 font-medium">
+              Average Revenue<br>Increase
+            </p>
+          </div>
+
+          <!-- KPI 2: 250+ -->
+          <div class="text-center">
+            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-2">
+              250+
+            </div>
+            <p class="text-lg opacity-90 font-medium">
+              Successful<br>Campaigns
+            </p>
+          </div>
+
+          <!-- KPI 3: 97% -->
+          <div class="text-center">
+            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-2">
+              97%
+            </div>
+            <p class="text-lg opacity-90 font-medium">
+              Client Retention<br>Rate
+            </p>
+          </div>
+
+          <!-- KPI 4: -35% -->
+          <div class="text-center">
+            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-2">
+              -35%
+            </div>
+            <p class="text-lg opacity-90 font-medium">
+              Customer Acquisition<br>Cost Reduction
+            </p>
+          </div>
         </div>
       </div>
     </section>
