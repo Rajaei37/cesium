@@ -300,7 +300,7 @@
             icon="📈"
             value="180"
             suffix="%"
-            label="Average Revenue Increase"
+            label="Combustion Boost"
             class="animate-fade-in-up"
             style="animation-delay: 0ms"
           />
@@ -308,7 +308,7 @@
             icon="🚀"
             value="250"
             suffix="+"
-            label="Successful Campaigns"
+            label="Ignitions Triggered"
             class="animate-fade-in-up"
             style="animation-delay: 200ms"
           />
@@ -316,7 +316,7 @@
             icon="🎯"
             value="97"
             suffix="%"
-            label="Client Retention Rate"
+            label="Stable Reaction Rate"
             class="animate-fade-in-up"
             style="animation-delay: 400ms"
           />
@@ -324,7 +324,7 @@
             icon="💰"
             value="35"
             suffix="%"
-            label="Customer Acquisition Cost Reduction"
+            label="Cost-to-Acquisition Drop"
             prefix="-"
             class="animate-fade-in-up"
             style="animation-delay: 600ms"
