@@ -294,47 +294,41 @@
           Our data-driven approach delivers measurable growth for iGaming operators
         </p>
         
-        <!-- KPI Statistics Grid -->
+        <!-- Enhanced KPI Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          <!-- KPI 1: 180% -->
-          <div class="text-center">
-            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-2">
-              180%
-            </div>
-            <p class="text-lg opacity-90 font-medium">
-              Average Revenue<br>Increase
-            </p>
-          </div>
-
-          <!-- KPI 2: 250+ -->
-          <div class="text-center">
-            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-2">
-              250+
-            </div>
-            <p class="text-lg opacity-90 font-medium">
-              Successful<br>Campaigns
-            </p>
-          </div>
-
-          <!-- KPI 3: 97% -->
-          <div class="text-center">
-            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-2">
-              97%
-            </div>
-            <p class="text-lg opacity-90 font-medium">
-              Client Retention<br>Rate
-            </p>
-          </div>
-
-          <!-- KPI 4: -35% -->
-          <div class="text-center">
-            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-2">
-              -35%
-            </div>
-            <p class="text-lg opacity-90 font-medium">
-              Customer Acquisition<br>Cost Reduction
-            </p>
-          </div>
+          <Enhanced3DKpiCard
+            icon="📈"
+            value="180"
+            suffix="%"
+            label="Average Revenue Increase"
+            class="animate-fade-in-up"
+            style="animation-delay: 0ms"
+          />
+          <Enhanced3DKpiCard
+            icon="🚀"
+            value="250"
+            suffix="+"
+            label="Successful Campaigns"
+            class="animate-fade-in-up"
+            style="animation-delay: 200ms"
+          />
+          <Enhanced3DKpiCard
+            icon="🎯"
+            value="97"
+            suffix="%"
+            label="Client Retention Rate"
+            class="animate-fade-in-up"
+            style="animation-delay: 400ms"
+          />
+          <Enhanced3DKpiCard
+            icon="💰"
+            value="35"
+            suffix="%"
+            label="Customer Acquisition Cost Reduction"
+            prefix="-"
+            class="animate-fade-in-up"
+            style="animation-delay: 600ms"
+          />
         </div>
       </div>
     </section>
