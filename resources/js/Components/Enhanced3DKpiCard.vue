@@ -409,8 +409,8 @@ onMounted(() => {
 <style scoped>
 .enhanced-kpi-card {
   position: relative;
-  width: 300px; /* Increased width for horizontal display */
-  height: 350px; /* Adjusted height to accommodate description */
+  width: 274.48px; /* Fixed width based on user's ratio */
+  height: 141.00px; /* Fixed height based on user's ratio */
   cursor: pointer;
   transform-style: preserve-3d;
   perspective: 1000px;
@@ -445,37 +445,18 @@ onMounted(() => {
 
 .icon-container {
   position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 10px;
+  left: 10px;
+  transform: none;
   z-index: 3;
-}
-
-.icon-3d-wrapper {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #facb24 0%, #f0c14b 100%);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(250, 203, 36, 0.3);
-  transform-style: preserve-3d;
-}
-
-.kpi-icon {
-  width: 24px;
-  height: 24px;
-  color: #362869;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 
 .counter-display {
   position: absolute;
-  top: 35%; /* Adjusted position */
+  top: 25px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.5rem;
+  transform: translateX(-50%);
+  font-size: 2.2rem;
   font-weight: 800;
   color: #facb24;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -486,10 +467,10 @@ onMounted(() => {
 
 .kpi-label {
   position: absolute;
-  top: calc(35% + 50px); /* Adjusted position */
+  top: calc(25px + 40px); /* Adjusted position */
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -500,12 +481,12 @@ onMounted(() => {
 
 .kpi-description {
   position: absolute;
-  top: calc(35% + 90px); /* Adjusted position below label */
+  top: calc(25px + 70px); /* Adjusted position below label */
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.75rem; /* Smaller, more elegant font size */
-  line-height: 1.4; /* Tighter line spacing for elegance */
-  max-height: 120px; /* Increased max-height to accommodate more text */
+  font-size: 0.65rem; /* Smaller font size for elegance */
+  line-height: 1.3; /* Tighter line spacing for elegance */
+  max-height: 50px; /* Reduced max-height for better proportions */
   overflow: hidden; /* Hide overflow instead of scrolling */
   text-overflow: ellipsis; /* Add ellipsis for overflow */
   white-space: normal; /* Allow text to wrap */
@@ -515,7 +496,7 @@ onMounted(() => {
   transition: opacity 0.3s ease; /* Smooth transition for opacity */
   color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for elegance */
   width: 90%; /* Increased width for better proportions */
-  padding: 8px 12px; /* Better padding for elegant spacing */
+  padding: 4px 8px; /* Better padding for elegant spacing */
   background: rgba(255, 255, 255, 0.05); /* Subtle background for definition */
   border-radius: 6px; /* Subtle rounded corners */
   backdrop-filter: blur(4px); /* Subtle blur effect for elegance */
@@ -553,29 +534,41 @@ onMounted(() => {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .enhanced-kpi-card {
-    height: 220px; /* Adjusted for mobile */
+    width: 100%; /* Allow full width on mobile */
+    height: auto; /* Allow height to adjust dynamically */
+    max-width: 274.48px; /* Maintain aspect ratio on smaller screens */
+    margin: 0 auto; /* Center the card */
   }
   
   .counter-display {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    top: 20px;
+  }
+  
+  .icon-container {
+    top: 5px;
+    left: 5px;
   }
   
   .icon-3d-wrapper {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
   
   .kpi-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
   
   .kpi-label {
-    top: calc(50% + 20px);
+    top: calc(20px + 40px);
+    font-size: 0.7rem;
   }
   
   .kpi-description {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
+    top: calc(20px + 70px);
+    max-height: 60px;
   }
 }
 
