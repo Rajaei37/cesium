@@ -178,6 +178,71 @@
       </div>
     </section>
 
+    <!-- After the Cesium Reaction Section -->
+    <section class="py-20 bg-primary text-white relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="/assets/images/Group26.svg" alt="Molecular Element" class="absolute top-10 left-10 w-20 h-20 opacity-20" />
+        <img src="/assets/images/Group27.svg" alt="Molecular Element" class="absolute top-20 right-20 w-24 h-24 opacity-20" />
+        <img src="/assets/images/Group28.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-20" />
+        <img src="/assets/images/Group29.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-20 h-20 opacity-20" />
+      </div>
+      
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <!-- Main Title -->
+        <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+          After the Cesium Reaction
+        </h2>
+        <!-- Subtitle -->
+        <p class="text-xl opacity-90 mb-16 font-light max-w-3xl mx-auto">
+          Real numbers. Real ignition. Measurable explosions in growth and performance.
+        </p>
+        
+        <!-- KPI Cards Grid with Hover Effects -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <!-- KPI Card 1: 180% -->
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-opacity-20 hover:scale-105 transition-all duration-300 cursor-pointer group">
+            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-4 group-hover:text-yellow-300 transition-colors duration-300">
+              180<span class="text-4xl">%</span>
+            </div>
+            <p class="text-white text-lg font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+              Average Revenue Increase
+            </p>
+          </div>
+
+          <!-- KPI Card 2: 250+ -->
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-opacity-20 hover:scale-105 transition-all duration-300 cursor-pointer group">
+            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-4 group-hover:text-yellow-300 transition-colors duration-300">
+              250<span class="text-4xl">+</span>
+            </div>
+            <p class="text-white text-lg font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+              Successful Campaigns
+            </p>
+          </div>
+
+          <!-- KPI Card 3: 97% -->
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-opacity-20 hover:scale-105 transition-all duration-300 cursor-pointer group">
+            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-4 group-hover:text-yellow-300 transition-colors duration-300">
+              97<span class="text-4xl">%</span>
+            </div>
+            <p class="text-white text-lg font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+              Client Retention Rate
+            </p>
+          </div>
+
+          <!-- KPI Card 4: -35% -->
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-opacity-20 hover:scale-105 transition-all duration-300 cursor-pointer group">
+            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-4 group-hover:text-yellow-300 transition-colors duration-300">
+              <span class="text-4xl">-</span>35<span class="text-4xl">%</span>
+            </div>
+            <p class="text-white text-lg font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+              Customer Acquisition Cost Reduction
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- What We Offer Section -->
     <section id="services" class="py-20 bg-white relative overflow-hidden">
       <!-- Molecular Background Elements -->
@@ -270,65 +335,6 @@
         <!-- Explore All Services Button -->
         <div class="text-center mt-12">
           <img src="/assets/images/Exploreallservicesindetail.svg" alt="Explore all services in detail" class="mx-auto cursor-pointer hover:scale-105 transition-transform duration-300" />
-        </div>
-      </div>
-    </section>
-
-    <!-- After the Cesium Reaction Section -->
-    <section class="py-20 bg-primary text-white relative overflow-hidden">
-      <!-- Background Elements -->
-      <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Group26.svg" alt="Molecular Element" class="absolute top-10 left-10 w-20 h-20 opacity-20" />
-        <img src="/assets/images/Group27.svg" alt="Molecular Element" class="absolute top-20 right-20 w-24 h-24 opacity-20" />
-        <img src="/assets/images/Group28.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-20" />
-        <img src="/assets/images/Group29.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-20 h-20 opacity-20" />
-      </div>
-      
-      <div class="container mx-auto px-6 text-center relative z-10">
-        <!-- Main Title -->
-        <h2 class="text-4xl lg:text-5xl font-bold mb-4">
-          After the Cesium Reaction
-        </h2>
-        <!-- Subtitle -->
-        <p class="text-xl opacity-90 mb-16 font-light max-w-3xl mx-auto">
-          Real numbers. Real ignition. Measurable explosions in growth and performance.
-        </p>
-        
-        <!-- Enhanced KPI Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          <Enhanced3DKpiCard
-            icon="/assets/images/Frame20.svg"
-            value="180"
-            suffix="%"
-            label="Combustion Boost"
-            class="animate-fade-in-up"
-            style="animation-delay: 0ms"
-          />
-          <Enhanced3DKpiCard
-            icon="/assets/images/Frame20.svg"
-            value="250"
-            suffix="+"
-            label="Ignitions Triggered"
-            class="animate-fade-in-up"
-            style="animation-delay: 200ms"
-          />
-          <Enhanced3DKpiCard
-            icon="/assets/images/Frame20.svg"
-            value="97"
-            suffix="%"
-            label="Stable Reaction Rate"
-            class="animate-fade-in-up"
-            style="animation-delay: 400ms"
-          />
-          <Enhanced3DKpiCard
-            icon="/assets/images/Frame20.svg"
-            value="35"
-            suffix="%"
-            label="Cost-to-Acquisition Drop"
-            prefix="-"
-            class="animate-fade-in-up"
-            style="animation-delay: 600ms"
-          />
         </div>
       </div>
     </section>
