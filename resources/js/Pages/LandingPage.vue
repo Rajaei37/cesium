@@ -205,6 +205,7 @@
             value="180"
             suffix="%"
             label="Combustion Boost"
+            description="Your ROI doesn’t just increase — it combusts. After exposure to Cesium’s reaction chain, clients average over 180% growth in returns."
             class="animate-fade-in-up"
             style="animation-delay: 0ms"
           />
@@ -213,6 +214,7 @@
             value="250"
             suffix="+"
             label="Ignitions Triggered"
+            description="That’s how many successful campaigns have already run through our reactor — each designed to launch performance at scale."
             class="animate-fade-in-up"
             style="animation-delay: 200ms"
           />
@@ -221,6 +223,7 @@
             value="97"
             suffix="%"
             label="Stable Reaction Rate"
+            description="We don’t flash and fade. Our systems are engineered for long-term performance — and clients stay with us because the results are repeatable."
             class="animate-fade-in-up"
             style="animation-delay: 400ms"
           />
@@ -230,6 +233,7 @@
             suffix="%"
             label="Cost-to-Acquisition Drop"
             prefix="-"
+            description="Your ROI doesn’t just increase — it combusts. After exposure to Cesium’s reaction chain, clients average over 180% growth in returns."
             class="animate-fade-in-up"
             style="animation-delay: 600ms"
           />

@@ -43,6 +43,14 @@
         {{ label }}
       </p>
       
+      <!-- Description with subtle animation -->
+      <p 
+        v-if="description"
+        class="kpi-description"
+      >
+        {{ description }}
+      </p>
+      
       <!-- Floating particles effect -->
       <div class="particles-container" ref="particlesRef">
         <canvas ref="particlesCanvas" class="particles-canvas"></canvas>
@@ -80,6 +88,10 @@ const props = defineProps({
   label: {
     type: String,
     required: true
+  },
+  description: {
+    type: String,
+    default: ''
   },
   animationDuration: {
     type: Number,
@@ -370,7 +382,7 @@ onMounted(() => {
 .enhanced-kpi-card {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 250px; /* Increased height to accommodate description */
   cursor: pointer;
   transform-style: preserve-3d;
   perspective: 1000px;
@@ -446,7 +458,7 @@ onMounted(() => {
 
 .kpi-label {
   position: absolute;
-  bottom: 20px;
+  top: calc(50% + 30px); /* Adjusted position */
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.875rem;
@@ -455,6 +467,19 @@ onMounted(() => {
   text-align: center;
   margin: 0;
   opacity: 0.9;
+  z-index: 2;
+}
+
+.kpi-description {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin: 0;
+  padding: 0 10px;
   z-index: 2;
 }
 
@@ -490,7 +515,7 @@ onMounted(() => {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .enhanced-kpi-card {
-    height: 180px;
+    height: 220px; /* Adjusted for mobile */
   }
   
   .counter-display {
@@ -505,6 +530,14 @@ onMounted(() => {
   .kpi-icon {
     width: 20px;
     height: 20px;
+  }
+  
+  .kpi-label {
+    top: calc(50% + 20px);
+  }
+  
+  .kpi-description {
+    font-size: 0.65rem;
   }
 }
 
@@ -530,4 +563,3 @@ onMounted(() => {
   border-radius: 16px;
 }
 </style>
-
