@@ -198,47 +198,41 @@
           Real numbers. Real ignition. Measurable explosions in growth and performance.
         </p>
         
-        <!-- KPI Cards Grid with Hover Effects -->
+        <!-- Enhanced KPI Cards Grid with Sparkling Effects -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          <!-- KPI Card 1: 180% -->
-          <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-opacity-20 hover:scale-105 transition-all duration-300 cursor-pointer group">
-            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-4 group-hover:text-yellow-300 transition-colors duration-300">
-              180<span class="text-4xl">%</span>
-            </div>
-            <p class="text-white text-lg font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-              Average Revenue Increase
-            </p>
-          </div>
-
-          <!-- KPI Card 2: 250+ -->
-          <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-opacity-20 hover:scale-105 transition-all duration-300 cursor-pointer group">
-            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-4 group-hover:text-yellow-300 transition-colors duration-300">
-              250<span class="text-4xl">+</span>
-            </div>
-            <p class="text-white text-lg font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-              Successful Campaigns
-            </p>
-          </div>
-
-          <!-- KPI Card 3: 97% -->
-          <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-opacity-20 hover:scale-105 transition-all duration-300 cursor-pointer group">
-            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-4 group-hover:text-yellow-300 transition-colors duration-300">
-              97<span class="text-4xl">%</span>
-            </div>
-            <p class="text-white text-lg font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-              Client Retention Rate
-            </p>
-          </div>
-
-          <!-- KPI Card 4: -35% -->
-          <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-opacity-20 hover:scale-105 transition-all duration-300 cursor-pointer group">
-            <div class="text-6xl lg:text-7xl font-bold text-secondary mb-4 group-hover:text-yellow-300 transition-colors duration-300">
-              <span class="text-4xl">-</span>35<span class="text-4xl">%</span>
-            </div>
-            <p class="text-white text-lg font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-              Customer Acquisition Cost Reduction
-            </p>
-          </div>
+          <Enhanced3DKpiCard
+            icon="trending-up"
+            value="180"
+            suffix="%"
+            label="Combustion Boost"
+            class="animate-fade-in-up"
+            style="animation-delay: 0ms"
+          />
+          <Enhanced3DKpiCard
+            icon="target"
+            value="250"
+            suffix="+"
+            label="Ignitions Triggered"
+            class="animate-fade-in-up"
+            style="animation-delay: 200ms"
+          />
+          <Enhanced3DKpiCard
+            icon="bar-chart"
+            value="97"
+            suffix="%"
+            label="Stable Reaction Rate"
+            class="animate-fade-in-up"
+            style="animation-delay: 400ms"
+          />
+          <Enhanced3DKpiCard
+            icon="dollar-sign"
+            value="35"
+            suffix="%"
+            label="Cost-to-Acquisition Drop"
+            prefix="-"
+            class="animate-fade-in-up"
+            style="animation-delay: 600ms"
+          />
         </div>
       </div>
     </section>
