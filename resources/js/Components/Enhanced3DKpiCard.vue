@@ -157,7 +157,27 @@ const formatNumber = (num) => {
 const handleMouseEnter = () => {
   isHovered.value = true
   
-  // 3D tilt effect
+  // Kill any existing animations to ensure fresh start
+  gsap.killTweensOf(cardContainer.value)
+  gsap.killTweensOf(".icon-3d-wrapper")
+  gsap.killTweensOf(currentValue)
+  
+  // Stop and clear any existing particles
+  stopParticles()
+  
+  // Reset to initial state before starting new animations
+  gsap.set(cardContainer.value, {
+    rotationX: 0,
+    rotationY: 0,
+    z: 0
+  })
+  
+  gsap.set(".icon-3d-wrapper", {
+    scale: 1,
+    rotationZ: 0
+  })
+  
+  // Start fresh 3D tilt effect
   gsap.to(cardContainer.value, {
     duration: 0.3,
     rotationX: -5,
@@ -166,22 +186,38 @@ const handleMouseEnter = () => {
     ease: "power2.out"
   })
   
-  // Icon bounce
-  gsap.to('.icon-3d-wrapper', {
+  // Start fresh icon bounce
+  gsap.to(".icon-3d-wrapper", {
     duration: 0.3,
     scale: 1.1,
     rotationZ: 5,
     ease: "back.out(1.7)"
   })
   
-  // Start particles
+  // Start fresh particles
   startParticles()
+  
+  // Restart counter animation from beginning
+  animateCounter()
 }
 
 const handleMouseLeave = () => {
   isHovered.value = false
   
-  // Reset 3D tilt
+  // Kill all animations immediately for clean reset
+  gsap.killTweensOf(cardContainer.value)
+  gsap.killTweensOf(".icon-3d-wrapper")
+  gsap.killTweensOf(currentValue)
+  
+  // Stop and completely clear particles
+  stopParticles()
+  particles = [] // Clear particles array
+  if (particlesCanvas.value) {
+    const ctx = particlesCanvas.value.getContext("2d")
+    if (ctx) ctx.clearRect(0, 0, particlesCanvas.value.width, particlesCanvas.value.height)
+  }
+  
+  // Reset to neutral state
   gsap.to(cardContainer.value, {
     duration: 0.3,
     rotationX: 0,
@@ -190,16 +226,13 @@ const handleMouseLeave = () => {
     ease: "power2.out"
   })
   
-  // Reset icon
-  gsap.to('.icon-3d-wrapper', {
+  // Reset icon to neutral state
+  gsap.to(".icon-3d-wrapper", {
     duration: 0.3,
     scale: 1,
     rotationZ: 0,
     ease: "power2.out"
   })
-  
-  // Stop particles
-  stopParticles()
 }
 
 const handleMouseMove = (event) => {
@@ -382,7 +415,7 @@ onMounted(() => {
 .enhanced-kpi-card {
   position: relative;
   width: 100%;
-  height: 250px; /* Increased height to accommodate description */
+  height: 300px; /* Increased height to accommodate description */
   cursor: pointer;
   transform-style: preserve-3d;
   perspective: 1000px;
@@ -444,7 +477,7 @@ onMounted(() => {
 
 .counter-display {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.5rem;
@@ -458,7 +491,7 @@ onMounted(() => {
 
 .kpi-label {
   position: absolute;
-  top: calc(50% + 30px); /* Adjusted position */
+  top: calc(40% + 50px); /* Adjusted position */
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.875rem;
@@ -472,15 +505,22 @@ onMounted(() => {
 
 .kpi-description {
   position: absolute;
-  bottom: 20px;
+  top: calc(40% + 90px); /* Adjusted position below label */
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.7);
-  text-align: center;
-  margin: 0;
-  padding: 0 10px;
-  z-index: 2;
+  font-size: 0.8rem; /* Increased font size for readability */
+  line-height: 1.5; /* Increased line spacing */
+  max-height: 120px; /* Increased max-height to accommodate more text */
+  overflow-y: auto; /* Enable scrolling for overflow */
+  text-overflow: clip; /* Ensure full text is visible, no ellipsis */
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words */
+  text-align: center; /* Center align the text */
+  opacity: 0.9; /* Slightly more opaque */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  color: white; /* Ensure text is white for visibility */
+  width: 90%; /* Limit width to prevent overflow */
+  padding: 0 5%; /* Add padding for better spacing */
 }
 
 .particles-container {
