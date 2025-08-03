@@ -199,7 +199,7 @@
         </p>
         
         <!-- Enhanced KPI Cards Grid with Sparkling Effects -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <Enhanced3DKpiCard
             icon="trending-up"
             value="180"

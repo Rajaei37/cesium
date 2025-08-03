@@ -409,8 +409,8 @@ onMounted(() => {
 <style scoped>
 .enhanced-kpi-card {
   position: relative;
-  width: 100%;
-  height: 300px; /* Increased height to accommodate description */
+  width: 300px; /* Increased width for horizontal display */
+  height: 350px; /* Adjusted height to accommodate description */
   cursor: pointer;
   transform-style: preserve-3d;
   perspective: 1000px;
@@ -472,7 +472,7 @@ onMounted(() => {
 
 .counter-display {
   position: absolute;
-  top: 40%;
+  top: 35%; /* Adjusted position */
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.5rem;
@@ -486,7 +486,7 @@ onMounted(() => {
 
 .kpi-label {
   position: absolute;
-  top: calc(40% + 50px); /* Adjusted position */
+  top: calc(35% + 50px); /* Adjusted position */
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.875rem;
@@ -500,12 +500,12 @@ onMounted(() => {
 
 .kpi-description {
   position: absolute;
-  top: calc(40% + 90px); /* Adjusted position below label */
+  top: calc(35% + 90px); /* Adjusted position below label */
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.75rem; /* Smaller, more elegant font size */
   line-height: 1.4; /* Tighter line spacing for elegance */
-  max-height: 100px; /* Reduced max-height for better proportions */
+  max-height: 120px; /* Increased max-height to accommodate more text */
   overflow: hidden; /* Hide overflow instead of scrolling */
   text-overflow: ellipsis; /* Add ellipsis for overflow */
   white-space: normal; /* Allow text to wrap */
@@ -514,7 +514,7 @@ onMounted(() => {
   opacity: 0.8; /* Slightly more subtle */
   transition: opacity 0.3s ease; /* Smooth transition for opacity */
   color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for elegance */
-  width: 85%; /* Slightly narrower for better proportions */
+  width: 90%; /* Increased width for better proportions */
   padding: 8px 12px; /* Better padding for elegant spacing */
   background: rgba(255, 255, 255, 0.05); /* Subtle background for definition */
   border-radius: 6px; /* Subtle rounded corners */
