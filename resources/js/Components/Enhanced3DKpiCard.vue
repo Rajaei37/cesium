@@ -409,18 +409,20 @@ onMounted(() => {
 <style scoped>
 .enhanced-kpi-card {
   position: relative;
-  width: 274.48px; /* Fixed width based on user's ratio */
-  height: 141.00px; /* Fixed height based on user's ratio */
+  width: 100%;
+  max-width: 320px;
+  height: 200px;
   cursor: pointer;
   transform-style: preserve-3d;
   perspective: 1000px;
+  margin: 0 auto;
 }
 
 .card-3d-container {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 0.56px;
+  border-radius: 12px;
   transform-style: preserve-3d;
   transition: all 0.3s ease;
 }
@@ -429,7 +431,7 @@ onMounted(() => {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, #362869 0%, #4a3a7a 100%);
-  border-radius: 0.56px;
+  border-radius: 12px;
   box-shadow: 
     0 4px 20px rgba(54, 40, 105, 0.3),
     0 1px 3px rgba(0, 0, 0, 0.1);
@@ -445,67 +447,87 @@ onMounted(() => {
 
 .icon-container {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  transform: none;
+  top: 16px;
+  left: 16px;
   z-index: 3;
+}
+
+.icon-3d-wrapper {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #facb24 0%, #f0c14b 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(250, 203, 36, 0.3);
+  transform-style: preserve-3d;
+}
+
+.kpi-icon {
+  width: 24px;
+  height: 24px;
+  color: #362869;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 
 .counter-display {
   position: absolute;
-  top: 25px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 2.2rem;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
   font-weight: 800;
   color: #facb24;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.025em;
   z-index: 2;
+  white-space: nowrap;
 }
 
 .kpi-label {
   position: absolute;
-  top: calc(25px + 40px); /* Adjusted position */
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: white;
   text-align: center;
   margin: 0;
   opacity: 0.9;
   z-index: 2;
+  white-space: nowrap;
 }
 
 .kpi-description {
   position: absolute;
-  top: calc(25px + 70px); /* Adjusted position below label */
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.65rem; /* Smaller font size for elegance */
-  line-height: 1.3; /* Tighter line spacing for elegance */
-  max-height: 50px; /* Reduced max-height for better proportions */
-  overflow: hidden; /* Hide overflow instead of scrolling */
-  text-overflow: ellipsis; /* Add ellipsis for overflow */
-  white-space: normal; /* Allow text to wrap */
-  word-wrap: break-word; /* Break long words */
-  text-align: center; /* Center align the text */
-  opacity: 0.8; /* Slightly more subtle */
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
-  color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for elegance */
-  width: 90%; /* Increased width for better proportions */
-  padding: 4px 8px; /* Better padding for elegant spacing */
-  background: rgba(255, 255, 255, 0.05); /* Subtle background for definition */
-  border-radius: 6px; /* Subtle rounded corners */
-  backdrop-filter: blur(4px); /* Subtle blur effect for elegance */
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+  z-index: 2;
 }
 
 .particles-container {
   position: absolute;
   inset: 0;
-  border-radius: 0.56px;
+  border-radius: 12px;
   overflow: hidden;
   pointer-events: none;
   z-index: 1;
@@ -519,7 +541,7 @@ onMounted(() => {
 .glow-overlay {
   position: absolute;
   inset: 0;
-  border-radius: 0.56px;
+  border-radius: 12px;
   background: radial-gradient(circle at center, rgba(250, 203, 36, 0.1) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -534,41 +556,35 @@ onMounted(() => {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .enhanced-kpi-card {
-    width: 100%; /* Allow full width on mobile */
-    height: auto; /* Allow height to adjust dynamically */
-    max-width: 274.48px; /* Maintain aspect ratio on smaller screens */
-    margin: 0 auto; /* Center the card */
+    max-width: 280px;
+    height: 180px;
   }
   
   .counter-display {
-    font-size: 1.8rem;
-    top: 20px;
-  }
-  
-  .icon-container {
-    top: 5px;
-    left: 5px;
+    font-size: 2.5rem;
   }
   
   .icon-3d-wrapper {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
   }
   
   .kpi-icon {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
   
   .kpi-label {
-    top: calc(20px + 40px);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    bottom: 50px;
   }
   
   .kpi-description {
-    font-size: 0.6rem;
-    top: calc(20px + 70px);
-    max-height: 60px;
+    font-size: 0.7rem;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    max-height: 35px;
   }
 }
 
@@ -591,6 +607,6 @@ onMounted(() => {
 .enhanced-kpi-card:focus-visible {
   outline: 2px solid #facb24;
   outline-offset: 2px;
-  border-radius: 0.56px;
+  border-radius: 12px;
 }
 </style>
