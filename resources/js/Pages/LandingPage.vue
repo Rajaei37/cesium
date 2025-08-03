@@ -229,11 +229,10 @@
           />
           <Enhanced3DKpiCard
             icon="dollar-sign"
-            value="35"
+            value="-35"
             suffix="%"
             label="Cost-to-Acquisition Drop"
-            prefix="-"
-            description="Your ROI doesn’t just increase — it combusts. After exposure to Cesium’s reaction chain, clients average over 180% growth in returns."
+            description="Your ROI doesn't just increase — it combusts. After exposure to Cesium's reaction chain, clients average over 180% growth in returns."
             class="animate-fade-in-up"
             style="animation-delay: 600ms"
           />

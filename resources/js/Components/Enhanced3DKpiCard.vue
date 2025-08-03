@@ -16,7 +16,7 @@
       
       <!-- Icon with 3D effect -->
       <div class="icon-container">
-        <div class="icon-3d-wrapper">
+        <div class="icon-3d-wrapper" ref="iconWrapper">
           <component 
             :is="getIconComponent()" 
             class="kpi-icon"
@@ -112,6 +112,7 @@ const cardContainer = ref(null)
 const counterRef = ref(null)
 const particlesRef = ref(null)
 const particlesCanvas = ref(null)
+const iconWrapper = ref(null)
 
 // State
 const isHovered = ref(false)
@@ -159,7 +160,7 @@ const handleMouseEnter = () => {
   
   // Kill any existing animations to ensure fresh start
   gsap.killTweensOf(cardContainer.value)
-  gsap.killTweensOf(".icon-3d-wrapper")
+  gsap.killTweensOf(iconWrapper.value)
   gsap.killTweensOf(currentValue)
   
   // Stop and clear any existing particles
@@ -172,7 +173,7 @@ const handleMouseEnter = () => {
     z: 0
   })
   
-  gsap.set(".icon-3d-wrapper", {
+  gsap.set(iconWrapper.value, {
     scale: 1,
     rotationZ: 0
   })
@@ -186,8 +187,8 @@ const handleMouseEnter = () => {
     ease: "power2.out"
   })
   
-  // Start fresh icon bounce
-  gsap.to(".icon-3d-wrapper", {
+  // Start fresh icon bounce - targeting individual icon
+  gsap.to(iconWrapper.value, {
     duration: 0.3,
     scale: 1.1,
     rotationZ: 5,
@@ -197,8 +198,8 @@ const handleMouseEnter = () => {
   // Start fresh particles
   startParticles()
   
-  // Restart counter animation from beginning
-  animateCounter()
+  // Remove counter animation - display static value
+  displayValue.value = formattedValue.value
 }
 
 const handleMouseLeave = () => {
@@ -206,7 +207,7 @@ const handleMouseLeave = () => {
   
   // Kill all animations immediately for clean reset
   gsap.killTweensOf(cardContainer.value)
-  gsap.killTweensOf(".icon-3d-wrapper")
+  gsap.killTweensOf(iconWrapper.value)
   gsap.killTweensOf(currentValue)
   
   // Stop and completely clear particles
@@ -226,8 +227,8 @@ const handleMouseLeave = () => {
     ease: "power2.out"
   })
   
-  // Reset icon to neutral state
-  gsap.to(".icon-3d-wrapper", {
+  // Reset individual icon to neutral state
+  gsap.to(iconWrapper.value, {
     duration: 0.3,
     scale: 1,
     rotationZ: 0,
@@ -381,11 +382,7 @@ const stopParticles = () => {
 
 // Watchers
 watch(() => props.value, () => {
-  if (props.startAnimation) {
-    animateCounter()
-  } else {
-    displayValue.value = formattedValue.value
-  }
+  displayValue.value = formattedValue.value
 })
 
 // Lifecycle
@@ -399,10 +396,8 @@ onMounted(() => {
       })
     }
     
-    // Delay animation slightly to ensure proper mounting
-    setTimeout(() => {
-      animateCounter()
-    }, 100)
+    // Display static value without animation
+    displayValue.value = formattedValue.value
   } catch (error) {
     console.warn('Enhanced3DKpiCard: Error during mount:', error)
     // Fallback to display final value without animation
@@ -425,7 +420,7 @@ onMounted(() => {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 16px;
+  border-radius: 0.56px;
   transform-style: preserve-3d;
   transition: all 0.3s ease;
 }
@@ -434,7 +429,7 @@ onMounted(() => {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, #362869 0%, #4a3a7a 100%);
-  border-radius: 16px;
+  border-radius: 0.56px;
   box-shadow: 
     0 4px 20px rgba(54, 40, 105, 0.3),
     0 1px 3px rgba(0, 0, 0, 0.1);
@@ -508,25 +503,28 @@ onMounted(() => {
   top: calc(40% + 90px); /* Adjusted position below label */
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.8rem; /* Increased font size for readability */
-  line-height: 1.5; /* Increased line spacing */
-  max-height: 120px; /* Increased max-height to accommodate more text */
-  overflow-y: auto; /* Enable scrolling for overflow */
-  text-overflow: clip; /* Ensure full text is visible, no ellipsis */
+  font-size: 0.75rem; /* Smaller, more elegant font size */
+  line-height: 1.4; /* Tighter line spacing for elegance */
+  max-height: 100px; /* Reduced max-height for better proportions */
+  overflow: hidden; /* Hide overflow instead of scrolling */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
   white-space: normal; /* Allow text to wrap */
   word-wrap: break-word; /* Break long words */
   text-align: center; /* Center align the text */
-  opacity: 0.9; /* Slightly more opaque */
+  opacity: 0.8; /* Slightly more subtle */
   transition: opacity 0.3s ease; /* Smooth transition for opacity */
-  color: white; /* Ensure text is white for visibility */
-  width: 90%; /* Limit width to prevent overflow */
-  padding: 0 5%; /* Add padding for better spacing */
+  color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for elegance */
+  width: 85%; /* Slightly narrower for better proportions */
+  padding: 8px 12px; /* Better padding for elegant spacing */
+  background: rgba(255, 255, 255, 0.05); /* Subtle background for definition */
+  border-radius: 6px; /* Subtle rounded corners */
+  backdrop-filter: blur(4px); /* Subtle blur effect for elegance */
 }
 
 .particles-container {
   position: absolute;
   inset: 0;
-  border-radius: 16px;
+  border-radius: 0.56px;
   overflow: hidden;
   pointer-events: none;
   z-index: 1;
@@ -540,7 +538,7 @@ onMounted(() => {
 .glow-overlay {
   position: absolute;
   inset: 0;
-  border-radius: 16px;
+  border-radius: 0.56px;
   background: radial-gradient(circle at center, rgba(250, 203, 36, 0.1) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -600,6 +598,6 @@ onMounted(() => {
 .enhanced-kpi-card:focus-visible {
   outline: 2px solid #facb24;
   outline-offset: 2px;
-  border-radius: 16px;
+  border-radius: 0.56px;
 }
 </style>
