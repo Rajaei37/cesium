@@ -22,50 +22,25 @@
       </Link>
     </div>
 
-    <!-- Schedule Modal - Removed as we are opening a new window -->
-
     <!-- Header -->
     <AppHeader current-page="home" />
 
-    <!-- Header Section (Hero Section modified to include header elements) -->
-    <section id="home" class="relative bg-primary text-white py-6 pt-28 overflow-hidden">
-      <div class="container mx-auto px-6 relative z-10 flex items-center justify-between">
-        <!-- Social Media Icons -->
-        <div class="flex items-center space-x-4 ml-auto">
-          <a href="https://www.linkedin.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-linkedin-in text-2xl"></i>
-          </a>
-          <a href="https://www.tiktok.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-tiktok text-2xl"></i>
-          </a>
-          <a href="https://www.instagram.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-instagram text-2xl"></i>
-          </a>
-          <a href="https://www.facebook.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-facebook-f text-2xl"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- Hero Content Section -->
-    <section class="relative bg-primary text-white py-20 overflow-hidden">
+    <section id="home" class="relative bg-primary text-white pt-28 pb-20 overflow-hidden min-h-screen flex items-center">
       <!-- Dynamic Background with Vector.svg -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-50 animate-float" />
+        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-50" />
       </div>
       
       <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
-          <!-- Small Yellow Text Above - positioned more dynamically -->
-          <div class="relative mb-6">
-            <p class="text-secondary text-lg font-medium animate-fade-in-up absolute -top-2 left-0 lg:left-8">
-              is Active by nature
-            </p>
-          </div>
+          <!-- Small Yellow Text Above -->
+          <p class="text-secondary text-lg font-medium mb-2 animate-fade-in-up">
+            is Active by nature
+          </p>
           
-          <!-- Large Company Name with dynamic positioning -->
-          <h1 class="text-6xl lg:text-8xl font-bold leading-tight mb-6 animate-fade-in-up relative">
+          <!-- Large Company Name -->
+          <h1 class="text-6xl lg:text-8xl font-bold leading-tight mb-6 animate-fade-in-up">
             Cesium
           </h1>
           
@@ -115,7 +90,7 @@
         </h2>
         <!-- Subtitle -->
         <p class="text-xl text-gray-600 mb-16 font-medium">
-          Because Inactive Doesn't Win.
+          Because Inactive Doesn\'t Win.
         </p>
         
         <!-- Three Cards -->
@@ -135,7 +110,7 @@
             <!-- Card Description -->
             <p class="text-gray-600 text-sm leading-relaxed">
               Every move we make is based on calculated data and tested hypotheses.<br><br>
-              Our strategies aren't just data-driven, they're reaction-tuned to create maximum market ignition.
+              Our strategies aren\'t just data-driven, they\'re reaction-tuned to create maximum market ignition.
             </p>
           </div>
 
@@ -153,7 +128,7 @@
             </h3>
             <!-- Card Description -->
             <p class="text-gray-600 text-sm leading-relaxed">
-              We don't rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
+              We don\'t rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
             </p>
           </div>
 
@@ -171,7 +146,7 @@
             </h3>
             <!-- Card Description -->
             <p class="text-gray-600 text-sm leading-relaxed">
-              We don't just work in your industry — we react with it. Years of deep learning give us the ability to anticipate volatility, exploit opportunity, and maximize momentum.
+              We don\'t just work in your industry — we react with it. Years of deep learning give us the ability to anticipate volatility, exploit opportunity, and maximize momentum.
             </p>
           </div>
         </div>
@@ -232,7 +207,7 @@
             value="-35"
             suffix="%"
             label="Cost-to-Acquisition Drop"
-            description="Your ROI doesn't just increase — it combusts. After exposure to Cesium's reaction chain, clients average over 180% growth in returns."
+            description="Your ROI doesn\'t just increase — it combusts. After exposure to Cesium\'s reaction chain, clients average over 180% growth in returns."
             class="animate-fade-in-up"
             style="animation-delay: 600ms"
           />
@@ -512,7 +487,7 @@ onMounted(() => {
 }
 
 /* Enhanced hover effects */
-.hover\:shadow-xl:hover {
+.hover\\:shadow-xl:hover {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
