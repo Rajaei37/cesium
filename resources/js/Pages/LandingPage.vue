@@ -47,10 +47,10 @@
           <!-- Sub-headline with better spacing -->
           <div class="space-y-3 lg:space-y-4 mb-8">
             <p class="text-lg lg:text-xl font-medium opacity-90 animate-fade-in-up animation-delay-200">
-              Cesium isn\'t a marketing agency.
+              Cesium isn't a marketing agency.
             </p>
             <p class="text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed max-w-lg mx-auto lg:mx-0">
-              It\'s a high-energy force designed to react with your business
+              It's a high-energy force designed to react with your business
             </p>
             <p class="text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed max-w-lg mx-auto lg:mx-0">
               sparking momentum, amplifying results, and scaling with precision.
@@ -59,7 +59,7 @@
               From identity to ignition to intelligent growth
             </p>
             <p class="text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed max-w-lg mx-auto lg:mx-0">
-              we catalyze your brand\'s trajectory.
+              we catalyze your brand's trajectory.
             </p>
           </div>
           
@@ -90,7 +90,7 @@
         </h2>
         <!-- Subtitle -->
         <p class="text-xl text-gray-600 mb-16 font-medium">
-          Because Inactive Doesn\'t Win.
+          Because Inactive Doesn't Win.
         </p>
         
         <!-- Three Cards -->
@@ -110,7 +110,7 @@
             <!-- Card Description -->
             <p class="text-gray-600 text-sm leading-relaxed">
               Every move we make is based on calculated data and tested hypotheses.<br><br>
-              Our strategies aren\'t just data-driven, they\'re reaction-tuned to create maximum market ignition.
+              Our strategies aren't just data-driven, they're reaction-tuned to create maximum market ignition.
             </p>
           </div>
 
@@ -128,7 +128,7 @@
             </h3>
             <!-- Card Description -->
             <p class="text-gray-600 text-sm leading-relaxed">
-              We don\'t rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
+              We don't rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
             </p>
           </div>
 
@@ -146,7 +146,7 @@
             </h3>
             <!-- Card Description -->
             <p class="text-gray-600 text-sm leading-relaxed">
-              We don\'t just work in your industry — we react with it. Years of deep learning give us the ability to anticipate volatility, exploit opportunity, and maximize momentum.
+              We don't just work in your industry — we react with it. Years of deep learning give us the ability to anticipate volatility, exploit opportunity, and maximize momentum.
             </p>
           </div>
         </div>
@@ -180,7 +180,7 @@
             value="180"
             suffix="%"
             label="Combustion Boost"
-            description="Your ROI doesn’t just increase — it combusts. After exposure to Cesium’s reaction chain, clients average over 180% growth in returns."
+            description="Your ROI doesn't just increase — it combusts. After exposure to Cesium's reaction chain, clients average over 180% growth in returns."
             class="animate-fade-in-up"
             style="animation-delay: 0ms"
           />
@@ -189,7 +189,7 @@
             value="250"
             suffix="+"
             label="Ignitions Triggered"
-            description="That’s how many successful campaigns have already run through our reactor — each designed to launch performance at scale."
+            description="That's how many successful campaigns have already run through our reactor — each designed to launch performance at scale."
             class="animate-fade-in-up"
             style="animation-delay: 200ms"
           />
@@ -198,7 +198,7 @@
             value="97"
             suffix="%"
             label="Stable Reaction Rate"
-            description="We don’t flash and fade. Our systems are engineered for long-term performance — and clients stay with us because the results are repeatable."
+            description="We don't flash and fade. Our systems are engineered for long-term performance — and clients stay with us because the results are repeatable."
             class="animate-fade-in-up"
             style="animation-delay: 400ms"
           />
@@ -207,7 +207,7 @@
             value="-35"
             suffix="%"
             label="Cost-to-Acquisition Drop"
-            description="Your ROI doesn\'t just increase — it combusts. After exposure to Cesium\'s reaction chain, clients average over 180% growth in returns."
+            description="Your ROI doesn't just increase — it combusts. After exposure to Cesium's reaction chain, clients average over 180% growth in returns."
             class="animate-fade-in-up"
             style="animation-delay: 600ms"
           />
@@ -568,5 +568,4 @@ onMounted(() => {
   }
 }
 </style>
-
 
