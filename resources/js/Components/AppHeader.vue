@@ -86,17 +86,17 @@
         
         <!-- Social Media Icons -->
         <div class="flex items-center space-x-3 ml-4">
-          <a href="https://www.linkedin.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-linkedin-in text-lg"></i>
+          <a href="https://www.linkedin.com/company/cesium-agency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <img src="/assets/social-icons/linkedin.svg" alt="LinkedIn" class="h-6 w-6">
           </a>
-          <a href="https://www.tiktok.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-tiktok text-lg"></i>
+          <a href="https://www.tiktok.com/@cesiumagency" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <img src="/assets/social-icons/tiktok.svg" alt="TikTok" class="h-6 w-6">
           </a>
-          <a href="https://www.instagram.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-instagram text-lg"></i>
+          <a href="https://www.instagram.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <img src="/assets/social-icons/instagram.svg" alt="Instagram" class="h-6 w-6">
           </a>
-          <a href="https://www.facebook.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <i class="fab fa-facebook-f text-lg"></i>
+          <a href="https://www.facebook.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+            <img src="/assets/social-icons/facebook.svg" alt="Facebook" class="h-6 w-6">
           </a>
         </div>
       </div>
