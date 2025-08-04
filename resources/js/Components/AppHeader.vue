@@ -86,17 +86,17 @@
         
         <!-- Social Media Icons -->
         <div class="flex items-center space-x-3 ml-4">
-          <a href="https://www.linkedin.com/company/cesium-agency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <img src="/assets/social-icons/linkedin.svg" alt="LinkedIn" class="h-6 w-6">
+          <a href="https://www.linkedin.com/company/cesium-agency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
+            <img src="/assets/social-icons/linkedin.svg" alt="LinkedIn" class="h-5 w-5 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
           </a>
-          <a href="https://www.tiktok.com/@cesiumagency" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <img src="/assets/social-icons/tiktok.svg" alt="TikTok" class="h-6 w-6">
+          <a href="https://www.tiktok.com/@cesiumagency" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
+            <img src="/assets/social-icons/tiktok.svg" alt="TikTok" class="h-5 w-5 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
           </a>
-          <a href="https://www.instagram.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <img src="/assets/social-icons/instagram.svg" alt="Instagram" class="h-6 w-6">
+          <a href="https://www.instagram.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
+            <img src="/assets/social-icons/instagram.svg" alt="Instagram" class="h-5 w-5 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
           </a>
-          <a href="https://www.facebook.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
-            <img src="/assets/social-icons/facebook.svg" alt="Facebook" class="h-6 w-6">
+          <a href="https://www.facebook.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
+            <img src="/assets/social-icons/facebook.svg" alt="Facebook" class="h-5 w-5 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
           </a>
         </div>
       </div>
@@ -122,13 +122,32 @@
         <Link href="/our-process" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Our process</Link>
         <Link href="/blog" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">News</Link>
         <Link href="/contact-us" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Contact</Link>
-        <Link href="/join-our-team" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2 border border-white text-center">Join our Team</Link>
+        <Link href="/join-our-team" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2 border border-white text-center rounded-none">Join our Team</Link>
         
         <!-- Mobile CTA -->
         <div class="pt-6 border-t border-gray-200">
-          <Link href="/contact-us" @click="closeMobileMenu" class="w-full bg-secondary hover:bg-secondary-dark text-primary font-semibold px-6 py-3 shadow-lg transition-all duration-300 flex items-center justify-center text-lg">
+          <Link href="/contact-us" @click="closeMobileMenu" class="w-full bg-secondary hover:bg-secondary-dark text-primary font-semibold px-6 py-3 shadow-lg transition-all duration-300 flex items-center justify-center text-lg rounded-none">
             contact us
           </Link>
+        </div>
+        
+        <!-- Mobile Social Media Icons -->
+        <div class="pt-6 border-t border-gray-200">
+          <p class="text-white text-sm mb-4">Follow us:</p>
+          <div class="flex items-center justify-center space-x-6">
+            <a href="https://www.linkedin.com/company/cesium-agency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
+              <img src="/assets/social-icons/linkedin.svg" alt="LinkedIn" class="h-6 w-6 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
+            </a>
+            <a href="https://www.tiktok.com/@cesiumagency" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
+              <img src="/assets/social-icons/tiktok.svg" alt="TikTok" class="h-6 w-6 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
+            </a>
+            <a href="https://www.instagram.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
+              <img src="/assets/social-icons/instagram.svg" alt="Instagram" class="h-6 w-6 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
+            </a>
+            <a href="https://www.facebook.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
+              <img src="/assets/social-icons/facebook.svg" alt="Facebook" class="h-6 w-6 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
+            </a>
+          </div>
         </div>
       </div>
     </div>
