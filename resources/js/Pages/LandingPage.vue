@@ -29,46 +29,46 @@
     <section id="home" class="relative bg-primary text-white pt-28 pb-20 overflow-hidden min-h-screen flex items-center">
       <!-- Dynamic Background with Vector.svg -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-50" />
+        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-50 lg:opacity-30" />
       </div>
       
       <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
           <!-- Small Yellow Text Above -->
-          <p class="text-secondary text-lg font-medium mb-2 animate-fade-in-up">
+          <p class="text-secondary text-base lg:text-lg font-medium mb-2 animate-fade-in-up">
             is Active by nature
           </p>
           
           <!-- Large Company Name -->
-          <h1 class="text-6xl lg:text-8xl font-bold leading-tight mb-6 animate-fade-in-up">
+          <h1 class="text-5xl sm:text-6xl lg:text-8xl font-bold leading-tight mb-6 animate-fade-in-up">
             Cesium
           </h1>
           
           <!-- Sub-headline with better spacing -->
-          <div class="space-y-4 mb-8">
+          <div class="space-y-3 lg:space-y-4 mb-8">
             <p class="text-lg lg:text-xl font-medium opacity-90 animate-fade-in-up animation-delay-200">
               Cesium isn\'t a marketing agency.
             </p>
-            <p class="text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed max-w-lg">
+            <p class="text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed max-w-lg mx-auto lg:mx-0">
               It\'s a high-energy force designed to react with your business
             </p>
-            <p class="text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed max-w-lg">
+            <p class="text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed max-w-lg mx-auto lg:mx-0">
               sparking momentum, amplifying results, and scaling with precision.
             </p>
-            <p class="text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-500 font-light leading-relaxed max-w-lg">
+            <p class="text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-500 font-light leading-relaxed max-w-lg mx-auto lg:mx-0">
               From identity to ignition to intelligent growth
             </p>
-            <p class="text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed max-w-lg">
+            <p class="text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed max-w-lg mx-auto lg:mx-0">
               we catalyze your brand\'s trajectory.
             </p>
           </div>
           
-          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-bold py-4 px-8 shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-700">
+          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-bold py-3 px-6 lg:py-4 lg:px-8 shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-700 text-sm lg:text-base">
             Request Strategy Call
           </Link>
         </div>
         <div class="lg:w-1/2 flex justify-center lg:justify-end animate-fade-in-up animation-delay-600">
-          <MiniSlotMachine class="w-full max-w-md" />
+          <MiniSlotMachine class="w-full max-w-xs sm:max-w-sm lg:max-w-md" />
         </div>
       </div>
     </section>
@@ -531,6 +531,40 @@ onMounted(() => {
   .fixed.bottom-6.right-6 button svg {
     width: 1.25rem;
     height: 1.25rem;
+  }
+}
+
+/* Hero section mobile optimizations */
+@media (max-width: 640px) {
+  #home {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+  }
+  
+  #home h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  
+  #home .space-y-3 {
+    margin-bottom: 2rem;
+  }
+  
+  #home .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #home h1 {
+    font-size: 2.5rem;
+  }
+  
+  #home .text-secondary {
+    font-size: 0.875rem;
   }
 }
 </style>
