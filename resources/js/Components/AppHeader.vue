@@ -41,7 +41,7 @@
           class="text-white hover:text-secondary transition-colors duration-300 font-medium relative group"
           :class="{ 'text-secondary': currentPage === 'our-process' }"
         >
-          Our Process
+          Our process
           <span 
             class="absolute bottom-0 left-0 h-0.5 bg-secondary transition-all duration-300"
             :class="currentPage === 'our-process' ? 'w-full' : 'w-0 group-hover:w-full'"
@@ -52,7 +52,7 @@
           class="text-white hover:text-secondary transition-colors duration-300 font-medium relative group"
           :class="{ 'text-secondary': currentPage === 'blog' }"
         >
-          Insights
+          News
           <span 
             class="absolute bottom-0 left-0 h-0.5 bg-secondary transition-all duration-300"
             :class="currentPage === 'blog' ? 'w-full' : 'w-0 group-hover:w-full'"
@@ -73,8 +73,19 @@
 
       <!-- CTA Buttons and Social Media Icons -->
       <div class="hidden md:flex items-center space-x-4">
+        <Link 
+          href="/join-our-team" 
+          class="text-white hover:text-secondary transition-colors duration-300 font-medium px-6 py-2 border border-white hover:border-secondary"
+          :class="{ 'text-secondary border-secondary': currentPage === 'join-team' }"
+        >
+          Join our Team
+        </Link>
+        <Link href="/contact-us" class="bg-secondary text-primary font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          contact us
+        </Link>
+        
         <!-- Social Media Icons -->
-        <div class="flex items-center space-x-3 mr-4">
+        <div class="flex items-center space-x-3 ml-4">
           <a href="https://www.linkedin.com/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
             <i class="fab fa-linkedin-in text-lg"></i>
           </a>
@@ -88,16 +99,6 @@
             <i class="fab fa-facebook-f text-lg"></i>
           </a>
         </div>
-        <Link 
-          href="/join-our-team" 
-          class="text-white hover:text-secondary transition-colors duration-300 font-medium px-4 py-2 border border-white hover:border-secondary"
-          :class="{ 'text-secondary border-secondary': currentPage === 'join-team' }"
-        >
-          Join Our Team
-        </Link>
-        <Link href="/contact-us" class="bg-secondary text-primary font-semibold px-6 py-2.5 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-          contact us
-        </Link>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -118,16 +119,15 @@
       <div class="px-4 py-6 space-y-6 w-full">
         <Link href="/" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Home</Link>
         <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Services</Link>
-
-        <Link href="/our-process" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Our Process</Link>
-        <Link href="/blog" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Insights</Link>
+        <Link href="/our-process" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Our process</Link>
+        <Link href="/blog" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">News</Link>
         <Link href="/contact-us" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Contact</Link>
-        <Link href="/join-our-team" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2 border border-white rounded-full text-center">Join Our Team</Link>
+        <Link href="/join-our-team" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2 border border-white text-center">Join our Team</Link>
         
         <!-- Mobile CTA -->
         <div class="pt-6 border-t border-gray-200">
-          <Link href="/contact-us" @click="closeMobileMenu" class="w-full bg-secondary hover:bg-secondary-dark text-primary font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center text-lg">
-            Get Started
+          <Link href="/contact-us" @click="closeMobileMenu" class="w-full bg-secondary hover:bg-secondary-dark text-primary font-semibold px-6 py-3 shadow-lg transition-all duration-300 flex items-center justify-center text-lg">
+            contact us
           </Link>
         </div>
       </div>
