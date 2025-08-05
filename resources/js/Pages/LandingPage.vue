@@ -33,7 +33,7 @@
       <img 
         src="/assets/images/Vector.svg" 
         alt="Background Vector" 
-        class="absolute top-0 left-0 w-full h-full object-contain opacity-80 lg:opacity-90 transform scale-100 lg:scale-100 rotate-0 lg:rotate-0 animate-float-subtle"
+        class="absolute -top-1/4 -left-1/4 w-[150%] h-[150%] object-cover opacity-80 lg:opacity-90 transform scale-100 lg:scale-100 rotate-0 lg:rotate-0 animate-float-subtle"
         style="filter: contrast(1.2) brightness(1.1); animation-duration: 6s; z-index: 1;"
       />
       
