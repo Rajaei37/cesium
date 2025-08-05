@@ -29,20 +29,20 @@
     <section id="home" class="relative bg-primary text-white pt-28 pb-20 overflow-hidden min-h-screen flex items-center">
       <!-- Dynamic Background with Vector.svg -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-50 lg:opacity-30" />
+        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-40 lg:opacity-50" style="transform: scale(1.2) rotate(-5deg);" />
       </div>
       
       <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
-        <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
-          <!-- Small Yellow Text Above -->
-          <p class="text-secondary text-base lg:text-lg font-medium mb-2 animate-fade-in-up">
-            is Active by nature
-          </p>
-          
+        <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 relative">
           <!-- Large Company Name -->
           <h1 class="text-5xl sm:text-6xl lg:text-8xl font-bold leading-tight mb-6 animate-fade-in-up">
             Cesium
           </h1>
+          
+          <!-- Small Yellow Text Above - positioned to top right of Cesium -->
+          <p class="text-secondary text-base lg:text-lg font-medium mb-2 animate-fade-in-up absolute -top-8 right-0 lg:right-auto lg:left-full lg:ml-4 lg:top-2">
+            is Active by nature
+          </p>
           
           <!-- Sub-headline with better spacing -->
           <div class="space-y-3 lg:space-y-4 mb-8">
