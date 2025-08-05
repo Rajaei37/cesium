@@ -30,11 +30,12 @@
       <!-- Dynamic Background Gradient -->
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" style="z-index: 0;"></div>
       <!-- Vector background with proper positioning and subtle floating effect -->
+<div class="relative overflow-hidden">
       <img 
         src="/assets/images/Vector.svg" 
-        alt="Background Vector" 
-        class="absolute -top-1/4 -left-1/4 w-[150%] h-[150%] object-cover opacity-80 lg:opacity-90 transform scale-100 lg:scale-100 rotate-0 lg:rotate-0 animate-float-subtle"
-        style="filter: contrast(1.2) brightness(1.1); animation-duration: 6s; z-index: 1;"
+        alt="Background Vector"
+        class="pointer-events-none absolute inset-0 w-full h-full object-cover opacity-80 z-0 animate-float-subtle"
+        style="filter: contrast(1.2) brightness(1.1); animation-duration: 6s;"
       />
       
       <div class="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
@@ -51,10 +52,10 @@
           <!-- Sub-headline with exact spacing as target -->
           <div class="space-y-1 mb-8 max-w-2xl">
             <p class="text-xl sm:text-2xl font-medium opacity-95 animate-fade-in-up animation-delay-200">
-              Cesium isn't a marketing agency.
+              Cesium isn\'t a marketing agency.
             </p>
             <p class="text-lg sm:text-xl opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed">
-              It's a high-energy force designed to react with your business
+              It\'s a high-energy force designed to react with your business
             </p>
             <p class="text-lg sm:text-xl opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed">
               sparking momentum, amplifying results, and scaling with precision.
@@ -63,7 +64,7 @@
               From identity to ignition to intelligent growth
             </p>
             <p class="text-lg sm:text-xl opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed">
-              we catalyze your brand's trajectory.
+              we catalyze your brand\'s trajectory.
             </p>
           </div>
           
@@ -75,6 +76,7 @@
           <MiniSlotMachine class="w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-md xl:max-w-lg" />
         </div>
       </div>
+</div>
     </section>
 
     <!-- Why Cesium Section -->
