@@ -1,7 +1,7 @@
 <template>
   <nav :class="[
     'fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full max-w-full overflow-x-hidden',
-    scrolled ? 'bg-primary bg-opacity-90 shadow-xl py-2' : 'bg-primary bg-opacity-0 py-4'
+    scrolled ? 'bg-primary bg-opacity-90 shadow-xl py-2' : 'bg-gradient-to-b from-primary via-primary/80 to-transparent py-4'
   ]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between w-full">
       <!-- Logo -->
