@@ -32,7 +32,7 @@
         src="/assets/images/Vector.svg" 
         alt="Background Vector" 
         class="absolute top-0 left-0 w-full h-full object-cover opacity-80 lg:opacity-90 transform scale-125 lg:scale-150 rotate-0 lg:rotate-0 animate-float-subtle"
-        style="filter: contrast(1.2) brightness(1.1); animation-duration: 6s; z-index: 0;"
+        style="filter: contrast(1.2) brightness(1.1); animation-duration: 6s; z-index: 5;"
       />
       <!-- Dynamic Background Gradient -->
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" style="z-index: 1;"></div>
