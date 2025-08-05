@@ -24,18 +24,19 @@
       <!-- Slot Machine Container -->
       <div
         :class="[
-          'bg-gray-200 rounded-lg shadow-2xl p-6 flex flex-col items-center relative',
+          'bg-gray-200 shadow-2xl p-6 flex flex-col items-center relative',
           spinning ? 'animate-shake' : '',
           jackpot ? 'ring-4 ring-green-400 ring-offset-2' : ''
         ]"
-        style="width: 400px; min-height: 300px; transition: box-shadow 0.3s;"
+        style="width: 400px; min-height: 300px; transition: box-shadow 0.3s; border-radius: 0.56px;"
         role="application"
         aria-label="Slot machine game"
       >
         <!-- Loading overlay for spinning -->
         <div 
           v-if="spinning"
-          class="absolute inset-0 bg-white/20 rounded-2xl flex items-center justify-center z-5"
+          class="absolute inset-0 bg-white/20 flex items-center justify-center z-5"
+          style="border-radius: 0.56px;"
           aria-hidden="true"
         >
           <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-[#362869]"></div>
@@ -43,8 +44,8 @@
 
         <!-- Slot Display -->
         <div 
-          class="bg-[#362869] rounded-lg p-3 mb-6 shadow-inner border-4 border-[#362869]"
-          style="width: 100%; max-width: 320px;"
+          class="bg-[#362869] p-3 mb-6 shadow-inner border-4 border-[#362869]"
+          style="width: 100%; max-width: 320px; border-radius: 0.56px;"
         >
           <div 
             class="flex space-x-1 justify-center"
@@ -62,7 +63,8 @@
               :style="{ 
                 animationDelay: `${i * 0.1}s`,
                 width: '90px',
-                height: '90px'
+                height: '90px',
+                borderRadius: '0.56px'
               }"
             >
               <img :src="symbol.path" :alt="symbol.name" class="w-14 h-14" />
@@ -73,7 +75,8 @@
         <!-- Spin Button -->
         <button
           @click="spin"
-          class="px-12 py-3 bg-[#facb24] text-[#362869] rounded-full font-bold text-lg shadow-lg hover:bg-yellow-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#facb24] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed mb-4"
+          class="px-12 py-3 bg-[#facb24] text-[#362869] font-bold text-lg shadow-lg hover:bg-yellow-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#facb24] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed mb-4"
+          style="border-radius: 0.56px;"
           :disabled="spinning || cooldown"
           :aria-label="spinning ? 'Spinning in progress' : 'Spin the slot machine'"
         >
@@ -104,46 +107,26 @@
         <!-- Discount Code Display -->
         <div 
           v-if="discount" 
-          class="mt-2 text-xl font-bold text-green-700 text-center"
+          class="mt-2 text-center"
           role="status"
           aria-live="assertive"
         >
-           Your Discount Code: 
+          <div class="text-xs text-green-700 mb-1">Your Discount Code:</div>
           <span 
-            class="underline cursor-pointer hover:text-green-800 transition-colors"
+            class="text-sm font-bold text-green-700 underline cursor-pointer hover:text-green-800 transition-colors"
             @click="copyDiscountCode"
             :title="copied ? 'Copied!' : 'Click to copy'"
           >
             {{ discount }}
           </span>
-          <span v-if="copied" class="text-sm text-green-600 ml-2">✓ Copied!</span>
+          <span v-if="copied" class="text-xs text-green-600 ml-2">✓ Copied!</span>
         </div>
 
         <!-- Call to Action for Discount -->
         <div v-if="discount" class="mt-4">
-          <a href="/contact-us" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+          <a href="/contact-us" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105" style="border-radius: 0.56px;">
             Claim Your Discount Now!
           </a>
-        </div>
-
-        <!-- Fun Message -->
-        <div 
-          v-if="funMessage" 
-          class="mt-2 text-sm text-gray-500 italic text-center max-w-xs"
-        >
-          {{ funMessage }}
-        </div>
-
-        <!-- Game Stats (optional) -->
-        <div 
-          v-if="showStats && gameStats.totalSpins > 0"
-          class="mt-4 text-xs text-gray-400 text-center border-t pt-3 w-full"
-        >
-          <div class="flex justify-between">
-            <span>Spins: {{ gameStats.totalSpins }}</span>
-            <span>Wins: {{ gameStats.wins }}</span>
-            <span>Win Rate: {{ winRate }}%</span>
-          </div>
         </div>
       </div>
 
@@ -161,8 +144,6 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import lottie from 'lottie-web'
 
-
-
 // Emits
 const emit = defineEmits(['discount-won', 'spin-complete'])
 
@@ -172,13 +153,11 @@ const spinning = ref(false)
 const result = ref('')
 const showConfetti = ref(false)
 const jackpot = ref(false)
-const funMessage = ref('')
 const discount = ref('')
 const confettiContainer = ref(null)
 const copied = ref(false)
 const cooldown = ref(false)
 const cooldownTime = ref(0)
-const showStats = ref(false)
 
 // Game statistics
 const gameStats = ref({
@@ -199,19 +178,6 @@ const symbols = [
   { name: 'horseshoe', path: '/assets/icons/slotmachine/horseshoe.svg', colorClass: 'bg-orange-50' }
 ]
 
-const funMessages = [
-  'Luck is just a spin away!',
-  'Feeling lucky today?',
-  'Big wins start with bold moves!',
-  'The reels are hot!',
-  'Try again, fortune favors the brave!',
-  'Jackpot dreams!',
-  'Spin to win!',
-  'May the odds be ever in your favor!',
-  'Every spin is a new chance!',
-  'Go for gold!'
-]
-
 const discountCodes = {
   jackpot: 'CesiumPlatinum30-884695',
   match: 'CesiumGold20-1529',
@@ -226,7 +192,6 @@ const winRate = computed(() => {
 
 // Methods
 const getColor = (symbol) => {
-  // The color is now part of the symbol object itself, applied as a background class
   return symbol.colorClass || 'bg-gray-50'
 }
 
@@ -312,10 +277,6 @@ const spin = () => {
   jackpot.value = false
   discount.value = ''
   copied.value = false
-  funMessage.value = funMessages[Math.floor(Math.random() * funMessages.length)]
-
-  // Play spin sound
-
 
   let spins = 0
   const spinDuration = 20 + Math.floor(Math.random() * 10) // 20-30 spins
@@ -350,7 +311,6 @@ const evaluateResult = () => {
     discount.value = discountCodes.jackpot
     isWin = true
     isJackpotWin = true
-
     
     // Show confetti animation
     setTimeout(() => {
@@ -378,13 +338,11 @@ const evaluateResult = () => {
     result.value = 'Nice! You got a match! '
     discount.value = discountCodes.match
     isWin = true
-
     
   } else {
     // No match - consolation prize
     result.value = 'Try again! '
     discount.value = discountCodes.consolation
-
   }
   
   // Update statistics
@@ -395,10 +353,6 @@ const evaluateResult = () => {
 onMounted(() => {
   loadGameStats()
   
-  // Show stats after first spin
-  if (gameStats.value.totalSpins > 0) {
-    showStats.value = true
-  }
   // Initialize slots with random symbols on mount
   slots.value = [
     symbols[Math.floor(Math.random() * symbols.length)],
@@ -420,7 +374,6 @@ defineExpose({
   resetStats: () => {
     gameStats.value = { totalSpins: 0, wins: 0, jackpots: 0, lastWin: null }
     localStorage.removeItem('slotMachineStats')
-    showStats.value = false
   }
 })
 </script>
@@ -563,10 +516,6 @@ button:focus-visible {
 .overflow-x-auto::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-</style>
-
-
-
 
 @keyframes spin-slot {
   0% { transform: translateY(0) scaleY(1); opacity: 1; }
@@ -608,5 +557,5 @@ button:focus-visible {
 .animate-pulse-strong {
   animation: pulse-strong 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
-
+</style>
 
