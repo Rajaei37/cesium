@@ -34,8 +34,8 @@
         <img 
           src="/assets/images/Vector.svg" 
           alt="Background Vector" 
-          class="absolute inset-0 w-full h-full object-cover opacity-80 lg:opacity-90 transform scale-105 lg:scale-110 rotate-2 lg:rotate-3 animate-float-subtle"
-          style="filter: drop-shadow(0 12px 24px rgba(250, 203, 36, 0.4)) contrast(1.2) brightness(1.1); animation-duration: 6s;"
+          class="absolute inset-0 w-full h-full object-contain opacity-80 lg:opacity-90 transform scale-100 lg:scale-100 rotate-0 lg:rotate-0 animate-float-subtle"
+          style="filter: contrast(1.2) brightness(1.1); animation-duration: 6s;"
         />
       </div>
       
