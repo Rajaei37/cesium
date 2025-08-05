@@ -29,7 +29,7 @@
     <section id="home" class="relative bg-primary text-white pt-20 sm:pt-24 md:pt-28 pb-16 sm:pb-20 overflow-hidden min-h-screen flex items-center">
       <!-- Dynamic Background with Vector.svg -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-60 sm:opacity-65 md:opacity-70 lg:opacity-75" style="transform: scale(1.3) sm:scale(1.4) md:scale(1.5) rotate(-2deg) sm:rotate(-3deg) md:rotate(-4deg); filter: contrast(1.5) brightness(1.2) saturate(1.3);" />
+        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-80 sm:opacity-85 md:opacity-90 lg:opacity-95" style="transform: scale(1.8) sm:scale(1.9) md:scale(2.0) rotate(0deg) sm:rotate(1deg) md:rotate(2deg); filter: contrast(2.0) brightness(1.4) saturate(1.5) drop-shadow(0 10px 20px rgba(250, 203, 36, 0.3));" />
       </div>
       
       <div class="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
@@ -40,30 +40,30 @@
           </h1>
           
           <!-- Small Yellow Text Above - positioned to top right of Cesium -->
-          <p class="text-secondary text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-2 animate-fade-in-up absolute -top-6 xs:-top-7 sm:-top-8 md:-top-10 right-0 lg:right-auto lg:left-full lg:ml-2 xl:ml-4 lg:top-1 xl:top-2">
+          <p class="text-secondary text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-2 animate-fade-in-up absolute -top-4 xs:-top-5 sm:-top-6 md:-top-8 lg:-top-10 right-0 lg:right-auto lg:left-full lg:ml-4 xl:ml-6 lg:top-2 xl:top-4">
             is Active by nature
           </p>
           
           <!-- Sub-headline with better spacing -->
-          <div class="space-y-2 sm:space-y-3 lg:space-y-4 mb-6 sm:mb-8">
+          <div class="space-y-1 sm:space-y-2 lg:space-y-3 mb-6 sm:mb-8 lg:pl-0">
             <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-medium opacity-90 animate-fade-in-up animation-delay-200">
               Cesium isn't a marketing agency.
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto lg:mx-0">
               It's a high-energy force designed to react with your business
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto lg:mx-0">
               sparking momentum, amplifying results, and scaling with precision.
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-500 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-500 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto lg:mx-0">
               From identity to ignition to intelligent growth
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto lg:mx-0">
               we catalyze your brand's trajectory.
             </p>
           </div>
           
-          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-bold py-2 px-4 xs:py-3 xs:px-6 sm:py-3 sm:px-6 md:py-4 md:px-8 lg:py-4 lg:px-8 shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-700 text-xs xs:text-sm sm:text-base md:text-lg">
+          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-bold py-2 px-4 xs:py-3 xs:px-6 sm:py-3 sm:px-6 md:py-4 md:px-8 lg:py-4 lg:px-8 shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-700 text-xs xs:text-sm sm:text-base md:text-lg lg:ml-0">
             Request Strategy Call
           </Link>
         </div>
