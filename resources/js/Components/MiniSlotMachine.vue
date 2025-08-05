@@ -56,20 +56,18 @@
               v-for="(symbol, i) in slots" 
               :key="i" 
               :class="[
-                'bg-gray-300 border-2 border-gray-400 flex items-center justify-center transition-transform duration-300 overflow-hidden relative',
-                spinning ? 'animate-spin-3d' : '',
+                'bg-gray-300 border-2 border-gray-400 flex items-center justify-center transition-transform duration-300',
+                spinning ? 'animate-spin-slot' : '',
                 jackpot && symbol.name === slots[0].name ? 'animate-jackpot-glow' : ''
               ]"
               :style="{ 
-                animationDelay: spinning ? `${i * 0.1}s` : '0s',
+                animationDelay: spinning ? `${i * 0.15}s` : '0s',
                 width: '90px',
                 height: '90px',
-                borderRadius: '0.56px',
-                transformStyle: 'preserve-3d',
-                backfaceVisibility: 'hidden'
+                borderRadius: '0.56px'
               }"
             >
-              <img :src="symbol.path" :alt="symbol.name" class="w-14 h-14 absolute inset-0 m-auto" />
+              <img :src="symbol.path" :alt="symbol.name" class="w-14 h-14" />
             </div>
           </div>
         </div>
@@ -279,57 +277,39 @@ const spin = () => {
   discount.value = ''
   copied.value = false
 
-  // Initialize slots with random symbols for the start of the spin
-  slots.value = [
-    { ...symbols[Math.floor(Math.random() * symbols.length)], spinning: true },
-    { ...symbols[Math.floor(Math.random() * symbols.length)], spinning: true },
-    { ...symbols[Math.floor(Math.random() * symbols.length)], spinning: true },
-  ]
+  let spins = 0
+  const spinDuration = 20 + Math.floor(Math.random() * 10) // 20-30 spins
+  
+  const interval = setInterval(() => {
+    slots.value = [
+      symbols[Math.floor(Math.random() * symbols.length)],
+      symbols[Math.floor(Math.random() * symbols.length)],
+      symbols[Math.floor(Math.random() * symbols.length)],
+    ]
+    spins++
 
-  const spinDuration = 2000; // Total spin duration in ms
-  const intervalTime = 100; // Interval for updating symbols
-  let elapsedTime = 0;
-
-  const spinInterval = setInterval(() => {
-    elapsedTime += intervalTime;
-
-    // Update each slot individually with a new random symbol
-    slots.value = slots.value.map(slot => ({
-      ...symbols[Math.floor(Math.random() * symbols.length)],
-      spinning: true // Keep spinning until animation ends
-    }));
-
-    if (elapsedTime >= spinDuration) {
-      clearInterval(spinInterval);
-      // Stop spinning and evaluate result
-      slots.value = slots.value.map(slot => ({ ...slot, spinning: false }));
-      evaluateResult();
-      startCooldown();
+    if (spins > spinDuration) {
+      clearInterval(interval)
+      spinning.value = false
+      evaluateResult()
+      startCooldown()
     }
-  }, intervalTime);
+  }, 90)
 }
 
 const evaluateResult = () => {
-  // Ensure final symbols are set before evaluation
-  slots.value = [
-    symbols[Math.floor(Math.random() * symbols.length)],
-    symbols[Math.floor(Math.random() * symbols.length)],
-    symbols[Math.floor(Math.random() * symbols.length)],
-  ];
-
-  const [first, second, third] = slots.value;
-  let isWin = false;
-  let isJackpotWin = false;
+  const [first, second, third] = slots.value
+  let isWin = false
+  let isJackpotWin = false
   
   if (first.name === second.name && second.name === third.name) {
     // Jackpot - all three match
-    result.value = ' JACKPOT! ';
-    jackpot.value = true;
-    showConfetti.value = true;
-    discount.value = discountCodes.jackpot;
-    isWin = true;
-    isJackpotWin = true;
-
+    result.value = ' JACKPOT! '
+    jackpot.value = true
+    showConfetti.value = true
+    discount.value = discountCodes.jackpot
+    isWin = true
+    isJackpotWin = true
     
     // Show confetti animation
     setTimeout(() => {
@@ -341,33 +321,31 @@ const evaluateResult = () => {
             loop: false,
             autoplay: true,
             path: '/assets/confetti.json'
-          });
+          })
         } catch (error) {
-          console.warn('Confetti animation failed:', error);
+          console.warn('Confetti animation failed:', error)
         }
       }
-    }, 100);
+    }, 100)
 
     setTimeout(() => {
-      showConfetti.value = false;
-    }, 3000);
+      showConfetti.value = false
+    }, 3000)
     
   } else if (first.name === second.name || second.name === third.name || first.name === third.name) {
     // Partial match - two symbols match
-    result.value = 'Nice! You got a match! ';
-    discount.value = discountCodes.match;
-    isWin = true;
-
+    result.value = 'Nice! You got a match! '
+    discount.value = discountCodes.match
+    isWin = true
     
   } else {
     // No match - consolation prize
-    result.value = 'Try again! ';
-    discount.value = discountCodes.consolation;
-
+    result.value = 'Try again! '
+    discount.value = discountCodes.consolation
   }
   
   // Update statistics
-  updateGameStats(isWin, isJackpotWin);
+  updateGameStats(isWin, isJackpotWin)
 }// Lifecycle
 onMounted(() => {
   loadGameStats()
@@ -544,7 +522,7 @@ button:focus-visible {
 }
 
 .animate-spin-slot {
-  animation: spin-slot 0.1s linear infinite;
+  animation: spin-slot 0.15s linear infinite;
 }
 
 /* Jackpot glow animation */
@@ -577,20 +555,3 @@ button:focus-visible {
   animation: pulse-strong 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 </style>
-
-
-
-@keyframes spin-3d {
-  0% {
-    transform: rotateX(0deg);
-  }
-  100% {
-    transform: rotateX(360deg);
-  }
-}
-
-.animate-spin-3d {
-  animation: spin-3d 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-}
-
-
