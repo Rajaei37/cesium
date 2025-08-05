@@ -29,41 +29,62 @@
     <section id="home" class="relative bg-primary text-white pt-20 sm:pt-24 md:pt-28 pb-16 sm:pb-20 overflow-hidden min-h-screen flex items-center">
       <!-- Dynamic Background with Vector.svg -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-80 sm:opacity-85 md:opacity-90 lg:opacity-95" style="transform: scale(1.8) sm:scale(1.9) md:scale(2.0) rotate(0deg) sm:rotate(1deg) md:rotate(2deg); filter: contrast(2.0) brightness(1.4) saturate(1.5) drop-shadow(0 10px 20px rgba(250, 203, 36, 0.3));" />
+        <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90"></div>
+        <!-- Main diagonal vector shape matching target -->
+        <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="vectorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#facb24;stop-opacity:1" />
+              <stop offset="50%" style="stop-color:#facb24;stop-opacity:0.9" />
+              <stop offset="100%" style="stop-color:#facb24;stop-opacity:0.8" />
+            </linearGradient>
+            <filter id="floatingShadow">
+              <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#facb24" flood-opacity="0.4"/>
+            </filter>
+          </defs>
+          
+          <!-- Top diagonal stripe -->
+          <polygon points="0,0 800,0 600,150 0,150" fill="url(#vectorGradient)" filter="url(#floatingShadow)" class="animate-float-slow" />
+          
+          <!-- Main central diagonal stripe -->
+          <polygon points="200,200 1200,100 1200,350 400,450" fill="url(#vectorGradient)" filter="url(#floatingShadow)" class="animate-float-medium" />
+          
+          <!-- Bottom vertical stripe -->
+          <polygon points="700,400 900,400 900,800 700,800" fill="url(#vectorGradient)" filter="url(#floatingShadow)" class="animate-float-fast" />
+        </svg>
       </div>
       
       <div class="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
-        <div class="w-full lg:w-1/2 text-center lg:text-left mb-8 sm:mb-10 lg:mb-0 relative">
+        <div class="w-full lg:w-1/2 text-left mb-8 sm:mb-10 lg:mb-0 relative">
           <!-- Large Company Name -->
-          <h1 class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight mb-4 sm:mb-6 animate-fade-in-up">
+          <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-tight mb-6 animate-fade-in-up relative">
             Cesium
+            <!-- Small Yellow Text positioned exactly as in target -->
+            <span class="absolute -top-4 sm:-top-6 md:-top-8 lg:-top-10 right-0 text-secondary text-sm sm:text-base md:text-lg lg:text-xl font-medium animate-fade-in-up">
+              is Active by nature
+            </span>
           </h1>
           
-          <!-- Small Yellow Text Above - positioned to top right of Cesium -->
-          <p class="text-secondary text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-2 animate-fade-in-up absolute -top-4 xs:-top-5 sm:-top-6 md:-top-8 lg:-top-10 right-0 lg:right-auto lg:left-full lg:ml-4 xl:ml-6 lg:top-2 xl:top-4">
-            is Active by nature
-          </p>
-          
-          <!-- Sub-headline with better spacing -->
-          <div class="space-y-1 sm:space-y-2 lg:space-y-3 mb-6 sm:mb-8 lg:pl-0">
-            <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-medium opacity-90 animate-fade-in-up animation-delay-200">
+          <!-- Sub-headline with exact spacing as target -->
+          <div class="space-y-1 mb-8 max-w-2xl">
+            <p class="text-xl sm:text-2xl font-medium opacity-95 animate-fade-in-up animation-delay-200">
               Cesium isn't a marketing agency.
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto lg:mx-0">
+            <p class="text-lg sm:text-xl opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed">
               It's a high-energy force designed to react with your business
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto lg:mx-0">
+            <p class="text-lg sm:text-xl opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed">
               sparking momentum, amplifying results, and scaling with precision.
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-500 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto lg:mx-0">
+            <p class="text-lg sm:text-xl opacity-90 animate-fade-in-up animation-delay-500 font-light leading-relaxed">
               From identity to ignition to intelligent growth
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto lg:mx-0">
+            <p class="text-lg sm:text-xl opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed">
               we catalyze your brand's trajectory.
             </p>
           </div>
           
-          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-bold py-2 px-4 xs:py-3 xs:px-6 sm:py-3 sm:px-6 md:py-4 md:px-8 lg:py-4 lg:px-8 shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-700 text-xs xs:text-sm sm:text-base md:text-lg lg:ml-0">
+          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-bold py-4 px-8 shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-700 text-lg">
             Request Strategy Call
           </Link>
         </div>
@@ -565,6 +586,76 @@ onMounted(() => {
   
   #home .text-secondary {
     font-size: 0.875rem;
+  }
+}
+</style>
+
+
+
+<style scoped>
+/* Floating animations for vector shapes */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-1deg); }
+}
+
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 4s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float-fast 3s ease-in-out infinite;
+}
+
+/* Fade in animations */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+.animation-delay-700 {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
