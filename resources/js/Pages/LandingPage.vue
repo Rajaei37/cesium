@@ -30,12 +30,12 @@
       <!-- Dynamic Background with Vector.svg -->
       <div class="absolute inset-0 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90"></div>
-        <!-- Vector background matching target image exactly -->
+        <!-- Vector background with proper positioning and subtle floating effect -->
         <img 
           src="/assets/images/Vector.svg" 
           alt="Background Vector" 
-          class="absolute inset-0 w-full h-full object-cover opacity-40 lg:opacity-50 transform scale-110 lg:scale-105 rotate-1 lg:rotate-2"
-          style="filter: drop-shadow(0 8px 16px rgba(250, 203, 36, 0.2));"
+          class="absolute inset-0 w-full h-full object-cover opacity-60 lg:opacity-70 transform scale-105 lg:scale-110 rotate-2 lg:rotate-3 animate-pulse"
+          style="filter: drop-shadow(0 10px 20px rgba(250, 203, 36, 0.3)); animation-duration: 4s;"
         />
       </div>
       
