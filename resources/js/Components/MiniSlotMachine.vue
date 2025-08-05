@@ -57,11 +57,11 @@
               :key="i" 
               :class="[
                 'bg-gray-300 border-2 border-gray-400 flex items-center justify-center transition-transform duration-300',
-                spinning ? 'animate-spin-slot' : '',
+                slotSpinning[i] ? 'animate-spin-slot' : '',
                 jackpot && symbol.name === slots[0].name ? 'animate-jackpot-glow' : ''
               ]"
               :style="{ 
-                animationDelay: spinning ? `${i * 0.15}s` : '0s',
+                animationDelay: slotSpinning[i] ? `${i * 0.15}s` : '0s',
                 width: '90px',
                 height: '90px',
                 borderRadius: '0.56px'
@@ -150,6 +150,7 @@ const emit = defineEmits(['discount-won', 'spin-complete'])
 // State
 const slots = ref([])
 const spinning = ref(false)
+const slotSpinning = ref([false, false, false]) // Track individual slot spinning state
 const result = ref('')
 const showConfetti = ref(false)
 const jackpot = ref(false)
@@ -277,6 +278,9 @@ const spin = () => {
   discount.value = ''
   copied.value = false
 
+  // Start all slots spinning
+  slotSpinning.value = [true, true, true]
+
   let spins = 0
   const spinDuration = 20 + Math.floor(Math.random() * 10) // 20-30 spins
   
@@ -290,11 +294,40 @@ const spin = () => {
 
     if (spins > spinDuration) {
       clearInterval(interval)
-      spinning.value = false
-      evaluateResult()
-      startCooldown()
+      // Start sequential stopping
+      stopSlotsSequentially()
     }
   }, 90)
+}
+
+const stopSlotsSequentially = () => {
+  // Set final symbols
+  const finalSymbols = [
+    symbols[Math.floor(Math.random() * symbols.length)],
+    symbols[Math.floor(Math.random() * symbols.length)],
+    symbols[Math.floor(Math.random() * symbols.length)],
+  ]
+
+  // Stop first slot after 500ms
+  setTimeout(() => {
+    slotSpinning.value[0] = false
+    slots.value[0] = finalSymbols[0]
+  }, 500)
+
+  // Stop second slot after 1000ms
+  setTimeout(() => {
+    slotSpinning.value[1] = false
+    slots.value[1] = finalSymbols[1]
+  }, 1000)
+
+  // Stop third slot after 1500ms and evaluate result
+  setTimeout(() => {
+    slotSpinning.value[2] = false
+    slots.value[2] = finalSymbols[2]
+    spinning.value = false
+    evaluateResult()
+    startCooldown()
+  }, 1500)
 }
 
 const evaluateResult = () => {
