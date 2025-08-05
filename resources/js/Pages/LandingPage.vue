@@ -27,15 +27,15 @@
 
     <!-- Hero Content Section -->
     <section id="home" class="relative bg-primary text-white pt-20 sm:pt-24 md:pt-28 pb-16 sm:pb-20 min-h-screen flex items-center" style="overflow: visible;">
+      <!-- Dynamic Background Gradient -->
+      <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" style="z-index: 0;"></div>
       <!-- Vector background with proper positioning and subtle floating effect -->
       <img 
         src="/assets/images/Vector.svg" 
         alt="Background Vector" 
         class="absolute inset-0 w-full h-full object-contain opacity-80 lg:opacity-90 transform scale-100 lg:scale-100 rotate-0 lg:rotate-0 animate-float-subtle"
-        style="filter: contrast(1.2) brightness(1.1); animation-duration: 6s; z-index: 0;"
+        style="filter: contrast(1.2) brightness(1.1); animation-duration: 6s; z-index: 1;"
       />
-      <!-- Dynamic Background Gradient -->
-      <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" style="z-index: 1;"></div>
       
       <div class="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         <div class="w-full lg:w-1/2 text-left mb-8 sm:mb-10 lg:mb-0 relative">
