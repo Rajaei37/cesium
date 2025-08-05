@@ -30,28 +30,13 @@
       <!-- Dynamic Background with Vector.svg -->
       <div class="absolute inset-0 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90"></div>
-        <!-- Main diagonal vector shape matching target -->
-        <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="vectorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#facb24;stop-opacity:1" />
-              <stop offset="50%" style="stop-color:#facb24;stop-opacity:0.9" />
-              <stop offset="100%" style="stop-color:#facb24;stop-opacity:0.8" />
-            </linearGradient>
-            <filter id="floatingShadow">
-              <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#facb24" flood-opacity="0.4"/>
-            </filter>
-          </defs>
-          
-          <!-- Top diagonal stripe -->
-          <polygon points="0,0 800,0 600,150 0,150" fill="url(#vectorGradient)" filter="url(#floatingShadow)" class="animate-float-slow" />
-          
-          <!-- Main central diagonal stripe -->
-          <polygon points="200,200 1200,100 1200,350 400,450" fill="url(#vectorGradient)" filter="url(#floatingShadow)" class="animate-float-medium" />
-          
-          <!-- Bottom vertical stripe -->
-          <polygon points="700,400 900,400 900,800 700,800" fill="url(#vectorGradient)" filter="url(#floatingShadow)" class="animate-float-fast" />
-        </svg>
+        <!-- Vector background matching target image exactly -->
+        <img 
+          src="/assets/images/Vector.svg" 
+          alt="Background Vector" 
+          class="absolute inset-0 w-full h-full object-cover opacity-40 lg:opacity-50 transform scale-110 lg:scale-105 rotate-1 lg:rotate-2"
+          style="filter: drop-shadow(0 8px 16px rgba(250, 203, 36, 0.2));"
+        />
       </div>
       
       <div class="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
