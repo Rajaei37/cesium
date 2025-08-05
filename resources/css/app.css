@@ -235,3 +235,15 @@ select:focus {
   }
 }
 
+
+
+@keyframes floatSubtle {
+  0% { transform: translate(0, 0) rotate(2deg); }
+  50% { transform: translate(5px, 5px) rotate(3deg); }
+  100% { transform: translate(0, 0) rotate(2deg); }
+}
+
+.animate-float-subtle {
+  animation: floatSubtle 6s ease-in-out infinite;
+}
+
