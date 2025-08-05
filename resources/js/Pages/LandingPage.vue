@@ -26,7 +26,7 @@
     <AppHeader current-page="home" />
 
     <!-- Hero Content Section -->
-    <section id="home" class="relative bg-primary text-white pt-20 sm:pt-24 md:pt-28 pb-16 sm:pb-20 overflow-visible min-h-screen flex items-center">
+      <section id="home" class="relative bg-primary text-white pt-20 sm:pt-24 md:pt-28 pb-16 sm:pb-20 overflow-hidden min-h-screen flex items-center">
       <!-- Vector background with proper positioning and subtle floating effect -->
       <img 
         src="/assets/images/Vector.svg" 
