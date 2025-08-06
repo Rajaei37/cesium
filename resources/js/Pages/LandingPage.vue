@@ -150,13 +150,15 @@
 </section>
 
     <!-- After the Cesium Reaction Section -->
-    <section class="py-20 bg-primary text-white relative overflow-hidden">
-      <!-- Background Elements -->
+    <section class="py-20 bg-[#2C1C59] text-white relative overflow-hidden">
+      <!-- Background Vector -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Group26.svg" alt="Molecular Element" class="absolute top-10 left-10 w-20 h-20 opacity-50" />
-        <img src="/assets/images/Group27.svg" alt="Molecular Element" class="absolute top-20 right-20 w-24 h-24 opacity-50" />
-        <img src="/assets/images/Group28.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-50" />
-        <img src="/assets/images/Group29.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-20 h-20 opacity-50" />
+        <img 
+          src="/upload/long-cesium-vector.svg" 
+          alt="Cesium Vector" 
+          class="absolute top-0 left-0 w-full h-full object-cover opacity-60 z-0"
+          style="mix-blend-mode: overlay;"
+        />
       </div>
       
       <div class="container mx-auto px-6 text-center relative z-10">
@@ -169,140 +171,155 @@
           Real numbers. Real ignition. Measurable explosions in growth and performance.
         </p>
         
-        <!-- Enhanced KPI Cards Grid with Sparkling Effects -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          <Enhanced3DKpiCard
-            icon="trending-up"
-            value="180"
-            suffix="%"
-            label="Combustion Boost"
-            description="Your ROI doesn't just increase — it combusts. After exposure to Cesium's reaction chain, clients average over 180% growth in returns."
-            class="animate-fade-in-up"
-            style="animation-delay: 0ms"
-          />
-          <Enhanced3DKpiCard
-            icon="target"
-            value="250"
-            suffix="+"
-            label="Ignitions Triggered"
-            description="That's how many successful campaigns have already run through our reactor — each designed to launch performance at scale."
-            class="animate-fade-in-up"
-            style="animation-delay: 200ms"
-          />
-          <Enhanced3DKpiCard
-            icon="bar-chart"
-            value="97"
-            suffix="%"
-            label="Stable Reaction Rate"
-            description="We don't flash and fade. Our systems are engineered for long-term performance — and clients stay with us because the results are repeatable."
-            class="animate-fade-in-up"
-            style="animation-delay: 400ms"
-          />
-          <Enhanced3DKpiCard
-            icon="dollar-sign"
-            value="-35"
-            suffix="%"
-            label="Cost-to-Acquisition Drop"
-            description="Your ROI doesn't just increase — it combusts. After exposure to Cesium's reaction chain, clients average over 180% growth in returns."
-            class="animate-fade-in-up"
-            style="animation-delay: 600ms"
-          />
+        <!-- Stats Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-20">
+          <!-- Stat 1 -->
+          <div class="text-center">
+            <div class="text-5xl lg:text-6xl font-bold text-[#FFD300] mb-2">180%</div>
+            <div class="text-lg font-semibold mb-3">Combustion Boost</div>
+            <p class="text-sm opacity-80 leading-relaxed">
+              Your cost-to-deposit increase = combustion. After exposure to Cesium's ignition formula, clients average over 180% growth in volume.
+            </p>
+          </div>
+          
+          <!-- Stat 2 -->
+          <div class="text-center">
+            <div class="text-5xl lg:text-6xl font-bold text-[#FFD300] mb-2">250+</div>
+            <div class="text-lg font-semibold mb-3">Ignitions Triggered</div>
+            <p class="text-sm opacity-80 leading-relaxed">
+              That's how many successful campaigns we've run worldwide — each designed to spark performance at scale.
+            </p>
+          </div>
+          
+          <!-- Stat 3 -->
+          <div class="text-center">
+            <div class="text-5xl lg:text-6xl font-bold text-[#FFD300] mb-2">97%</div>
+            <div class="text-lg font-semibold mb-3">Stable Reaction Rate</div>
+            <p class="text-sm opacity-80 leading-relaxed">
+              We don't burn out fast. Our systems are engineered for long-term performance, and 97% stay with us because the returns are repeatable.
+            </p>
+          </div>
+          
+          <!-- Stat 4 -->
+          <div class="text-center">
+            <div class="text-5xl lg:text-6xl font-bold text-[#FFD300] mb-2">-35%</div>
+            <div class="text-lg font-semibold mb-3">Cost-to-Acquisition Drop</div>
+            <p class="text-sm opacity-80 leading-relaxed">
+              Your cost-to-deposit decrease = explosion. After exposure to Cesium's traction formula, clients average over 35% growth in revenue.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- What We Offer Section -->
-    <section id="services" class="py-20 bg-white relative overflow-hidden">
-      <!-- Molecular Background Elements -->
-      <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Group30.svg" alt="Molecular Element" class="absolute top-10 left-10 w-16 h-16 opacity-50" />
-        <img src="/assets/images/Group31.svg" alt="Molecular Element" class="absolute top-20 right-20 w-20 h-20 opacity-50" />
-        <img src="/assets/images/Group32.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-50" />
-        <img src="/assets/images/Group33.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-16 h-16 opacity-50" />
-      </div>
-      
-      <div class="container mx-auto px-6 relative z-10">
+    <section id="services" class="py-20 bg-[#2C1C59] text-white relative overflow-hidden">
+      <div class="container mx-auto px-6 relative z-10 max-w-6xl">
+        <!-- Header -->
         <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-semibold text-primary mb-4 animate-fade-in-up">
+          <h2 class="text-4xl lg:text-5xl font-bold mb-4">
             What We Offer
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
-            Comprehensive marketing solutions designed specifically for the iGaming industry
+          <p class="text-xl opacity-90 max-w-3xl mx-auto font-light">
+            Custom-formulated marketing solutions that ignite iGaming growth.<br>
+            Each service is engineered to spark action and scale performance.
           </p>
         </div>
         
-        <!-- Service Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <!-- Service Card 1: Paid Media -->
-          <div class="bg-secondary rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden">
-            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-              <img src="/assets/images/CS11.svg" alt="Paid Media" class="w-10 h-10" />
+        <!-- Service Cards -->
+        <div class="space-y-4 mb-12">
+          <!-- Paid Media Card (Highlighted) -->
+          <div class="bg-[#FFD300] text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:shadow-lg transition-all duration-300 group">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Paid Media</h3>
+              <p class="text-sm opacity-80">
+                Launch high-voltage ad campaigns across top platforms to drive instant results.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-primary mb-4">Paid Media</h3>
-            <p class="text-primary text-sm leading-relaxed">
-              Strategic advertising campaigns across multiple platforms to maximize your reach and ROI.
-            </p>
+            <div class="flex items-center space-x-4">
+              <button class="bg-[#2C1C59] text-[#FFD300] px-4 py-2 rounded border border-[#2C1C59] hover:bg-transparent hover:text-[#2C1C59] transition-all duration-300 text-sm font-medium">
+                Learn More
+              </button>
+              <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
           </div>
 
-          <!-- Service Card 2: SEO Optimization -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
-            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-              <img src="/assets/images/CS2.svg" alt="SEO Optimization" class="w-10 h-10" />
+          <!-- SEO Optimization Card -->
+          <div class="bg-white text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
+            <div>
+              <h3 class="text-xl font-bold mb-2">SEO Optimization</h3>
+              <p class="text-sm opacity-80">
+                Climb search rankings and sustain long-term organic traffic reactions.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-primary mb-4">SEO Optimization</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Improve your search engine rankings and organic visibility with our proven SEO strategies.
-            </p>
+            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
           </div>
 
-          <!-- Service Card 3: Social Media -->
-          <div class="bg-secondary rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden">
-            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-              <img src="/assets/images/CS3.svg" alt="Social Media" class="w-10 h-10" />
+          <!-- Social Media Marketing Card -->
+          <div class="bg-white text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Social Media Marketing</h3>
+              <p class="text-sm opacity-80">
+                Climb search rankings and sustain long-term organic traffic reactions.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-primary mb-4">Social Media</h3>
-            <p class="text-primary text-sm leading-relaxed">
-              Build and engage your community across all major social media platforms.
-            </p>
+            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
           </div>
 
-          <!-- Service Card 4: Data Analytics -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
-            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-              <img src="/assets/images/CS41.svg" alt="Data Analytics" class="w-10 h-10" />
+          <!-- Data Analytics Card -->
+          <div class="bg-white text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Data Analytics</h3>
+              <p class="text-sm opacity-80">
+                Climb search rankings and sustain long-term organic traffic reactions.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-primary mb-4">Data Analytics</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Make informed decisions with comprehensive data analysis and reporting.
-            </p>
+            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
           </div>
 
-          <!-- Service Card 5: Content Marketing -->
-          <div class="bg-secondary rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden">
-            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-              <img src="/assets/images/CS4.svg" alt="Content Marketing" class="w-10 h-10" />
+          <!-- Content Marketing Card -->
+          <div class="bg-white text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Content Marketing</h3>
+              <p class="text-sm opacity-80">
+                Climb search rankings and sustain long-term organic traffic reactions.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-primary mb-4">Content Marketing</h3>
-            <p class="text-primary text-sm leading-relaxed">
-              Create compelling content that resonates with your audience and drives engagement.
-            </p>
+            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
           </div>
 
-          <!-- Service Card 6: Email Marketing -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
-            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-              <img src="/assets/images/CS51.svg" alt="Email Marketing" class="w-10 h-10" />
+          <!-- Branding & Visual Identity Card -->
+          <div class="bg-white text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Branding & Visual Identity</h3>
+              <p class="text-sm opacity-80">
+                Climb search rankings and sustain long-term organic traffic reactions.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-primary mb-4">Email Marketing</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Nurture leads and retain customers with targeted email campaigns.
-            </p>
+            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
           </div>
         </div>
         
         <!-- Explore All Services Button -->
-        <div class="text-center mt-12">
-          <img src="/assets/images/Exploreallservicesindetail.svg" alt="Explore all services in detail" class="mx-auto cursor-pointer hover:scale-105 transition-transform duration-300" />
+        <div class="text-center">
+          <button class="border border-white text-white px-6 py-3 rounded hover:bg-[#FFD300] hover:text-[#2C1C59] hover:border-[#FFD300] transition-all duration-300 flex items-center space-x-2 mx-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+            <span>Explore all services in detail</span>
+          </button>
         </div>
       </div>
     </section>
