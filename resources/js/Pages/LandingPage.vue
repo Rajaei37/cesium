@@ -34,7 +34,7 @@
       <img 
         src="/assets/images/Vector.svg" 
         alt="Background Vector"
-        class="pointer-events-none absolute w-[150%] h-[150%] object-cover opacity-80 z-0 animate-float-subtle transform -rotate-12 -top-1/4 -left-1/4"
+        class="pointer-events-none absolute w-[200%] h-[200%] object-cover opacity-80 z-0 animate-float-subtle transform -rotate-45 -top-1/2 -left-1/2 lg:w-[150%] lg:h-[150%] lg:-rotate-12 lg:-top-1/4 lg:-left-1/4"
         style="filter: contrast(1.2) brightness(1.1); animation-duration: 6s;"
       />
       
