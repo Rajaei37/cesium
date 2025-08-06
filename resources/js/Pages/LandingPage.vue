@@ -85,14 +85,14 @@
       <!-- Molecular Background Elements -->
       <div class="absolute inset-0 overflow-hidden">
         <!-- Card 1 Background Vector -->
-        <img src="/assets/images/1.svg" alt="Background Vector 1" class="absolute top-0 left-0 w-[400px] h-[250px] object-cover opacity-10" style="transform: translate(-50%, -50%) rotate(15deg);" />
+        <img src="/assets/images/1.svg" alt="Background Vector 1" class="absolute top-0 left-0 w-[400px] h-[250px] object-cover opacity-50" style="transform: translate(-50%, -50%) rotate(15deg);" />
         <!-- Card 2 Background Vector -->
-        <img src="/assets/images/2.svg" alt="Background Vector 2" class="absolute top-1/2 left-1/2 w-[400px] h-[250px] object-cover opacity-10" style="transform: translate(-50%, -50%) rotate(-20deg);" />
+        <img src="/assets/images/2.svg" alt="Background Vector 2" class="absolute top-1/2 left-1/2 w-[400px] h-[250px] object-cover opacity-50" style="transform: translate(-50%, -50%) rotate(-20deg);" />
         <!-- Card 3 Background Vector -->
-        <img src="/assets/images/3.svg" alt="Background Vector 3" class="absolute bottom-0 right-0 w-[400px] h-[250px] object-cover opacity-10" style="transform: translate(50%, 50%) rotate(10deg);" />
+        <img src="/assets/images/3.svg" alt="Background Vector 3" class="absolute bottom-0 right-0 w-[400px] h-[250px] object-cover opacity-50" style="transform: translate(50%, 50%) rotate(10deg);" />
         <!-- Additional Vectors for visual complexity -->
-        <img src="/assets/images/2-1.svg" alt="Background Vector 2-1" class="absolute top-1/4 right-1/4 w-[400px] h-[250px] object-cover opacity-10" style="transform: translate(25%, -25%) rotate(30deg);" />
-        <img src="/assets/images/3-1.svg" alt="Background Vector 3-1" class="absolute bottom-1/4 left-1/4 w-[400px] h-[250px] object-cover opacity-10" style="transform: translate(-25%, 25%) rotate(-40deg);" />
+        <img src="/assets/images/2-1.svg" alt="Background Vector 2-1" class="absolute top-1/4 right-1/4 w-[400px] h-[250px] object-cover opacity-50" style="transform: translate(25%, -25%) rotate(30deg);" />
+        <img src="/assets/images/3-1.svg" alt="Background Vector 3-1" class="absolute bottom-1/4 left-1/4 w-[400px] h-[250px] object-cover opacity-50" style="transform: translate(-25%, 25%) rotate(-40deg);" />
       </div>
       
       <div class="container mx-auto px-6 text-center relative z-10">
@@ -108,7 +108,7 @@
         <!-- Three Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <!-- Card 1: Precision-Fueled Reactions -->
-          <div class="bg-white rounded-xl shadow-lg p-8 relative overflow-hidden">
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
             <!-- Large Background Number -->
             <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30">1</div>
             <!-- Yellow Number Badge -->
@@ -127,7 +127,7 @@
           </div>
 
           <!-- Card 2: Repeatable Chain Reactions -->
-          <div class="bg-white rounded-xl shadow-lg p-8 relative overflow-hidden">
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
             <!-- Large Background Number -->
             <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30">2</div>
             <!-- Yellow Number Badge -->
@@ -145,7 +145,7 @@
           </div>
 
           <!-- Card 3: Domain Chemistry -->
-          <div class="bg-white rounded-xl shadow-lg p-8 relative overflow-hidden">
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
             <!-- Large Background Number -->
             <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30">3</div>
             <!-- Yellow Number Badge -->
@@ -250,7 +250,7 @@
         <!-- Service Cards Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <!-- Service Card 1: Paid Media -->
-          <div class="bg-secondary rounded-xl shadow-lg p-8 text-center relative overflow-hidden">
+          <div class="bg-secondary rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden">
             <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
               <img src="/assets/images/CS11.svg" alt="Paid Media" class="w-10 h-10" />
             </div>
@@ -261,7 +261,7 @@
           </div>
 
           <!-- Service Card 2: SEO Optimization -->
-          <div class="bg-white rounded-xl shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
             <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
               <img src="/assets/images/CS2.svg" alt="SEO Optimization" class="w-10 h-10" />
             </div>
@@ -272,7 +272,7 @@
           </div>
 
           <!-- Service Card 3: Social Media -->
-          <div class="bg-secondary rounded-xl shadow-lg p-8 text-center relative overflow-hidden">
+          <div class="bg-secondary rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden">
             <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
               <img src="/assets/images/CS3.svg" alt="Social Media" class="w-10 h-10" />
             </div>
@@ -283,7 +283,7 @@
           </div>
 
           <!-- Service Card 4: Data Analytics -->
-          <div class="bg-white rounded-xl shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
             <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
               <img src="/assets/images/CS41.svg" alt="Data Analytics" class="w-10 h-10" />
             </div>
@@ -294,7 +294,7 @@
           </div>
 
           <!-- Service Card 5: Content Marketing -->
-          <div class="bg-secondary rounded-xl shadow-lg p-8 text-center relative overflow-hidden">
+          <div class="bg-secondary rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden">
             <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
               <img src="/assets/images/CS4.svg" alt="Content Marketing" class="w-10 h-10" />
             </div>
@@ -305,7 +305,7 @@
           </div>
 
           <!-- Service Card 6: Email Marketing -->
-          <div class="bg-white rounded-xl shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 text-center relative overflow-hidden border border-gray-100">
             <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
               <img src="/assets/images/CS51.svg" alt="Email Marketing" class="w-10 h-10" />
             </div>
@@ -339,7 +339,7 @@
 
         <!-- Featured Blog Post -->
         <div v-if="blogPosts && blogPosts.length > 0" class="mb-12">
-          <div class="bg-white rounded-xl shadow-xl overflow-hidden animate-fade-in-up">
+          <div class="bg-white rounded-[0.56px] shadow-xl overflow-hidden animate-fade-in-up">
             <div class="md:flex">
               <div class="md:w-1/2">
                 <img :src="blogPosts[0].image" :alt="blogPosts[0].title" class="w-full h-64 md:h-full object-cover" />
