@@ -84,12 +84,12 @@
 <section class="py-20 bg-gray-100 relative overflow-hidden">
   <div class="container mx-auto px-6 text-center relative z-10">
     <!-- Main Title -->
-    <h2 class="text-4xl lg:text-5xl font-normal text-primary mb-2">
+    <h2 class="text-3xl lg:text-4xl font-normal text-primary mb-0">
       Why <span class="text-primary font-extrabold">Cesium</span>?
     </h2>
     <!-- Subtitle -->
-    <p class="text-base text-gray-600 font-normal mb-16">
-      Because Inactive Doesn't Win.
+    <p class="text-sm text-gray-600 font-normal mb-16">
+      Because Inactive Doesn\'t Win.
     </p>
     
     <!-- Three Cards - Horizontal layout -->
