@@ -29,7 +29,7 @@
     <section id="home" class="relative bg-primary text-white pt-20 sm:pt-24 md:pt-28 pb-16 sm:pb-20 overflow-hidden min-h-screen flex items-center">
       <!-- Dynamic Background with Vector.svg -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-60 sm:opacity-65 md:opacity-70 lg:opacity-75" style="transform: scale(1.3) sm:scale(1.4) md:scale(1.5) rotate(13deg) sm:rotate(12deg) md:rotate(11deg); filter: contrast(1.5) brightness(1.2) saturate(1.3);" />
+        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-60 sm:opacity-65 md:opacity-70 lg:opacity-75" style="transform: scale(1.5) rotate(15deg) translateX(-20%) translateY(20%); filter: contrast(1.5) brightness(1.2) saturate(1.3);" />
       </div>
       
       <div class="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
@@ -40,26 +40,26 @@
           </h1>
           
           <!-- Small Yellow Text Above - positioned to top right of Cesium -->
-          <p class="text-secondary text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-2 animate-fade-in-up absolute -top-6 xs:-top-7 sm:-top-8 md:-top-10 right-0 lg:right-auto lg:left-full lg:ml-2 xl:ml-4 lg:top-1 xl:top-2">
+          <p class="text-secondary text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-2 animate-fade-in-up absolute top-0 right-0 lg:right-auto lg:left-full lg:ml-2 xl:ml-4 lg:top-1 xl:top-2">
             is Active by nature
           </p>
           
           <!-- Sub-headline with better spacing -->
-          <div class="space-y-2 sm:space-y-3 lg:space-y-4 mb-6 sm:mb-8">
+          <div class="space-y-2 sm:space-y-3 lg:space-y-4 mb-6 sm:mb-8 text-left">
             <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-medium opacity-90 animate-fade-in-up animation-delay-200">
-              Cesium isn't a marketing agency.
+              Cesium isn\'t a marketing agency.
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0">
-              It's a high-energy force designed to react with your business
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed">
+              It\'s a high-energy force designed to react with your business
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed">
               sparking momentum, amplifying results, and scaling with precision.
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-500 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-500 font-light leading-relaxed">
               From identity to ignition to intelligent growth
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0">
-              we catalyze your brand's trajectory.
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed">
+              we catalyze your brand\'s trajectory.
             </p>
           </div>
           
