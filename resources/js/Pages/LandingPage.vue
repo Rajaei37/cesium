@@ -80,71 +80,71 @@
     </div>
   </section>
 
-    <!-- Why Cesium Section -->
-    <section class="py-20 bg-gray-100 relative overflow-hidden">
-      <div class="container mx-auto px-6 text-center relative z-10">
-        <!-- Main Title -->
-        <h2 class="text-5xl lg:text-6xl font-extrabold text-primary mb-4">
-          Why <span class="text-primary">Cesium</span>?
-        </h2>
-        <!-- Subtitle -->
-        <p class="text-3xl text-gray-600 mb-16 font-bold">
-          Because Inactive Doesn't Win.
-        </p>
-        
-        <!-- Three Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <!-- Card 1: Precision-Fueled Reactions -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full md:w-1/3 h-auto" style="background-image: url('/assets/images/card1.svg'); background-size: cover; background-position: center;">
-            <!-- Yellow Number Badge -->
-            <div class="inline-flex items-center justify-start text-primary font-bold text-xl mb-6 relative z-20">
-              1)
-            </div>
-            <!-- Card Title -->
-            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20 text-left">
-              Precision-Fueled<br>Reactions
-            </h3>
-            <!-- Card Description -->
-            <p class="text-gray-600 text-sm leading-relaxed relative z-20 text-left">
-              Every move we make is based on calculated data and tested hypotheses.<br><br>
-              Our strategies aren't just data-driven, they're reaction-tuned to create maximum market ignition.
-            </p>
-          </div>
-
-          <!-- Card 2: Repeatable Chain Reactions -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full md:w-1/3 h-auto" style="background-image: url('/assets/images/card2.svg'); background-size: cover; background-position: center;">
-            <!-- Yellow Number Badge -->
-            <div class="inline-flex items-center justify-start text-primary font-bold text-xl mb-6 relative z-20">
-              2)
-            </div>
-            <!-- Card Title -->
-            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20 text-left">
-              Repeatable Chain<br>Reactions
-            </h3>
-            <!-- Card Description -->
-            <p class="text-gray-600 text-sm leading-relaxed relative z-20 text-left">
-              We don't rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
-            </p>
-          </div>
-
-          <!-- Card 3: Domain Chemistry -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full md:w-1/3 h-auto" style="background-image: url('/assets/images/card3.svg'); background-size: cover; background-position: center;">
-            <!-- Yellow Number Badge -->
-            <div class="inline-flex items-center justify-start text-primary font-bold text-xl mb-6 relative z-20">
-              3)
-            </div>
-            <!-- Card Title -->
-            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20 text-left">
-              Domain<br>Chemistry
-            </h3>
-            <!-- Card Description -->
-            <p class="text-gray-600 text-sm leading-relaxed relative z-20 text-left">
-              We don't just work in your industry — we react with it. Years of deep learning give us the ability to anticipate volatility, exploit opportunity, and maximize momentum.
-            </p>
-          </div>
+<!-- Why Cesium Section -->
+<section class="py-20 bg-gray-100 relative overflow-hidden">
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <!-- Main Title -->
+    <h2 class="text-5xl lg:text-6xl font-extrabold text-primary mb-4">
+      Why <span class="text-primary">Cesium</span>?
+    </h2>
+    <!-- Subtitle -->
+    <p class="text-3xl text-gray-600 mb-16 font-bold">
+      Because Inactive Doesn\'t Win.
+    </p>
+    
+    <!-- Three Cards - Horizontal layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Card 1: Precision-Fueled Reactions -->
+      <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full h-auto" style="background-image: url(\'/assets/images/card1.svg\'); background-size: cover; background-position: center;">
+        <!-- Yellow Number Badge -->
+        <div class="inline-flex items-center justify-start text-secondary font-bold text-xl mb-6 relative z-20">
+          1)
         </div>
+        <!-- Card Title -->
+        <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20 text-left">
+          Precision-Fueled<br>Reactions
+        </h3>
+        <!-- Card Description -->
+        <p class="text-gray-600 text-sm leading-relaxed relative z-20 text-left">
+          Every move we make is based on calibrated data and tested hypotheses.<br><br>
+          Our strategies aren\'t just data-driven, they\'re reaction-tuned to create maximum market ignition.
+        </p>
       </div>
-    </section>
+
+      <!-- Card 2: Repeatable Chain Reactions -->
+      <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full h-auto" style="background-image: url(\'/assets/images/card2.svg\'); background-size: cover; background-position: center;">
+        <!-- Yellow Number Badge -->
+        <div class="inline-flex items-center justify-start text-secondary font-bold text-xl mb-6 relative z-20">
+          2)
+        </div>
+        <!-- Card Title -->
+        <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20 text-left">
+          Repeatable Chain<br>Reactions
+        </h3>
+        <!-- Card Description -->
+        <p class="text-gray-600 text-sm leading-relaxed relative z-20 text-left">
+          We don\'t rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
+        </p>
+      </div>
+
+      <!-- Card 3: Domain Chemistry -->
+      <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full h-auto" style="background-image: url(\'/assets/images/card3.svg\'); background-size: cover; background-position: center;">
+        <!-- Yellow Number Badge -->
+        <div class="inline-flex items-center justify-start text-secondary font-bold text-xl mb-6 relative z-20">
+          3)
+        </div>
+        <!-- Card Title -->
+        <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20 text-left">
+          Domain<br>Chemistry
+        </h3>
+        <!-- Card Description -->
+        <p class="text-gray-600 text-sm leading-relaxed relative z-20 text-left">
+          We don\'t just work in your industry — we react with it. Years of deep learning give us the ability to anticipate volatility, exploit opportunity, and maximize momentum.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- After the Cesium Reaction Section -->
     <section class="py-20 bg-primary text-white relative overflow-hidden">
