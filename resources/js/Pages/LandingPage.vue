@@ -85,11 +85,11 @@
   <div class="container mx-auto px-6 text-center relative z-10">
     <!-- Main Title -->
     <h2 class="text-3xl lg:text-4xl font-normal text-primary mb-0">
-      <span class="text-primary font-normal">Why</span> <span class="text-primary font-extrabold">Cesium</span>?
+      <span class="text-primary font-light">Why</span> <span class="text-primary font-extrabold">Cesium</span>?
     </h2>
     <!-- Subtitle -->
     <p class="text-sm text-gray-600 font-normal mb-8">
-      Because Inactive Doesn't Win.
+      Because Inactive Doesn\'t Win.
     </p>
     
     <!-- Three Cards - Horizontal layout -->
