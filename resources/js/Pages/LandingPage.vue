@@ -95,50 +95,53 @@
     <!-- Three Cards - Horizontal layout -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <!-- Card 1: Precision-Fueled Reactions -->
-      <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full h-auto" style="background-image: url(\'/assets/images/card1.svg\'); background-size: cover; background-position: center;">
+      <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full h-auto" style="background-image: url('/assets/images/card1.svg'); background-size: cover; background-position: center;">
         <!-- Yellow Number Badge -->
-        <div class="inline-flex items-center justify-start text-secondary font-bold text-xl mb-6 relative z-20">
-          1)
+        <div class="flex justify-start mb-6 relative z-20">
+          <span class="text-yellow-400 font-bold text-3xl">1)</span>
         </div>
         <!-- Card Title -->
-        <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20 text-left">
+        <h3 class="text-2xl font-bold text-primary mb-6 leading-tight text-left relative z-20">
           Precision-Fueled<br>Reactions
         </h3>
         <!-- Card Description -->
-        <p class="text-gray-600 text-sm leading-relaxed relative z-20 text-left">
-          Every move we make is based on calibrated data and tested hypotheses.<br><br>
+        <p class="text-gray-700 text-base leading-relaxed text-left relative z-20">
+          Every move we make is based on calibrated data and tested hypotheses.
+        </p>
+        <br>
+        <p class="text-gray-700 text-base leading-relaxed text-left relative z-20">
           Our strategies aren\'t just data-driven, they\'re reaction-tuned to create maximum market ignition.
         </p>
       </div>
 
       <!-- Card 2: Repeatable Chain Reactions -->
-      <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full h-auto" style="background-image: url(\'/assets/images/card2.svg\'); background-size: cover; background-position: center;">
+      <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full h-auto" style="background-image: url('/assets/images/card2.svg'); background-size: cover; background-position: center;">
         <!-- Yellow Number Badge -->
-        <div class="inline-flex items-center justify-start text-secondary font-bold text-xl mb-6 relative z-20">
-          2)
+        <div class="flex justify-start mb-6 relative z-20">
+          <span class="text-yellow-400 font-bold text-3xl">2)</span>
         </div>
         <!-- Card Title -->
-        <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20 text-left">
+        <h3 class="text-2xl font-bold text-primary mb-6 leading-tight text-left relative z-20">
           Repeatable Chain<br>Reactions
         </h3>
         <!-- Card Description -->
-        <p class="text-gray-600 text-sm leading-relaxed relative z-20 text-left">
+        <p class="text-gray-700 text-base leading-relaxed text-left relative z-20">
           We don\'t rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
         </p>
       </div>
 
       <!-- Card 3: Domain Chemistry -->
-      <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full h-auto" style="background-image: url(\'/assets/images/card3.svg\'); background-size: cover; background-position: center;">
+      <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full h-auto" style="background-image: url('/assets/images/card3.svg'); background-size: cover; background-position: center;">
         <!-- Yellow Number Badge -->
-        <div class="inline-flex items-center justify-start text-secondary font-bold text-xl mb-6 relative z-20">
-          3)
+        <div class="flex justify-start mb-6 relative z-20">
+          <span class="text-yellow-400 font-bold text-3xl">3)</span>
         </div>
         <!-- Card Title -->
-        <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20 text-left">
+        <h3 class="text-2xl font-bold text-primary mb-6 leading-tight text-left relative z-20">
           Domain<br>Chemistry
         </h3>
         <!-- Card Description -->
-        <p class="text-gray-600 text-sm leading-relaxed relative z-20 text-left">
+        <p class="text-gray-700 text-base leading-relaxed text-left relative z-20">
           We don\'t just work in your industry — we react with it. Years of deep learning give us the ability to anticipate volatility, exploit opportunity, and maximize momentum.
         </p>
       </div>
