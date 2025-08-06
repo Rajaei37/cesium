@@ -25,53 +25,60 @@
     <!-- Header -->
     <AppHeader current-page="home" />
 
-    <!-- Hero Content Section -->
-    <section id="home" class="relative bg-primary text-white pt-20 sm:pt-24 md:pt-28 pb-16 sm:pb-20 overflow-hidden min-h-screen flex items-center">
-      <!-- Dynamic Background with Vector.svg -->
-      <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-60 sm:opacity-65 md:opacity-70 lg:opacity-75" style="transform: scale(1.5) rotate(15deg) translateX(-20%) translateY(20%); filter: contrast(1.5) brightness(1.2) saturate(1.3);" />
-      </div>
-      
-      <div class="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
-        <div class="w-full lg:w-1/2 text-center lg:text-left mb-8 sm:mb-10 lg:mb-0 relative">
-          <!-- Large Company Name -->
-          <h1 class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight mb-4 sm:mb-6 animate-fade-in-up">
-            Cesium
-          </h1>
-          
-          <!-- Small Yellow Text Above - positioned to top right of Cesium -->
-          <p class="text-secondary text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-2 animate-fade-in-up absolute top-0 right-0 lg:right-auto lg:left-full lg:ml-2 xl:ml-4 lg:top-1 xl:top-2">
-            is Active by nature
+    <section
+    id="home"
+    class="relative bg-gradient-to-br from-[#2E1E60] via-[#3B1E60] to-[#4B2D83] text-white pt-24 pb-16 min-h-screen flex items-center overflow-hidden"
+  >
+    <!-- Yellow Vector Background -->
+    <img
+      src="/assets/images/Vector.svg"
+      alt="Background Vector"
+      class="absolute top-0 left-0 w-full h-full object-cover opacity-80 lg:opacity-90 animate-float-subtle"
+      style="z-index: 1"
+    />
+
+    <!-- Optional gradient overlay for better text contrast -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#140c2b] via-transparent to-[#140c2b] opacity-40 z-0 pointer-events-none"></div>
+
+    <!-- Hero Content -->
+    <div class="container mx-auto px-4 sm:px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <!-- Left: Text Content -->
+      <div class="text-center lg:text-left">
+        <div class="flex flex-wrap justify-center lg:justify-start items-center gap-x-3 mb-4 animate-fade-in-up">
+          <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">Cesium</h1>
+          <span class="text-secondary text-xl md:text-2xl lg:text-3xl font-medium">is Active by nature</span>
+        </div>
+
+        <div class="space-y-3 text-left">
+          <p class="text-lg sm:text-xl font-medium animate-fade-in-up animation-delay-200">
+            Cesium isn’t a marketing agency.
           </p>
-          
-          <!-- Sub-headline with better spacing -->
-          <div class="space-y-2 sm:space-y-3 lg:space-y-4 mb-6 sm:mb-8 text-left">
-            <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-medium opacity-90 animate-fade-in-up animation-delay-200">
-              Cesium isn\'t a marketing agency.
-            </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-300 font-light leading-relaxed">
-              It\'s a high-energy force designed to react with your business
-            </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-400 font-light leading-relaxed">
-              sparking momentum, amplifying results, and scaling with precision.
-            </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-500 font-light leading-relaxed">
-              From identity to ignition to intelligent growth
-            </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-600 font-light leading-relaxed">
-              we catalyze your brand\'s trajectory.
-            </p>
-          </div>
-          
-          <Link href="/contact-us" class="inline-block bg-secondary text-primary font-bold py-2 px-4 xs:py-3 xs:px-6 sm:py-3 sm:px-6 md:py-4 md:px-8 lg:py-4 lg:px-8 shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-700 text-xs xs:text-sm sm:text-base md:text-lg">
-            Request Strategy Call
-          </Link>
+          <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-300">
+            It’s a high-energy force designed to react with your business
+          </p>
+          <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-400">
+            sparking momentum, amplifying results, and scaling with precision.
+          </p>
+          <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-500">
+            we catalyze your brand’s trajectory.
+          </p>
         </div>
-        <div class="w-full lg:w-1/2 flex justify-center lg:justify-end animate-fade-in-up animation-delay-600">
-          <MiniSlotMachine class="w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-md xl:max-w-lg" />
-        </div>
+
+        <!-- CTA Button -->
+        <Link
+          href="/contact-us"
+          class="mt-6 inline-block bg-secondary text-primary font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-600"
+        >
+          Request Strategy Call
+        </Link>
       </div>
-    </section>
+
+      <!-- Right: Slot Machine -->
+      <div class="flex justify-center lg:justify-end animate-fade-in-up animation-delay-600">
+        <MiniSlotMachine class="w-full max-w-[320px] sm:max-w-[360px] md:max-w-[420px] lg:max-w-[460px]" />
+      </div>
+    </div>
+  </section>
 
     <!-- Why Cesium Section -->
     <section class="py-20 bg-gray-100 relative overflow-hidden">
