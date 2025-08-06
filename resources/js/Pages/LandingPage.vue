@@ -95,10 +95,7 @@
         <!-- Three Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <!-- Card 1: Precision-Fueled Reactions -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
-            <!-- Vector Background inside card -->
-            <img src="/assets/images/1.svg" alt="Background Vector 1" class="absolute bottom-0 right-0 w-[100%] h-[100%] object-cover opacity-50" style="transform: rotate(15deg) translate(20%, 20%);" />
-
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden" style="background-image: url('/assets/images/card1.svg'); background-size: cover; background-position: center;">
             <!-- Yellow Number Badge -->
             <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6 relative z-20">
               1)
@@ -115,10 +112,7 @@
           </div>
 
           <!-- Card 2: Repeatable Chain Reactions -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
-            <!-- Vector Background inside card -->
-            <img src="/assets/images/2.svg" alt="Background Vector 2" class="absolute top-0 left-0 w-[100%] h-[100%] object-cover opacity-50" style="transform: rotate(-20deg) translate(-20%, -20%);" />
-
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden" style="background-image: url('/assets/images/card2.svg'); background-size: cover; background-position: center;">
             <!-- Yellow Number Badge -->
             <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6 relative z-20">
               2)
@@ -134,10 +128,7 @@
           </div>
 
           <!-- Card 3: Domain Chemistry -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
-            <!-- Vector Background inside card -->
-            <img src="/assets/images/3.svg" alt="Background Vector 3" class="absolute top-0 right-0 w-[100%] h-[100%] object-cover opacity-50" style="transform: rotate(10deg) translate(-20%, 20%);" />
-
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden" style="background-image: url('/assets/images/card3.svg'); background-size: cover; background-position: center;">
             <!-- Yellow Number Badge -->
             <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6 relative z-20">
               3)
