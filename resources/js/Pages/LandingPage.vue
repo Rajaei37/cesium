@@ -84,10 +84,15 @@
     <section class="py-20 bg-gray-100 relative overflow-hidden">
       <!-- Molecular Background Elements -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Group22.svg" alt="Molecular Element" class="absolute top-10 left-10 w-16 h-16 opacity-30" />
-        <img src="/assets/images/Group23.svg" alt="Molecular Element" class="absolute top-20 right-20 w-20 h-20 opacity-30" />
-        <img src="/assets/images/Group24.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-30" />
-        <img src="/assets/images/Group25.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-16 h-16 opacity-30" />
+        <!-- Card 1 Background Vector -->
+        <img src="/assets/images/1.svg" alt="Background Vector 1" class="absolute top-0 left-0 w-[400px] h-[250px] object-cover opacity-10" style="transform: translate(-50%, -50%) rotate(15deg);" />
+        <!-- Card 2 Background Vector -->
+        <img src="/assets/images/2.svg" alt="Background Vector 2" class="absolute top-1/2 left-1/2 w-[400px] h-[250px] object-cover opacity-10" style="transform: translate(-50%, -50%) rotate(-20deg);" />
+        <!-- Card 3 Background Vector -->
+        <img src="/assets/images/3.svg" alt="Background Vector 3" class="absolute bottom-0 right-0 w-[400px] h-[250px] object-cover opacity-10" style="transform: translate(50%, 50%) rotate(10deg);" />
+        <!-- Additional Vectors for visual complexity -->
+        <img src="/assets/images/2-1.svg" alt="Background Vector 2-1" class="absolute top-1/4 right-1/4 w-[400px] h-[250px] object-cover opacity-10" style="transform: translate(25%, -25%) rotate(30deg);" />
+        <img src="/assets/images/3-1.svg" alt="Background Vector 3-1" class="absolute bottom-1/4 left-1/4 w-[400px] h-[250px] object-cover opacity-10" style="transform: translate(-25%, 25%) rotate(-40deg);" />
       </div>
       
       <div class="container mx-auto px-6 text-center relative z-10">
