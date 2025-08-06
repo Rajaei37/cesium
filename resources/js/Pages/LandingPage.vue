@@ -29,7 +29,7 @@
     <section id="home" class="relative bg-primary text-white pt-20 sm:pt-24 md:pt-28 pb-16 sm:pb-20 overflow-hidden min-h-screen flex items-center">
       <!-- Dynamic Background with Vector.svg -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-60 sm:opacity-65 md:opacity-70 lg:opacity-75" style="transform: scale(1.3) sm:scale(1.4) md:scale(1.5) rotate(-2deg) sm:rotate(-3deg) md:rotate(-4deg); filter: contrast(1.5) brightness(1.2) saturate(1.3);" />
+        <img src="/assets/images/Vector.svg" alt="Abstract Background Vector" class="absolute w-full h-full object-cover opacity-60 sm:opacity-65 md:opacity-70 lg:opacity-75" style="transform: scale(1.3) sm:scale(1.4) md:scale(1.5) rotate(13deg) sm:rotate(12deg) md:rotate(11deg); filter: contrast(1.5) brightness(1.2) saturate(1.3);" />
       </div>
       
       <div class="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
