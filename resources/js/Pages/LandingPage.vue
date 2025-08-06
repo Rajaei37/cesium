@@ -84,11 +84,11 @@
     <section class="py-20 bg-gray-100 relative overflow-hidden">
       <div class="container mx-auto px-6 text-center relative z-10">
         <!-- Main Title -->
-        <h2 class="text-5xl lg:text-6xl font-bold text-primary mb-4">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-primary mb-4">
           Why <span class="text-primary">Cesium</span>?
         </h2>
         <!-- Subtitle -->
-        <p class="text-xl text-gray-600 mb-16 font-medium">
+        <p class="text-2xl text-gray-600 mb-16 font-bold">
           Because Inactive Doesn't Win.
         </p>
         
