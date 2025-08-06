@@ -31,10 +31,10 @@
   >
     <!-- Yellow Vector Background -->
     <img
-      src="/assets/images/Vector.svg"
+      src="/assets/images/Vector(5).svg"
       alt="Background Vector"
-      class="absolute top-0 left-0 w-full h-full object-cover opacity-80 lg:opacity-90 animate-float-subtle"
-      style="z-index: 1"
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-auto object-cover opacity-80 lg:opacity-90 animate-float-subtle"
+      style="z-index: 1; transform: translateX(-50%) translateY(50%);"
     />
 
     <!-- Optional gradient overlay for better text contrast -->
