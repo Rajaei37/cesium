@@ -97,9 +97,8 @@
           <!-- Card 1: Precision-Fueled Reactions -->
           <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
             <!-- Vector Background inside card -->
-            <img src="/assets/images/1.svg" alt="Background Vector 1" class="absolute bottom-0 right-0 w-[120%] h-[60%] opacity-20" style="transform: rotate(15deg) translate(10%, 10%);" />
-            <!-- Large Background Number -->
-            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30 z-10">1</div>
+            <img src="/assets/images/1.svg" alt="Background Vector 1" class="absolute bottom-0 right-0 w-[100%] h-[100%] object-cover opacity-50" style="transform: rotate(15deg) translate(20%, 20%);" />
+
             <!-- Yellow Number Badge -->
             <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6 relative z-20">
               1)
@@ -118,9 +117,8 @@
           <!-- Card 2: Repeatable Chain Reactions -->
           <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
             <!-- Vector Background inside card -->
-            <img src="/assets/images/2.svg" alt="Background Vector 2" class="absolute bottom-0 left-0 w-[120%] h-[60%] opacity-20" style="transform: rotate(-20deg) translate(-10%, 10%);" />
-            <!-- Large Background Number -->
-            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30 z-10">2</div>
+            <img src="/assets/images/2.svg" alt="Background Vector 2" class="absolute top-0 left-0 w-[100%] h-[100%] object-cover opacity-50" style="transform: rotate(-20deg) translate(-20%, -20%);" />
+
             <!-- Yellow Number Badge -->
             <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6 relative z-20">
               2)
@@ -138,9 +136,8 @@
           <!-- Card 3: Domain Chemistry -->
           <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
             <!-- Vector Background inside card -->
-            <img src="/assets/images/3.svg" alt="Background Vector 3" class="absolute top-0 left-0 w-[120%] h-[60%] opacity-20" style="transform: rotate(10deg) translate(-10%, -10%);" />
-            <!-- Large Background Number -->
-            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30 z-10">3</div>
+            <img src="/assets/images/3.svg" alt="Background Vector 3" class="absolute top-0 right-0 w-[100%] h-[100%] object-cover opacity-50" style="transform: rotate(10deg) translate(-20%, 20%);" />
+
             <!-- Yellow Number Badge -->
             <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6 relative z-20">
               3)
@@ -162,10 +159,10 @@
     <section class="py-20 bg-primary text-white relative overflow-hidden">
       <!-- Background Elements -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Group26.svg" alt="Molecular Element" class="absolute top-10 left-10 w-20 h-20 opacity-20" />
-        <img src="/assets/images/Group27.svg" alt="Molecular Element" class="absolute top-20 right-20 w-24 h-24 opacity-20" />
-        <img src="/assets/images/Group28.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-20" />
-        <img src="/assets/images/Group29.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-20 h-20 opacity-20" />
+        <img src="/assets/images/Group26.svg" alt="Molecular Element" class="absolute top-10 left-10 w-20 h-20 opacity-50" />
+        <img src="/assets/images/Group27.svg" alt="Molecular Element" class="absolute top-20 right-20 w-24 h-24 opacity-50" />
+        <img src="/assets/images/Group28.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-50" />
+        <img src="/assets/images/Group29.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-20 h-20 opacity-50" />
       </div>
       
       <div class="container mx-auto px-6 text-center relative z-10">
@@ -224,10 +221,10 @@
     <section id="services" class="py-20 bg-white relative overflow-hidden">
       <!-- Molecular Background Elements -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/assets/images/Group30.svg" alt="Molecular Element" class="absolute top-10 left-10 w-16 h-16 opacity-20" />
-        <img src="/assets/images/Group31.svg" alt="Molecular Element" class="absolute top-20 right-20 w-20 h-20 opacity-20" />
-        <img src="/assets/images/Group32.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-20" />
-        <img src="/assets/images/Group33.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-16 h-16 opacity-20" />
+        <img src="/assets/images/Group30.svg" alt="Molecular Element" class="absolute top-10 left-10 w-16 h-16 opacity-50" />
+        <img src="/assets/images/Group31.svg" alt="Molecular Element" class="absolute top-20 right-20 w-20 h-20 opacity-50" />
+        <img src="/assets/images/Group32.svg" alt="Molecular Element" class="absolute bottom-20 left-20 w-18 h-18 opacity-50" />
+        <img src="/assets/images/Group33.svg" alt="Molecular Element" class="absolute bottom-10 right-10 w-16 h-16 opacity-50" />
       </div>
       
       <div class="container mx-auto px-6 relative z-10">
