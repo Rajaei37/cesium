@@ -88,8 +88,8 @@
       <span class="text-primary font-light">Why</span> <span class="text-primary font-extrabold">Cesium</span>?
     </h2>
     <!-- Subtitle -->
-    <p class="text-sm text-gray-600 font-normal mb-8">
-      Because Inactive Doesn\'t Win.
+    <p class="text-base text-gray-600 font-normal mb-8">
+      Because Inactive Doesn't Win.
     </p>
     
     <!-- Three Cards - Horizontal layout -->
