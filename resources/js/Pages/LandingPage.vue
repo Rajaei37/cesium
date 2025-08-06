@@ -82,19 +82,6 @@
 
     <!-- Why Cesium Section -->
     <section class="py-20 bg-gray-100 relative overflow-hidden">
-      <!-- Molecular Background Elements -->
-      <div class="absolute inset-0 overflow-hidden">
-        <!-- Card 1 Background Vector -->
-        <img src="/assets/images/1.svg" alt="Background Vector 1" class="absolute top-0 left-0 w-[400px] h-[250px] object-cover opacity-50" style="transform: translate(-50%, -50%) rotate(15deg);" />
-        <!-- Card 2 Background Vector -->
-        <img src="/assets/images/2.svg" alt="Background Vector 2" class="absolute top-1/2 left-1/2 w-[400px] h-[250px] object-cover opacity-50" style="transform: translate(-50%, -50%) rotate(-20deg);" />
-        <!-- Card 3 Background Vector -->
-        <img src="/assets/images/3.svg" alt="Background Vector 3" class="absolute bottom-0 right-0 w-[400px] h-[250px] object-cover opacity-50" style="transform: translate(50%, 50%) rotate(10deg);" />
-        <!-- Additional Vectors for visual complexity -->
-        <img src="/assets/images/2-1.svg" alt="Background Vector 2-1" class="absolute top-1/4 right-1/4 w-[400px] h-[250px] object-cover opacity-50" style="transform: translate(25%, -25%) rotate(30deg);" />
-        <img src="/assets/images/3-1.svg" alt="Background Vector 3-1" class="absolute bottom-1/4 left-1/4 w-[400px] h-[250px] object-cover opacity-50" style="transform: translate(-25%, 25%) rotate(-40deg);" />
-      </div>
-      
       <div class="container mx-auto px-6 text-center relative z-10">
         <!-- Main Title -->
         <h2 class="text-5xl lg:text-6xl font-bold text-primary mb-4">
@@ -109,18 +96,20 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <!-- Card 1: Precision-Fueled Reactions -->
           <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
+            <!-- Vector Background inside card -->
+            <img src="/assets/images/1.svg" alt="Background Vector 1" class="absolute bottom-0 right-0 w-[120%] h-[60%] opacity-20" style="transform: rotate(15deg) translate(10%, 10%);" />
             <!-- Large Background Number -->
-            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30">1</div>
+            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30 z-10">1</div>
             <!-- Yellow Number Badge -->
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6 relative z-20">
               1)
             </div>
             <!-- Card Title -->
-            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight">
+            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20">
               Precision-Fueled<br>Reactions
             </h3>
             <!-- Card Description -->
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <p class="text-gray-600 text-sm leading-relaxed relative z-20">
               Every move we make is based on calculated data and tested hypotheses.<br><br>
               Our strategies aren't just data-driven, they're reaction-tuned to create maximum market ignition.
             </p>
@@ -128,36 +117,40 @@
 
           <!-- Card 2: Repeatable Chain Reactions -->
           <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
+            <!-- Vector Background inside card -->
+            <img src="/assets/images/2.svg" alt="Background Vector 2" class="absolute bottom-0 left-0 w-[120%] h-[60%] opacity-20" style="transform: rotate(-20deg) translate(-10%, 10%);" />
             <!-- Large Background Number -->
-            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30">2</div>
+            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30 z-10">2</div>
             <!-- Yellow Number Badge -->
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6 relative z-20">
               2)
             </div>
             <!-- Card Title -->
-            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight">
+            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20">
               Repeatable Chain<br>Reactions
             </h3>
             <!-- Card Description -->
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <p class="text-gray-600 text-sm leading-relaxed relative z-20">
               We don't rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
             </p>
           </div>
 
           <!-- Card 3: Domain Chemistry -->
           <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden">
+            <!-- Vector Background inside card -->
+            <img src="/assets/images/3.svg" alt="Background Vector 3" class="absolute top-0 left-0 w-[120%] h-[60%] opacity-20" style="transform: rotate(10deg) translate(-10%, -10%);" />
             <!-- Large Background Number -->
-            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30">3</div>
+            <div class="absolute top-4 right-4 text-8xl font-bold text-gray-100 opacity-30 z-10">3</div>
             <!-- Yellow Number Badge -->
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-primary font-bold text-xl mb-6 relative z-20">
               3)
             </div>
             <!-- Card Title -->
-            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight">
+            <h3 class="text-2xl font-bold text-primary mb-4 leading-tight relative z-20">
               Domain<br>Chemistry
             </h3>
             <!-- Card Description -->
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <p class="text-gray-600 text-sm leading-relaxed relative z-20">
               We don't just work in your industry — we react with it. Years of deep learning give us the ability to anticipate volatility, exploit opportunity, and maximize momentum.
             </p>
           </div>
