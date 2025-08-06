@@ -67,7 +67,7 @@
         <!-- CTA Button -->
         <Link
           href="/contact-us"
-          class="mt-6 inline-block bg-secondary text-primary font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-600"
+          class="mt-6 inline-block bg-secondary text-primary font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-[0.56px] shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-600"
         >
           Request Strategy Call
         </Link>
@@ -573,6 +573,18 @@ onMounted(() => {
   #home .text-secondary {
     font-size: 0.875rem;
   }
+}
+
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animate-float-subtle {
+  animation: float-subtle 6s ease-in-out infinite;
 }
 </style>
 
