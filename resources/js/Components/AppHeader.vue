@@ -92,15 +92,13 @@
             </svg>
           </a>
           <a href="https://www.tiktok.com/@cesiumagency" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.525 0.025H16.1875V16.6C16.1875 18.425 14.6875 19.925 12.8625 19.925C11.0375 19.925 9.5375 18.425 9.5375 16.6C9.5375 14.775 11.0375 13.275 12.8625 13.275C12.9375 13.275 13.0125 13.275 13.0875 13.2875V9.675C13.0125 9.6625 12.9375 9.6625 12.8625 9.6625C8.8625 9.6625 5.625 12.825 5.625 16.7375C5.625 20.65 8.8625 23.8125 12.8625 23.8125C16.8625 23.8125 20.1 20.65 20.1 16.7375V4.3375C20.1 1.95 22.05 0.025 24.4375 0.025V3.8625C24.3875 3.8625 24.325 3.8625 24.275 3.8625C22.1375 3.8625 20.3875 5.6 20.3875 7.7375V12.525H16.1875V0.025H12.525Z"/>
-            </svg>
+            <img src="/assets/social-icons/tiktok.svg" alt="TikTok" class="h-5 w-5 object-contain transition-all duration-300">
           </a>
           <a href="https://www.instagram.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
             <img src="/assets/social-icons/instagram.svg" alt="Instagram" class="h-5 w-5 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
           </a>
           <a href="https://www.facebook.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
-            <img src="/assets/social-icons/facebook.svg" alt="Facebook" class="h-5 w-5 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
+            <img src="/assets/social-icons/facebook.svg" alt="Facebook" class="h-5 w-5 object-contain transition-all duration-300">
           </a>
         </div>
       </div>
@@ -145,15 +143,13 @@
               </svg>
             </a>
             <a href="https://www.tiktok.com/@cesiumagency" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.525 0.025H16.1875V16.6C16.1875 18.425 14.6875 19.925 12.8625 19.925C11.0375 19.925 9.5375 18.425 9.5375 16.6C9.5375 14.775 11.0375 13.275 12.8625 13.275C12.9375 13.275 13.0125 13.275 13.0875 13.2875V9.675C13.0125 9.6625 12.9375 9.6625 12.8625 9.6625C8.8625 9.6625 5.625 12.825 5.625 16.7375C5.625 20.65 8.8625 23.8125 12.8625 23.8125C16.8625 23.8125 20.1 20.65 20.1 16.7375V4.3375C20.1 1.95 22.05 0.025 24.4375 0.025V3.8625C24.3875 3.8625 24.325 3.8625 24.275 3.8625C22.1375 3.8625 20.3875 5.6 20.3875 7.7375V12.525H16.1875V0.025H12.525Z"/>
-              </svg>
+              <img src="/assets/social-icons/tiktok.svg" alt="TikTok" class="h-6 w-6 object-contain transition-all duration-300">
             </a>
             <a href="https://www.instagram.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
               <img src="/assets/social-icons/instagram.svg" alt="Instagram" class="h-6 w-6 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
             </a>
             <a href="https://www.facebook.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
-              <img src="/assets/social-icons/facebook.svg" alt="Facebook" class="h-6 w-6 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
+              <img src="/assets/social-icons/facebook.svg" alt="Facebook" class="h-6 w-6 object-contain transition-all duration-300">
             </a>
           </div>
         </div>
