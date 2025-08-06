@@ -84,20 +84,20 @@
     <section class="py-20 bg-gray-100 relative overflow-hidden">
       <div class="container mx-auto px-6 text-center relative z-10">
         <!-- Main Title -->
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-primary mb-4">
+        <h2 class="text-5xl lg:text-6xl font-extrabold text-primary mb-4">
           Why <span class="text-primary">Cesium</span>?
         </h2>
         <!-- Subtitle -->
-        <p class="text-2xl text-gray-600 mb-16 font-bold">
+        <p class="text-3xl text-gray-600 mb-16 font-bold">
           Because Inactive Doesn't Win.
         </p>
         
         <!-- Three Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <!-- Card 1: Precision-Fueled Reactions -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full md:w-auto h-auto" style="background-image: url('/assets/images/card1.svg'); background-size: cover; background-position: center;">
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full md:w-1/3 h-auto" style="background-image: url('/assets/images/card1.svg'); background-size: cover; background-position: center;">
             <!-- Yellow Number Badge -->
-            <div class="inline-flex items-center justify-start w-12 h-12 text-primary font-bold text-xl mb-6 relative z-20">
+            <div class="inline-flex items-center justify-start text-primary font-bold text-xl mb-6 relative z-20">
               1)
             </div>
             <!-- Card Title -->
@@ -112,9 +112,9 @@
           </div>
 
           <!-- Card 2: Repeatable Chain Reactions -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full md:w-auto h-auto" style="background-image: url('/assets/images/card2.svg'); background-size: cover; background-position: center;">
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full md:w-1/3 h-auto" style="background-image: url('/assets/images/card2.svg'); background-size: cover; background-position: center;">
             <!-- Yellow Number Badge -->
-            <div class="inline-flex items-center justify-start w-12 h-12 text-primary font-bold text-xl mb-6 relative z-20">
+            <div class="inline-flex items-center justify-start text-primary font-bold text-xl mb-6 relative z-20">
               2)
             </div>
             <!-- Card Title -->
@@ -128,9 +128,9 @@
           </div>
 
           <!-- Card 3: Domain Chemistry -->
-          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full md:w-auto h-auto" style="background-image: url('/assets/images/card3.svg'); background-size: cover; background-position: center;">
+          <div class="bg-white rounded-[0.56px] shadow-lg p-8 relative overflow-hidden w-full md:w-1/3 h-auto" style="background-image: url('/assets/images/card3.svg'); background-size: cover; background-position: center;">
             <!-- Yellow Number Badge -->
-            <div class="inline-flex items-center justify-start w-12 h-12 text-primary font-bold text-xl mb-6 relative z-20">
+            <div class="inline-flex items-center justify-start text-primary font-bold text-xl mb-6 relative z-20">
               3)
             </div>
             <!-- Card Title -->
