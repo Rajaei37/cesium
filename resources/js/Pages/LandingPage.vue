@@ -154,7 +154,7 @@
       <!-- Background Vector -->
       <div class="absolute inset-0 overflow-hidden">
         <img 
-          src="/upload/long-cesium-vector.svg" 
+          src="/assets/long-cesium-vector.svg" 
           alt="Cesium Vector" 
           class="absolute top-0 left-0 w-full h-full object-cover opacity-60 z-0"
           style="mix-blend-mode: overlay;"
