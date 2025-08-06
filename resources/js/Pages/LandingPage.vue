@@ -156,8 +156,7 @@
         <img 
           src="/assets/long-cesium-vector.svg" 
           alt="Cesium Vector" 
-          class="absolute top-0 left-0 w-full h-full object-cover opacity-60 z-0"
-          style="mix-blend-mode: overlay;"
+          class="absolute top-0 left-0 w-full h-full"
         />
       </div>
       
