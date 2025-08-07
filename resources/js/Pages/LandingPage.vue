@@ -229,14 +229,14 @@
         <!-- Service Cards -->
         <div class="space-y-4 mb-12">
           <!-- Paid Media Card (Highlighted) -->
-          <div class="bg-[#FFD300] text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:shadow-lg transition-all duration-300 group">
+          <div class="bg-white text-[#2C1C59] rounded-[0.56px] p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
             <div>
               <h3 class="text-xl font-bold mb-2">Paid Media</h3>
               <p class="text-sm opacity-80">
                 Launch high-voltage ad campaigns across top platforms to drive instant results.
               </p>
             </div>
-            <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <button class="bg-[#2C1C59] text-[#FFD300] px-4 py-2 rounded border border-[#2C1C59] hover:bg-transparent hover:text-[#2C1C59] transition-all duration-300 text-sm font-medium">
                 Learn More
               </button>
