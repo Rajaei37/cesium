@@ -91,8 +91,7 @@
     <p class="text-base text-gray-600 font-normal mb-8">
       Because Inactive Doesn't Win.
     </p>
-    
-    <!-- Three Cards - Horizontal layout -->
+        <!-- Service Cards -->rizontal layout -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <!-- Card 1: Precision-Fueled Reactions -->
       <div class="bg-white rounded-[0.56px] shadow-lg p-6 relative overflow-hidden w-full" style="background-image: url('/assets/images/card1.svg'); background-size: cover; background-position: center; min-height: 280px;">
@@ -222,14 +221,11 @@
           </h2>
           <p class="text-xl opacity-90 max-w-3xl mx-auto font-light">
             Custom-formulated marketing solutions that ignite iGaming growth.<br>
-            Each service is engineered to spark action and scale performance.
+              Each service is engineered to spark action and scale performance.
           </p>
         </div>
-        
-        <!-- Service Cards -->
         <div class="space-y-4 mb-12">
-          <!-- Paid Media Card (Highlighted) -->
-          <div class="bg-white text-[#2C1C59] rounded-[0.56px] p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
+          <div class="bg-white text-[#2C1C59] rounded-[0.56px] p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group hover:scale-105">
             <div>
               <h3 class="text-xl font-bold mb-2">Paid Media</h3>
               <p class="text-sm opacity-80">
@@ -237,7 +233,7 @@
               </p>
             </div>
             <div class="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <button class="bg-[#2C1C59] text-[#FFD300] px-4 py-2 rounded border border-[#2C1C59] hover:bg-transparent hover:text-[#2C1C59] transition-all duration-300 text-sm font-medium">
+              <button class="bg-[#2C1C59] text-[#FFD300] px-4 py-2 rounded-[0.56px] border border-[#2C1C59] hover:bg-transparent hover:text-[#2C1C59] transition-all duration-300 text-sm font-medium" onclick="window.location.href=\'https://odin-recharge-bot.online/what-we-offer\'">
                 Learn More
               </button>
               <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -247,68 +243,94 @@
           </div>
 
           <!-- SEO Optimization Card -->
-          <div class="bg-white text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
+          <div class="bg-white text-[#2C1C59] rounded-[0.56px] p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group hover:scale-105">
             <div>
               <h3 class="text-xl font-bold mb-2">SEO Optimization</h3>
               <p class="text-sm opacity-80">
                 Climb search rankings and sustain long-term organic traffic reactions.
               </p>
             </div>
-            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+            <div class="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button class="bg-[#2C1C59] text-[#FFD300] px-4 py-2 rounded-[0.56px] border border-[#2C1C59] hover:bg-transparent hover:text-[#2C1C59] transition-all duration-300 text-sm font-medium" onclick="window.location.href=\'https://odin-recharge-bot.online/what-we-offer\'">
+                Learn More
+              </button>
+              <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
           </div>
 
           <!-- Social Media Marketing Card -->
-          <div class="bg-white text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
+          <div class="bg-white text-[#2C1C59] rounded-[0.56px] p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group hover:scale-105">
             <div>
               <h3 class="text-xl font-bold mb-2">Social Media Marketing</h3>
               <p class="text-sm opacity-80">
                 Climb search rankings and sustain long-term organic traffic reactions.
               </p>
             </div>
-            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+            <div class="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button class="bg-[#2C1C59] text-[#FFD300] px-4 py-2 rounded-[0.56px] border border-[#2C1C59] hover:bg-transparent hover:text-[#2C1C59] transition-all duration-300 text-sm font-medium" onclick="window.location.href=\'https://odin-recharge-bot.online/what-we-offer\'">
+                Learn More
+              </button>
+              <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
           </div>
 
           <!-- Data Analytics Card -->
-          <div class="bg-white text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
+          <div class="bg-white text-[#2C1C59] rounded-[0.56px] p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group hover:scale-105">
             <div>
               <h3 class="text-xl font-bold mb-2">Data Analytics</h3>
               <p class="text-sm opacity-80">
                 Climb search rankings and sustain long-term organic traffic reactions.
               </p>
             </div>
-            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+            <div class="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button class="bg-[#2C1C59] text-[#FFD300] px-4 py-2 rounded-[0.56px] border border-[#2C1C59] hover:bg-transparent hover:text-[#2C1C59] transition-all duration-300 text-sm font-medium" onclick="window.location.href=\'https://odin-recharge-bot.online/what-we-offer\'">
+                Learn More
+              </button>
+              <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
           </div>
 
           <!-- Content Marketing Card -->
-          <div class="bg-white text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
+          <div class="bg-white text-[#2C1C59] rounded-[0.56px] p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group hover:scale-105">
             <div>
               <h3 class="text-xl font-bold mb-2">Content Marketing</h3>
               <p class="text-sm opacity-80">
                 Climb search rankings and sustain long-term organic traffic reactions.
               </p>
             </div>
-            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+            <div class="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button class="bg-[#2C1C59] text-[#FFD300] px-4 py-2 rounded-[0.56px] border border-[#2C1C59] hover:bg-transparent hover:text-[#2C1C59] transition-all duration-300 text-sm font-medium" onclick="window.location.href=\'https://odin-recharge-bot.online/what-we-offer\'">
+                Learn More
+              </button>
+              <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
           </div>
 
           <!-- Branding & Visual Identity Card -->
-          <div class="bg-white text-[#2C1C59] rounded-lg p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group">
+          <div class="bg-white text-[#2C1C59] rounded-[0.56px] p-6 flex items-center justify-between hover:bg-[#FFD300] hover:shadow-lg transition-all duration-300 group hover:scale-105">
             <div>
               <h3 class="text-xl font-bold mb-2">Branding & Visual Identity</h3>
               <p class="text-sm opacity-80">
-                Climb search rankings and sustain long-term organic traffic reactions.
+                Forge a powerful brand identity that resonates and converts, built on strategic insights.
               </p>
             </div>
-            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+            <div class="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button class="bg-[#2C1C59] text-[#FFD300] px-4 py-2 rounded-[0.56px] border border-[#2C1C59] hover:bg-transparent hover:text-[#2C1C59] transition-all duration-300 text-sm font-medium" onclick="window.location.href=\'https://odin-recharge-bot.online/what-we-offer\'">
+                Learn More
+              </button>
+              <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
+          </div>
           </div>
         </div>
         
@@ -378,15 +400,12 @@
             class="animate-fade-in-up"
             :style="{ animationDelay: `${200 * (index + 1)}ms` }"
           />
-        </div>
-
-        <!-- View All Blog Posts -->
+                <!-- Explore All Services Button -->
         <div class="text-center">
-          <a href="/blog" class="inline-block bg-secondary text-primary font-semibold py-4 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
-            View All Insights
+          <a href="https://odin-recharge-bot.online/what-we-offer" class="inline-block bg-[#FFD300] text-[#2C1C59] font-bold py-3 px-8 rounded-[0.56px] shadow-lg hover:bg-[#FFD300]/90 transition duration-300 transform hover:scale-105">
+            Explore all services in detail
           </a>
-        </div>
-      </div>
+        </div>div>
     </section>
 
 
