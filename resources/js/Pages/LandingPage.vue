@@ -148,7 +148,7 @@
   </div>
 </section>
 
-    <!-- After the Cesium Reaction Section -->
+    <!-- Combined Section: After the Cesium Reaction & What We Offer -->
     <section class="py-20 bg-[#2C1C59] text-white relative overflow-hidden">
       <!-- Background Vector -->
       <div class="absolute inset-0 overflow-hidden">
@@ -161,11 +161,10 @@
       </div>
       
       <div class="container mx-auto px-6 text-center relative z-10">
-        <!-- Main Title -->
+        <!-- After the Cesium Reaction Content -->
         <h2 class="text-4xl lg:text-5xl font-bold mb-4">
           After the Cesium Reaction
         </h2>
-        <!-- Subtitle -->
         <p class="text-xl opacity-90 mb-16 font-light max-w-3xl mx-auto">
           Real numbers. Real ignition. Measurable explosions in growth and performance.
         </p>
@@ -208,16 +207,8 @@
             </p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- What We Offer Section - Updated with new design -->
-    <section id="services" class="py-20 bg-purple-800 text-white relative overflow-hidden">
-      <!-- Yellow curved accent element -->
-      <div class="absolute left-0 top-0 bottom-0 w-24 bg-yellow-400 transform -skew-x-12 origin-left"></div>
-      
-      <div class="container mx-auto px-6 relative z-10">
-        <!-- Section Header -->
+        <!-- What We Offer Content -->
         <div class="text-center mb-16">
           <h2 class="text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up">
             What We Offer
@@ -335,8 +326,6 @@
         </div>
       </div>
     </section>
-
-
 
     <!-- Latest Insights Section -->
     <section id="blog" class="py-20 bg-primary-dark text-white">
