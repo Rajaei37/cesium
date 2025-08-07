@@ -153,7 +153,7 @@
   <!-- Background Vector -->
   <div class="absolute inset-0 overflow-hidden">
     <img 
-      src="/assets/backgroundwithvector.svg" 
+      src="/assets/Rectangle8.jpg" 
       alt="Cesium Vector" 
       class="absolute top-0 left-0 w-full h-full object-cover opacity-40 z-0"
       style="mix-blend-mode: screen;"
