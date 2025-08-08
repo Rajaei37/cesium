@@ -33,7 +33,7 @@
     <img
       src="/assets/images/Vector.svg"
       alt="Background Vector"
-      class="absolute top-0 left-[-35px] w-full h-full object-cover opacity-80 lg:opacity-90 animate-float-subtle"
+      class="absolute top-0 left-[-75px] w-full h-full object-cover opacity-80 lg:opacity-90 animate-float-subtle"
       style="z-index: 1"
     />
 
@@ -91,7 +91,6 @@
     <p class="text-base text-gray-600 font-normal mb-8">
       Because Inactive Doesn't Win.
     </p>
-        <!-- Service Cards -->rizontal layout -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <!-- Card 1: Precision-Fueled Reactions -->
       <div class="bg-white rounded-[0.56px] shadow-lg p-6 relative overflow-hidden w-full" style="background-image: url('/assets/images/card1.svg'); background-size: cover; background-position: center; min-height: 280px;">
