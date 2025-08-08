@@ -58,16 +58,16 @@
 
           <div class="space-y-3 text-left">
             <p class="text-lg sm:text-xl font-medium animate-fade-in-up animation-delay-200">
-              Cesium isn\'t a marketing agency.
+              Cesium isn't a marketing agency.
             </p>
             <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-300">
-              It\'s a high-energy force designed to react with your business
+              It's a high-energy force designed to react with your business
             </p>
             <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-400">
               sparking momentum, amplifying results, and scaling with precision.
             </p>
             <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-500">
-              we catalyze your brand\'s trajectory.
+              we catalyze your brand's trajectory.
             </p>
           </div>
 
@@ -96,7 +96,7 @@
         </h2>
         <!-- Subtitle -->
         <p class="text-base text-gray-600 font-normal mb-8">
-          Because Inactive Doesn\'t Win.
+          Because Inactive Doesn't Win.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <!-- Card 1: Precision-Fueled Reactions -->
@@ -115,7 +115,7 @@
                 Every move we make is based on calibrated data and tested hypotheses.
               </p>
               <p>
-                Our strategies aren\'t just data-driven, they\'re reaction-tuned to create maximum market ignition.
+                Our strategies aren't just data-driven, they're reaction-tuned to create maximum market ignition.
               </p>
             </div>
           </div>
@@ -132,7 +132,7 @@
             </h3>
             <!-- Card Description -->
             <p class="text-gray-700 text-sm leading-relaxed text-left relative z-20">
-              We don\'t rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
+              We don't rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
             </p>
           </div>
 
