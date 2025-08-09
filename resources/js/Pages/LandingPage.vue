@@ -18,7 +18,10 @@
     <!-- What We Offer Section -->
     <ServicesSection />
 
-    <!-- Latest Insights / Testimonials Section -->
+    <!-- We Trigger the Reaction Section -->
+    <WeTriggerReaction />
+
+    <!-- Cesium Insights Section -->
     <LatestInsights />
 
     <!-- Footer -->
@@ -35,6 +38,7 @@ import HeroSection from '@/Components/HeroSection.vue';
 import WhyCesium from '@/Components/WhyCesium.vue';
 import CesiumReaction from '@/Components/CesiumReaction.vue';
 import ServicesSection from '@/Components/ServicesSection.vue';
+import WeTriggerReaction from '@/Components/WeTriggerReaction.vue';
 import LatestInsights from '@/Components/LatestInsights.vue';
 </script>
 
