@@ -9,7 +9,7 @@
       <img
         src="/assets/images/Vector.svg"
         alt="Background Vector"
-        class="absolute inset-0 w-full h-full object-fill opacity-80 lg:opacity-90 animate-float-subtle"
+        class="absolute inset-0 w-full h-full object-contain opacity-80 lg:opacity-90 animate-float-subtle"
       />
     </div>
 
