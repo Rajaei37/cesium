@@ -27,16 +27,16 @@
 
         <div class="space-y-3 text-left">
           <p class="text-lg sm:text-xl font-medium animate-fade-in-up animation-delay-200">
-            Cesium isn\'t a marketing agency.
+            Cesium isn't a marketing agency.
           </p>
           <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-300">
-            It\'s a high-energy force designed to react with your business
+            It's a high-energy force designed to react with your business
           </p>
           <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-400">
             sparking momentum, amplifying results, and scaling with precision.
           </p>
           <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-500">
-            we catalyze your brand\'s trajectory.
+            we catalyze your brand's trajectory.
           </p>
         </div>
 
