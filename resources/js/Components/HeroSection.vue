@@ -5,16 +5,11 @@
     class="relative bg-[#362869] text-white pt-24 pb-16 min-h-screen flex items-center"
   >
     <!-- Yellow Vector Background - FIXED POSITIONING -->
-    <div class="absolute inset-0 w-full h-full overflow-visible z-0">
+    <div class="absolute inset-0 w-full h-full overflow-hidden z-0">
       <img
         src="/assets/images/Vector.svg"
         alt="Background Vector"
-        class="absolute top-0 left-0 w-full h-full object-contain opacity-80 lg:opacity-90 animate-float-subtle"
-        style="
-          object-position: left center;
-          transform: translateX(-10%);
-          min-width: 120%;
-        "
+        class="absolute inset-0 w-full h-full object-cover opacity-80 lg:opacity-90 animate-float-subtle"
       />
     </div>
 
@@ -32,16 +27,16 @@
 
         <div class="space-y-3 text-left">
           <p class="text-lg sm:text-xl font-medium animate-fade-in-up animation-delay-200">
-            Cesium isn't a marketing agency.
+            Cesium isn\'t a marketing agency.
           </p>
           <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-300">
-            It's a high-energy force designed to react with your business
+            It\'s a high-energy force designed to react with your business
           </p>
           <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-400">
             sparking momentum, amplifying results, and scaling with precision.
           </p>
           <p class="text-base sm:text-lg opacity-90 animate-fade-in-up animation-delay-500">
-            we catalyze your brand's trajectory.
+            we catalyze your brand\'s trajectory.
           </p>
         </div>
 
