@@ -6,12 +6,11 @@
   >
     <!-- Yellow Vector Background - FIXED POSITIONING -->
     <div class="absolute inset-0 w-full h-full overflow-hidden z-0">
-      <svg
-        class="absolute inset-0 w-full h-full"
-        preserveAspectRatio="none"
-      >
-        <use xlink:href="/assets/images/Vector.svg#id" />
-      </svg>
+      <img
+        src="/assets/images/Vector.svg"
+        alt="Background Vector"
+        class="absolute inset-0 w-full h-full object-cover opacity-80 lg:opacity-90 animate-float-subtle"
+      />
     </div>
 
     <!-- Optional gradient overlay for better text contrast -->
