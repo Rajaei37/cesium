@@ -6,7 +6,7 @@ export default defineConfig({
     // base: '/build/', // Set base path for root domain deployment
     plugins: [
         laravel({
-            input: ["resources/css/app.css", "resources/js/app.js"],
+            input: ["resources/css/app.css", "resources/js/app.js", "public/assets/Rectangle8.jpg"],
             refresh: true,
         }),
         vue({
