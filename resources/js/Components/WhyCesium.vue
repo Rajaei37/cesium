@@ -8,7 +8,7 @@
       </h2>
       <!-- Subtitle -->
       <p class="text-base text-gray-600 font-normal mb-8">
-        Because Inactive Doesn\'t Win.
+        Because Inactive doesn't Win.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -28,7 +28,7 @@
               Every move we make is based on calibrated data and tested hypotheses.
             </p>
             <p>
-              Our strategies aren\'t just data-driven, they\'re reaction-tuned to create maximum market ignition.
+              Our strategies aren't just data-driven, they're reaction-tuned to create maximum market ignition.
             </p>
           </div>
         </div>
@@ -45,7 +45,7 @@
           </h3>
           <!-- Card Description -->
           <p class="text-gray-700 text-sm leading-relaxed text-left relative z-20">
-            We don\'t rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
+          We don't rely on luck. We engineer repeatable systems that spark, scale, and sustain performance — with measurable outcomes at every stage.
           </p>
         </div>
 
@@ -61,7 +61,7 @@
           </h3>
           <!-- Card Description -->
           <p class="text-gray-700 text-sm leading-relaxed text-left relative z-20">
-            We don\'t just work in your industry — we react with it. Years of deep learning give us the ability to anticipate volatility, exploit opportunity, and maximize momentum.
+          We don't just work in your industry — we react with it. Years of deep learning give us the ability to anticipate volatility, exploit opportunity, and maximize momentum.
           </p>
         </div>
       </div>
