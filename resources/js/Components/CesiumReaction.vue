@@ -8,8 +8,6 @@
         style="
           background-image: url('/assets/Rectangle8.jpg');
           background-size: cover;
-          background-position: center;
-          background-attachment: fixed;
         "
       ></div>
       <div class="absolute inset-0 bg-[#362869]/20 mix-blend-multiply"></div>
