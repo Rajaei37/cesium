@@ -2,14 +2,14 @@
   <!-- FIXED HERO SECTION -->
   <section
     id="home"
-    class="relative bg-[#362869] text-white pt-24 pb-16 min-h-screen flex items-center"
+    class="relative bg-[#362869] text-white pt-24 pb-16 min-h-screen flex items-center overflow-hidden"
   >
     <!-- Yellow Vector Background - FIXED POSITIONING -->
     <div class="absolute inset-0 w-full h-full overflow-hidden z-0">
       <img
         src="/assets/images/Vector.svg"
         alt="Background Vector"
-        class="absolute inset-0 w-full h-full object-contain opacity-80 lg:opacity-90 animate-float-subtle"
+        class="absolute inset-0 w-full h-full object-cover opacity-80 lg:opacity-90 animate-float-subtle"
       />
     </div>
 
@@ -17,15 +17,15 @@
     <div class="absolute inset-0 bg-gradient-to-t from-[#140c2b]/40 via-transparent to-[#140c2b]/40 z-5 pointer-events-none"></div>
 
     <!-- Hero Content -->
-    <div class="container mx-auto px-4 sm:px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div class="container mx-auto px-4 sm:px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center py-10">
       <!-- Left: Text Content -->
       <div class="text-center lg:text-left">
-        <div class="flex flex-wrap justify-center lg:justify-start items-center gap-x-3 mb-4 animate-fade-in-up">
+        <div class="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-baseline gap-x-3 mb-4 animate-fade-in-up">
           <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">Cesium</h1>
-          <span class="text-secondary text-xl md:text-2xl lg:text-3xl font-medium">is Active by nature</span>
+          <span class="text-secondary text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium mt-2 lg:mt-0">is Active by nature</span>
         </div>
 
-        <div class="space-y-3 text-left">
+        <div class="space-y-3 text-left max-w-xl lg:max-w-none mx-auto lg:mx-0">
           <p class="text-lg sm:text-xl font-medium animate-fade-in-up animation-delay-200">
             Cesium isn't a marketing agency.
           </p>
@@ -43,14 +43,14 @@
         <!-- CTA Button -->
         <Link
           href="/contact-us"
-          class="mt-6 inline-block bg-secondary text-primary font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-[0.56px] shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-600"
+          class="mt-8 inline-block bg-secondary text-primary font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-[0.56px] shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-600"
         >
           Request Strategy Call
         </Link>
       </div>
 
       <!-- Right: Slot Machine -->
-      <div class="flex justify-center lg:justify-end animate-fade-in-up animation-delay-600">
+      <div class="flex justify-center lg:justify-end animate-fade-in-up animation-delay-600 mt-10 lg:mt-0">
         <MiniSlotMachine class="w-full max-w-[320px] sm:max-w-[360px] md:max-w-[420px] lg:max-w-[460px]" />
       </div>
     </div>
@@ -90,4 +90,5 @@ import MiniSlotMachine from '@/Components/MiniSlotMachine.vue';
   animation: floatSubtle 3s ease-in-out infinite;
 }
 </style>
+
 

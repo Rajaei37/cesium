@@ -1,153 +1,138 @@
 <template>
-  <!-- What We Offer Section -->
-  <section class="py-20 bg-[#362869] text-white relative">
-    <!-- FIXED Background Vector -->
-    <div class="absolute inset-0 w-full h-full">
-      <div 
-        class="w-full h-full bg-cover bg-center bg-no-repeat opacity-40"
-        style="
-          background-image: url('/assets/Rectangle8.jpg');
-          background-size: cover;
-        "
-      ></div>
-      <div class="absolute inset-0 bg-[#362869]/20 mix-blend-multiply"></div>
+  <!-- What We Offer Content -->
+  <div class="container mx-auto px-6 text-center relative z-10 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up text-white">
+        What We Offer
+      </h2>
+      <p class="text-xl opacity-90 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light text-white">
+        Custom-formulated marketing solutions that ignite iGaming growth.<br>
+        Each service is engineered to spark action and scale performance.
+      </p>
     </div>
     
-    <div class="container mx-auto px-6 text-center relative z-10">
-      <!-- What We Offer Content -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up">
-          What We Offer
-        </h2>
-        <p class="text-xl opacity-90 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 font-light">
-          Custom-formulated marketing solutions that ignite iGaming growth.<br>
-          Each service is engineered to spark action and scale performance.
-        </p>
-      </div>
-      
-      <!-- Service Cards List -->
-      <div class="max-w-4xl mx-auto space-y-4">
-        <!-- Service Card 1: Paid Media -->
-        <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
-          <div class="flex-1">
-            <h3 class="text-2xl font-bold text-[#362869] mb-2">Paid Media</h3>
-            <p class="text-gray-700 text-sm">Launch high-voltage ad campaigns across top platforms to drive instant results.</p>
-          </div>
-          <div class="flex items-center space-x-4">
-            <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
-              Learn More
-            </a>
-            <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </div>
+    <!-- Service Cards List -->
+    <div class="max-w-4xl mx-auto space-y-4">
+      <!-- Service Card 1: Paid Media -->
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-[#362869] mb-2">Paid Media</h3>
+          <p class="text-gray-700 text-sm">Launch high-voltage ad campaigns across top platforms to drive instant results.</p>
         </div>
-
-        <!-- Service Card 2: SEO Optimization -->
-        <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
-          <div class="flex-1">
-            <h3 class="text-2xl font-bold text-[#362869] mb-2">SEO Optimization</h3>
-            <p class="text-gray-700 text-sm">Climb search rankings and sustain long-term organic traffic reactions.</p>
-          </div>
-          <div class="flex items-center space-x-4">
-            <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
-              Learn More
-            </a>
-            <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </div>
-        </div>
-
-        <!-- Service Card 3: Social Media Marketing -->
-        <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
-          <div class="flex-1">
-            <h3 class="text-2xl font-bold text-[#362869] mb-2">Social Media Marketing</h3>
-            <p class="text-gray-700 text-sm">Build engaged communities and drive viral growth through strategic social campaigns.</p>
-          </div>
-          <div class="flex items-center space-x-4">
-            <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
-              Learn More
-            </a>
-            <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </div>
-        </div>
-
-        <!-- Service Card 4: Data Analytics -->
-        <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
-          <div class="flex-1">
-            <h3 class="text-2xl font-bold text-[#362869] mb-2">Data Analytics</h3>
-            <p class="text-gray-700 text-sm">Transform raw data into actionable insights that fuel precision-targeted growth strategies.</p>
-          </div>
-          <div class="flex items-center space-x-4">
-            <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
-              Learn More
-            </a>
-            <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </div>
-        </div>
-
-        <!-- Service Card 5: Content Marketing -->
-        <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
-          <div class="flex-1">
-            <h3 class="text-2xl font-bold text-[#362869] mb-2">Content Marketing</h3>
-            <p class="text-gray-700 text-sm">Create compelling narratives that resonate with your audience and drive engagement.</p>
-          </div>
-          <div class="flex items-center space-x-4">
-            <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
-              Learn More
-            </a>
-            <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </div>
-        </div>
-
-        <!-- Service Card 6: Email Marketing -->
-        <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
-          <div class="flex-1">
-            <h3 class="text-2xl font-bold text-[#362869] mb-2">Email Marketing</h3>
-            <p class="text-gray-700 text-sm">Deliver personalized messages that convert prospects into loyal customers.</p>
-          </div>
-          <div class="flex items-center space-x-4">
-            <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
-              Learn More
-            </a>
-            <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </div>
-        </div>
-
-        <!-- Service Card 7: Branding & Visual Identity -->
-        <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
-          <div class="flex-1">
-            <h3 class="text-2xl font-bold text-[#362869] mb-2">Branding & Visual Identity</h3>
-            <p class="text-gray-700 text-sm">Craft a powerful brand presence that resonates with your target audience.</p>
-          </div>
-          <div class="flex items-center space-x-4">
-            <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
-              Learn More
-            </a>
-            <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </div>
+        <div class="flex items-center space-x-4">
+          <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+            Learn More
+          </a>
+          <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
         </div>
       </div>
 
-      <!-- Explore All Services Button -->
-      <div class="mt-12">
-        <a href="https://odin-recharge-bot.online/what-we-offer" class="inline-flex items-center bg-[#facb24] text-primary font-bold py-3 px-6 rounded-[0.56px] shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105">
-          Explore all services in detail
-        </a>
+      <!-- Service Card 2: SEO Optimization -->
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-[#362869] mb-2">SEO Optimization</h3>
+          <p class="text-gray-700 text-sm">Climb search rankings and sustain long-term organic traffic reactions.</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+            Learn More
+          </a>
+          <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Service Card 3: Social Media Marketing -->
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-[#362869] mb-2">Social Media Marketing</h3>
+          <p class="text-gray-700 text-sm">Build engaged communities and drive viral growth through strategic social campaigns.</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+            Learn More
+          </a>
+          <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Service Card 4: Data Analytics -->
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-[#362869] mb-2">Data Analytics</h3>
+          <p class="text-gray-700 text-sm">Transform raw data into actionable insights that fuel precision-targeted growth strategies.</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+            Learn More
+          </a>
+          <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Service Card 5: Content Marketing -->
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-[#362869] mb-2">Content Marketing</h3>
+          <p class="text-gray-700 text-sm">Create compelling narratives that resonate with your audience and drive engagement.</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+            Learn More
+          </a>
+          <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Service Card 6: Email Marketing -->
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-[#362869] mb-2">Email Marketing</h3>
+          <p class="text-gray-700 text-sm">Deliver personalized messages that convert prospects into loyal customers.</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+            Learn More
+          </a>
+          <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Service Card 7: Branding & Visual Identity -->
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-[#362869] mb-2">Branding & Visual Identity</h3>
+          <p class="text-gray-700 text-sm">Craft a powerful brand presence that resonates with your target audience.</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="https://odin-recharge-bot.online/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+            Learn More
+          </a>
+          <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
       </div>
     </div>
-  </section>
+
+    <!-- Explore All Services Button -->
+    <div class="mt-12">
+      <a href="https://odin-recharge-bot.online/what-we-offer" class="inline-flex items-center bg-[#facb24] text-primary font-bold py-3 px-6 rounded-[0.56px] shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105">
+        Explore all services in detail
+      </a>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -161,7 +146,7 @@
 }
 
 .service-card::before {
-  content: '';
+  content: ""; /* Corrected: Added empty string for content */
   position: absolute;
   top: 0;
   left: 0;
@@ -200,4 +185,5 @@
 
 .animation-delay-200 { animation-delay: 0.2s; }
 </style>
+
 

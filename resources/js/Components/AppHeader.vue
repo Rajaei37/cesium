@@ -11,7 +11,7 @@
         </Link>
       </div>
 
-      <!-- Navigation Menu -->
+      <!-- Navigation Menu (Desktop) -->
       <div class="hidden md:flex items-center space-x-8">
         <Link 
           href="/" 
@@ -71,7 +71,7 @@
         </Link>
       </div>
 
-      <!-- CTA Buttons and Social Media Icons -->
+      <!-- CTA Buttons and Social Media Icons (Desktop) -->
       <div class="hidden md:flex items-center space-x-4">
         <Link 
           href="/join-our-team" 
@@ -263,3 +263,5 @@ onUnmounted(() => {
   }
 }
 </style>
+
+

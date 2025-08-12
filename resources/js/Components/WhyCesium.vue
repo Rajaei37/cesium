@@ -1,6 +1,6 @@
 <template>
   <!-- Why Cesium Section -->
-  <section class="py-20 bg-gray-100 relative overflow-hidden">
+  <section class="py-20 bg-cesium-light-gray relative overflow-hidden">
     <div class="container mx-auto px-6 text-center relative z-10">
       <!-- Main Title -->
       <h2 class="text-3xl lg:text-4xl font-normal text-primary mb-0">
@@ -13,7 +13,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <!-- Card 1: Precision-Fueled Reactions -->
-        <div class="bg-white rounded-[0.56px] shadow-lg p-6 relative overflow-hidden w-full" style="background-image: url('/assets/images/card1.svg'); background-size: cover; background-position: center; min-height: 280px;">
+        <div class="bg-white rounded-[0.56px] shadow-lg p-6 relative overflow-hidden w-full">
           <!-- Yellow Number Badge -->
           <div class="flex justify-start mb-4 relative z-20">
             <span class="text-yellow-400 font-bold text-2xl">1)</span>
@@ -34,7 +34,7 @@
         </div>
 
         <!-- Card 2: Repeatable Chain Reactions -->
-        <div class="bg-white rounded-[0.56px] shadow-lg p-6 relative overflow-hidden w-full" style="background-image: url('/assets/images/card2.svg'); background-size: cover; background-position: center; min-height: 280px;">
+        <div class="bg-white rounded-[0.56px] shadow-lg p-6 relative overflow-hidden w-full">
           <!-- Yellow Number Badge -->
           <div class="flex justify-start mb-4 relative z-20">
             <span class="text-yellow-400 font-bold text-2xl">2)</span>
@@ -50,7 +50,7 @@
         </div>
 
         <!-- Card 3: Domain Chemistry -->
-        <div class="bg-white rounded-[0.56px] shadow-lg p-6 relative overflow-hidden w-full" style="background-image: url('/assets/images/card3.svg'); background-size: cover; background-position: center; min-height: 280px;">
+        <div class="bg-white rounded-[0.56px] shadow-lg p-6 relative overflow-hidden w-full">
           <!-- Yellow Number Badge -->
           <div class="flex justify-start mb-4 relative z-20">
             <span class="text-yellow-400 font-bold text-2xl">3)</span>
@@ -72,4 +72,5 @@
 <script setup>
 // No props or reactive data needed for this component
 </script>
+
 

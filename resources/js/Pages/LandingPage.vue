@@ -12,11 +12,14 @@
     <!-- Why Cesium Section -->
     <WhyCesium />
 
-    <!-- After the Cesium Reaction Section -->
-    <CesiumReaction />
+    <!-- Combined Background Section -->
+    <BackgroundSection>
+      <!-- After the Cesium Reaction Section -->
+      <CesiumReaction />
 
-    <!-- What We Offer Section -->
-    <ServicesSection />
+      <!-- What We Offer Section -->
+      <ServicesSection />
+    </BackgroundSection>
 
     <!-- We Trigger the Reaction Section -->
     <WeTriggerReaction />
@@ -40,5 +43,7 @@ import CesiumReaction from '@/Components/CesiumReaction.vue';
 import ServicesSection from '@/Components/ServicesSection.vue';
 import WeTriggerReaction from '@/Components/WeTriggerReaction.vue';
 import LatestInsights from '@/Components/LatestInsights.vue';
+import BackgroundSection from '@/Components/BackgroundSection.vue';
 </script>
+
 

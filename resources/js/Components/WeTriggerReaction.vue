@@ -17,13 +17,13 @@
           Your project, your market, your vision — we apply pressure, accelerate results, and amplify the signal.
         </p>
         <p class="text-lg text-gray-600 font-medium">
-          All you need is the first atom — we'll trigger the chain.
+          All you need is the first atom — we\'ll trigger the chain.
         </p>
       </div>
 
       <!-- CTA Button -->
       <div class="text-center">
-        <a href="/contact-us" class="inline-block bg-[#facb24] text-[#362869] font-bold py-4 px-8 rounded-[0.56px] shadow-lg hover:bg-[#FFD300] transition transform hover:scale-105">
+        <a href="/contact-us" class="inline-block bg-[#facb24] text-[#362869] font-bold py-4 px-8 rounded-[0.56px] shadow-lg hover:bg-yellow-500 transition transform hover:scale-105">
           Start now
         </a>
       </div>
@@ -34,4 +34,5 @@
 <script setup>
 // No props or reactive data needed for this component
 </script>
+
 
