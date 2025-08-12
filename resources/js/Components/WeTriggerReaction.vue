@@ -7,7 +7,7 @@
         You Bring the Spark
       </h2>
       <h2 class="text-5xl lg:text-6xl font-bold font-sans text-[#4A248C] mb-6">
-        We Trigger the <span class="text-[#4A248C] font-extrabold">Reaction.</span>
+        We Trigger the <span class="font-extrabold">Reaction.</span>
       </h2>
       
       <!-- Description -->
@@ -19,7 +19,7 @@
           Your project, your market, your vision — we apply pressure, accelerate results, and amplify the signal.
         </p>
         <p class="text-base font-sans text-[#4A248C]">
-          All you need is the first atom — we'll trigger the chain.
+          All you need is the first atom —we'll trigger the chain.
         </p>
       </div>
 
