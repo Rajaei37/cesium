@@ -3,7 +3,7 @@
     <div 
       class="absolute inset-0 w-full h-full"
       style="
-        background-image: url(\'/assets/Rectangle8.jpg\');
+        background-image: url('/assets/Rectangle8.jpg');
         background-size: cover;
         background-position: center;
         opacity: 1;
