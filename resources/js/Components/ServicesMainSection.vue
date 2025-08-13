@@ -6,7 +6,10 @@
         <div class="lg:w-1/3 bg-[#F0F0F5] p-6">
           <ul class="space-y-2">
             <li v-for="service in services" :key="service.id" 
-                :class="{'bg-[#FFD700] text-[#4A248C]': activeService === service.id, 'text-gray-700': activeService !== service.id}"
+                :class="{
+                  'bg-[#FFD700] text-[#4A248C]': activeService === service.id,
+                  'text-gray-700': activeService !== service.id
+                }"
                 class="p-3 rounded-md cursor-pointer hover:bg-[#FFD700] hover:text-[#4A248C] transition-all duration-200"
                 @click="selectService(service.id)">
               {{ service.name }}
@@ -17,7 +20,7 @@
         <!-- Right Column: Service Details -->
         <div class="lg:w-2/3 bg-[#FFD700] p-8 flex flex-col justify-center items-center">
           <div v-if="activeServiceDetails" class="text-center">
-            <div class="w-48 h-48 mb-6">
+            <div class="w-64 h-64 mb-6">
               <img :src="activeServiceDetails.svg" :alt="activeServiceDetails.headline" class="w-full h-full object-contain" />
             </div>
             <h3 class="text-3xl font-bold text-[#4A248C] mb-4">
