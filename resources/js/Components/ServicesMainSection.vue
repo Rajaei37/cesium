@@ -10,7 +10,7 @@
                   'bg-[#FFD700] text-[#4A248C]': activeService === service.id,
                   'text-gray-700': activeService !== service.id
                 }"
-                class="p-3 rounded-md cursor-pointer hover:bg-[#FFD700] hover:text-[#4A248C] transition-all duration-200"
+                class="p-3 rounded-md cursor-pointer hover:bg-[#FFD700] hover:text-[#4A248C] transition-all duration-200 font-medium text-lg"
                 @click="selectService(service.id)">
               {{ service.name }}
             </li>
@@ -29,7 +29,7 @@
             <p class="text-lg text-[#4A248C] mb-6">
               {{ activeServiceDetails.description }}
             </p>
-            <ul class="list-disc list-inside text-left text-[#4A248C]">
+            <ul class="list-disc list-inside text-left text-[#4A248C] space-y-2">
               <li v-for="item in activeServiceDetails.benefits" :key="item">{{ item }}</li>
             </ul>
           </div>
