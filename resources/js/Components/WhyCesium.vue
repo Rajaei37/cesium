@@ -8,8 +8,7 @@
         <span class="font-extrabold">Why Cesium</span>?
       </h2>
       <!-- Subtitle -->
-      <p class="text-lg text-white max-w-3xl mx-auto mb-12">
-        Because we are the active element that drives your project forward. In a market that moves at the speed of light, you need a partner that reacts instantly and triggers a chain of success. At Cesium, we don't just provide services — we create ongoing reactions that push your brand to new heights.
+      <p class="text-lg text-white max-w-3xl mx-auto mb-12">        Because we are the active element that drives your project forward. In a market that moves at the speed of light, you need a partner that reacts instantly and triggers a chain of success. At Cesium, we don't just provide services — we create ongoing reactions that push your brand to new heights.
       </p>
       <a href="/contact-us" class="inline-block bg-secondary text-primary font-bold py-4 px-8 rounded-full shadow-lg hover:bg-yellow-500 transition transform hover:scale-105">
         Start Your Project Now
