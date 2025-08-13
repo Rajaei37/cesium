@@ -25,7 +25,7 @@
           ></span>
         </Link>
         <Link 
-          href="/what-we-offer" 
+          href="/services" 
           class="text-white hover:text-secondary transition-colors duration-300 font-medium relative group"
           :class="{ 'text-secondary': currentPage === 'services' }"
         >
@@ -120,7 +120,7 @@
     <div v-if="mobileMenuOpen" class="fixed top-20 left-0 right-0 bottom-0 bg-primary text-white shadow-lg animate-slide-down z-[9999] md:hidden overflow-y-auto">
       <div class="px-4 py-6 space-y-6 w-full">
         <Link href="/" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Home</Link>
-        <Link href="/what-we-offer" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Services</Link>
+        <Link href="/services" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Services</Link>
         <Link href="/our-process" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Our process</Link>
         <Link href="/blog" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">News</Link>
         <Link href="/contact-us" @click="closeMobileMenu" class="block text-white hover:text-secondary transition-colors duration-300 font-medium text-lg py-2">Contact</Link>

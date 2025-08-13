@@ -34,3 +34,10 @@ Route::get("/join-our-team", function () {
 })->name("join-our-team");
 
 
+
+
+Route::get("/services", function () {
+    return Inertia::render("ServicesPage");
+})->name("services");
+
+
