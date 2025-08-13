@@ -148,9 +148,9 @@
           <a href="https://www.instagram.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
             <img src="/assets/social-icons/instagram.svg" alt="Instagram" class="h-5 w-5 object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
           </a>
-            <a href="https://www.facebook.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
-              <img src="/assets/social-icons/facebook.svg" alt="Facebook" class="h-5 w-5 object-contain transition-all duration-300">
-            </a>
+          <a href="https://www.facebook.com/cesiumagency/" target="_blank" class="text-white hover:text-secondary transition-colors duration-300 flex items-center justify-center">
+            <img src="/assets/social-icons/facebook.svg" alt="Facebook" class="h-5 w-5 object-contain transition-all duration-300">
+          </a>
           </div>
         </div>
       </div>
