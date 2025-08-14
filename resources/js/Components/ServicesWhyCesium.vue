@@ -17,21 +17,21 @@
         <div class="text-center">
           <h3 class="text-5xl font-bold text-[#facb24] mb-2">180%</h3>
           <p class="text-white font-semibold mb-2">Combustion Boost</p>
-          <p class="text-sm text-gray-300">Our SEO experts got Ignition — 3 positions higher in search results for competitive keywords within 90 days.</p>
+          <p class="text-sm text-gray-300">Your ROI doesn't just increase - it combusts. After exposure to Cesium's reaction chain, clients average over 180% growth in returns.</p>
         </div>
         <div class="text-center">
           <h3 class="text-5xl font-bold text-[#facb24] mb-2">250+</h3>
           <p class="text-white font-semibold mb-2">Ignitions Triggered</p>
-          <p class="text-sm text-gray-300">We helped Accelerate scale their organic traffic from 15K monthly visitors to 65K — a 333% increase in 6 months.</p>
+          <p class="text-sm text-gray-300">That's how many successful campaigns have already run on our reactor — each designed to launch performance at scale.</p>
         </div>
         <div class="text-center">
           <h3 class="text-5xl font-bold text-[#facb24] mb-2">97%</h3>
-          <p class="text-white font-semibold mb-2">Stable Reaction Rate</p>          <p class="text-sm text-gray-300">We don't burn out fast. Our systems are engineered to keep your performance — and revenue — at the top.</p>
+          <p class="text-white font-semibold mb-2">Stable Reaction Rate</p>          <p class="text-sm text-gray-300">We don't flash and fade. Our systems are engineered for long-term performance — and clients stay with us because the results are repeatable.</p>
         </div>
         <div class="text-center">
           <h3 class="text-5xl font-bold text-[#facb24] mb-2">-35%</h3>
           <p class="text-white font-semibold mb-2">Cost-to-Acquisition Drop</p>
-          <p class="text-sm text-gray-300">After one quarter with Cesium — 3 positions higher in search results for competitive keywords within 90 days.</p>
+          <p class="text-sm text-gray-300">Your ROI doesn't just decrease - it combusts. After exposure to Cesium's traction formula, clients average over 35% growth in revenue.</p>
         </div>
       </div>
 

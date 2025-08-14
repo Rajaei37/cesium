@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#362869] py-20 mt-20 relative overflow-hidden">
+  <section class="bg-[#362869] py-20 pt-40 relative overflow-hidden">
     <img src="/assets/Asset3.svg" alt="Molecular Graphic" class="absolute top-0 left-0 w-full h-full object-cover opacity-20" />
     <div class="container mx-auto px-6 text-center relative z-10">
       <h1 class="text-5xl lg:text-6xl font-bold text-white mb-4">
