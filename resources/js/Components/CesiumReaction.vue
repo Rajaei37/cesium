@@ -15,7 +15,7 @@
         <div class="text-5xl lg:text-6xl font-bold text-[#facb24] mb-2">180%</div>
         <div class="text-lg font-semibold mb-3 text-white">Combustion Boost</div>
         <p class="text-sm opacity-80 leading-relaxed text-white">
-          Your ROI doesn\'t just increase - it combusts. After exposure to Cesium\'s reaction chain, clients average over 180% growth in returns.
+          Your ROI doesn't just increase - it combusts. After exposure to Cesium's reaction chain, clients average over 180% growth in returns.
         </p>
       </div>
       
@@ -24,7 +24,7 @@
         <div class="text-5xl lg:text-6xl font-bold text-[#facb24] mb-2">250+</div>
         <div class="text-lg font-semibold mb-3 text-white">Ignitions Triggered</div>
         <p class="text-sm opacity-80 leading-relaxed text-white">
-          That\'s how many successful campaigns have already run on our reactor — each designed to launch performance at scale.
+          That's how many successful campaigns have already run on our reactor — each designed to launch performance at scale.
         </p>
       </div>
       
@@ -33,7 +33,7 @@
         <div class="text-5xl lg:text-6xl font-bold text-[#facb24] mb-2">97%</div>
         <div class="text-lg font-semibold mb-3 text-white">Stable Reaction Rate</div>
         <p class="text-sm opacity-80 leading-relaxed text-white">
-          We don\'t flash and fade. Our systems are engineered for long-term performance — and clients stay with us because the results are repeatable.
+          We don't flash and fade. Our systems are engineered for long-term performance — and clients stay with us because the results are repeatable.
         </p>
       </div>
       
@@ -42,7 +42,7 @@
         <div class="text-5xl lg:text-6xl font-bold text-[#facb24] mb-2">-35%</div>
         <div class="text-lg font-semibold mb-3 text-white">Cost-to-Acquisition Drop</div>
         <p class="text-sm opacity-80 leading-relaxed text-white">
-          Your ROI doesn\'t just decrease - it combusts. After exposure to Cesium\'s traction formula, clients average over 35% growth in revenue.
+          Your ROI doesn't just decrease - it combusts. After exposure to Cesium's traction formula, clients average over 35% growth in revenue.
         </p>
       </div>
     </div>
