@@ -3,7 +3,7 @@
     <AppHeader current-page="services" />
     <ServicesHeroSection />
     <ServicesMainSection />
-    <WhyCesium />
+    <ServicesWhyCesium />
     <AppFooter />
   </div>
 </template>
@@ -13,7 +13,7 @@ import AppHeader from "../Components/AppHeader.vue";
 import AppFooter from "../Components/AppFooter.vue";
 import ServicesHeroSection from "../Components/ServicesHeroSection.vue";
 import ServicesMainSection from "../Components/ServicesMainSection.vue";
-import WhyCesium from "../Components/WhyCesium.vue";
+import ServicesWhyCesium from "../Components/ServicesWhyCesium.vue";
 </script>
 
 

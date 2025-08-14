@@ -1,37 +1,27 @@
 <template>
   <section id="services-main" class="py-20 bg-white">
     <div class="container mx-auto px-6">
-      <div class="flex flex-col lg:flex-row shadow-lg rounded-lg overflow-hidden">
+      <div class="flex flex-col lg:flex-row shadow-lg overflow-hidden" style="border-radius: 0.56px;">
         <!-- Left Column: Service List -->
         <div class="lg:w-1/3 bg-[#F0F0F5] p-6">
           <ul class="space-y-2">
             <li v-for="service in services" :key="service.id" 
                 :class="{
-                  'bg-[#FFD700] text-[#4A248C]': activeService === service.id,
+                  'bg-[#facb24] text-[#362869]': activeService === service.id,
                   'text-gray-700': activeService !== service.id
                 }"
-                class="p-3 rounded-md cursor-pointer hover:bg-[#FFD700] hover:text-[#4A248C] transition-all duration-200 font-medium text-lg"
+                class="p-3 cursor-pointer hover:bg-[#facb24] hover:text-[#362869] transition-all duration-200 font-medium text-lg"
+                style="border-radius: 0.56px;"
                 @click="selectService(service.id)">
               {{ service.name }}
             </li>
           </ul>
         </div>
 
-        <!-- Right Column: Service Details -->
-        <div class="lg:w-2/3 bg-[#FFD700] p-8 flex flex-col justify-center items-center">
-          <div v-if="activeServiceDetails" class="text-center">
-            <div class="w-64 h-64 mb-6">
-              <img :src="activeServiceDetails.svg" :alt="activeServiceDetails.headline" class="w-full h-full object-contain" />
-            </div>
-            <h3 class="text-3xl font-bold text-[#4A248C] mb-4">
-              {{ activeServiceDetails.headline }}
-            </h3>
-            <p class="text-lg text-[#4A248C] mb-6">
-              {{ activeServiceDetails.description }}
-            </p>
-            <ul class="list-disc list-inside text-left text-[#4A248C] space-y-2">
-              <li v-for="item in activeServiceDetails.benefits" :key="item">{{ item }}</li>
-            </ul>
+        <!-- Right Column: Service Details (SVG Card) -->
+        <div class="lg:w-2/3 bg-white p-8 flex flex-col justify-center items-center">
+          <div v-if="activeServiceDetails" class="w-full h-full flex justify-center items-center">
+            <img :src="activeServiceDetails.svg" :alt="activeServiceDetails.name" class="w-full h-auto max-w-full max-h-full object-contain" />
           </div>
         </div>
       </div>
