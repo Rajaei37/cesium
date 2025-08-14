@@ -25,7 +25,7 @@
           ></span>
         </Link>
         <Link 
-          href="/what-we-offer" 
+          href="/services" 
           class="text-white hover:text-secondary transition-colors duration-300 font-medium relative group"
           :class="{ 'text-secondary': currentPage === 'services' }"
         >

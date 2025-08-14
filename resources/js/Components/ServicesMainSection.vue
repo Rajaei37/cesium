@@ -19,7 +19,7 @@
         </div>
 
         <!-- Right Column: Service Details (SVG Card) -->
-        <div class="lg:w-2/3 bg-white p-8 flex flex-col justify-center items-center">
+        <div class="lg:w-2/3 bg-white flex flex-col justify-center items-center">
           <div v-if="activeServiceDetails" class="w-full h-full flex justify-center items-center">
             <img :src="activeServiceDetails.svg" :alt="activeServiceDetails.name" class="w-full h-auto max-w-full max-h-full object-contain" />
           </div>

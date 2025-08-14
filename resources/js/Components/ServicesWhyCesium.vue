@@ -26,8 +26,7 @@
         </div>
         <div class="text-center">
           <h3 class="text-5xl font-bold text-[#facb24] mb-2">97%</h3>
-          <p class="text-white font-semibold mb-2">Stable Reaction Rate</p>
-          <p class="text-sm text-gray-300">We don't burn out fast. Our systems are engineered to keep your performance — and revenue — at the top.</p>
+          <p class="text-white font-semibold mb-2">Stable Reaction Rate</p>          <p class="text-sm text-gray-300">We don't burn out fast. Our systems are engineered to keep your performance — and revenue — at the top.</p>
         </div>
         <div class="text-center">
           <h3 class="text-5xl font-bold text-[#facb24] mb-2">-35%</h3>
