@@ -25,7 +25,7 @@
     <WeTriggerReaction />
 
     <!-- Cesium Insights Section -->
-    <LatestInsights />
+    <CesiumInsights />
 
     <!-- Footer -->
     <AppFooter />
@@ -42,7 +42,7 @@ import WhyCesium from '@/Components/WhyCesium.vue';
 import CesiumReaction from '@/Components/CesiumReaction.vue';
 import ServicesSection from '@/Components/ServicesSection.vue';
 import WeTriggerReaction from '@/Components/WeTriggerReaction.vue';
-import LatestInsights from '@/Components/LatestInsights.vue';
+import CesiumInsights from '@/Components/CesiumInsights.vue';
 import BackgroundSection from '@/Components/BackgroundSection.vue';
 </script>
 
