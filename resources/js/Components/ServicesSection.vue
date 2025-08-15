@@ -14,13 +14,13 @@
     <!-- Service Cards List -->
     <div class="max-w-4xl mx-auto space-y-4">
       <!-- Service Card 1: Paid Media -->
-      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;" @click="navigateToService('paid-media')">
         <div class="flex-1">
           <h3 class="text-2xl font-bold text-[#362869] mb-2">Paid Media</h3>
           <p class="text-gray-700 text-sm">Launch high-voltage ad campaigns across top platforms to drive instant results.</p>
         </div>
         <div class="flex items-center space-x-4">
-          <a href="/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+          <a href="/services?service=paid-media" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;" @click.stop>
             Learn More
           </a>
           <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,13 +30,13 @@
       </div>
 
       <!-- Service Card 2: SEO Optimization -->
-      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;" @click="navigateToService('seo-optimization')">
         <div class="flex-1">
           <h3 class="text-2xl font-bold text-[#362869] mb-2">SEO Optimization</h3>
           <p class="text-gray-700 text-sm">Climb search rankings and sustain long-term organic traffic reactions.</p>
         </div>
         <div class="flex items-center space-x-4">
-          <a href="/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+          <a href="/services?service=seo-optimization" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;" @click.stop>
             Learn More
           </a>
           <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,13 +46,13 @@
       </div>
 
       <!-- Service Card 3: Social Media Marketing -->
-      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;" @click="navigateToService('social-media-marketing')">
         <div class="flex-1">
           <h3 class="text-2xl font-bold text-[#362869] mb-2">Social Media Marketing</h3>
-          <p class="text-gray-700 text-sm">Climb search rankings and sustain long-term organic traffic reactions.</p>
+          <p class="text-gray-700 text-sm">Build vibrant online communities and drive viral growth through strategic social campaigns.</p>
         </div>
         <div class="flex items-center space-x-4">
-          <a href="/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+          <a href="/services?service=social-media-marketing" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;" @click.stop>
             Learn More
           </a>
           <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,13 +62,13 @@
       </div>
 
       <!-- Service Card 4: Data Analytics -->
-      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;" @click="navigateToService('data-analytics')">
         <div class="flex-1">
           <h3 class="text-2xl font-bold text-[#362869] mb-2">Data Analytics</h3>
-          <p class="text-gray-700 text-sm">Climb search rankings and sustain long-term organic traffic reactions.</p>
+          <p class="text-gray-700 text-sm">Transform raw data into strategic intelligence that fuels precision-targeted growth.</p>
         </div>
         <div class="flex items-center space-x-4">
-          <a href="/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+          <a href="/services?service=data-analytics" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;" @click.stop>
             Learn More
           </a>
           <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,13 +78,13 @@
       </div>
 
       <!-- Service Card 5: Content Marketing -->
-      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;" @click="navigateToService('content-marketing')">
         <div class="flex-1">
           <h3 class="text-2xl font-bold text-[#362869] mb-2">Content Marketing</h3>
-          <p class="text-gray-700 text-sm">Climb search rankings and sustain long-term organic traffic reactions.</p>
+          <p class="text-gray-700 text-sm">Develop engaging content that attracts, educates, and converts your target audience.</p>
         </div>
         <div class="flex items-center space-x-4">
-          <a href="/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+          <a href="/services?service=content-marketing" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;" @click.stop>
             Learn More
           </a>
           <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,13 +94,13 @@
       </div>
 
       <!-- Service Card 6: Branding & Visual Identity -->
-      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;">
+      <div class="service-card group bg-gray-100 text-gray-800 p-6 flex items-center justify-between transition-all duration-300 hover:bg-[#facb24] hover:transform hover:scale-105 cursor-pointer" style="border-radius: 0.56px;" @click="navigateToService('branding')">
         <div class="flex-1">
           <h3 class="text-2xl font-bold text-[#362869] mb-2">Branding & Visual Identity</h3>
-          <p class="text-gray-700 text-sm">Climb search rankings and sustain long-term organic traffic reactions.</p>
+          <p class="text-gray-700 text-sm">Develop a compelling brand story and visual language that resonates with your audience.</p>
         </div>
         <div class="flex items-center space-x-4">
-          <a href="/what-we-offer" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;">
+          <a href="/services?service=branding" class="learn-more-btn opacity-0 group-hover:opacity-100 bg-[#362869] text-white px-4 py-2 font-semibold transition-all duration-300" style="border-radius: 0.56px;" @click.stop>
             Learn More
           </a>
           <svg class="w-6 h-6 text-[#362869]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,7 +112,7 @@
 
     <!-- Explore All Services Button -->
     <div class="mt-12">
-      <a href="/what-we-offer" class="inline-flex items-center bg-[#facb24] text-primary font-bold py-3 px-6 rounded-[0.56px] shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105">
+      <a href="/services" class="inline-flex items-center bg-[#facb24] text-primary font-bold py-3 px-6 rounded-[0.56px] shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105">
         Explore all services in detail
       </a>
     </div>
@@ -120,7 +120,11 @@
 </template>
 
 <script setup>
-// No props or reactive data needed for this component
+import { router } from '@inertiajs/vue3'
+
+const navigateToService = (serviceId) => {
+  router.visit(`/services?service=${serviceId}`)
+}
 </script>
 
 <style scoped>
