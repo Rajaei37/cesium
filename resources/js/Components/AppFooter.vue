@@ -43,7 +43,7 @@
           <p class="text-gray-300 mb-6 font-light">
             Join successful iGaming operators who have transformed their growth with our proven strategies.
           </p>
-          <a href="https://forms.google.com/your-form-link" target="_blank" class="inline-block bg-secondary text-primary font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105">
+          <a href="https://forms.google.com/your-form-link" target="_blank" class="inline-block bg-secondary text-primary font-semibold py-3 px-6 shadow-lg hover:bg-secondary-dark transition duration-300 transform hover:scale-105" style="border-radius: 0.56px;">
             Apply Now
           </a>
         </div>

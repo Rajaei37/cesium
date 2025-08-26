@@ -61,24 +61,26 @@
         <!-- Join Team Button -->
         <Link 
           href="/join-our-team" 
-          class="group relative text-white hover:text-secondary transition-all duration-300 font-medium px-6 py-2 border border-white/30 hover:border-secondary/70 rounded-lg backdrop-blur-sm hover:backdrop-blur-md overflow-hidden"
+          class="group relative text-white hover:text-secondary transition-all duration-300 font-medium px-6 py-2 border border-white/30 hover:border-secondary/70 backdrop-blur-sm hover:backdrop-blur-md overflow-hidden"
+          style="border-radius: 0.56px;"
           :class="{ 'text-secondary border-secondary': currentPage === 'join-team' }"
         >
           <span class="relative z-10">Join our Team</span>
           <!-- Button Background Animation -->
-          <div class="absolute inset-0 bg-gradient-to-r from-secondary/0 to-secondary/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-secondary/0 to-secondary/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500" style="border-radius: 0.56px;"></div>
         </Link>
 
         <!-- Contact CTA Button -->
         <Link 
           href="/contact-us" 
-          class="group relative bg-gradient-to-r from-secondary via-secondary-light to-secondary text-primary font-semibold px-6 py-2 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-0.5 overflow-hidden"
+          class="group relative bg-gradient-to-r from-secondary via-secondary-light to-secondary text-primary font-semibold px-6 py-2 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-0.5 overflow-hidden"
+          style="border-radius: 0.56px;"
         >
           <span class="relative z-10">contact us</span>
           <!-- Shimmer Effect -->
           <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
           <!-- Button Glow -->
-          <div class="absolute inset-0 bg-secondary/50 rounded-lg blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+          <div class="absolute inset-0 bg-secondary/50 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" style="border-radius: 0.56px;"></div>
         </Link>
         
         <!-- Enhanced Social Media Icons -->
@@ -106,11 +108,12 @@
         </div>
       </div>
 
-      <!-- Enhanced Mobile Menu Button -->
+        <!-- Enhanced Mobile Menu Button -->
       <div class="flex items-center space-x-4">
         <button 
           @click="toggleMobileMenu" 
-          class="md:hidden relative group p-2 text-white hover:text-secondary transition-all duration-300 rounded-lg hover:bg-white/10"
+          class="md:hidden relative group p-2 text-white hover:text-secondary transition-all duration-300 hover:bg-white/10"
+          style="border-radius: 0.56px;"
           :class="{ 'text-secondary': mobileMenuOpen }"
         >
           <!-- Animated Hamburger Icon -->
@@ -154,14 +157,16 @@
             <Link 
               href="/join-our-team" 
               @click="closeMobileMenu" 
-              class="block w-full text-center text-white hover:text-secondary transition-colors duration-300 font-medium py-3 border border-white/30 hover:border-secondary/70 rounded-lg backdrop-blur-sm"
+              class="block w-full text-center text-white hover:text-secondary transition-colors duration-300 font-medium py-3 border border-white/30 hover:border-secondary/70 backdrop-blur-sm"
+              style="border-radius: 0.56px;"
             >
               Join our Team
             </Link>
             <Link 
               href="/contact-us" 
               @click="closeMobileMenu" 
-              class="block w-full bg-gradient-to-r from-secondary via-secondary-light to-secondary text-primary font-semibold py-3 text-center rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
+              class="block w-full bg-gradient-to-r from-secondary via-secondary-light to-secondary text-primary font-semibold py-3 text-center shadow-lg transition-all duration-300 transform hover:scale-105"
+              style="border-radius: 0.56px;"
             >
               contact us
             </Link>
@@ -313,7 +318,8 @@ const MobileNavLink = {
     <Link 
       :href="href"
       @click="$emit('click')"
-      class="group block text-white hover:text-secondary transition-all duration-300 font-medium text-lg py-3 px-4 rounded-lg hover:bg-white/5 relative overflow-hidden"
+      class="group block text-white hover:text-secondary transition-all duration-300 font-medium text-lg py-3 px-4 hover:bg-white/5 relative overflow-hidden"
+      style="border-radius: 0.56px;"
     >
       <span class="relative z-10">
         <slot></slot>
@@ -332,7 +338,8 @@ const SocialIcon = {
     <a 
       :href="href" 
       target="_blank" 
-      class="group relative text-white hover:text-secondary transition-all duration-300 p-2 rounded-lg hover:bg-white/10 hover:shadow-lg hover:shadow-secondary/20 transform hover:scale-110"
+      class="group relative text-white hover:text-secondary transition-all duration-300 p-2 hover:bg-white/10 hover:shadow-lg hover:shadow-secondary/20 transform hover:scale-110"
+      style="border-radius: 0.56px;"
       :class="size === 'large' ? 'p-3' : 'p-2'"
     >
       <!-- SVG Icon -->
@@ -358,7 +365,7 @@ const SocialIcon = {
       />
       
       <!-- Hover Glow Effect -->
-      <div class="absolute inset-0 bg-secondary/20 rounded-lg blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+      <div class="absolute inset-0 bg-secondary/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" style="border-radius: 0.56px;"></div>
     </a>
   `
 };
