@@ -81,7 +81,7 @@
           Join our Team
         </Link>
         <Link href="/contact-us" class="bg-secondary text-primary font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-          contact us
+          Start Now
         </Link>
         
         <!-- Social Media Icons -->
@@ -129,7 +129,7 @@
         <!-- Mobile CTA -->
         <div class="pt-6 border-t border-gray-200">
           <Link href="/contact-us" @click="closeMobileMenu" class="w-full bg-secondary hover:bg-secondary-dark text-primary font-semibold px-6 py-3 shadow-lg transition-all duration-300 flex items-center justify-center text-lg rounded-none">
-            contact us
+            Start Now
           </Link>
         </div>
         

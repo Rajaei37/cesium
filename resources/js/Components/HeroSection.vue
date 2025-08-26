@@ -45,7 +45,7 @@
           href="/contact-us"
           class="mt-8 inline-block bg-secondary text-primary font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-[0.56px] shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-600"
         >
-          Request Strategy Call
+          Start Now
         </Link>
       </div>
 
