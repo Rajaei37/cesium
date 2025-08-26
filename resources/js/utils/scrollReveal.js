@@ -80,7 +80,7 @@ export class ScrollReveal {
     Object.assign(element.style, {
       opacity: '0',
       transform: `translate(${translateValue})`,
-      transition: `all ${options.duration}ms ${options.easing} ${options.del
+      transition: `all ${options.duration}ms ${options.easing} ${options.delay}ms`,
       willChange: 'opacity, transform'
     });
   }
