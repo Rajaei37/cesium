@@ -179,7 +179,8 @@
       <div class="mt-16 opacity-0 animate-fade-in-up animation-delay-1200" ref="ctaSection">
         <a 
           href="/contact-us"
-          class="group inline-flex items-center space-x-3 bg-gradient-to-r from-primary to-primary-light hover:from-secondary hover:to-secondary-light text-white hover:text-primary font-semibold px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1"
+          class="group inline-flex items-center space-x-3 bg-gradient-to-r from-primary to-primary-light hover:from-secondary hover:to-secondary-light text-white hover:text-primary font-semibold px-8 py-4 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1"
+          style="border-radius: 0.56px;"
         >
           <span>Experience the Cesium Difference</span>
           <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
