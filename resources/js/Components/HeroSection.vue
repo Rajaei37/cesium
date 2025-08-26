@@ -101,7 +101,8 @@
         <Link
           ref="ctaButton"
           href="/contact-us"
-          class="group inline-flex items-center gap-3 bg-gradient-to-r from-secondary via-secondary-light to-secondary text-primary font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-secondary/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 opacity-0 translate-y-4"
+          class="group inline-flex items-center gap-3 bg-gradient-to-r from-secondary via-secondary-light to-secondary text-primary font-bold py-4 px-8 shadow-2xl hover:shadow-secondary/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 opacity-0 translate-y-4"
+          style="border-radius: 0.56px;"
         >
           <span class="relative z-10">Request Strategy Call</span>
           <svg 
@@ -114,7 +115,7 @@
           </svg>
           
           <!-- Button Glow Effect -->
-          <div class="absolute inset-0 bg-gradient-to-r from-secondary/50 to-transparent rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-secondary/50 to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" style="border-radius: 0.56px;"></div>
         </Link>
       </div>
 
